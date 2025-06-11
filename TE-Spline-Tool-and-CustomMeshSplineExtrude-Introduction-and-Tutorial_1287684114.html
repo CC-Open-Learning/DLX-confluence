@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VARLab : TE Spline Tool and CustomMeshSplineExtrude Introduction and Tutorial</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="VARLab_44990773.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Learning-Experience_972881951.html">Learning Experience</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="216629273.html">Digital Learning Experiences (DLX)</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="706347009.html">LSM8.02 - Conestoga Trades: Electrician Simulator</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Development-Documentations_1066237953.html">Development Documentations</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            VARLab : TE Spline Tool and CustomMeshSplineExtrude Introduction and Tutorial
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                            
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> User 1c73e</span>, last modified on Aug 16, 2024
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <p>This page will introduce the Unity Spline tool and outline how to use our CustomMeshExtrude tool in the trades electrical DLX.  </p><div class="panel" style="background-color: #EAE6FF;border-color: #998DD9;border-width: 1px;"><div class="panelContent" style="background-color: #EAE6FF;">
+<p>Please visit this link for an introduction on Unity Spline <a class="external-link" data-card-appearance="inline" href="https://docs.unity3d.com/Packages/com.unity.splines@1.0/manual/getting-started-with-splines.html" rel="nofollow">https://docs.unity3d.com/Packages/com.unity.splines@1.0/manual/getting-started-with-splines.html</a> </p>
+</div></div><p><strong>How to add CustomMeshSplineExtrude within TE DLX</strong></p><ol start="1"><li><p>Create a new game object, and add a Spline component: </p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="2024-08-15_08h02_11.png" width="736" loading="lazy" src="attachments/1287684114/1287979009.png?width=736" data-image-src="attachments/1287684114/1287979009.png" data-height="1050" data-width="1920" data-unresolved-comment-count="0" data-linked-resource-id="1287979009" data-linked-resource-version="2" data-linked-resource-type="attachment" data-linked-resource-default-alias="2024-08-15_08h02_11.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1287684114" data-linked-resource-container-version="2" data-media-id="a2784c70-4bee-4fc3-bce0-297ab56f7a5c" data-media-type="file"></span><p /></li><li><p>Press the + on the Spline component to add Knots.  You will then see a line in the scene: </p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="2024-08-15_08h03_18.png" width="736" loading="lazy" src="attachments/1287684114/1287815176.png?width=736" data-image-src="attachments/1287684114/1287815176.png" data-height="1050" data-width="1920" data-unresolved-comment-count="0" data-linked-resource-id="1287815176" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="2024-08-15_08h03_18.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1287684114" data-linked-resource-container-version="2" data-media-id="e177cf44-ae7e-4899-b9e5-0b7a23928544" data-media-type="file"></span><p /></li><li><p>  If you click on the Spline view in the Toolbar as shown, you will then see the knots and the tangents.  You can also use the View dropdown to edit what the Spline view looks like: </p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="2024-08-15_08h03_36.png" width="736" loading="lazy" src="attachments/1287684114/1287618581.png?width=736" data-image-src="attachments/1287684114/1287618581.png" data-height="1050" data-width="1920" data-unresolved-comment-count="0" data-linked-resource-id="1287618581" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="2024-08-15_08h03_36.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1287684114" data-linked-resource-container-version="2" data-media-id="42c1ffd0-81c5-4625-85f2-86a3f3de2932" data-media-type="file"></span><p /></li><li><p>For this project, after adding the Spline component, then add the Spline Extrude component to the game object as well, and configure as shown: </p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="2024-08-15_08h04_26.png" width="736" loading="lazy" src="attachments/1287684114/1287946255.png?width=736" data-image-src="attachments/1287684114/1287946255.png" data-height="1050" data-width="1920" data-unresolved-comment-count="0" data-linked-resource-id="1287946255" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="2024-08-15_08h04_26.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1287684114" data-linked-resource-container-version="2" data-media-id="cea4a859-357f-4819-b525-5f537358666b" data-media-type="file"></span><p> Note* these are base values for our wire system, please adjust according to your use case</p></li><li><p>To edit the Spline, use the move tool on individual Knots to move it as shown here: </p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="2024-08-15_08h06_23.png" width="736" loading="lazy" src="attachments/1287684114/1287880706.png?width=736" data-image-src="attachments/1287684114/1287880706.png" data-height="679" data-width="1213" data-unresolved-comment-count="0" data-linked-resource-id="1287880706" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="2024-08-15_08h06_23.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1287684114" data-linked-resource-container-version="2" data-media-id="c72e584a-3da1-4025-967a-c89f195493d7" data-media-type="file"></span><p>OR you can move the tangents and adjust the spline as shown here: </p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="2024-08-15_08h06_35.png" width="736" loading="lazy" src="attachments/1287684114/1288011778.png?width=736" data-image-src="attachments/1287684114/1288011778.png" data-height="679" data-width="1213" data-unresolved-comment-count="0" data-linked-resource-id="1288011778" data-linked-resource-version="2" data-linked-resource-type="attachment" data-linked-resource-default-alias="2024-08-15_08h06_35.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1287684114" data-linked-resource-container-version="2" data-media-id="66322039-dd16-4cba-aaef-e848f2215ac2" data-media-type="file"></span><p /></li><li><p>Make sure all Knots are set to Auto in the Element Inspector: </p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="2024-08-15_08h06_35.png" width="736" loading="lazy" src="attachments/1287684114/1288011778.png?width=736" data-image-src="attachments/1287684114/1288011778.png" data-height="679" data-width="1235" data-unresolved-comment-count="0" data-linked-resource-id="1288011778" data-linked-resource-version="2" data-linked-resource-type="attachment" data-linked-resource-default-alias="2024-08-15_08h06_35.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1287684114" data-linked-resource-container-version="2" data-media-id="66322039-dd16-4cba-aaef-e848f2215ac2" data-media-type="file"></span><p /></li><li><p>Add the Custom Mesh Spline Extrude component as shown, and each time you make adjustments to your spline, click both regenerate buttons as shown: </p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="2024-08-16_07h40_38.png" width="410" loading="lazy" src="attachments/1287684114/1289388124.png?width=410" data-image-src="attachments/1287684114/1289388124.png" data-height="679" data-width="410" data-unresolved-comment-count="0" data-linked-resource-id="1289388124" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="2024-08-16_07h40_38.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1287684114" data-linked-resource-container-version="2" data-media-id="06b58c0c-a7bf-4cd2-8295-45c631f5d426" data-media-type="file"></span><p> </p><p /></li></ol>
+                    </div>
+
+                                        <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="attachments" class="pageSectionTitle">Attachments:</h2>
+                        </div>
+
+                        <div class="greybox" align="left">
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1287684114/1287225454.png">2024-08-15_08h02_11.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1287684114/1287979009.png">2024-08-15_08h02_11.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1287684114/1287815176.png">2024-08-15_08h03_18.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1287684114/1287618581.png">2024-08-15_08h03_36.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1287684114/1287946255.png">2024-08-15_08h04_26.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1287684114/1287880706.png">2024-08-15_08h06_23.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1287684114/1287946264.png">2024-08-15_08h06_35.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1287684114/1288011778.png">2024-08-15_08h06_35.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1287684114/1289388124.png">2024-08-16_07h40_38.png</a> (image/png)
+                                <br/>
+                                                    </div>
+                    </div>
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Jun 11, 2025 14:17</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

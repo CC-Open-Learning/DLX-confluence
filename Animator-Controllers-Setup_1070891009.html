@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VARLab : Animator Controllers Setup</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="VARLab_44990773.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Learning-Experience_972881951.html">Learning Experience</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="General-Release-DLX_729973721.html">General Release DLX</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="LSM9.01---Public-Health-Inspection_805306369.html">LSM9.01 - Public Health Inspection</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Development-Documentation_1066991653.html">Development Documentation</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Doors-Setup_1070727169.html">Doors Setup</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            VARLab : Animator Controllers Setup
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                            
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> User 2013e</span>, last modified on Apr 17, 2024
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <style type='text/css'>/*<![CDATA[*/
+div.rbtoc1749651321942 {padding: 0px;}
+div.rbtoc1749651321942 ul {list-style: none;margin-left: 0px;}
+div.rbtoc1749651321942 li {margin-left: 0px;padding-left: 0px;}
+
+/*]]>*/</style><div class='toc-macro rbtoc1749651321942'>
+<ul class='toc-indentation'>
+<li><a href='#AnimatorControllersSetup-BeforeBeginning'>Before Beginning</a>
+<ul class='toc-indentation'>
+<li><a href='#AnimatorControllersSetup-DoubleDoorController'>Double Door Controller</a>
+<ul class='toc-indentation'>
+<li><a href='#AnimatorControllersSetup-Parameters'>Parameters</a></li>
+<li><a href='#AnimatorControllersSetup-Transitionproperties.'>Transition properties.</a></li>
+</ul>
+</li>
+<li><a href='#AnimatorControllersSetup-SingleDoorController'>Single Door Controller</a>
+<ul class='toc-indentation'>
+<li><a href='#AnimatorControllersSetup-Parameters.1'>Parameters</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div><h1 id="AnimatorControllersSetup-BeforeBeginning"><strong>Before Beginning </strong></h1><div class="confluence-information-macro confluence-information-macro-information"><span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"></span><div class="confluence-information-macro-body"><p>This section doesn't cover keyframe animations. Please refer to Unity documentation on how to create them. <a class="external-link" data-card-appearance="inline" href="https://learn.unity.com/tutorial/creating-keyframed-animation-in-timeline" rel="nofollow">https://learn.unity.com/tutorial/creating-keyframed-animation-in-timeline</a> </p></div></div><p>Currently, we have Double Doors and Cooler/Freezer Doors animator controllers ready to use at<em> <strong>/Assets/AnimatorControllers </strong></em>and<strong> </strong>animations at<em> <strong>/Assets/Art/Animations.</strong></em></p><h2 id="AnimatorControllersSetup-DoubleDoorController">Double Door Controller</h2><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20240415-195813.png" width="760" loading="lazy" src="attachments/1070891009/1071218691.png?width=760" data-image-src="attachments/1070891009/1071218691.png" data-height="901" data-width="2500" data-unresolved-comment-count="0" data-linked-resource-id="1071218691" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20240415-195813.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1070891009" data-linked-resource-container-version="6" data-media-id="3b186b5b-9366-4373-bb33-aa06f0102bf6" data-media-type="file"></span><h3 id="AnimatorControllersSetup-Parameters">Parameters</h3><p>Double doors must rotate towards the next room, so we created 4 Trigger parameters. </p><p style="margin-left: 30.0px;"><strong>OpenFromInside&lt;Trigger&gt;: </strong>Door rotates on the negative Y axis. </p><p style="margin-left: 30.0px;"><strong>CloseFromInside&lt;Trigger&gt;: </strong>Door rotates back to Y = 0.</p><p style="margin-left: 30.0px;"><strong>OpenFromOutside&lt;Trigger&gt;: </strong>Door rotates on the positive Y axis.</p><p style="margin-left: 30.0px;"><strong>CloseFromOutside&lt;Trigger&gt;: </strong>Door rotates back to Y = 0.</p><p style="margin-left: 30.0px;"><strong>DoorOpen&lt;Bool&gt;:  </strong>Control the current door state, where true == open.</p><h3 id="AnimatorControllersSetup-Transitionproperties.">Transition properties. </h3><div class="table-wrap"><table data-table-width="760" data-layout="default" data-local-id="3926d4cb-2031-40ea-9824-c23bfa918b17" class="confluenceTable"><tbody><tr><td class="confluenceTd"><p /><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20240415-200417.png" width="282" loading="lazy" src="attachments/1070891009/1071218697.png?width=282" data-image-src="attachments/1070891009/1071218697.png" data-height="496" data-width="539" data-unresolved-comment-count="0" data-linked-resource-id="1071218697" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20240415-200417.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1070891009" data-linked-resource-container-version="6" data-media-id="27648f22-2504-4946-b0cf-ac10dd29ae39" data-media-type="file"></span><p /></td><td class="confluenceTd"><p /><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20240415-200359.png" width="282" loading="lazy" src="attachments/1070891009/1071218703.png?width=282" data-image-src="attachments/1070891009/1071218703.png" data-height="664" data-width="529" data-unresolved-comment-count="0" data-linked-resource-id="1071218703" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20240415-200359.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1070891009" data-linked-resource-container-version="6" data-media-id="f401c638-9a6c-4064-a70c-729971d35eea" data-media-type="file"></span><p /></td><td class="confluenceTd"><p /><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20240415-200437.png" width="282" loading="lazy" src="attachments/1070891009/1071218709.png?width=282" data-image-src="attachments/1070891009/1071218709.png" data-height="641" data-width="528" data-unresolved-comment-count="0" data-linked-resource-id="1071218709" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20240415-200437.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1070891009" data-linked-resource-container-version="6" data-media-id="e8f956aa-5c7e-409b-9147-6b78092d9555" data-media-type="file"></span><p /></td><td class="confluenceTd"><p /><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20240415-200537.png" width="282" loading="lazy" src="attachments/1070891009/1071218715.png?width=282" data-image-src="attachments/1070891009/1071218715.png" data-height="515" data-width="525" data-unresolved-comment-count="0" data-linked-resource-id="1071218715" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20240415-200537.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1070891009" data-linked-resource-container-version="6" data-media-id="d5cd0bba-80cb-482a-a832-8e1b46448b1d" data-media-type="file"></span><p /></td><td class="confluenceTd"><p /><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20240415-200552.png" width="282" loading="lazy" src="attachments/1070891009/1071218721.png?width=282" data-image-src="attachments/1070891009/1071218721.png" data-height="651" data-width="532" data-unresolved-comment-count="0" data-linked-resource-id="1071218721" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20240415-200552.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1070891009" data-linked-resource-container-version="6" data-media-id="ba395495-f2ed-4a44-9b94-96ba0c8f307f" data-media-type="file"></span><p /></td><td class="confluenceTd"><p /><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20240415-200611.png" width="264" loading="lazy" src="attachments/1070891009/1071218727.png?width=264" data-image-src="attachments/1070891009/1071218727.png" data-height="652" data-width="532" data-unresolved-comment-count="0" data-linked-resource-id="1071218727" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20240415-200611.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1070891009" data-linked-resource-container-version="6" data-media-id="a077a47b-5bc4-445f-918f-72f71fcf4e81" data-media-type="file"></span><p /></td></tr></tbody></table></div><hr/><h2 id="AnimatorControllersSetup-SingleDoorController">Single Door Controller</h2><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20240415-202855.png" width="764" loading="lazy" src="attachments/1070891009/1071218733.png?width=764" data-image-src="attachments/1070891009/1071218733.png" data-height="1100" data-width="2487" data-unresolved-comment-count="0" data-linked-resource-id="1071218733" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20240415-202855.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1070891009" data-linked-resource-container-version="6" data-media-id="9dcc717c-ae89-436d-b510-2cc243c8a207" data-media-type="file"></span><h3 id="AnimatorControllersSetup-Parameters.1">Parameters</h3><p style="margin-left: 30.0px;"><strong>Open&lt;Trigger&gt;: </strong>The door opens towards the current room. </p><p style="margin-left: 30.0px;"><strong>Close&lt;Trigger&gt;: </strong>Door closes. </p><p style="margin-left: 30.0px;"><strong>DoorOpen&lt;Bool&gt;:  </strong>Control the current door state, where true == open.</p><div class="table-wrap"><table data-table-width="760" data-layout="default" data-local-id="0f803e36-7990-4903-837b-8e58a41fb50c" class="confluenceTable"><tbody><tr><td class="confluenceTd"><p /><p /><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20240415-203310.png" width="532" loading="lazy" src="attachments/1070891009/1071218739.png?width=532" data-image-src="attachments/1070891009/1071218739.png" data-height="525" data-width="532" data-unresolved-comment-count="0" data-linked-resource-id="1071218739" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20240415-203310.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1070891009" data-linked-resource-container-version="6" data-media-id="8f56085b-3322-4433-943e-3f1c5d933f93" data-media-type="file"></span><p /></td><td class="confluenceTd"><p /><p /><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20240415-203333.png" width="533" loading="lazy" src="attachments/1070891009/1071218745.png?width=533" data-image-src="attachments/1070891009/1071218745.png" data-height="641" data-width="533" data-unresolved-comment-count="0" data-linked-resource-id="1071218745" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20240415-203333.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1070891009" data-linked-resource-container-version="6" data-media-id="ccbd7d9f-8fe9-4f98-89f8-3c2760044f8d" data-media-type="file"></span><p /></td><td class="confluenceTd"><p /><p /><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20240415-203351.png" width="532" loading="lazy" src="attachments/1070891009/1071218751.png?width=532" data-image-src="attachments/1070891009/1071218751.png" data-height="624" data-width="532" data-unresolved-comment-count="0" data-linked-resource-id="1071218751" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20240415-203351.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1070891009" data-linked-resource-container-version="6" data-media-id="863cd9ef-9e64-42c8-872b-7728478ce2d4" data-media-type="file"></span><p /></td></tr></tbody></table></div>
+                    </div>
+
+                                        <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="attachments" class="pageSectionTitle">Attachments:</h2>
+                        </div>
+
+                        <div class="greybox" align="left">
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1070891009/1071218691.png">image-20240415-195813.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1070891009/1071218697.png">image-20240415-200417.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1070891009/1071218703.png">image-20240415-200359.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1070891009/1071218709.png">image-20240415-200437.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1070891009/1071218715.png">image-20240415-200537.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1070891009/1071218721.png">image-20240415-200552.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1070891009/1071218727.png">image-20240415-200611.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1070891009/1071218733.png">image-20240415-202855.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1070891009/1071218739.png">image-20240415-203310.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1070891009/1071218745.png">image-20240415-203333.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1070891009/1071218751.png">image-20240415-203351.png</a> (image/png)
+                                <br/>
+                                                    </div>
+                    </div>
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Jun 11, 2025 14:15</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

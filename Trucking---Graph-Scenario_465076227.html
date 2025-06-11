@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VARLab : Trucking - Graph Scenario</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="VARLab_44990773.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Learning-Experience_972881951.html">Learning Experience</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="General-Release-DLX_729973721.html">General Release DLX</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="LSM3.01-Trucking-Pre-Trip-Inspection_386367493.html">LSM3.01 Trucking Pre Trip Inspection</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            VARLab : Trucking - Graph Scenario
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                            
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> Balazs Karner</span>, last modified on Dec 14, 2021
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <div class="confluence-information-macro confluence-information-macro-note"><span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"></span><div class="confluence-information-macro-body"><p>This page is a work in progress. The graph scenario is still a far away task, and the only complete plan is for the wheels which is also likely to change as we review the process with our content expert.</p></div></div><style type='text/css'>/*<![CDATA[*/
+div.rbtoc1749650766182 {padding: 0px;}
+div.rbtoc1749650766182 ul {list-style: disc;margin-left: 0px;}
+div.rbtoc1749650766182 li {margin-left: 0px;padding-left: 0px;}
+
+/*]]>*/</style><div class='toc-macro rbtoc1749650766182'>
+<ul class='toc-indentation'>
+<li><a href='#Trucking-GraphScenario-TruckingInspectionOverallOrder'>Trucking Inspection Overall Order</a></li>
+<li><a href='#Trucking-GraphScenario-GuidedMode'>Guided Mode</a>
+<ul class='toc-indentation'>
+<li><a href='#Trucking-GraphScenario-GuidedMode-WheelInspectionOrder'>Guided Mode - Wheel Inspection Order</a></li>
+</ul>
+</li>
+<li><a href='#Trucking-GraphScenario-AdvancedMode'>Advanced Mode</a></li>
+</ul>
+</div><h2 id="Trucking-GraphScenario-TruckingInspectionOverallOrder">Trucking Inspection Overall Order</h2><p>The overall inspection order that was presented in the video inspection from our content expert is recorded in <a data-card-appearance="inline" href="https://varlab-dev.atlassian.net/wiki/spaces/VAR/pages/456851518/Trucking+FRS+-+DLS+Level#Order-of-Inspection-Tasks---Based-on-Live-Inspection-Demo-Reference-Video-from-Way-Freight" rel="nofollow">https://varlab-dev.atlassian.net/wiki/spaces/VAR/pages/456851518/Trucking+FRS+-+DLS+Level#Order-of-Inspection-Tasks---Based-on-Live-Inspection-Demo-Reference-Video-from-Way-Freight</a>. This is not a requirement to follow and we can propose our own inspection order that makes the most sense for the trucking sim. </p><p>The plan is to make guided mode linear, and have the student on rails moving from one inspection/POI to another only progressing if they press the “Next Inspection” button and answer all inspectables at the current POI correctly. However, in advanced mode the student will be the one driving the sim and have the option to select where they want to navigate to, what to inspect, have the option to go back to change answers if they desire, or skip sections entirely.</p><h2 id="Trucking-GraphScenario-GuidedMode">Guided Mode</h2><p>The only proposed section that is complete currently are the wheels. Anything else is yet to even be implemented.</p><ol><li><p>Overall Exterior Condition of the Truck/Trailer</p></li><li><p>DS Steer Tire</p></li><li><p>DS Rear Truck Tires x 2</p></li><li><p>DS Trailer Tires X 2</p></li><li><p>Repeat steps 2-4 for PS wheels</p></li><li><p>TBD</p></li></ol><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/465076227/465272833.png" data-image-src="attachments/465076227/465272833.png" data-height="2700" data-width="3450" data-unresolved-comment-count="0" data-linked-resource-id="465272833" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Graph Scenario-20211214-020350.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="465076227" data-linked-resource-container-version="4" data-media-id="dad8b4e3-ff14-4e8a-9d96-6e55953f4794" data-media-type="file"></span><h3 id="Trucking-GraphScenario-GuidedMode-WheelInspectionOrder">Guided Mode - Wheel Inspection Order</h3><p>The wheel inspection is broken up into five steps/POIs for the student. Each wheel inspection in the overall order of the sim will have the same steps/order depending on which tire is being inspected.</p><ol><li><p>Tire tread is inspected</p><ol><li><p>Debris is also inspected in the same step here only if it is a set of double tires</p></li></ol></li><li><p>Rims and tire side wall are inspected</p></li><li><p>Lug nuts are inspected</p></li><li><p>Tire pressure is inspected</p></li><li><p>Mud flaps for the wheels are inspected only if they are present at that set of wheels</p></li></ol><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/465076227/465272846.png" data-image-src="attachments/465076227/465272846.png" data-height="4020" data-width="2747" data-unresolved-comment-count="0" data-linked-resource-id="465272846" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Wheel Inspection-20211214-020346.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="465076227" data-linked-resource-container-version="4" data-media-id="ca8679e4-1d31-4872-a6ff-fb40e53079d2" data-media-type="file"></span><h2 id="Trucking-GraphScenario-AdvancedMode">Advanced Mode</h2><p>TBD at a later date</p><p />
+                    </div>
+
+                                        <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="attachments" class="pageSectionTitle">Attachments:</h2>
+                        </div>
+
+                        <div class="greybox" align="left">
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/465076227/465272833.png">Graph Scenario-20211214-020350.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/465076227/465272846.png">Wheel Inspection-20211214-020346.png</a> (image/png)
+                                <br/>
+                                                    </div>
+                    </div>
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Jun 11, 2025 14:06</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

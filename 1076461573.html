@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VARLab : Edge Case: Loading Image For Inspectable Door</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="VARLab_44990773.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Learning-Experience_972881951.html">Learning Experience</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="General-Release-DLX_729973721.html">General Release DLX</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="LSM9.01---Public-Health-Inspection_805306369.html">LSM9.01 - Public Health Inspection</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Development-Documentation_1066991653.html">Development Documentation</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Doors-Setup_1070727169.html">Doors Setup</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            VARLab : Edge Case: Loading Image For Inspectable Door
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                            
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> User aa77f</span>, last modified on Apr 18, 2024
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <p>This article will be going over a specific edge case that is found on the fridge and freezer doors. The problem that was encountered was these doors are inspectable however when they are inspected they are open, and the default state of the doors is closed. This creates a problem when the game starts and wants to take photos of the objects that are in the save file the door is no longer in the same position.</p><p /><p>The solution to this was to introduce a “second” door that is turned off and swaps with the original object on load. </p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20240418-150653.png" width="760" loading="lazy" src="attachments/1076461573/1076002836.png?width=760" data-image-src="attachments/1076461573/1076002836.png" data-height="881" data-width="1328" data-unresolved-comment-count="0" data-linked-resource-id="1076002836" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20240418-150653.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1076461573" data-linked-resource-container-version="2" data-media-id="c63ec7fd-28d8-4bea-a11e-844a309af231" data-media-type="file"></span><p>To achieve this a stand alone component was created.</p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20240418-150849.png" width="662" loading="lazy" src="attachments/1076461573/1076133902.png?width=662" data-image-src="attachments/1076461573/1076133902.png" data-height="134" data-width="662" data-unresolved-comment-count="0" data-linked-resource-id="1076133902" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20240418-150849.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1076461573" data-linked-resource-container-version="2" data-media-id="f274521b-829c-4ea3-bfbb-46648f6152f9" data-media-type="file"></span><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20240418-150833.png" width="579" loading="lazy" src="attachments/1076461573/1075806237.png?width=579" data-image-src="attachments/1076461573/1075806237.png" data-height="217" data-width="579" data-unresolved-comment-count="0" data-linked-resource-id="1075806237" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20240418-150833.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1076461573" data-linked-resource-container-version="2" data-media-id="95960742-9684-4651-a675-2697d1932d80" data-media-type="file"></span><p>LOD0 (1) is a duplicate with all the same information in its inspectable component but does <strong>NOT </strong>have the swap component and is positioned in a way that matches the doors “Open” state, the <strong>Original</strong> object will have the swap component on it with the references to the original, and the object to swap to. On load if the DLX needs a picture of the door the objects are swapped, it gets the photo then swaps back. Please look at <strong>Door_Cooler </strong>within the <strong>Walk-In Fridge Exterior</strong> as an example if you need to implement this functionality.</p>
+                    </div>
+
+                                        <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="attachments" class="pageSectionTitle">Attachments:</h2>
+                        </div>
+
+                        <div class="greybox" align="left">
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1076461573/1076199454.png">image-20240418-150650.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1076461573/1076002836.png">image-20240418-150653.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1076461573/1075806237.png">image-20240418-150833.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1076461573/1076133902.png">image-20240418-150849.png</a> (image/png)
+                                <br/>
+                                                    </div>
+                    </div>
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Jun 11, 2025 14:15</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VARLab : General Release Notes (LSM 9.05 Respiratory Therapy 1.0)</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="VARLab_44990773.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Learning-Experience_972881951.html">Learning Experience</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="216629273.html">Digital Learning Experiences (DLX)</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="LSM9.05---Respiratory-Therapy_1328119833.html">LSM9.05 - Respiratory Therapy</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            VARLab : General Release Notes (LSM 9.05 Respiratory Therapy 1.0)
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                            
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> User e88ce</span>, last modified by <span class='editor'> User 17a3a</span> on Apr 09, 2025
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <div class="table-wrap"><table data-table-width="760" data-layout="default" data-local-id="bd4ef9db-7af5-4b30-ade3-6f5864edd281" class="confluenceTable"><tbody><tr><td data-highlight-colour="transparent" class="confluenceTd"><p>DLX development project name </p></td><td data-highlight-colour="transparent" class="confluenceTd"><p>Respiratory Therapy Orientation </p></td></tr><tr><td data-highlight-colour="transparent" class="confluenceTd"><p>DLX Model Course Shell </p></td><td data-highlight-colour="transparent" class="confluenceTd"><p><a class="external-link" href="https://conestoga.desire2learn.com/d2l/home/1408136" rel="nofollow">https://conestoga.desire2learn.com/d2l/home/1408136</a></p><p>Build RT-25W7.4-02APR 2025</p></td></tr><tr><td data-highlight-colour="transparent" class="confluenceTd"><p>General Release date </p></td><td data-highlight-colour="transparent" class="confluenceTd"><p><strong>April 4</strong> 2025 </p></td></tr><tr><td data-highlight-colour="transparent" class="confluenceTd"><p>Notes prepared by </p></td><td data-highlight-colour="transparent" class="confluenceTd"><p>Cam Turner (*with help from Ryan Dooley)</p></td></tr></tbody></table></div><p><strong>Overview </strong></p><p>The Respiratory Therapy Orientation DLX was developed by CVRI (formerly VARLab) at Conestoga College from September 2024 until April 2025. The purpose of the DLX is to help students orient themselves to the location and purpose of all medications and supplies they will need to be familiar with when performing a bronchoscopy procedure. It is meant to be a 1:1 representation of the ideal stocking/locations for everything compared to the College’s real training procedure room.</p><p>The current release includes the Orientation module of the DLX which allows students to interact with and read/listen to descriptions of the items they will need to become familiar with. In the Orientation module, students can navigate the procedure room with the goal of finding and learning about 100% of the items. There is no time limit or optimal path. In future releases, we will include the Biopsy module which will simulate the actual procedure, setup, and post-procedure.</p><p>This DLX does not provide any assessment capabilities, nor return any grades to the LMS. Students can play an infinite number of times to aid their learning.</p><p /><p><strong>DLX Objectives</strong> </p><p>The primary objective of the RT Orientation DLX is to provide students with unlimited access to the Procedure Room, the various medications and supplies that are used in class, and a majority of the equipment for the whole program. Students can use this in a number of ways when access to the real equipment is either heavily scheduled or unavailable (after hours).</p><p /><p><strong>Known Issues </strong></p><p>At the time of General Release (<strong>April 4, 2025</strong>) for Respiratory Therapy Orientation 1.0, the following low-impact issues were known to exist. For each issue, a workaround is provided, to assist users who may encounter these issues when using the DLX.</p><div class="table-wrap"><table data-table-width="760" data-layout="default" data-local-id="66a22ea6-6cb1-422a-8aea-c3aa0c408f21" class="confluenceTable"><tbody><tr><td data-highlight-colour="#e8e8e8" class="confluenceTd"><p><strong>Issue #</strong> </p></td><td data-highlight-colour="#e8e8e8" class="confluenceTd"><p><strong>Description</strong> </p></td><td data-highlight-colour="#e8e8e8" class="confluenceTd"><p><strong>Workaround</strong> or Discussion</p></td></tr><tr><td data-highlight-colour="#fae2d5" class="confluenceTd"><p>RT-486</p></td><td data-highlight-colour="#fae2d5" class="confluenceTd"><p>There is a brief flicker noticed in the Object Viewer window when interacting with a bronch tower item.</p></td><td data-highlight-colour="#fae2d5" class="confluenceTd"><p>Some work was done to improve the Object Viewer flicker experience. This issue is specific to interacting with bronch tower items, the scene is shown briefly in the OV window prior to the explorable loading into it.</p></td></tr><tr><td data-highlight-colour="#fae2d5" class="confluenceTd"><p>RT-504</p></td><td data-highlight-colour="#fae2d5" class="confluenceTd"><p>POI workflow can be disrupted when rapidly entering/exiting the menu </p></td><td data-highlight-colour="#fae2d5" class="confluenceTd"><p>This is an edge case where if the user was to click on the menu button and exit the menu prior to the camera transition finishing a disruption of which POI’s should currently be active occurs. A fix has been suggested on this ticket.</p></td></tr><tr><td data-highlight-colour="#fae2d5" class="confluenceTd"><p>RT-503</p></td><td data-highlight-colour="#fae2d5" class="confluenceTd"><p>The order of items in the Progress Indicator List changes on reload.</p></td><td data-highlight-colour="#fae2d5" class="confluenceTd"><p>Not a bug; however, to provide a more consistent experience, it may be better to have these items remain in the same order in the progress indicator list. We’ll want the order to match the other parts of the DLX as closely as possible. </p></td></tr><tr><td data-highlight-colour="#fae2d5" class="confluenceTd"><p>RT-501</p></td><td data-highlight-colour="#fae2d5" class="confluenceTd"><p>Shadows on OV items can hinder viewing.</p></td><td data-highlight-colour="#fae2d5" class="confluenceTd"><p>When interacting with some items in the OV, depending on the orientation, the lighting/shadows can lead to parts of the object not being entirely visible.</p></td></tr><tr><td data-highlight-colour="#fae2d5" class="confluenceTd"><p>RT-470</p></td><td data-highlight-colour="#fae2d5" class="confluenceTd"><p>Optimize project structure for better loading.</p></td><td data-highlight-colour="#fae2d5" class="confluenceTd"><p>The load times in the DLX are not as fast as they could be. There is a fair amount of clean up that could be done to decrease the file size and potentially aid the slow load times experienced in certain hardware and network speeds.</p></td></tr><tr><td data-highlight-colour="#fae2d5" class="confluenceTd"><p>RT-300</p></td><td data-highlight-colour="#fae2d5" class="confluenceTd"><p>Object Viewer does not rotate proportionally.</p></td><td data-highlight-colour="#fae2d5" class="confluenceTd"><p>When interacting with items in the OV, the movement is applied a little more aggressively to the left. This results in the movement feeling slightly off for some users. During the student play testing, one student did mention they found it hard to reset the object back to its original position, as the movement can be slightly unpredictable. This is potentially something that needs to be resolved at the package level.</p></td></tr><tr><td data-highlight-colour="#fae2d5" class="confluenceTd"><p>RT-510</p></td><td data-highlight-colour="#fae2d5" class="confluenceTd"><p>The camera sensitivity slider can be dragged beyond the minimum possible value.</p></td><td data-highlight-colour="#fae2d5" class="confluenceTd"><p>Dragging the camera sensitivity slider to its lowest value causes it to jump to a slighter higher value. This is because the value it jumps to is the true minimum value that the camera sensitivity can be. This causes no functional issues but should be changed in the future to avoid confusion.</p></td></tr></tbody></table></div><div class="table-wrap"><table data-table-width="760" data-layout="default" data-local-id="485b01d9-ae42-43fe-b09f-0f5da8bdf858" class="confluenceTable"><tbody><tr><td data-highlight-colour="#e3fcef" class="confluenceTd"><p>UNIVERSAL</p></td><td data-highlight-colour="#e3fcef" class="confluenceTd"><p>DLX cannot be played on mobile devices such as tablets or phones. </p></td><td data-highlight-colour="#e3fcef" class="confluenceTd"><p>Use program-recommended hardware to play this DLX. </p></td></tr><tr><td data-highlight-colour="#e3fcef" class="confluenceTd"><p>UNIVERSAL</p></td><td data-highlight-colour="#e3fcef" class="confluenceTd"><p>Saving progress while playing offline is not possible. </p></td><td data-highlight-colour="#e3fcef" class="confluenceTd"><p>Assuming the DLX is loaded and <em>begun</em> while connected to the internet, the user may continue to play and explore offline. However, if the user does not re-establish network connectivity before closing the browser tab, then explorable progress will not be saved.</p></td></tr><tr><td data-highlight-colour="#e3fcef" class="confluenceTd"><p>UNIVERSAL</p></td><td data-highlight-colour="#e3fcef" class="confluenceTd"><p>DLX is not available without login to eConestoga. </p></td><td data-highlight-colour="#e3fcef" class="confluenceTd"><p>There is no workaround for this problem. User controls for eConestoga are managed by Central IT. Please open a ticket to gain access to eConestoga. </p></td></tr></tbody></table></div>
+                    </div>
+
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Jun 11, 2025 14:20</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

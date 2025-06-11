@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VARLab : Knowledge Check Creation Workflow</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="VARLab_44990773.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Learning-Experience_972881951.html">Learning Experience</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="General-Release-DLX_729973721.html">General Release DLX</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="LSM7.07---MP-Circuits_588283905.html">LSM7.07 - MP Circuits</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            VARLab : Knowledge Check Creation Workflow
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                            
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> User 5ebc2</span>, last modified on Mar 04, 2024
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <p>This page will detail the workflow required in creating a new knowledge check for a lab. Specific steps will be outlined and accessible through the list below.</p><p> A quick workflow for developers that understand the structure and workflow already, and primarily want to save time going through the process can be found at the bottom of the table of contents.</p><p /><style type='text/css'>/*<![CDATA[*/
+div.rbtoc1749651163846 {padding: 0px;}
+div.rbtoc1749651163846 ul {list-style: disc;margin-left: 0px;}
+div.rbtoc1749651163846 li {margin-left: 0px;padding-left: 0px;}
+
+/*]]>*/</style><div class='toc-macro rbtoc1749651163846'>
+<ul class='toc-indentation'>
+<li><a href='#KnowledgeCheckCreationWorkflow-CreatingaKnowledgeCheckTaskScriptableObject'>Creating a Knowledge Check Task Scriptable Object</a></li>
+<li><a href='#KnowledgeCheckCreationWorkflow-PopulatingKnowledgeCheckTaskValues'>Populating Knowledge Check Task Values</a>
+<ul class='toc-indentation'>
+<li><a href='#KnowledgeCheckCreationWorkflow-QuestionText'>Question Text</a></li>
+<li><a href='#KnowledgeCheckCreationWorkflow-QuestionAudio'>Question Audio</a></li>
+<li><a href='#KnowledgeCheckCreationWorkflow-IsPrediction'>IsPrediction</a></li>
+</ul>
+</li>
+<li><a href='#KnowledgeCheckCreationWorkflow-PopulatingKnowledgeCheckOptionValues'>Populating Knowledge Check Option Values</a>
+<ul class='toc-indentation'>
+<li><a href='#KnowledgeCheckCreationWorkflow-Image'>Image</a></li>
+<li><a href='#KnowledgeCheckCreationWorkflow-Text'>Text</a></li>
+<li><a href='#KnowledgeCheckCreationWorkflow-FeedbackText'>Feedback Text</a></li>
+<li><a href='#KnowledgeCheckCreationWorkflow-IsCorrectAnswer'>IsCorrectAnswer</a></li>
+</ul>
+</li>
+<li><a href='#KnowledgeCheckCreationWorkflow-PredictionKnowledgeCheckSetup'>Prediction Knowledge Check Setup</a></li>
+<li><a href='#KnowledgeCheckCreationWorkflow-Finalization'>Finalization</a></li>
+<li><a href='#KnowledgeCheckCreationWorkflow-QuickWorkflow'>Quick Workflow</a></li>
+</ul>
+</div><hr/><h2 id="KnowledgeCheckCreationWorkflow-CreatingaKnowledgeCheckTaskScriptableObject">Creating a Knowledge Check Task Scriptable Object</h2><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" width="325" loading="lazy" src="attachments/887029807/887160853.png?width=325" data-image-src="attachments/887029807/887160853.png" data-height="607" data-width="325" data-unresolved-comment-count="0" data-linked-resource-id="887160853" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20231214-183116.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="887029807" data-linked-resource-container-version="2" data-media-id="e15b82a5-0450-4f0a-9a5b-38cdd16bdf1a" data-media-type="file"></span><p>The process of creating a standard knowledge check has been standardized to a point, although there are a few decisions that need to be made throughout that will determine the approach that you should take. </p><p>For now, we will just be creating the base scriptable object. Follow the steps below or use the image below.</p><p /><ol start="1"><li><p>Navigate to \Scriptable Objects\Lab Tasks and enter the folder of the lab that you are creating a knowledge check for.</p></li><li><p>Once you are in the folder for your selected lab, right click and create a new KnowledgeCheckTask under ScriptableObjects → Tasks → KnowledgeCheckTask</p></li><li><p>With this created, it is time to assign the values. Proceed below</p></li></ol><p /><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" width="760" loading="lazy" src="attachments/887029807/887160867.png?width=760" data-image-src="attachments/887029807/887160867.png" data-height="706" data-width="848" data-unresolved-comment-count="0" data-linked-resource-id="887160867" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20231214-193008.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="887029807" data-linked-resource-container-version="2" data-media-id="94f8ff66-ece7-4e38-a3ed-b3b97c16ef97" data-media-type="file"></span><hr/><h2 id="KnowledgeCheckCreationWorkflow-PopulatingKnowledgeCheckTaskValues">Populating Knowledge Check Task Values</h2><p /><p>Every standard knowledge check consists of:</p><ul><li><p>A Question, (text and audio)</p></li><li><p>Feedback (text and audio)</p></li><li><p>Options (We will get into this later)</p></li></ul><p /><p>For this example, I will be using the Lab 1 knowledge check.</p><h3 id="KnowledgeCheckCreationWorkflow-QuestionText"><strong>Question Text</strong></h3><p>To find any text related to knowledge checks (and all other text within the Sim), refer to the MPC Script on Sharepoint under the “Voiceover and Script” folder. </p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" width="760" loading="lazy" src="attachments/887029807/887357492.png?width=760" data-image-src="attachments/887029807/887357492.png" data-height="24" data-width="1396" data-unresolved-comment-count="0" data-linked-resource-id="887357492" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20231214-190755.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="887029807" data-linked-resource-container-version="2" data-media-id="3b7b1ad1-ca9b-430c-9737-3b975160ddd1" data-media-type="file"></span><p>Once you find the associated Question text, copy and paste it into the Question Text field in the scriptable object that you created.</p><span class="confluence-embedded-file-wrapper image-left-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-left" width="320" loading="lazy" src="attachments/887029807/887455802.png?width=320" data-image-src="attachments/887029807/887455802.png" data-height="78" data-width="320" data-unresolved-comment-count="0" data-linked-resource-id="887455802" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20231214-190832.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="887029807" data-linked-resource-container-version="2" data-media-id="36e9fdef-53c1-4f93-8b39-6d75ec6fca89" data-media-type="file"></span><h3 id="KnowledgeCheckCreationWorkflow-QuestionAudio"><strong>Question Audio</strong></h3><p>To find any audio related to knowledge checks (and all other audio within the Sim), refer to the Voice Clips folder on Sharepoint within the “Voiceover and Script” folder. Once you find the associated Question audio, download it and import it into Unity,</p><span class="confluence-embedded-file-wrapper image-left-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-left" width="174" loading="lazy" src="attachments/887029807/887128118.png?width=174" data-image-src="attachments/887029807/887128118.png" data-height="44" data-width="174" data-unresolved-comment-count="0" data-linked-resource-id="887128118" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20231214-191317.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="887029807" data-linked-resource-container-version="2" data-media-id="452192b2-22e6-4a77-af4c-426dafd24f55" data-media-type="file"></span><p>Create a new Audio Segment (\ScriptableObjects\AudioSegment) and add the audio clip to the Audio Clips list in the segment. Assign the completed Audio Segment in the task scriptable object that you created.</p><span class="confluence-embedded-file-wrapper image-left-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-left" width="318" loading="lazy" src="attachments/887029807/887095359.png?width=318" data-image-src="attachments/887029807/887095359.png" data-height="141" data-width="318" data-unresolved-comment-count="0" data-linked-resource-id="887095359" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20231214-191355.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="887029807" data-linked-resource-container-version="2" data-media-id="2055b89e-e99c-4273-8c82-5538fb58337c" data-media-type="file"></span><p>This process is the same for both the correct and incorrect feedback.</p><h3 id="KnowledgeCheckCreationWorkflow-IsPrediction"><strong>IsPrediction</strong></h3><p>This value determines whether or not this knowledge check is a prediction knowledge check. In a standard scenario, it will stay unchecked. Knowledge checks with a prediction will be covered elsewhere on this page.</p><p /><p>With the basics done, next I will cover creating and assigning Knowledge Check Options</p><hr/><h2 id="KnowledgeCheckCreationWorkflow-PopulatingKnowledgeCheckOptionValues">Populating Knowledge Check Option Values</h2><p /><p>Every Knowledge Check Option consists of:</p><ul><li><p>An Image</p></li><li><p>Text that accompanies the image</p></li><li><p>Feedback text that appears in the feedback panel (where applicable)</p></li><li><p>Checkbox for if the option is the correct answer (where applicable)</p></li></ul><p /><p>As of now, the maximum amount of options in a knowledge check is 4. Clicking on any of them will enable a designated outline (either green, or red) depending on whether the answer is correct, or incorrect respectively. A new option can be created by clicking the + icon on the options list</p><span class="confluence-embedded-file-wrapper image-left-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-left" width="314" loading="lazy" src="attachments/887029807/887193666.png?width=314" data-image-src="attachments/887029807/887193666.png" data-height="125" data-width="314" data-unresolved-comment-count="0" data-linked-resource-id="887193666" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20231214-193237.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="887029807" data-linked-resource-container-version="2" data-media-id="0b29d2ec-22a2-432f-b083-b55dc2efafff" data-media-type="file"></span><h3 id="KnowledgeCheckCreationWorkflow-Image"><strong>Image</strong></h3><p>Images for the knowledge checks can be found on Sharepoint under Assets\2D\MPC-KC Images, however, most images you would need will likely already be in the project under Images\KnowledgeCheckImages</p><span class="confluence-embedded-file-wrapper image-left-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-left" width="551" loading="lazy" src="attachments/887029807/887226403.png?width=551" data-image-src="attachments/887029807/887226403.png" data-height="99" data-width="551" data-unresolved-comment-count="0" data-linked-resource-id="887226403" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20231214-194249.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="887029807" data-linked-resource-container-version="2" data-media-id="9cf627b4-9e6b-4c1e-84d6-c787b9ee93cc" data-media-type="file"></span><p>To decide what image to use, refer to <a href="https://varlab-dev.atlassian.net/wiki/spaces/VAR/pages/754122753/Labs+6-10+Lab+Procedures" data-linked-resource-id="754122753" data-linked-resource-version="11" data-linked-resource-type="page">Labs 6-10 Lab Procedures</a> and find the knowledge check step in the table related to the lab you are working on. The text associated with the option is most often very similar to the name of the image file that it is describing.</p><span class="confluence-embedded-file-wrapper image-left-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-left" width="183" loading="lazy" src="attachments/887029807/886997048.png?width=183" data-image-src="attachments/887029807/886997048.png" data-height="73" data-width="183" data-unresolved-comment-count="0" data-linked-resource-id="886997048" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20231214-195144.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="887029807" data-linked-resource-container-version="2" data-media-id="8a2bcd7e-abb4-4e4a-82d1-e149107a4346" data-media-type="file"></span><p>Once you have found the image, assign it to the Image field in the option you created in the Knowledge Check Task.</p><h3 id="KnowledgeCheckCreationWorkflow-Text"><strong>Text</strong></h3><p>To find the text for an option , refer to <a href="https://varlab-dev.atlassian.net/wiki/spaces/VAR/pages/754122753/Labs+6-10+Lab+Procedures" data-linked-resource-id="754122753" data-linked-resource-version="11" data-linked-resource-type="page">Labs 6-10 Lab Procedures</a> and find the knowledge check step in the table related to the lab you are working on. Copy and paste the option text into the Text field for the option.</p><p>For example:</p><span class="confluence-embedded-file-wrapper image-left-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-left" width="226" loading="lazy" src="attachments/887029807/886964295.png?width=226" data-image-src="attachments/887029807/886964295.png" data-height="54" data-width="226" data-unresolved-comment-count="0" data-linked-resource-id="886964295" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20231214-201106.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="887029807" data-linked-resource-container-version="2" data-media-id="e8b415da-af35-4b75-a64f-e46f89549448" data-media-type="file"></span><span class="confluence-embedded-file-wrapper image-left-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-left" width="318" loading="lazy" src="attachments/887029807/887160879.png?width=318" data-image-src="attachments/887029807/887160879.png" data-height="124" data-width="318" data-unresolved-comment-count="0" data-linked-resource-id="887160879" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20231214-201241.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="887029807" data-linked-resource-container-version="2" data-media-id="5045b613-b498-44ac-b897-258bd0087c27" data-media-type="file"></span><p>Repeat this process for each option in the Knowledge check. This same process can be applied to </p><h3 id="KnowledgeCheckCreationWorkflow-FeedbackText"><strong>Feedback Text</strong></h3><p>Follow the procedure outlined above except using the feedback text for either correct or incorrect.</p><h3 id="KnowledgeCheckCreationWorkflow-IsCorrectAnswer"><strong>IsCorrectAnswer</strong></h3><p>Use to mark which option(s) are correct. If the knowledge check is a prediction, this value is used to determine the type</p><hr/><h2 id="KnowledgeCheckCreationWorkflow-PredictionKnowledgeCheckSetup">Prediction Knowledge Check Setup</h2><p /><p>If you are creating a Prediction knowledge check, first you will need to create a complete KnowledgeCheckTask.</p><span class="confluence-embedded-file-wrapper image-left-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-left" width="320" loading="lazy" src="attachments/887029807/887193687.png?width=320" data-image-src="attachments/887029807/887193687.png" data-height="162" data-width="320" data-unresolved-comment-count="0" data-linked-resource-id="887193687" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20231214-204955.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="887029807" data-linked-resource-container-version="2" data-media-id="d2be9e29-5ac4-4860-9559-489ec6dc990e" data-media-type="file"></span><p>Then, set IsPrediction to true and create a new KnowledgeCheckPredictionFeedbackTask under ScriptableObjects → Tasks → KnowledgeCheckPredictionFeedbackTask. Assign your chosen knowledge check in the Chosen Task field.</p><span class="confluence-embedded-file-wrapper image-left-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-left" width="321" loading="lazy" src="attachments/887029807/887291971.png?width=321" data-image-src="attachments/887029807/887291971.png" data-height="110" data-width="321" data-unresolved-comment-count="0" data-linked-resource-id="887291971" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20231214-205110.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="887029807" data-linked-resource-container-version="2" data-media-id="0348ecdc-94cd-4950-9d50-24562ac5399c" data-media-type="file"></span><p>For context, when you select an option during a knowledge check in the simulation, all of its values are assigned to the selected option fields in the KnowledgeCheckTask scriptable object. Then, when you reach a knowledge check prediction feedback task, it checks the values of the selected option in the chosen task assigned to populate the feedback panel.</p><span class="confluence-embedded-file-wrapper image-left-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-left" width="718" loading="lazy" src="attachments/887029807/886997071.png?width=718" data-image-src="attachments/887029807/886997071.png" data-height="187" data-width="718" data-unresolved-comment-count="0" data-linked-resource-id="886997071" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20231214-212014.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="887029807" data-linked-resource-container-version="2" data-media-id="9792cb2a-0484-4002-b4fa-9409f29ad8f6" data-media-type="file"></span><h2 id="KnowledgeCheckCreationWorkflow-Finalization">Finalization</h2><p>When all is said and done, assign your completed tasks into their correct positions within the associated lab container (when possible)</p><h2 id="KnowledgeCheckCreationWorkflow-QuickWorkflow">Quick Workflow</h2><ol start="1"><li><p>Create KnowledgeCheckTask</p></li><li><p>Assign Question + Feedback text and audio </p></li><li><p>Create and assign option values  <a href="https://varlab-dev.atlassian.net/wiki/spaces/VAR/pages/754122753/Labs+6-10+Lab+Procedures" data-linked-resource-id="754122753" data-linked-resource-version="11" data-linked-resource-type="page">Labs 6-10 Lab Procedures</a> </p></li><li><p>If its a prediction knowledge check, create KnowledgeCheckPredictionFeedbackTask and assign it to your created knowledge check</p></li><li><p>Set IsPrediction to true in your knowledge check task scriptable object</p></li></ol><p />
+                    </div>
+
+                                        <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="attachments" class="pageSectionTitle">Attachments:</h2>
+                        </div>
+
+                        <div class="greybox" align="left">
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/887029807/887160853.png">image-20231214-183116.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/887029807/887357492.png">image-20231214-190755.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/887029807/887455802.png">image-20231214-190832.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/887029807/887128118.png">image-20231214-191317.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/887029807/887095359.png">image-20231214-191355.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/887029807/887160867.png">image-20231214-193008.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/887029807/887193666.png">image-20231214-193237.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/887029807/887226403.png">image-20231214-194249.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/887029807/886997048.png">image-20231214-195144.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/887029807/887291955.png">image-20231214-200958.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/887029807/886964295.png">image-20231214-201106.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/887029807/887095373.png">image-20231214-201206.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/887029807/887160879.png">image-20231214-201241.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/887029807/887193687.png">image-20231214-204955.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/887029807/887291971.png">image-20231214-205110.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/887029807/887357534.png">image-20231214-211531.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/887029807/887390282.png">image-20231214-211609.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/887029807/886997071.png">image-20231214-212014.png</a> (image/png)
+                                <br/>
+                                                    </div>
+                    </div>
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Jun 11, 2025 14:12</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

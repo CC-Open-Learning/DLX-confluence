@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VARLab : TE UI Creation from Figma Documentation</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="VARLab_44990773.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Learning-Experience_972881951.html">Learning Experience</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="216629273.html">Digital Learning Experiences (DLX)</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="706347009.html">LSM8.02 - Conestoga Trades: Electrician Simulator</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Development-Documentations_1066237953.html">Development Documentations</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="User-Interfaces_1531150391.html">User Interfaces</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            VARLab : TE UI Creation from Figma Documentation
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                            
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> User 1c73e</span> on May 23, 2024
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <p>This document will outline the steps needed to create UI components within Unity as specified in the Figma documentation below:</p><div class="confluence-information-macro confluence-information-macro-information"><span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"></span><div class="confluence-information-macro-body"><p><a class="external-link" data-card-appearance="inline" href="https://www.figma.com/design/bjRTVV086WFMxQmPz1MbUQ/Trades-Electrical?node-id=664-692" rel="nofollow">https://www.figma.com/design/bjRTVV086WFMxQmPz1MbUQ/Trades-Electrical?node-id=664-692</a>  </p></div></div><ol start="1"><li><p>Find the UI component within the Figma document you wish to add to the Unity project.  For this example, we will add the Confirmation message in the Measurement section. On the right side, the Properties panel contains the details of the component. This will be used to recreate the container within Unity:</p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="2024-05-23_08h55_32.png" width="736" loading="lazy" src="attachments/1127645218/1132724229.png?width=736" data-image-src="attachments/1127645218/1132724229.png" data-height="960" data-width="1920" data-unresolved-comment-count="0" data-linked-resource-id="1132724229" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="2024-05-23_08h55_32.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1127645218" data-linked-resource-container-version="1" data-media-id="410927ad-71e6-4b75-9972-09f34a5394e6" data-media-type="file"></span></li><li><p>To export individual components, such as the info icon, select <strong>Export </strong>in the top right corner after highlighting the desired component.  Click the 1x dropdown and change to 2x for larger and 4x for smaller components (this can be scaled down as needed within Unity).  Export as PNG :</p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="2024-05-23_09h04_53.png" width="736" loading="lazy" src="attachments/1127645218/1133150209.png?width=736" data-image-src="attachments/1127645218/1133150209.png" data-height="960" data-width="1920" data-unresolved-comment-count="0" data-linked-resource-id="1133150209" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="2024-05-23_09h04_53.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1127645218" data-linked-resource-container-version="1" data-media-id="0280b9f1-a820-48c2-b84a-e20317e2ee94" data-media-type="file"></span></li><li><p>  Drag the .png file you exported into Assets/Art/Sprites/UI/Icons. Change the <strong>Texture Type </strong>to Sprite (2D/UI).  Change the max size to 64.  Save.</p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="2024-05-23_09h07_26.png" width="736" loading="lazy" src="attachments/1127645218/1133117442.png?width=736" data-image-src="attachments/1127645218/1133117442.png" data-height="1050" data-width="1920" data-unresolved-comment-count="0" data-linked-resource-id="1133117442" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="2024-05-23_09h07_26.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1127645218" data-linked-resource-container-version="1" data-media-id="36e7f30c-d819-44bb-acda-7de8f2b58aa8" data-media-type="file"></span><p /></li><li><p> For each new UXML template needed, create a folder within UI Toolkit name appropriately:</p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="2024-05-23_09h25_35.png" width="736" loading="lazy" src="attachments/1127645218/1132888079.png?width=736" data-image-src="attachments/1127645218/1132888079.png" data-height="303" data-width="1920" data-unresolved-comment-count="0" data-linked-resource-id="1132888079" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="2024-05-23_09h25_35.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1127645218" data-linked-resource-container-version="1" data-media-id="39142066-f9e7-48ba-bb59-ebf357d84ef2" data-media-type="file"></span><p /></li><li><p>Within the folder, right-click and navigate to Create &gt; UI Toolkit &gt; Editor window:</p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="2024-05-23_09h29_04.png" width="736" loading="lazy" src="attachments/1127645218/1133019150.png?width=736" data-image-src="attachments/1127645218/1133019150.png" data-height="1050" data-width="1920" data-unresolved-comment-count="0" data-linked-resource-id="1133019150" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="2024-05-23_09h29_04.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1127645218" data-linked-resource-container-version="1" data-media-id="4f6830a0-2cb4-431b-a4cd-54ee0fb9cf9e" data-media-type="file"></span><p /></li><li><p>You will be prompted with the following: </p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="2024-05-23_09h55_05.png" width="300" loading="lazy" src="attachments/1127645218/1133412356.png?width=300" data-image-src="attachments/1127645218/1133412356.png" data-height="177" data-width="300" data-unresolved-comment-count="0" data-linked-resource-id="1133412356" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="2024-05-23_09h55_05.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1127645218" data-linked-resource-container-version="1" data-media-id="125da75b-e9f0-44e9-924f-e2d6bf9443b9" data-media-type="file"></span><p>Uncheck USS (unless ticket explicitly asks for one).  Name the UXML file appropriately, and name the C# the same with the suffix Controller </p></li><li><p>Move the .cs file to Assets/Scripts/UI</p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="2024-05-23_09h56_58.png" width="736" loading="lazy" src="attachments/1127645218/1133412363.png?width=736" data-image-src="attachments/1127645218/1133412363.png" data-height="303" data-width="1920" data-unresolved-comment-count="0" data-linked-resource-id="1133412363" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="2024-05-23_09h56_58.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1127645218" data-linked-resource-container-version="1" data-media-id="153a7cf5-c3e8-4fa1-af40-039ec2c1da3d" data-media-type="file"></span></li><li><p>Go back to your new folder and open the new UXML template. </p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="2024-05-23_09h19_41.png" width="736" loading="lazy" src="attachments/1127645218/1133215764.png?width=736" data-image-src="attachments/1127645218/1133215764.png" data-height="871" data-width="1433" data-unresolved-comment-count="0" data-linked-resource-id="1133215764" data-linked-resource-version="4" data-linked-resource-type="attachment" data-linked-resource-default-alias="2024-05-23_09h19_41.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1127645218" data-linked-resource-container-version="1" data-media-id="e4d0ef43-1d8e-4871-8f3c-f3606d091a30" data-media-type="file"></span><p /></li><li><p>Start with a <strong>Visual Element</strong> that will contain all the individual components. This element positioning will always be <strong>Absolute</strong> while containing elements will be relative: </p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="2024-05-23_10h01_31.png" width="736" loading="lazy" src="attachments/1127645218/1132658696.png?width=736" data-image-src="attachments/1127645218/1132658696.png" data-height="872" data-width="1435" data-unresolved-comment-count="0" data-linked-resource-id="1132658696" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="2024-05-23_10h01_31.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1127645218" data-linked-resource-container-version="1" data-media-id="aac5022e-247c-4a42-9787-6a2e46f6954b" data-media-type="file"></span><p /></li><li><p> Refer back to the <strong>Properties </strong>section of the Figma documentation to configure the components.  The font style and colours will always be 1-1, but the other settings may need adjusting:</p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="2024-05-23_09h19_41.png" width="736" loading="lazy" src="attachments/1127645218/1133215764.png?width=736" data-image-src="attachments/1127645218/1133215764.png" data-height="871" data-width="1433" data-unresolved-comment-count="0" data-linked-resource-id="1133215764" data-linked-resource-version="4" data-linked-resource-type="attachment" data-linked-resource-default-alias="2024-05-23_09h19_41.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1127645218" data-linked-resource-container-version="1" data-media-id="e4d0ef43-1d8e-4871-8f3c-f3606d091a30" data-media-type="file"></span><p>  </p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="2024-05-23_09h20_26.png" width="736" loading="lazy" src="attachments/1127645218/1133445148.png?width=736" data-image-src="attachments/1127645218/1133445148.png" data-height="871" data-width="1433" data-unresolved-comment-count="0" data-linked-resource-id="1133445148" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="2024-05-23_09h20_26.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1127645218" data-linked-resource-container-version="1" data-media-id="10ba977b-74a4-4982-9854-f42b0bd2d65b" data-media-type="file"></span><p>  </p></li><li><p>To add the icon, drag the icon from Assets/Art/Sprites/UI/Icons into the background slot of the desired <strong>Visual Element</strong></p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="2024-05-23_09h20_12.png" width="736" loading="lazy" src="attachments/1127645218/1132789787.png?width=736" data-image-src="attachments/1127645218/1132789787.png" data-height="871" data-width="1433" data-unresolved-comment-count="0" data-linked-resource-id="1132789787" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="2024-05-23_09h20_12.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1127645218" data-linked-resource-container-version="1" data-media-id="979e00de-dd2f-425e-9c89-d875571742f7" data-media-type="file"></span><p> </p></li></ol><p />
+                    </div>
+
+                                        <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="attachments" class="pageSectionTitle">Attachments:</h2>
+                        </div>
+
+                        <div class="greybox" align="left">
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1127645218/1132724229.png">2024-05-23_08h55_32.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1127645218/1133019137.png">2024-05-23_08h57_24.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1127645218/1133150209.png">2024-05-23_09h04_53.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1127645218/1133117442.png">2024-05-23_09h07_26.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1127645218/1132888079.png">2024-05-23_09h25_35.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1127645218/1133019150.png">2024-05-23_09h29_04.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1127645218/1133412356.png">2024-05-23_09h55_05.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1127645218/1133412363.png">2024-05-23_09h56_58.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1127645218/1133346824.png">2024-05-23_09h19_41.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1127645218/1132658696.png">2024-05-23_10h01_31.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1127645218/1133608961.png">2024-05-23_09h19_41.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1127645218/1133445148.png">2024-05-23_09h20_26.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1127645218/1133412369.png">2024-05-23_09h19_41.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1127645218/1133215764.png">2024-05-23_09h19_41.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1127645218/1132789787.png">2024-05-23_09h20_12.png</a> (image/png)
+                                <br/>
+                                                    </div>
+                    </div>
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Jun 11, 2025 14:17</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

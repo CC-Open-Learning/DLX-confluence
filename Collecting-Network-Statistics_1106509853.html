@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VARLab : Collecting Network Statistics</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="VARLab_44990773.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Learning-Experience_972881951.html">Learning Experience</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="216629273.html">Digital Learning Experiences (DLX)</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="XTP7.02---Climate-Change_548929547.html">XTP7.02 - Climate Change</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="1100578817.html">Climate Change V3_Network Testing (Web)</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            VARLab : Collecting Network Statistics
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                            
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> User 02cce</span>, last modified by <span class='editor'> User 9086e</span> on May 09, 2024
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <style type='text/css'>/*<![CDATA[*/
+div.rbtoc1749651780760 {padding: 0px;}
+div.rbtoc1749651780760 ul {list-style: none;margin-left: 0px;}
+div.rbtoc1749651780760 li {margin-left: 0px;padding-left: 0px;}
+
+/*]]>*/</style><div class='toc-macro rbtoc1749651780760'>
+<ul class='toc-indentation'>
+<li><a href='#CollectingNetworkStatistics-Setup'>Setup</a></li>
+<li><a href='#CollectingNetworkStatistics-BeforeTesting'>Before Testing</a></li>
+<li><a href='#CollectingNetworkStatistics-DuringTesting'>During Testing</a></li>
+<li><a href='#CollectingNetworkStatistics-AfterTesting'>After Testing</a></li>
+<li><a href='#CollectingNetworkStatistics-Outcomes'>Outcomes</a></li>
+</ul>
+</div><div class="panel" style="background-color: #EAE6FF;border-color: #998DD9;border-width: 1px;"><div class="panelContent" style="background-color: #EAE6FF;">
+<p><strong>Participants (Please add your names, if you are testing for Baseline Network Systems)</strong></p><ul><li><p>Ali Noureddine; </p></li><li><p>Brittany Rogers; </p></li><li><p>Mostafa Elbasiouny; </p></li><li><p>Bowen Sittler;</p></li></ul>
+</div></div><h1 id="CollectingNetworkStatistics-Setup">Setup</h1><p>Testers can open a command terminal by typing <em>powershell </em>in the Windows Start Bar and running the Windows Powershell application:</p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20240509-153050.png" width="760" loading="lazy" src="attachments/1106509853/1107099651.png?width=760" data-image-src="attachments/1106509853/1107099651.png" data-height="761" data-width="1283" data-unresolved-comment-count="0" data-linked-resource-id="1107099651" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20240509-153050.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1106509853" data-linked-resource-container-version="6" data-media-id="18c6573d-c0ef-4549-9d40-a91e5bea5adc" data-media-type="file"></span><h1 id="CollectingNetworkStatistics-BeforeTesting">Before Testing</h1><p>Set a starting network traffic value with the command:</p><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">$startBytes = Get-NetAdapterStatistics -Name “Wi-Fi” | Select ReceivedBytes -ExpandProperty ReceivedBytes
+$startTime = Get-Date -UFormat %s</pre>
+</div></div><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20240509-155006.png" width="613" loading="lazy" src="attachments/1106509853/1106411529.png?width=613" data-image-src="attachments/1106509853/1106411529.png" data-height="25" data-width="613" data-unresolved-comment-count="0" data-linked-resource-id="1106411529" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20240509-155006.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1106509853" data-linked-resource-container-version="6" data-media-id="aca16d9f-6b27-4171-99cb-13d3ac2033ec" data-media-type="file"></span><h1 id="CollectingNetworkStatistics-DuringTesting">During Testing</h1><p>Record latency in the connection to eConestoga with </p><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">ping conestoga.desire2learn.com</pre>
+</div></div><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20240509-153312.png" width="444" loading="lazy" src="attachments/1106509853/1106575363.png?width=444" data-image-src="attachments/1106509853/1106575363.png" data-height="153" data-width="444" data-unresolved-comment-count="0" data-linked-resource-id="1106575363" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20240509-153312.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1106509853" data-linked-resource-container-version="6" data-media-id="40549dad-b5fc-4eef-8a06-67d05b4ed975" data-media-type="file"></span><h1 id="CollectingNetworkStatistics-AfterTesting">After Testing</h1><p>Record final network volume with the command:</p><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">$endBytes = Get-NetAdapterStatistics -Name “Wi-Fi” | Select ReceivedBytes -ExpandProperty ReceivedBytes
+$endTime = Get-Date -UFormat %s
+echo (($endBytes - $startBytes)/($endTime - $startTime))</pre>
+</div></div><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20240509-154905.png" width="623" loading="lazy" src="attachments/1106509853/1106346002.png?width=623" data-image-src="attachments/1106509853/1106346002.png" data-height="49" data-width="623" data-unresolved-comment-count="0" data-linked-resource-id="1106346002" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20240509-154905.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1106509853" data-linked-resource-container-version="6" data-media-id="d763f7bf-d41f-4134-9a4c-1667ecbef70d" data-media-type="file"></span><h1 id="CollectingNetworkStatistics-Outcomes">Outcomes</h1><p>Please post your ping and echo outputs in the table below:</p><div class="table-wrap"><table data-table-width="760" data-layout="default" data-local-id="b8c0a97c-cca8-40f3-b41d-281ba27439e2" class="confluenceTable"><tbody><tr><th class="confluenceTh"><p><strong>Ping Output</strong></p></th><th class="confluenceTh"><p><strong>Received Bandwidth</strong></p></th><th class="confluenceTh"><p /></th></tr><tr><td class="confluenceTd"><p>Ping statistics for 15.157.151.237:<br/>    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),<br/>Approximate round trip times in milli-seconds:<br/>    Minimum = 13ms, Maximum = 13ms, Average = 13ms</p></td><td class="confluenceTd"><p>0</p></td><td class="confluenceTd"><p /></td></tr><tr><td class="confluenceTd"><p>Ping statistics for 15.157.151.237:<br/>    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),<br/>Approximate round trip times in milli-seconds:<br/>    Minimum = 105ms, Maximum = 130ms, Average = 114ms</p></td><td class="confluenceTd"><p>1532.10599421773</p></td><td class="confluenceTd"><p /></td></tr><tr><td class="confluenceTd"><p>Ping statistics for 15.157.151.237:<br/>    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),<br/>Approximate round trip times in milli-seconds:<br/>    Minimum = 16ms, Maximum = 24ms, Average = 18ms</p></td><td class="confluenceTd"><p>0.297979033018539</p></td><td class="confluenceTd"><p /></td></tr></tbody></table></div><p />
+                    </div>
+
+                                        <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="attachments" class="pageSectionTitle">Attachments:</h2>
+                        </div>
+
+                        <div class="greybox" align="left">
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1106509853/1107099651.png">image-20240509-153050.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1106509853/1106575363.png">image-20240509-153312.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1106509853/1106346002.png">image-20240509-154905.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1106509853/1106411529.png">image-20240509-155006.png</a> (image/png)
+                                <br/>
+                                                    </div>
+                    </div>
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Jun 11, 2025 14:22</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

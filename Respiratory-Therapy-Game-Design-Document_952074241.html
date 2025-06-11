@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VARLab : Respiratory Therapy Game Design Document</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="VARLab_44990773.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Learning-Experience_972881951.html">Learning Experience</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="216629273.html">Digital Learning Experiences (DLX)</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="LSM9.05---Respiratory-Therapy_1328119833.html">LSM9.05 - Respiratory Therapy</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="PRE-FLIGHT---Respiratory-Therapy_950108161.html">PRE-FLIGHT - Respiratory Therapy</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            VARLab : Respiratory Therapy Game Design Document
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                            
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> Colm Ambler (Unlicensed)</span>, last modified by <span class='editor'> Corey Berry</span> on Jul 29, 2024
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <p><style>[data-colorid=gapy0z7ggz]{color:#ff5630} html[data-color-mode=dark] [data-colorid=gapy0z7ggz]{color:#cf2600}[data-colorid=lmml32nwjr]{color:#ff5630} html[data-color-mode=dark] [data-colorid=lmml32nwjr]{color:#cf2600}[data-colorid=q1zfe6qpnu]{color:#ff5630} html[data-color-mode=dark] [data-colorid=q1zfe6qpnu]{color:#cf2600}[data-colorid=xrnopjt3qa]{color:#ff5630} html[data-color-mode=dark] [data-colorid=xrnopjt3qa]{color:#cf2600}[data-colorid=aa3wd4yqtl]{color:#ff5630} html[data-color-mode=dark] [data-colorid=aa3wd4yqtl]{color:#cf2600}[data-colorid=sisokfvmzr]{color:#ff5630} html[data-color-mode=dark] [data-colorid=sisokfvmzr]{color:#cf2600}[data-colorid=hufkcbiilh]{color:#ff5630} html[data-color-mode=dark] [data-colorid=hufkcbiilh]{color:#cf2600}[data-colorid=m7dfss97uh]{color:#ff5630} html[data-color-mode=dark] [data-colorid=m7dfss97uh]{color:#cf2600}</style>DRAFT- PLEASE NOTE THAT THIS GDD WAS ROUGH WORK of our game designer and is for ideas/reference ONLY. This is not the design of this project. </p><h1 id="RespiratoryTherapyGameDesignDocument-RespiratoryTherapy(workingtitle)"><strong>Respiratory Therapy (working title)</strong></h1><p /><p>All work Copyright (c)[Date] by VARLab</p><p>Written by Colm Ambler</p><p>Version #0.9</p><p>March 28, 2024</p><p /><p /><p /><style type="text/css">/*<![CDATA[*/
+div.rbtoc1749651634824 {padding: 0px;}
+div.rbtoc1749651634824 ul {list-style: disc;margin-left: 0px;}
+div.rbtoc1749651634824 li {margin-left: 0px;padding-left: 0px;}
+
+/*]]>*/</style><div class="toc-macro rbtoc1749651634824">
+<ul class="toc-indentation">
+<li><span class="TOCOutline">1</span> <a href="#RespiratoryTherapyGameDesignDocument-RespiratoryTherapy(workingtitle)">Respiratory Therapy (working title)</a>
+<ul class="toc-indentation">
+<li><span class="TOCOutline">1.1</span> <a href="#RespiratoryTherapyGameDesignDocument-WhatisaGameDesignDocument(GDD)?">What is a Game Design Document (GDD)?</a></li>
+<li><span class="TOCOutline">1.2</span> <a href="#RespiratoryTherapyGameDesignDocument-ChangeLog">Change Log</a>
+<ul class="toc-indentation">
+<li><span class="TOCOutline">1.2.1</span> <a href="#RespiratoryTherapyGameDesignDocument-Version0.1">Version 0.1</a></li>
+</ul>
+</li>
+<li><span class="TOCOutline">1.3</span> <a href="#RespiratoryTherapyGameDesignDocument-DLXOverview">DLX Overview</a>
+<ul class="toc-indentation">
+<li><span class="TOCOutline">1.3.1</span> <a href="#RespiratoryTherapyGameDesignDocument-WhatistheDLX?">What is the DLX?</a></li>
+<li><span class="TOCOutline">1.3.2</span> <a href="#RespiratoryTherapyGameDesignDocument-Audience">Audience</a></li>
+<li><span class="TOCOutline">1.3.3</span> <a href="#RespiratoryTherapyGameDesignDocument-LearningObjectives">Learning Objectives</a></li>
+<li><span class="TOCOutline">1.3.4</span> <a href="#RespiratoryTherapyGameDesignDocument-Setting">Setting</a></li>
+<li><span class="TOCOutline">1.3.5</span> <a href="#RespiratoryTherapyGameDesignDocument-Tone">Tone</a></li>
+<li><span class="TOCOutline">1.3.6</span> <a href="#RespiratoryTherapyGameDesignDocument-Genre">Genre</a></li>
+</ul>
+</li>
+<li><span class="TOCOutline">1.4</span> <a href="#RespiratoryTherapyGameDesignDocument-Features">Features</a>
+<ul class="toc-indentation">
+<li><span class="TOCOutline">1.4.1</span> <a href="#RespiratoryTherapyGameDesignDocument-GeneralFeatures">General Features</a></li>
+<li><span class="TOCOutline">1.4.2</span> <a href="#RespiratoryTherapyGameDesignDocument-MultiplayerFeatures">Multiplayer Features</a></li>
+<li><span class="TOCOutline">1.4.3</span> <a href="#RespiratoryTherapyGameDesignDocument-AccessibilityFeatures">Accessibility Features</a></li>
+</ul>
+</li>
+<li><span class="TOCOutline">1.5</span> <a href="#RespiratoryTherapyGameDesignDocument-Gameplay">Gameplay</a>
+<ul class="toc-indentation">
+<li><span class="TOCOutline">1.5.1</span> <a href="#RespiratoryTherapyGameDesignDocument-PrimaryObjective">Primary Objective</a></li>
+<li><span class="TOCOutline">1.5.2</span> <a href="#RespiratoryTherapyGameDesignDocument-SecondaryObjective">Secondary Objective</a></li>
+<li><span class="TOCOutline">1.5.3</span> <a href="#RespiratoryTherapyGameDesignDocument-GameplayProgression">Gameplay Progression</a></li>
+<li><span class="TOCOutline">1.5.4</span> <a href="#RespiratoryTherapyGameDesignDocument-PlayerMovement/Controller">Player Movement/Controller</a></li>
+<li><span class="TOCOutline">1.5.5</span> <a href="#RespiratoryTherapyGameDesignDocument-PlayerAbilities">Player Abilities</a></li>
+<li><span class="TOCOutline">1.5.6</span> <a href="#RespiratoryTherapyGameDesignDocument-ItemManagement">Item Management</a></li>
+<li><span class="TOCOutline">1.5.7</span> <a href="#RespiratoryTherapyGameDesignDocument-Difficulty">Difficulty</a></li>
+</ul>
+</li>
+<li><span class="TOCOutline">1.6</span> <a href="#RespiratoryTherapyGameDesignDocument-GameWorld">Game World</a>
+<ul class="toc-indentation">
+<li><span class="TOCOutline">1.6.1</span> <a href="#RespiratoryTherapyGameDesignDocument-Scale">Scale</a></li>
+<li><span class="TOCOutline">1.6.2</span> <a href="#RespiratoryTherapyGameDesignDocument-Details">Details</a></li>
+<li><span class="TOCOutline">1.6.3</span> <a href="#RespiratoryTherapyGameDesignDocument-KeyLocations">Key Locations</a></li>
+<li><span class="TOCOutline">1.6.4</span> <a href="#RespiratoryTherapyGameDesignDocument-Traveling">Traveling</a></li>
+<li><span class="TOCOutline">1.6.5</span> <a href="#RespiratoryTherapyGameDesignDocument-PlayerCamera">Player Camera</a></li>
+<li><span class="TOCOutline">1.6.6</span> <a href="#RespiratoryTherapyGameDesignDocument-Lighting">Lighting</a></li>
+</ul>
+</li>
+<li><span class="TOCOutline">1.7</span> <a href="#RespiratoryTherapyGameDesignDocument-StoryandNarrative">Story and Narrative</a>
+<ul class="toc-indentation">
+<li><span class="TOCOutline">1.7.1</span> <a href="#RespiratoryTherapyGameDesignDocument-MainPlot">Main Plot</a></li>
+<li><span class="TOCOutline">1.7.2</span> <a href="#RespiratoryTherapyGameDesignDocument-PlotProgression">Plot Progression</a></li>
+<li><span class="TOCOutline">1.7.3</span> <a href="#RespiratoryTherapyGameDesignDocument-Storytelling">Storytelling</a>
+<ul class="toc-indentation">
+<li><span class="TOCOutline">1.7.3.1</span> <a href="#RespiratoryTherapyGameDesignDocument-Cutscenes">Cutscenes</a></li>
+<li><span class="TOCOutline">1.7.3.2</span> <a href="#RespiratoryTherapyGameDesignDocument-Documents">Documents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><span class="TOCOutline">1.8</span> <a href="#RespiratoryTherapyGameDesignDocument-Characters">Characters</a>
+<ul class="toc-indentation">
+<li><span class="TOCOutline">1.8.1</span> <a href="#RespiratoryTherapyGameDesignDocument-PlayerCharacter">Player Character</a></li>
+<li><span class="TOCOutline">1.8.2</span> <a href="#RespiratoryTherapyGameDesignDocument-Non-PlayableCharacters(NPCs)">Non-Playable Characters (NPCs)</a></li>
+</ul>
+</li>
+<li><span class="TOCOutline">1.9</span> <a href="#RespiratoryTherapyGameDesignDocument-SoundDesign">Sound Design</a>
+<ul class="toc-indentation">
+<li><span class="TOCOutline">1.9.1</span> <a href="#RespiratoryTherapyGameDesignDocument-Overview">Overview</a></li>
+<li><span class="TOCOutline">1.9.2</span> <a href="#RespiratoryTherapyGameDesignDocument-MusicandSFX">Music and SFX</a>
+<ul class="toc-indentation">
+<li><span class="TOCOutline">1.9.2.1</span> <a href="#RespiratoryTherapyGameDesignDocument-Sources">Sources</a></li>
+<li><span class="TOCOutline">1.9.2.2</span> <a href="#RespiratoryTherapyGameDesignDocument-Music">Music</a></li>
+<li><span class="TOCOutline">1.9.2.3</span> <a href="#RespiratoryTherapyGameDesignDocument-SoundEffects">Sound Effects</a></li>
+<li><span class="TOCOutline">1.9.2.4</span> <a href="#RespiratoryTherapyGameDesignDocument-BackgroundAudio">Background Audio</a></li>
+<li><span class="TOCOutline">1.9.2.5</span> <a href="#RespiratoryTherapyGameDesignDocument-Voiceover">Voiceover</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><span class="TOCOutline">1.10</span> <a href="#RespiratoryTherapyGameDesignDocument-Specifications">Specifications</a>
+<ul class="toc-indentation">
+<li><span class="TOCOutline">1.10.1</span> <a href="#RespiratoryTherapyGameDesignDocument-DevelopmentTeam">Development Team</a></li>
+<li><span class="TOCOutline">1.10.2</span> <a href="#RespiratoryTherapyGameDesignDocument-Software">Software</a></li>
+</ul>
+</li>
+<li><span class="TOCOutline">1.11</span> <a href="#RespiratoryTherapyGameDesignDocument-OtherInfo">Other Info</a>
+<ul class="toc-indentation">
+<li><span class="TOCOutline">1.11.1</span> <a href="#RespiratoryTherapyGameDesignDocument-Playtime">Playtime</a></li>
+<li><span class="TOCOutline">1.11.2</span> <a href="#RespiratoryTherapyGameDesignDocument-Risks">Risks</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div><p /><h2 id="RespiratoryTherapyGameDesignDocument-WhatisaGameDesignDocument(GDD)?"><strong>What is a Game Design Document (GDD)?</strong></h2><p>This game design document is a <u>living document</u> which details the core design principles and decisions with regards to the development of the &ldquo;Respiratory Therapy&rdquo; Digital Learning Experience (DLX). This document will be updated as development progresses, and provide links to further documentation under the appropriate section headings.</p><p /><hr /><h2 id="RespiratoryTherapyGameDesignDocument-ChangeLog"><strong>Change Log</strong></h2><h3 id="RespiratoryTherapyGameDesignDocument-Version0.1">Version 0.1</h3><p>This document began production on February 8th, 2024. This document has only been updated to include questions that need to be answered as it is very early in the design process.</p><p /><p>Version 0.9</p><p>The final adjustments made my Colm Ambler. Every section was filled out to the best possible completion for the current state of the project. It&rsquo;s not 1.0 as a lot of it has been undecided as the project has yet to begin in earnest. Some areas are still not filled out and there are many questions in regards to the program and material. </p><p>These changes were made on March 28, 2024.</p><p /><hr /><h2 id="RespiratoryTherapyGameDesignDocument-DLXOverview"><strong>DLX Overview</strong></h2><h3 id="RespiratoryTherapyGameDesignDocument-WhatistheDLX?">What is the DLX?</h3><p>The Respiratory Therapy DLX is an double asynchronous simulation that allows students in the Health and Life Sciences programs the opportunity to practice procedures that they would not be able to in real life. It will have a focus on High Acuity Low Occurrence events that teach students emotional preparedness and the skills to succeed in real life.</p><h3 id="RespiratoryTherapyGameDesignDocument-Audience">Audience</h3><p>Students in the Respiratory Therapy course. </p><p><span data-colorid="lmml32nwjr">Find out which term.</span></p><h3 id="RespiratoryTherapyGameDesignDocument-LearningObjectives">Learning Objectives</h3><ul><li><p>Allow students the opportunity to practice procedures they aren&rsquo;t able to in real life.</p></li><li><p>Give students a look into the atmosphere they will be working in.</p></li><li><p>Offer a simulation that students are able to replay whenever they need a refresher.</p></li></ul><h3 id="RespiratoryTherapyGameDesignDocument-Setting">Setting </h3><p>The DLX will take place entirely within a small hospital room. The same room will function for multiple purposes, both for practice and clinical simulation. It should be realistic to the specifications required ie. tools and equipment the player will be interacting with.</p><h3 id="RespiratoryTherapyGameDesignDocument-Tone">Tone</h3><p>The tone of the DLX will be realistic to an actual hospital environment. The Doctor character will be a no-nonsense type who scolds you for poor decision making. The player will be interacting in potential life or death situations and they should feel the weight of that within the sim.</p><h3 id="RespiratoryTherapyGameDesignDocument-Genre">Genre</h3><p>Two genres for the two sims. The flat screen is a choice based experience whereas the VR game is more of a clinical simulation.</p><p /><hr /><h2 id="RespiratoryTherapyGameDesignDocument-Features"><strong>Features</strong></h2><h3 id="RespiratoryTherapyGameDesignDocument-GeneralFeatures">General Features</h3><ul><li><p>Asynchronous</p></li><li><p>VR Simulation</p></li><li><p>Flat screen simulation</p></li><li><p>Task-based (in relation to the situation)</p></li><li><p>Co-operative? (Might be stretch goal)</p></li><li><p>Single player with computer companion?</p></li><li><p>Doctor Character to guide the player.</p></li><li><p>Different modes for practicing.</p></li><li><p>Bronchoscopy.</p></li><li><p>Choices matter and are displayed at the end of the flat screen.</p></li></ul><h3 id="RespiratoryTherapyGameDesignDocument-MultiplayerFeatures">Multiplayer Features</h3><p>Multiplayer has been mentioned but not confirmed. If it will be incorporated, it would be as the following, for the VR Sim:</p><p>In actual Bronchoscopies there are two RTs and a doctor. Each RT has their own tasks and things they need to be aware of. One needs to keep pumping oxygen and checking the monitor while the other helps the doctor with fluids and item management. These things naturally lend themselves to multiplayer tasks. The players would take the roles of each RT and need to work and communicate with each other to complete the procedure. </p><p>It&rsquo;s important given that this sim is designed to help students get accustomed to actual bronchoscopies but there are some things to consider. Adding multiplayer will increase dev time substantially and given that this is meant to be an asynchronous simulation that students can practice anytime, making it VR already limits accessibility and then to add another person on top will be another step for them to worry about.</p><h3 id="RespiratoryTherapyGameDesignDocument-AccessibilityFeatures">Accessibility Features</h3><ul><li><p>Content Warning</p></li><li><p>Individual Audio Adjustments</p></li><li><p>Voiceover</p></li><li><p>High-contrast and low contrast closed captions</p></li></ul><p /><hr /><h2 id="RespiratoryTherapyGameDesignDocument-Gameplay"><strong>Gameplay</strong></h2><h3 id="RespiratoryTherapyGameDesignDocument-PrimaryObjective">Primary Objective</h3><p>The student will make multiple objectives over the entirety of the sim. Each mode will task them with a specific overall objective.</p><p>Practice Mode:</p><p>The player must complete the tutorial tasks that are given in a set order.</p><p>Clinical Simulation - Bronchoscopy:</p><p>The player completes a Bronchoscopy.</p><p>For the flat screen simulation the objectives would be similar though approached in a different way. In the VR, it&rsquo;s more about the tactile of the process whereas the flat screen is more decision oriented. The procedures would be the same with more opportunity for consequence.</p><h3 id="RespiratoryTherapyGameDesignDocument-SecondaryObjective">Secondary Objective</h3><p>The player will be scored depending on their performance, encouraging correct procedure. The student will be encouraged to replay to get a better score.</p><p>In the flat screen the score would function as more of a narrative tree highlighting the choices they made and the results of those decisions. This would result in different endings with the game encouraging the player to retry and get the best ending possible.</p><h3 id="RespiratoryTherapyGameDesignDocument-GameplayProgression">Gameplay Progression</h3><p>Given that the simulation is an in-person VR simulation running off of Conestoga machines, progression will be light. Every mode will be available to the player though they will be encouraged to play through the tutorials before moving onto the clinical simulation. </p><p>Within the actual procedures, the player will be able to interact with many elements around the environment. It will be a linear procedure. The player must follow the instructions carefully, though in the later modes, these instructions will not be given.</p><p>Preparing the correct PPE will be a separate part of the sim.</p><h3 id="RespiratoryTherapyGameDesignDocument-PlayerMovement/Controller">Player Movement/Controller</h3><p>The player will be able to move through the environment through designated hotspots. It&rsquo;s important that they familiarize themselves with the environment though it will be slightly limited to focus on the learning objectives. In other areas the player will have full range of motion with their hands via the controllers and those hands will be their main way of interacting with the sim.</p><h3 id="RespiratoryTherapyGameDesignDocument-PlayerAbilities">Player Abilities</h3><p>The player will:</p><ul><li><p>Be able to look around the environment.</p></li><li><p>Interact with the Bronch Tower in every capacity.</p></li><li><p>Examine and interact with equipment (syringes, mouth guards, airbags etc.)</p></li><li><p>Make choices (in the flat screen).</p></li><li><p>Pick up objects (VR Sim).</p></li></ul><h3 id="RespiratoryTherapyGameDesignDocument-ItemManagement">Item Management</h3><p>The management of items and equipment will be diegetic and reflect the real-world environment. Most small items will be placed on a table at the foot, or to the side of the patient. These items will be taken and returned to this table.</p><h3 id="RespiratoryTherapyGameDesignDocument-Difficulty">Difficulty</h3><p>The difficulty will be dependent on the mode the player is in. In practice modes they are encouraged to take their time as they learn the mechanics of the sim. In the clinical simulation mode - bronchoscopy, every action they must perform will have a hidden time limit (determined by perhaps a sound cue). The timing of their actions will be what determines their final score. The actual amount of time given will be dependent on the action they need to perform.</p><p /><hr /><h2 id="RespiratoryTherapyGameDesignDocument-GameWorld"><strong>Game World</strong></h2><h3 id="RespiratoryTherapyGameDesignDocument-Scale">Scale</h3><p>The scale must be 1:1 with real life. This is especially important as it is a VR sim. Otherwise students will get motion sickness very quickly.</p><h3 id="RespiratoryTherapyGameDesignDocument-Details">Details</h3><ul><li><p>Bed</p></li><li><p>Patient</p></li><li><p>Bronch Tower</p></li><li><p>Monitor</p></li><li><p>Table</p></li><li><p>Window?</p></li><li><p>Door</p></li><li><p>Ceiling vent</p></li><li><p>Table with monitor</p></li><li><p>Handwasher station</p></li><li><p>White walls</p></li></ul><h3 id="RespiratoryTherapyGameDesignDocument-KeyLocations">Key Locations</h3><p>Bedside</p><p>Handwasher station</p><h3 id="RespiratoryTherapyGameDesignDocument-Traveling">Traveling</h3><p>The player will have different hotspots they can stand in. Within that hotspot they will have some maneuverability. Each hotspot will be shown via a circle on the floor. To move to these hotspots, the player will need to look towards them and point to the one they want to go to. They will then need to perform an action (either push on the left stick or press a trigger button) and then the screen will turn black for a split-second as the player is transported to that hotspot.</p><h3 id="RespiratoryTherapyGameDesignDocument-PlayerCamera">Player Camera</h3><p>First Person.</p><p>For the VR sim, the camera functions as the players eyes and moves along with the headset. For the flat screen, the camera is still in first person but much more restricted, acting as more of a 180 degree camera.</p><h3 id="RespiratoryTherapyGameDesignDocument-Lighting">Lighting</h3><p>The lighting within the scene will be both realistic and pleasing to the environment of the sim.</p><p /><hr /><h2 id="RespiratoryTherapyGameDesignDocument-StoryandNarrative"><strong>Story and Narrative</strong></h2><h3 id="RespiratoryTherapyGameDesignDocument-MainPlot">Main Plot</h3><p>The main plot follows a recent addition to the respiratory team (the player character) at an unspecified hospital. The narrative takes place over the course of a week as the character must perform different procedures each day. </p><p>Note: The idea of 7 procedures is not final, the idea of it taking place over a week is more of a tagline as of right now.</p><h3 id="RespiratoryTherapyGameDesignDocument-PlotProgression">Plot Progression</h3><p>Each procedure (day) will be categorized into two sections. The first allows the player to examine their surroundings and get acquainted with the equipment (ie. Bronch Tower). The second is a clinical simulation mode where some sort of event happens (person collapses after escaping a burning workplace) and the player must perform the actions to completion.</p><p>Each procedure (day) will be available from the start. This will be done to allow more flexibility in how instructors want to handle the sims. As a result, it also means that narratively they will be episodic in nature, meaning that while the characters will remain the same there will be no references to other procedures or different days. Continuity will be tricky as the player is able to play the 3rd procedure first, or third, or fifth. </p><p>As a stretch goal, there could be a final episode that unlocks after the player has gone through all of the other procedures that highlights their accomplishment and thanks them for their service. In this episode, continuity would be important.</p><h3 id="RespiratoryTherapyGameDesignDocument-Storytelling">Storytelling</h3><h4 id="RespiratoryTherapyGameDesignDocument-Cutscenes">Cutscenes</h4><p>There will be moments where control is taken away from the player to give them exposition or instructions on what to do. There may be other moments where control is not taken away and the player is being spoken to, either by a character or a narrator.</p><p /><h4 id="RespiratoryTherapyGameDesignDocument-Documents">Documents</h4><p>The player will be able to read documentation to help them understand elements of their work. Potentially related to equipment or a patient (I don&rsquo;t know if RTs get patient records, just throwing it out there.) There will also be an atlas of information the player is able to go back to at any point, sort of like a journal.</p><hr /><h2 id="RespiratoryTherapyGameDesignDocument-Characters"><strong>Characters</strong></h2><h3 id="RespiratoryTherapyGameDesignDocument-PlayerCharacter">Player Character</h3><p>The player takes the role of a new Respiratory Therapist given the opportunity to examine their workspace. Over the course of the narrative, the player character learns to deal with a &ldquo;real&rdquo; situation for a bronchoscopy.</p><h3 id="RespiratoryTherapyGameDesignDocument-Non-PlayableCharacters(NPCs)">Non-Playable Characters (NPCs)</h3><p>Each procedure will feature three NPCs. The Doctor and the second RT will always be the same. The patient will change for each procedure.</p><p>The following is throwing out ideas for basic personality traits, make of it what you will.</p><p>The Doctor: The doctor is a character with a lot of past experience in the field. They are understanding that the protagonist is a new employee and may not have interacted with every piece of equipment before. However in actual procedures they expect the utmost professionalism and precision. They will offer help if needed however they will get increasingly upset and continued incompetence. Afterwards they&rsquo;re often seen congratulating the people they work with and many others only have nice things to say about them. Though some say that&rsquo;s only because the people they don&rsquo;t like mysteriously get fired. Either way, it&rsquo;s probably best to stay on their good side.</p><p /><p>The second RT: An RT that has been on the job a couple of years. They know their way around the procedures and are happy to help if needed. They&rsquo;re supportive and friendly and are willing to look past some transgressions which has gotten them into trouble on a few occasions. They&rsquo;re a major film buff. When they&rsquo;re not actively on duty you&rsquo;ve talked with them on many occasions on whatever films you both have seen recently.</p><p /><p>Bronchoscopy Patient: <span data-colorid="m7dfss97uh">To be filled out.</span></p><p /><hr /><h2 id="RespiratoryTherapyGameDesignDocument-SoundDesign"><strong>Sound Design</strong></h2><h3 id="RespiratoryTherapyGameDesignDocument-Overview">Overview</h3><p>Sound will be an incredibly important element in the RT sims. Both in terms of ambience as well as indications for how the player is doing. It&rsquo;s important for the player to be able to recognize different sounds and what they mean for the procedure.</p><h3 id="RespiratoryTherapyGameDesignDocument-MusicandSFX">Music and SFX</h3><p>Music will be kept to a minimum, only on the main menu. Sound effects will be constant. The regular hymn of the heart monitor, the aggressive beep of the Bronch Tower. These sounds will give a sense of place and make the location feel more real. It also works itself in gameplay as the player needs to be aware of what sounds are playing and what they mean. At the same time, ambient sounds will be played to make the hospital feel alive. From footsteps outside to muffled voices. </p><h4 id="RespiratoryTherapyGameDesignDocument-Sources">Sources</h4><p><span data-colorid="hufkcbiilh">List the sources for the music and sound effect so they can be properly credited.</span></p><h4 id="RespiratoryTherapyGameDesignDocument-Music">Music</h4><p><span data-colorid="gapy0z7ggz">List the music used and where.</span></p><h4 id="RespiratoryTherapyGameDesignDocument-SoundEffects">Sound Effects</h4><p><span data-colorid="q1zfe6qpnu">List the sound effects used and where.</span></p><h4 id="RespiratoryTherapyGameDesignDocument-BackgroundAudio">Background Audio</h4><p><span data-colorid="aa3wd4yqtl">List the background audio used and where.</span></p><h4 id="RespiratoryTherapyGameDesignDocument-Voiceover">Voiceover</h4><p>Voiceover will be done for every line of voiced text. This will elevate the characters and make them feel like real people.</p><p /><hr /><h2 id="RespiratoryTherapyGameDesignDocument-Specifications"><strong>Specifications</strong></h2><h3 id="RespiratoryTherapyGameDesignDocument-DevelopmentTeam">Development Team</h3><p><span data-colorid="sisokfvmzr">Describe the development team that will be working on this project. This was yet to be figured out.</span></p><h3 id="RespiratoryTherapyGameDesignDocument-Software">Software</h3><p><span data-colorid="xrnopjt3qa">List the software that will be used for the project. </span></p><p /><hr /><h2 id="RespiratoryTherapyGameDesignDocument-OtherInfo"><strong>Other Info</strong></h2><h3 id="RespiratoryTherapyGameDesignDocument-Playtime">Playtime</h3><p>The DLX should take approximately 25-30 minutes per scenario on a first playthrough. This time takes into account players being unfamiliar and potentially stuck.</p><h3 id="RespiratoryTherapyGameDesignDocument-Risks">Risks</h3><p>Right now there is a lack of development direction. This should be solved soon but this document has been based on preliminary meetings with CEs.</p>
+                    </div>
+
+                                        <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="attachments" class="pageSectionTitle">Attachments:</h2>
+                        </div>
+
+                        <div class="greybox" align="left">
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/952074241/952074248.png">image-20220718-150023.png</a> (image/png)
+                                <br/>
+                                                    </div>
+                    </div>
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Jun 11, 2025 14:20</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

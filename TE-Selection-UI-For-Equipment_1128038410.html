@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VARLab : TE Selection UI For Equipment</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="VARLab_44990773.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Learning-Experience_972881951.html">Learning Experience</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="216629273.html">Digital Learning Experiences (DLX)</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="706347009.html">LSM8.02 - Conestoga Trades: Electrician Simulator</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Development-Documentations_1066237953.html">Development Documentations</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="User-Interfaces_1531150391.html">User Interfaces</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            VARLab : TE Selection UI For Equipment
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                            
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> User b9401</span>, last modified by <span class='editor'> User 7e2a4</span> on May 23, 2024
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <p><strong>Overview</strong></p><p>This document will cover how Trades Electrical deals with multiple-choice questions in this sim. This workflow will require understanding the Unity UI Toolkit and the backend functionality to make things come alive. The main purpose of the selections in this sim is to limit the selections to just <strong>four </strong>options based on the task selected in the UI. Filtering these options will require a separate UXML for each filter. <br/><br/><strong>Work Flow</strong></p><p /><p /><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="flow chart TE Multiple Choice v2.png" width="760" loading="lazy" src="attachments/1128038410/1132986386.png?width=760" data-image-src="attachments/1128038410/1132986386.png" data-height="1009" data-width="821" data-unresolved-comment-count="0" data-linked-resource-id="1132986386" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="flow chart TE Multiple Choice v2.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1128038410" data-linked-resource-container-version="6" data-media-id="7584e4b8-0852-4918-ac17-ec0f0ab124d6" data-media-type="file"></span><p /><p><strong>Implementation</strong></p><p>This section will cover the <u>backend implementation</u> that makes the Selection UI functional. Please refer to the <em>UI Toolkit documentation</em> for more details on how to work with UXML templates. This section assumes that the developer understands the basics of the Unity UI Toolkit.</p><p /><p><strong>Saving UXML Templates to Dictionary</strong></p><p>Depending on the task selected, the main factor that makes loading sub-menus possible is having a <a class="external-link" href="https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.dictionary-2?view=net-8.0" rel="nofollow">dictionary</a> that stores these templates using their name as a <strong>key</strong>:</p><span class="confluence-embedded-file-wrapper image-left-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-left" alt="Screenshot 2024-05-23 102155-20240523-142155.png" width="647" loading="lazy" src="attachments/1128038410/1133477893.png?width=647" data-image-src="attachments/1128038410/1133477893.png" data-height="21" data-width="647" data-unresolved-comment-count="0" data-linked-resource-id="1133477893" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Screenshot 2024-05-23 102155-20240523-142155.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1128038410" data-linked-resource-container-version="6" data-media-id="eba57ab1-d80d-484f-882d-f62080e0e2b8" data-media-type="file"></span><p>This dictionary holds the following useful keys:</p><ul><li><p>BodyTypeBoxesMountFanBox</p></li><li><p>BodyTypeBoxesMountGangBox</p></li><li><p>BodyTypeBoxesMountLightBox</p></li><li><p>BodyTypeBoxesMountOutletBox</p></li></ul><p>These keys are the equivalent of the UXML Templates created for each type of box (fan, gang, light and outlet). Whenever a <strong>learner </strong>clicks one of the available buttons, the solution interprets the action as “open the main menu for <em>this type</em> of boxes“.</p><p>Populating the dictionary is done by <a class="external-link" href="https://docs.unity3d.com/Manual/UIE-UQuery.html" rel="nofollow">finding UI child elements with UQuery</a> from the root container of the Item Selection template:</p><span class="confluence-embedded-file-wrapper image-left-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-left" alt="image-20240523-143629.png" width="669" loading="lazy" src="attachments/1128038410/1133150218.png?width=669" data-image-src="attachments/1128038410/1133150218.png" data-height="236" data-width="669" data-unresolved-comment-count="0" data-linked-resource-id="1133150218" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20240523-143629.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1128038410" data-linked-resource-container-version="6" data-media-id="b13e16a8-a5de-4509-9fd2-acaf7d66139c" data-media-type="file"></span><p>The implementation queries for any TemplateContainer with a <a class="external-link" href="https://docs.unity3d.com/Manual/UIE-USS-Selectors-class.html" rel="nofollow">USS class selector</a> <code>.sub</code> (see the Figure below), and each submenu is added to the dictionary for easy access. These submenus are hidden by default and only displayed when the user triggers an action for them.</p><span class="confluence-embedded-file-wrapper image-left-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-left" alt="image-20240523-143902.png" width="550" loading="lazy" src="attachments/1128038410/1133543451.png?width=550" data-image-src="attachments/1128038410/1133543451.png" data-height="410" data-width="550" data-unresolved-comment-count="0" data-linked-resource-id="1133543451" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20240523-143902.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1128038410" data-linked-resource-container-version="6" data-media-id="40de482e-c31f-44d3-8291-97385837e5a2" data-media-type="file"></span><p><strong>Filtering appropriate options for <u>current</u> task</strong></p><p />
+                    </div>
+
+                                        <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="attachments" class="pageSectionTitle">Attachments:</h2>
+                        </div>
+
+                        <div class="greybox" align="left">
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1128038410/1128595491.png">flow chart TE Multiple Choice v1.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1128038410/1133477893.png">Screenshot 2024-05-23 102155-20240523-142155.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1128038410/1132691513.png">image-20240523-143613.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1128038410/1133150218.png">image-20240523-143629.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1128038410/1133543451.png">image-20240523-143902.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1128038410/1132986386.png">flow chart TE Multiple Choice v2.png</a> (image/png)
+                                <br/>
+                                                    </div>
+                    </div>
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Jun 11, 2025 14:17</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

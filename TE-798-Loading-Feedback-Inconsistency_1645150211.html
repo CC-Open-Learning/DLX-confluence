@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VARLab : TE-798 Loading Feedback Inconsistency</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="VARLab_44990773.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Learning-Experience_972881951.html">Learning Experience</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="216629273.html">Digital Learning Experiences (DLX)</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="706347009.html">LSM8.02 - Conestoga Trades: Electrician Simulator</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Development-Documentations_1066237953.html">Development Documentations</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            VARLab : TE-798 Loading Feedback Inconsistency
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                            
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> User c4ba3</span>, last modified on Feb 24, 2025
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <p>Date: 2/24/2025</p><h3 id="TE-798LoadingFeedbackInconsistency-Problem">Problem </h3><ul><li><p>Fundamentally, the behavior constrains the user's selectable options via UI, and In-Game selection is not the same as they left the game if they were to leave when feedback has been invoked. </p><ul><li><p>The feedback constraint behaviour is as follows (using fan box mounting as an example):</p><ul><li><p><strong>Box Selection Menu </strong>the options are limited, meaning that if they select correct box, all the box selection for fan box would be disabled</p><ul><li><p>Case 1: is that they can get the correct box and wrong location, which would disable all other fan box options EXCEPT the correct box so that they can move location via clicking that box in UI.</p></li><li><p>Case 2: is if that they select wrong box and wrong location, it would disable the SELECTED option and allow user to select any other fan box options in UI.</p></li></ul></li></ul></li></ul></li></ul><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20250224-161436.png" width="524" loading="lazy" src="attachments/1645150211/1645281284.png?width=524" data-image-src="attachments/1645150211/1645281284.png" data-height="251" data-width="524" data-unresolved-comment-count="0" data-linked-resource-id="1645281284" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20250224-161436.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1645150211" data-linked-resource-container-version="2" data-media-id="bf26aac0-20bc-433a-9409-4827f3a16175" data-media-type="file"></span><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20250224-161831.png" width="527" loading="lazy" src="attachments/1645150211/1645641733.png?width=527" data-image-src="attachments/1645150211/1645641733.png" data-height="247" data-width="527" data-unresolved-comment-count="0" data-linked-resource-id="1645641733" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20250224-161831.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1645150211" data-linked-resource-container-version="2" data-media-id="e66162be-ebb1-453a-944e-32a2de7cd0d2" data-media-type="file"></span><ul><li><p><strong>In Game Mountable Selection Interaction UI</strong></p><ul><li><p>Feedback for following widget updates</p></li></ul></li></ul><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20250224-161750.png" width="427" loading="lazy" src="attachments/1645150211/1645936641.png?width=427" data-image-src="attachments/1645150211/1645936641.png" data-height="93" data-width="255" data-unresolved-comment-count="0" data-linked-resource-id="1645936641" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20250224-161750.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1645150211" data-linked-resource-container-version="2" data-media-id="e600f467-ebaf-45c6-87cd-7cf734df4c35" data-media-type="file"></span><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20250224-161810.png" width="424" loading="lazy" src="attachments/1645150211/1645019141.png?width=424" data-image-src="attachments/1645150211/1645019141.png" data-height="94" data-width="268" data-unresolved-comment-count="0" data-linked-resource-id="1645019141" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20250224-161810.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1645150211" data-linked-resource-container-version="2" data-media-id="42ea7057-fe35-4f0f-b3b2-c4f9572c4346" data-media-type="file"></span><p><strong>Why It’s documented and not fixed with proposed solution</strong></p><ul><li><p>Operating on assumption that edge case where user does not click on feedback after load is rare and too high risk to make changes close to release. The testing W254 TE Testing group was not able to detect this issue so proposed solution that could be implemented is documented. Moreover, since all is required is the user to ask for feedback to restore state, and that we had no feedback for this case, it’s not a high priority bug.</p><ul><li><p>IN CASE of a scenario that is bug is noticed and overwhelming this is an issue, we can proceed with solution proposed below.</p></li></ul></li></ul><h2 id="TE-798LoadingFeedbackInconsistency-ProposedSolution">Proposed Solution</h2><p>The following is a proposed solution that was implemented for box mounting task and may require some additional work for other tasks but overall schematically it is a pattern that can be implemented for the rest.</p><p>Rough Flow of How dirty feedback handling works</p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="Flowchart-20250224-195719.jpg" width="760" loading="lazy" src="attachments/1645150211/1645445126.jpg?width=760" data-image-src="attachments/1645150211/1645445126.jpg" data-height="3120" data-width="5126" data-unresolved-comment-count="0" data-linked-resource-id="1645445126" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Flowchart-20250224-195719.jpg" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/jpeg" data-linked-resource-container-id="1645150211" data-linked-resource-container-version="2" data-media-id="cea92274-0d1f-4600-8b03-69ec9040f457" data-media-type="file"></span><h3 id="TE-798LoadingFeedbackInconsistency-MountingTask">Mounting Task</h3><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: c#; gutter: false; theme: Confluence" data-theme="Confluence">// Made it possible to set selectedMountable so can swap it be LastMountableGivenFeedbackTo so we can mount it when loading
+public MountableName SelectedMountableName { get =&gt; selectedMountableName; set =&gt; selectedMountableName = value; }
+[JsonProperty] public MountableName LastMountableGivenFeedbackTo = MountableName.None;</pre>
+</div></div><h3 id="TE-798LoadingFeedbackInconsistency-BoxMountingTask">Box Mounting Task</h3><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: c#; gutter: false; theme: Confluence" data-theme="Confluence">[JsonProperty] public int locationIndex = -1; // Changed to public
+[JsonProperty] public int LastLocationFeedbackGivenIndex = -1; // ADDED </pre>
+</div></div><h3 id="TE-798LoadingFeedbackInconsistency-FeedbackHandler">Feedback Handler</h3><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: c#; gutter: false; theme: Confluence" data-theme="Confluence">        public void ProcessMountBoxesTasks()
+
+        {
+
+            foreach (BoxMountingTask mountTask in AllMountingTasksMap.Values.OfType&lt;BoxMountingTask&gt;())
+
+            {
+                ---------------------------------------------------------------------------------
+                // Save the last known feedback location and feedback selected mountable so on load we can use this for loading it first 
+                // and request feedback and then restore it the normal selected they did
+                for (int i = 0; i &lt; mountTask.LocationOptions.Length; i++)
+                {
+                    if (mountTask.SelectedLocation != mountTask.LocationOptions[i]) { continue; }
+                    mountTask.LastLocationFeedbackGivenIndex = i;
+                    break;
+
+                }
+                mountTask.LastMountableGivenFeedbackTo = mountTask.SelectedMountable.Name;
+                ---------------------------------------------------------------------------------
+                bool mountAndLocationCorrect = mountTask.CorrectLocation == mountTask.SelectedLocation &amp;&amp;</pre>
+</div></div><h3 id="TE-798LoadingFeedbackInconsistency-TaskHandler">Task Handler</h3><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: c#; gutter: false; theme: Confluence" data-theme="Confluence">// Added Variables TO Task Handler
+[JsonProperty] private bool isBoxMountingFeedbackInvoked;
+private DirtyFeedbackHandler dirtyFeedbackHandler = new DirtyFeedbackHandler();
+
+
+
+/// &lt;summary&gt;
+/// Sync internal systems with successfully loaded cloud save data. Note that the sequence
+/// here is very important. Tasks may not load properly if the sequence is updated incorrectly.
+/// &lt;/summary&gt;
+private void SyncInternalSystemsWithCloud()
+{
+    Changes:
+    -----------------------------------------------------------------------------------    
+    if (!boxMountingTasksDone)
+    {
+        foreach (BoxMountingTask boxMountingTask in AllMountingTasksMap.Values.OfType&lt;BoxMountingTask&gt;())
+        {
+            dirtyFeedbackHandler.EvaluateDirtyFeedback(boxMountingTask);
+        }
+    }
+    
+    LoadBoxMountingTasks();
+    if (!HasAllBoxMountingTasksCompleted() || !isBoxMountingFeedbackInvoked) { return; }
+    LoadBoxMountingFeedbackInvoked?.Invoke();
+    
+    if (!boxMountingTasksDone)
+    {
+        foreach (BoxMountingTask boxMountingTask in AllMountingTasksMap.Values.OfType&lt;BoxMountingTask&gt;())
+        {
+            dirtyFeedbackHandler.ReplaceMountDirtyFeedbackValues(boxMountingTask, boxMounter);
+        }
+    }
+    
+    if (!boxMountingTasksDone) { return; }
+    -----------------------------------------------------------------------------------    
+    DisableContractorFeedback?.Invoke(false);
+
+    RunSupplyCableMenu.OnLoadComplete(); // Sync completion of the first two quizzes
+    if (!RunSupplyCableMenu.IsCableQuizCompleted) { return; }
+    TaskSelectionMenu.SetSupplyTaskBtnStatus(WorkflowStatus.InProgress);
+
+    LoadAllCableMountingTasksStates();
+    if (!RunSupplyCableMenu.IsTerminateQuizCompleted) { return; }
+
+    LoadWireTerminationTasks();
+    if (!roughInTasksDone) { return; }
+
+    SupervisorFeedbackHandler(); // Handle feedback for rough-in stage
+
+    LoadedPastRoughInTasks?.Invoke();
+    DisableContractorFeedback?.Invoke(false);
+
+    LoadDeviceInstallationTasks();
+    if (!finalTasksDone) { return; }
+
+    SupervisorFeedbackHandler(); // Handle feedback for final stage
+    DisableContractorFeedback?.Invoke(false);
+
+    CircuitTestingMenu.OnLoadComplete();
+}
+
+private void MountPreview(Mounter mounter, MountingTask mountingTask)
+
+{
+
+    mounter.OnMountPreview(mountingTask)
+    if (!boxMountingTaskCorrectlyCompleted)
+
+    {
+        feedbackHandler.ProcessMountBoxesTasks();
+        Changes: Need to save data for feedback since we need to know state when last saved
+        ------------------------
+        cloudSaveAdapter.Save();
+        isBoxMountingFeedbackInvoked = true; // Used to remember if we need to invoke feedback or not for user
+        -----------------------------------------
+        }
+
+</pre>
+</div></div><h3 id="TE-798LoadingFeedbackInconsistency-DirtyFeedbackHandler(NewClass/File)">DirtyFeedback Handler (New Class/File)</h3><p>This class handles most of the logic that checks if the selected location or selected mountable option they selected is different to the one they asked for feedback for, and if so, will then set up it for last known feedback selection. Additionally, it does the opposite as well, if there is dirty feedback, it will hold onto values of what user selected mountable so it can be swapped with the last known feedback box mountable. Then after we call feedback in Task Handler, we will call <code>ReplaceMountDirtyFeedbackValues</code>() method to replace the selected mountable and selected location back to what user left it as.  Look at Task Handler and this class to get picture of how they work together.</p><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: c#; gutter: false; theme: Confluence" data-theme="Confluence">using System.Collections.Generic;
+
+namespace VARLab.TradesElectrical
+{
+    public class DirtyFeedbackHandler
+    { 
+        struct DirtyFeedbackContainer
+        {
+            public BoxMountingTask boxMountingTask;
+            // Location does not need to be saved, since we don&#39;t have to spawn in the location, we use index which is already saved and does not to be altered
+            public MountableName pendingUserSelectedMountable;
+            public bool DirtyFeedback;
+        }
+
+        private Dictionary&lt;Task, DirtyFeedbackContainer&gt; dirtyFeedbackContainers = new Dictionary&lt;Task, DirtyFeedbackContainer&gt;(); 
+        
+        /// &lt;summary&gt;
+        /// Checks if Selected Mountable &amp; Selected Location is dirty and if needs to be set up properly
+        /// To last known feedback selected mountable and/or selected location
+        /// &lt;/summary&gt;
+        /// &lt;param name=&quot;boxMountingTask&quot;&gt;&lt;/param&gt;
+        public void EvaluateDirtyFeedback(BoxMountingTask boxMountingTask)
+        {
+            if (boxMountingTask.SelectedMountableName != boxMountingTask.LastMountableGivenFeedbackTo 
+                &amp;&amp; boxMountingTask.LastMountableGivenFeedbackTo != MountableName.None)
+            {
+                SetDirtyFeedbackMountableName(boxMountingTask);
+            }
+
+            if (boxMountingTask.LastLocationFeedbackGivenIndex != -1 &amp;&amp; boxMountingTask.SelectedLocation !=
+                boxMountingTask.LocationOptions[boxMountingTask.LastLocationFeedbackGivenIndex])
+            {
+                SetDirtyFeedbackLocationValue(boxMountingTask);
+            }
+        }
+
+        /// &lt;summary&gt;
+        /// Sets mountable to original mountable that user selected and destroys mountable dirty value
+        /// &lt;/summary&gt;
+        /// &lt;param name=&quot;boxMountingTask&quot;&gt;&lt;/param&gt;
+        /// &lt;param name=&quot;boxMounter&quot;&gt;&lt;/param&gt;
+        public void ReplaceMountDirtyFeedbackValues(BoxMountingTask boxMountingTask, BoxMounter boxMounter)
+        {
+            if (!dirtyFeedbackContainers.TryGetValue(boxMountingTask.TaskName, out var dirtyFeedbackTask))
+            {
+                return;
+            }
+
+            boxMounter.DestroyMountableInTask(boxMountingTask);
+            boxMountingTask.RequestedMountableName = dirtyFeedbackTask.pendingUserSelectedMountable;
+            boxMountingTask.SelectedLocation = boxMountingTask.LocationOptions[boxMountingTask.locationIndex];
+            boxMounter.AutomaticMountablePlace(boxMountingTask);
+        }
+        
+        /// &lt;summary&gt;
+        /// Sets up selected mountable to value which feedback was originally given to
+        /// &lt;/summary&gt;
+        /// &lt;param name=&quot;boxMountingTask&quot;&gt;&lt;/param&gt;
+        /// &lt;param name=&quot;boxMounter&quot;&gt;&lt;/param&gt;
+        private void SetDirtyFeedbackMountableName(BoxMountingTask boxMountingTask)
+        {
+            dirtyFeedbackContainers.Add(boxMountingTask.TaskName, new DirtyFeedbackContainer
+            {
+                boxMountingTask = boxMountingTask,
+                pendingUserSelectedMountable = boxMountingTask.SelectedMountableName,
+                DirtyFeedback = true
+            });
+            boxMountingTask.SelectedMountableName = boxMountingTask.LastMountableGivenFeedbackTo;
+        }
+
+        /// &lt;summary&gt;
+        /// Sets up selected location to value which feedback was originally given to
+        /// &lt;/summary&gt;
+        /// &lt;param name=&quot;boxMountingTask&quot;&gt;&lt;/param&gt;
+        /// &lt;param name=&quot;boxMounter&quot;&gt;&lt;/param&gt;
+        private void SetDirtyFeedbackLocationValue(BoxMountingTask boxMountingTask)
+        {
+            if (dirtyFeedbackContainers.ContainsKey(boxMountingTask.TaskName))
+            {
+                boxMountingTask.SelectedLocation =
+                    boxMountingTask.LocationOptions[boxMountingTask.LastLocationFeedbackGivenIndex];
+                return;
+            }
+
+            dirtyFeedbackContainers.Add(boxMountingTask.TaskName, new DirtyFeedbackContainer
+            {
+                boxMountingTask = boxMountingTask,
+                pendingUserSelectedMountable = boxMountingTask.SelectedMountableName,
+                DirtyFeedback = true
+            });
+            
+        }
+    }
+}</pre>
+</div></div><h3 id="TE-798LoadingFeedbackInconsistency-BoxMounter">Box Mounter</h3><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: c#; gutter: false; theme: Confluence" data-theme="Confluence">  
+  // Changed to Public
+  public void DestroyMountableInTask(BoxMountingTask mountingTask)
+  {
+     // Add to last line since we call this in DirtyFeedbackHandler, 
+     // we need to update the backend when deleting old feedback item  
+      mountingFinalized?.Invoke(task);
+  }</pre>
+</div></div><p />
+                    </div>
+
+                                        <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="attachments" class="pageSectionTitle">Attachments:</h2>
+                        </div>
+
+                        <div class="greybox" align="left">
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1645150211/1645248515.png">image-20250224-161258.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1645150211/1645281284.png">image-20250224-161436.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1645150211/1645936641.png">image-20250224-161750.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1645150211/1644986375.png">image-20250224-161808.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1645150211/1645019141.png">image-20250224-161810.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1645150211/1645641733.png">image-20250224-161831.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1645150211/1645445126.jpg">Flowchart-20250224-195719.jpg</a> (image/jpeg)
+                                <br/>
+                                                    </div>
+                    </div>
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Jun 11, 2025 14:17</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

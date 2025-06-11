@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VARLab : Network Test Procedures - PHI</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="VARLab_44990773.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Learning-Experience_972881951.html">Learning Experience</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="General-Release-DLX_729973721.html">General Release DLX</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="LSM9.01---Public-Health-Inspection_805306369.html">LSM9.01 - Public Health Inspection</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Testing_837615629.html">Testing</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            VARLab : Network Test Procedures - PHI
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                            
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> Carolina Naoum Junqueira</span>, last modified on Nov 21, 2024
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <h2 id="NetworkTestProcedures-PHI-Overview">Overview</h2><p>These baseline tests intend to document network and web browser performance of the Public Health Inspection - Restaurant DLX as a WebGL module in eConestoga.</p><p>These test procedures are being performed on the <a class="external-link" href="https://conestoga.desire2learn.com/d2l/le/content/418015/viewContent/27838509/View" rel="nofollow"><strong>PHI-24F5.4 - 12NOV2024</strong></a> build which is proposed as release candidate. The file size is <strong>208MB </strong>(compressed).</p><h2 id="NetworkTestProcedures-PHI-Contents">Contents</h2><style type='text/css'>/*<![CDATA[*/
+div.rbtoc1749651258372 {padding: 0px;}
+div.rbtoc1749651258372 ul {list-style: none;margin-left: 0px;}
+div.rbtoc1749651258372 li {margin-left: 0px;padding-left: 0px;}
+
+/*]]>*/</style><div class='toc-macro rbtoc1749651258372'>
+<ul class='toc-indentation'>
+<li><a href='#NetworkTestProcedures-PHI-Overview'>Overview</a></li>
+<li><a href='#NetworkTestProcedures-PHI-Contents'>Contents</a></li>
+<li><a href='#NetworkTestProcedures-PHI-BaselineNetworkSystemsTests'>Baseline Network Systems Tests</a>
+<ul class='toc-indentation'>
+<li><a href='#NetworkTestProcedures-PHI-Bandwidth'>Bandwidth</a></li>
+<li><a href='#NetworkTestProcedures-PHI-ServerLoad'>Server Load</a></li>
+<li><a href='#NetworkTestProcedures-PHI-Latency'>Latency</a></li>
+<li><a href='#NetworkTestProcedures-PHI-PacketLoss'>Packet Loss</a></li>
+</ul>
+</li>
+<li><a href='#NetworkTestProcedures-PHI-Single-PlayerExperience'>Single-Player Experience</a>
+<ul class='toc-indentation'>
+<li><a href='#NetworkTestProcedures-PHI-LoadTime'>Load Time</a></li>
+<li><a href='#NetworkTestProcedures-PHI-Fullscreen'>Fullscreen</a></li>
+<li><a href='#NetworkTestProcedures-PHI-SavingProgress'>Saving Progress</a></li>
+<li><a href='#NetworkTestProcedures-PHI-Offline'>Offline</a></li>
+<li><a href='#NetworkTestProcedures-PHI-Bandwidth.1'>Bandwidth</a></li>
+</ul>
+</li>
+<li><a href='#NetworkTestProcedures-PHI-MultiplayerExperienceTests'>Multiplayer Experience Tests</a></li>
+</ul>
+</div><h2 id="NetworkTestProcedures-PHI-BaselineNetworkSystemsTests">Baseline Network Systems Tests</h2><p>These baseline network tests aim to track a minimal but necessary set of network performance metrics.</p><h3 id="NetworkTestProcedures-PHI-Bandwidth">Bandwidth</h3><ul><li><p>This was tested by checking the network speed using Speedtest by Ookla.</p></li><li><p>We timed the load time 5 times for each device and took the average.</p></li><li><p>Started the timer when refresh/build link was clicked and stopped the timer when the welcome screen was loaded.</p></li></ul><div class="table-wrap"><table data-table-width="760" data-layout="default" data-local-id="b0778f52-3717-43af-9d69-a2c9740dc749" class="confluenceTable"><tbody><tr><th class="confluenceTh"><p><strong>Device</strong></p></th><th class="confluenceTh"><p><strong>Network Speed</strong></p></th><th class="confluenceTh"><p><strong>Browser</strong></p></th><th class="confluenceTh"><p><strong>Load Time Average</strong></p></th></tr><tr><td class="confluenceTd"><p>TURD</p></td><td class="confluenceTd"><p>62 Mbps</p></td><td class="confluenceTd"><p>Edge</p></td><td class="confluenceTd"><p>01:02.228</p></td></tr><tr><td class="confluenceTd"><p>Alienware m16</p></td><td class="confluenceTd"><p>75 Mbps</p></td><td class="confluenceTd"><p>Chrome</p></td><td class="confluenceTd"><p>00:39.858</p></td></tr><tr><td class="confluenceTd"><p /></td><td class="confluenceTd"><p>25 Mbps</p></td><td class="confluenceTd"><p>Edge</p></td><td class="confluenceTd"><p>01:40.630</p></td></tr></tbody></table></div><h3 id="NetworkTestProcedures-PHI-ServerLoad">Server Load</h3><p>The web host for all modules is eConestoga so no measurement can be performed server-side. Loading the simulation itself is dependent on eConestoga servers and the Unity WebGL runtime.</p><h3 id="NetworkTestProcedures-PHI-Latency">Latency</h3><p>Using Wireshark we checked the response time for Brightspace, Playfab, and CloudSave.</p><p>Made a recording of the DLX load process using Wireshark and reviewed all requests and responses made to these services. These are the lowest and highest response time for each service</p><ul><li><p><strong>Brightspace:</strong> 0.002152 - 0.002624 seconds</p></li><li><p><strong>Playfab: </strong>0.002839 - 0.012019 seconds, 1 request failed*.</p></li><li><p><strong>CloudSave: </strong>0.06326 - 0.072291 seconds</p></li></ul><p>*Note: transient failures are normal and automatically retries if there is a failure. We validated the data in Playfab and all the expected logs were present. </p><h3 id="NetworkTestProcedures-PHI-PacketLoss">Packet Loss</h3><p>Because we are unable to capture the packet loss we are tracking retransmission request. The average retransmission request is 0.3%.</p><h2 id="NetworkTestProcedures-PHI-Single-PlayerExperience">Single-Player Experience</h2><p><strong>Single-Player Experience Tests</strong> intend to validate the stability and support of single-player experiences with the sim.</p><h3 id="NetworkTestProcedures-PHI-LoadTime">Load Time</h3><p>The load time changes according to network speed ranging from ~40 secs to ~2mins.</p><h3 id="NetworkTestProcedures-PHI-Fullscreen">Fullscreen</h3><p>The DLX is intended to be launched as embedded content within eConstoga tab, and the screen will resize to fill the available space.</p><p>Learners can enter and leave fullscreen mode with no issues.</p><h3 id="NetworkTestProcedures-PHI-SavingProgress">Saving Progress</h3><p>The DLX saves student progress two different ways: inspection records (Inspection Log, Gallery, Activity Log) and player location.</p><ul><li><p>Inspection records are saved to Azure every time the player clicks on an item, takes a photo or temperature reading, or completes an inspection.</p></li><li><p>Player location is saved every time the player enters a new area, such as the dining room or kitchen. When the player chooses to continue a saved inspection, they will be returned to a default position in the area they last entered. Even if the player was at a different position in the area when they left, they will start from the default position.</p></li></ul><p>Playfab total time played is triggered in 180 second intervals, this interval increase to ~240 seconds when the   DLX is not in focus. Total time played event is also triggered when the learner clicks on end inspection.</p><h3 id="NetworkTestProcedures-PHI-Offline">Offline</h3><p>Loss of network connection does not interrupt the learner’s ability to play the DLX.</p><ul><li><p><strong>Loses internet while playing and does not regain access before browser is closed: </strong>inspections done while offline will be lost. When the learner selects continue the next time they play those inspections will be missing.</p></li><li><p><strong>Loses internet while playing and regains access before closing the bowser:</strong> inspections done while offline will be saved. Playfab events will also get triggered.</p></li><li><p><strong>Player can not load the DLX when they are offline.</strong></p></li></ul><h3 id="NetworkTestProcedures-PHI-Bandwidth.1">Bandwidth</h3><p>Lower bandwidth increases overall load times but has no effect on the simulation once loaded, as there are no dependencies on external network resources after the initial load.</p><p> </p><h2 id="NetworkTestProcedures-PHI-MultiplayerExperienceTests">Multiplayer Experience Tests</h2><p>Public Health Inspection has no multiplayer component, so no tests of this kind are being performed.</p><p />
+                    </div>
+
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Jun 11, 2025 14:14</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

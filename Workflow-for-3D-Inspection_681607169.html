@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VARLab : Workflow for 3D Inspection</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="VARLab_44990773.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Learning-Experience_972881951.html">Learning Experience</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="General-Release-DLX_729973721.html">General Release DLX</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="LSM6.02---Heavy-Equipment---Bulldozer_505151489.html">LSM6.02 - Heavy Equipment - Bulldozer</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Workflow-for-Bulldozer-Inspection_542867457.html">Workflow for Bulldozer Inspection</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            VARLab : Workflow for 3D Inspection
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                            
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> Armando Interaminense</span> on Apr 18, 2023
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <h2 id="Workflowfor3DInspection-Creatinga3Dinspection"><strong>Creating a 3D inspection</strong></h2><h3 id="Workflowfor3DInspection-Step1:Creatinga3Dinspectioncontainerinstance"><strong>Step 1: Creating a 3D inspection container instance</strong></h3><p>Go into the prefab editing mode by clicking on the rightmost arrow.</p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" width="566" loading="lazy" src="attachments/681607169/681181196.png?width=566" data-image-src="attachments/681607169/681181196.png" data-height="276" data-width="578" data-unresolved-comment-count="0" data-linked-resource-id="681181196" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20230417-184939.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="681607169" data-linked-resource-container-version="1" data-media-id="8c116194-2479-4182-9351-1dca9c581e3e" data-media-type="file"></span><p>Find the mesh you require for your inspection. For this example, let’s consider the Sprocket DS GameObject shown below.</p><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/681607169/682262561.png" data-image-src="attachments/681607169/682262561.png" data-height="185" data-width="451" data-unresolved-comment-count="0" data-linked-resource-id="682262561" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20230418-144541.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="681607169" data-linked-resource-container-version="1" data-media-id="217ef5da-77ed-4e7d-a3c8-e0179d1ed784" data-media-type="file"></span><p /><h3 id="Workflowfor3DInspection-Step2:Addinginspectionelements"><strong>Step 2: Adding inspection elements</strong></h3><p>Add the following components and serialize the required fields appropriately. </p><div class="panel" style="background-color: #EAE6FF;border-color: #998DD9;border-width: 1px;"><div class="panelContent" style="background-color: #EAE6FF;">
+<p>You don’t need to serialize the Camera field in the prefab mode.</p>
+</div></div><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/681607169/681443337.png" data-image-src="attachments/681607169/681443337.png" data-height="551" data-width="402" data-unresolved-comment-count="0" data-linked-resource-id="681443337" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20230417-190918.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="681607169" data-linked-resource-container-version="1" data-media-id="7b11d5ad-8f88-4663-8b9d-48bad19ee153" data-media-type="file"></span><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/681607169/681639941.png" data-image-src="attachments/681607169/681639941.png" data-height="183" data-width="413" data-unresolved-comment-count="0" data-linked-resource-id="681639941" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20230417-191221.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="681607169" data-linked-resource-container-version="1" data-media-id="5eddcc18-2ba0-4b79-a072-6637f3b56ce2" data-media-type="file"></span><p><em>keep interactable empty</em></p><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/681607169/681771013.png" data-image-src="attachments/681607169/681771013.png" data-height="721" data-width="405" data-unresolved-comment-count="0" data-linked-resource-id="681771013" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20230417-191732.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="681607169" data-linked-resource-container-version="1" data-media-id="ce6c79e3-1c24-44a6-9fd7-3e04cde82f6b" data-media-type="file"></span><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/681607169/681476107.png" data-image-src="attachments/681607169/681476107.png" data-height="502" data-width="391" data-unresolved-comment-count="0" data-linked-resource-id="681476107" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20230417-193432.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="681607169" data-linked-resource-container-version="1" data-media-id="da1e4689-6c35-418b-aa72-f920ebf86abe" data-media-type="file"></span><p><strong>Step 3: Adding a new camera for this inspection</strong></p><p>Go to <em>Camera Positions </em>prefab. </p><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/681607169/681803781.png" data-image-src="attachments/681607169/681803781.png" data-height="142" data-width="577" data-unresolved-comment-count="0" data-linked-resource-id="681803781" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20230417-195125.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="681607169" data-linked-resource-container-version="1" data-media-id="07c87239-0b99-4bee-baf9-aef47d50936d" data-media-type="file"></span><p /><p>Duplicate any child object to create a new camera position for the new inspection.</p><p /><ul><li><p>instructions for setting up the camera view </p></li><li><p>Include adding a camera component to see how it looks but mention that they need to test because it isn't completely accurate </p></li></ul><p>Go back to the scene and serialize the newly created camera inside the Multiple Choice Inspection element.</p><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/681607169/682590209.png" data-image-src="attachments/681607169/682590209.png" data-height="73" data-width="402" data-unresolved-comment-count="0" data-linked-resource-id="682590209" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20230418-142849.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="681607169" data-linked-resource-container-version="1" data-media-id="3525d744-080f-4bba-9a74-86be0696e968" data-media-type="file"></span><h3 id="Workflowfor3DInspection-Step4:InsertingtheinspectionintotheInspectionManifest">Step 4: Inserting the inspection into the Inspection Manifest</h3><p>As the final step, click on the Bulldozer prefab and navigate to the <em>Inspection Manifest</em> component.</p><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/681607169/682262537.png" data-image-src="attachments/681607169/682262537.png" data-height="201" data-width="475" data-unresolved-comment-count="0" data-linked-resource-id="682262537" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20221209-161254.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="681607169" data-linked-resource-container-version="1" data-media-id="56230a5f-ac5b-4667-aa0a-fdc1a6a5e076" data-media-type="file"></span><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/681607169/682131467.png" data-image-src="attachments/681607169/682131467.png" data-height="633" data-width="390" data-unresolved-comment-count="0" data-linked-resource-id="682131467" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20230418-143425.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="681607169" data-linked-resource-container-version="1" data-media-id="3f611f6c-675c-41ed-8973-83d1482e47fb" data-media-type="file"></span><p>Click on <em>Find Inspection Elements </em>to insert the newly created 3D Inspection into the <em>Inspection Order</em> list.</p><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/681607169/682197012.png" data-image-src="attachments/681607169/682197012.png" data-height="509" data-width="400" data-unresolved-comment-count="0" data-linked-resource-id="682197012" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20230418-143511.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="681607169" data-linked-resource-container-version="1" data-media-id="962fbcb7-4696-4540-a210-ebb16ff878c7" data-media-type="file"></span><p>Place it in the correct order and override changes to the Bulldozer prefab.</p><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/681607169/681410591.png" data-image-src="attachments/681607169/681410591.png" data-height="1090" data-width="1617" data-unresolved-comment-count="0" data-linked-resource-id="681410591" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20230418-143938.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="681607169" data-linked-resource-container-version="1" data-media-id="a45c07e5-3bd4-4e63-b187-4763c5b88d98" data-media-type="file"></span><p>Congratulations! The 3D inspection you created is now ready to use. You can now go ahead and test it.</p>
+                    </div>
+
+                                        <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="attachments" class="pageSectionTitle">Attachments:</h2>
+                        </div>
+
+                        <div class="greybox" align="left">
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/681607169/681115653.png">image-20230417-184906.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/681607169/681181196.png">image-20230417-184939.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/681607169/681705478.png">image-20230417-185401.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/681607169/681312270.png">image-20230417-190621.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/681607169/681836545.png">image-20230417-190659.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/681607169/681443337.png">image-20230417-190918.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/681607169/681639941.png">image-20230417-191221.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/681607169/681771013.png">image-20230417-191732.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/681607169/681476107.png">image-20230417-193432.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/681607169/681803781.png">image-20230417-195125.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/681607169/681836553.png">image-20230417-195206.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/681607169/682590209.png">image-20230418-142849.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/681607169/682262537.png">image-20221209-161254.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/681607169/682262543.png">image-20221209-161331.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/681607169/682262549.png">image-20221209-161437.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/681607169/682262555.png">2022-12-09-20221209-161915.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/681607169/682524677.png">image-20230418-143347.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/681607169/682131467.png">image-20230418-143425.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/681607169/682197012.png">image-20230418-143511.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/681607169/681410591.png">image-20230418-143938.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/681607169/682262561.png">image-20230418-144541.png</a> (image/png)
+                                <br/>
+                                                    </div>
+                    </div>
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Jun 11, 2025 14:09</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VARLab : Bronch Tower Item Highlight</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="VARLab_44990773.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Learning-Experience_972881951.html">Learning Experience</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="216629273.html">Digital Learning Experiences (DLX)</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="LSM9.05---Respiratory-Therapy_1328119833.html">LSM9.05 - Respiratory Therapy</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Documentation_1512341506.html">Documentation</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            VARLab : Bronch Tower Item Highlight
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                            
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> Nilupul Vithanage</span>, last modified on Jan 29, 2025
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <p>This document provides detailed instructions on how to add an item highlighter to the bronchoscopy tower items. The highlighter will visually emphasize selected items, enhancing the user experience by making it easier to identify and interact with individual components. It includes step-by-step guidance on implementing the highlighter feature</p><h2 id="BronchTowerItemHighlight-Steps">Steps</h2><h3 id="BronchTowerItemHighlight-OpentheBronchoscopyTowerPrefab.">Open the Bronchoscopy Tower Prefab.</h3><p>Navigate to the <em>Bronchtower</em> prefab in your Unity project. You can open it in two ways:</p><ul><li><p><strong>Project Tab:</strong> Locate the prefab in the <em>Project</em> tab and double-click it to open.</p></li><li><p><strong>Hierarchy:</strong> Expand the <em>Bronchtower</em> prefab in the <em>Hierarchy</em> by clicking the arrow next to it.</p></li></ul><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20250128-153430.png" width="760" loading="lazy" src="attachments/1584463884/1584726018.png?width=760" data-image-src="attachments/1584463884/1584726018.png" data-height="261" data-width="1176" data-unresolved-comment-count="0" data-linked-resource-id="1584726018" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20250128-153430.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1584463884" data-linked-resource-container-version="7" data-media-id="e56d9d24-0fe9-426f-95e3-0628a2c38858" data-media-type="file"></span><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="11.png" width="531" loading="lazy" src="attachments/1584463884/1583972374.png?width=531" data-image-src="attachments/1584463884/1583972374.png" data-height="338" data-width="531" data-unresolved-comment-count="0" data-linked-resource-id="1583972374" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="11.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1584463884" data-linked-resource-container-version="7" data-media-id="a999a1c1-f463-4b59-b9e4-8c607886541e" data-media-type="file"></span><p /><h3 id="BronchTowerItemHighlight-SelecttheTargetItem.">Select the Target Item.</h3><p>Inside the prefab, identify the item you want to add the highlight to. Click on the specific item to select it.</p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="2.png" width="518" loading="lazy" src="attachments/1584463884/1584005146.png?width=518" data-image-src="attachments/1584463884/1584005146.png" data-height="468" data-width="518" data-unresolved-comment-count="0" data-linked-resource-id="1584005146" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="2.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1584463884" data-linked-resource-container-version="7" data-media-id="8d3b3ec5-9ae3-4dc6-8fbe-b5e478cb5d72" data-media-type="file"></span><p /><h3 id="BronchTowerItemHighlight-AddtheHighlightComponent">Add the Highlight Component</h3><p>With the item selected, add the <code>BronchTowerItemHighlighter</code> component to it. You can do this by:</p><ul><li><p>Clicking the <strong>Add Component</strong> button in the Inspector.</p></li><li><p>Searching for <code>BronchTowerItemHighlighter</code> and selecting it from the list.</p></li></ul><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="44.png" width="592" loading="lazy" src="attachments/1584463884/1584037910.png?width=592" data-image-src="attachments/1584463884/1584037910.png" data-height="346" data-width="592" data-unresolved-comment-count="0" data-linked-resource-id="1584037910" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="44.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1584463884" data-linked-resource-container-version="7" data-media-id="3e0dd3c3-6361-444a-86c6-11ea0601ae02" data-media-type="file"></span><p /><h3 id="BronchTowerItemHighlight-ConfiguretheHighlighterScript">Configure the Highlighter Script</h3><p>In the <code>BronchTowerItemHighlighter</code> script, you will need to configure the following:</p><ul><li><p><strong>Item to Highlight:</strong> Assign the item you want to highlight by dragging it into the designated field in the script's properties.</p></li><li><p><strong>Transparent Material:</strong> Locate the transparent material in the <strong>Materials</strong> folder. Use the file named <code>Bronch Tower Transparent.mat</code> and assign it to the appropriate field in the script.</p></li></ul><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="55.png" width="760" loading="lazy" src="attachments/1584463884/1584857105.png?width=760" data-image-src="attachments/1584463884/1584857105.png" data-height="842" data-width="1871" data-unresolved-comment-count="0" data-linked-resource-id="1584857105" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="55.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1584463884" data-linked-resource-container-version="7" data-media-id="2e357149-15ae-48f5-b864-7bb35b9eccfc" data-media-type="file"></span><p /><h3 id="BronchTowerItemHighlight-SettingUpExplorableEvents">Setting Up Explorable Events</h3><p>Expand the <strong>Explorable</strong> object associated with the bronchoscopy tower. You will see two events:</p><ul><li><p><strong>OnHighlightExplorable</strong></p></li><li><p><strong>OnUnhighlightExplorable</strong></p></li></ul><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="66.png" width="588" loading="lazy" src="attachments/1584463884/1584660500.png?width=588" data-image-src="attachments/1584463884/1584660500.png" data-height="388" data-width="588" data-unresolved-comment-count="0" data-linked-resource-id="1584660500" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="66.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1584463884" data-linked-resource-container-version="7" data-media-id="7fb0cd11-cb73-4f00-9a58-a53171710a52" data-media-type="file"></span><p /><h3 id="BronchTowerItemHighlight-LinktheHighlighterComponent:">Link the Highlighter Component:</h3><ul><li><p>Drag the object with the <code>BronchTowerItemHighlighter</code> component into these events.</p></li></ul><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="77.png" width="760" loading="lazy" src="attachments/1584463884/1583972380.png?width=760" data-image-src="attachments/1584463884/1583972380.png" data-height="704" data-width="1901" data-unresolved-comment-count="0" data-linked-resource-id="1583972380" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="77.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1584463884" data-linked-resource-container-version="7" data-media-id="295bff3a-4720-46b3-acd0-2ebbb5c799db" data-media-type="file"></span><p /><h3 id="BronchTowerItemHighlight-AssignHighlighterMethods">Assign Highlighter Methods</h3><ul><li><p>For <strong>On Highlight Explorable</strong>:<br/>Assign the <code>BronchTowerItemHighlighter.HighlightExplorable</code> method.</p></li><li><p>For <strong>On Unhighlight Explorable</strong>:<br/>Assign the <code>BronchTowerItemHighlighter.RestoreOriginalMaterial</code> method.</p></li></ul><p /><h3 id="BronchTowerItemHighlight-SettingUpPOI">Setting Up POI</h3><ul><li><p>Select the Relevant POI.</p></li></ul><p style="margin-left: 30.0px;">Identify and select the relevant <strong>Point of Interest</strong> (POI) from your scene or prefab.</p><ul><li><p>Add the POI to the Explorable List.</p></li></ul><p style="margin-left: 30.0px;">In the <strong>Explorable</strong> object, add the selected POI to the <strong>Explorable List</strong></p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="a1.png" width="760" loading="lazy" src="attachments/1584463884/1584070660.png?width=760" data-image-src="attachments/1584463884/1584070660.png" data-height="875" data-width="1916" data-unresolved-comment-count="0" data-linked-resource-id="1584070660" data-linked-resource-version="5" data-linked-resource-type="attachment" data-linked-resource-default-alias="a1.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1584463884" data-linked-resource-container-version="7" data-media-id="3fb08c07-8554-46fb-a796-afc05d1750c5" data-media-type="file"></span><h3 id="BronchTowerItemHighlight-SettinguptheEventSystem">Setting up the Event System</h3><p>Add the item to the Event System to enable highlight effects. This will ensure the item highlights when the mouse enters and returns to normal when the mouse exits.</p><p /><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="89.png" width="760" loading="lazy" src="attachments/1584463884/1587871780.png?width=760" data-image-src="attachments/1584463884/1587871780.png" data-height="387" data-width="1411" data-unresolved-comment-count="0" data-linked-resource-id="1587871780" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="89.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1584463884" data-linked-resource-container-version="7" data-media-id="9ee897d6-1b5d-4d91-8a40-b8091fed7070" data-media-type="file"></span><p /><p>Now it’s all set make sure you update and save the GUID manager before you run the simulation.</p>
+                    </div>
+
+                                        <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="attachments" class="pageSectionTitle">Attachments:</h2>
+                        </div>
+
+                        <div class="greybox" align="left">
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1584463884/1584136206.png">image-20250128-153101.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1584463884/1584726018.png">image-20250128-153430.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1584463884/1584070666.png">a1.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1584463884/1584857090.png">image-20250128-153928.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1584463884/1584791556.png">a1.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1584463884/1584332833.png">a1.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1584463884/1584234510.png">a1.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1584463884/1584070660.png">a1.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1584463884/1584201735.png">1.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1584463884/1584005146.png">2.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1584463884/1584431126.png">3.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1584463884/1583972374.png">11.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1584463884/1584037910.png">44.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1584463884/1584857105.png">55.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1584463884/1584660500.png">66.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1584463884/1583972380.png">77.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1584463884/1587871780.png">89.png</a> (image/png)
+                                <br/>
+                                                    </div>
+                    </div>
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Jun 11, 2025 14:20</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

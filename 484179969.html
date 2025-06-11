@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VARLab : Trucking: Wheels and Tires - Dev Considerations</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="VARLab_44990773.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Learning-Experience_972881951.html">Learning Experience</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="General-Release-DLX_729973721.html">General Release DLX</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="LSM3.01-Trucking-Pre-Trip-Inspection_386367493.html">LSM3.01 Trucking Pre Trip Inspection</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Trucking-FRS---DLS-Level_456851518.html">Trucking FRS - DLS Level</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            VARLab : Trucking: Wheels and Tires - Dev Considerations
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                            
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> Stacey Dineen (Unlicensed)</span>, last modified on Apr 29, 2022
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <p>As we have developed the exterior inspection procedure for Release I and into Release II, problems and confusion have arisen with regard to the standard naming convention for similar components and standard inspection procedure (order of steps). This document will attempt to document those standards for future reference.</p><h2 id="Trucking:WheelsandTires-DevConsiderations-NamingConventionsforTires">Naming Conventions for Tires</h2><p>Having SO MANY tires has created confusion with how to identify them, so a standard naming convention has been agreed upon:</p><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/484179969/484343811.png" data-image-src="attachments/484179969/484343811.png" data-height="229" data-width="916" data-unresolved-comment-count="0" data-linked-resource-id="484343811" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20220429-170044.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="484179969" data-linked-resource-container-version="3" data-media-id="02b478f7-d89b-446e-9d0a-37f393fe598f" data-media-type="file"></span><p><strong>Examples:</strong></p><p>DS Trailer Rear Brake chamber</p><p>PS Steer Rim</p><p>DS Tractor Front Inner Tread</p><p>PS Trailer Front Brake drum</p><p /><div class="confluence-information-macro confluence-information-macro-information"><span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"></span><div class="confluence-information-macro-body"><p>Notice that we never refer to any of these wheel/tire inspectables with words lie left or right, first or second, etc.  Those terms are relative to where you are standing, so we’ve eliminated them.</p></div></div><p>NOTE: In many issues and documents, you will see the term “Rear Tractor” used in place of “Tractor”.  This was causing confusion, since the drive tires that are located at the rear of the tractor (8 tires in total) are also identified according to axle position, such that we would have things like DS <strong>Rear</strong> Tractor <strong>Front</strong> Inner Tire.  The term “Rear Tractor” is popular, but it unnecessarily confusing for our project, so I’ve stopped using it.  Tractor tires are just Tractor now, not Rear Tractor.</p><div class="panel" style="background-color: #EAE6FF;border-color: #998DD9;border-width: 1px;"><div class="panelContent" style="background-color: #EAE6FF;">
+<p>This naming convention can easily be extended to other inspectable elements, such as lights.  The essential thing is to be consistent and use static reference points that do not change when the camera moves or if the GS is rearranged.</p><p>Example: DS Front Top Marker lights, DS Trailer Bottom Marker light, etc. </p>
+</div></div><h2 id="Trucking:WheelsandTires-DevConsiderations-StandardProcedureforInspectingEachWheel">Standard Procedure for Inspecting Each Wheel</h2><p>Having a standard approach for inspecting each tire (or each set of double tires) helps the student to remember all of the steps, by turning it into a repeatable pattern.  This supports the learning objectives and makes it easier to identify problems.</p><ol><li><p>Tread (for double tires, both treads are inspected together)</p></li><li><p>Debris (double sets of tires only, skip this step for Steer tires)</p></li><li><p>Sidewall (outer tire only for double tires)</p></li><li><p>Rim (outer tire only)</p></li><li><p>Lug Nuts (outer tire only)</p></li><li><p>Inflation (both tires together for double tires)</p></li><li><p>Brake chamber and brake drum</p></li><li><p>Air lines</p></li><li><p>Axle seal (inner tire only for double tires)</p></li></ol><h2 id="Trucking:WheelsandTires-DevConsiderations-Alwaysinspectitemsintheorderthattheyareencounteredinthe360walkaround:">Always inspect items in the <u>order that they are encountered</u> in the 360 walkaround:</h2><p>We begin at the DS front and walk toward the DS rear, inspecting the tires in the order when we encounter them:</p><hr/><p>DS Steer Tire</p><p>DS Tractor Front Tires &amp; Brakes</p><p>DS Tractor Rear Tires &amp; Brakes</p><p>DS Trailer Front Tires &amp; Brakes</p><p>DS Trailer Rear Tires &amp; Brakes</p><hr/><p>Now we stop and inspect the back of the trailer, van doors, etc. Then we proceed, but this time we’re coming from the rear of the vehicle toward the front.</p><hr/><p>PS Trailer Rear Tires &amp; Brakes</p><p>PS Trailer Front Tires &amp; Brakes</p><p>PS Tractor Rear Tires &amp; Brakes</p><p>PS Tractor Front Tires &amp; Brakes</p><p>PS Steer Tire</p>
+                    </div>
+
+                                        <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="attachments" class="pageSectionTitle">Attachments:</h2>
+                        </div>
+
+                        <div class="greybox" align="left">
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/484179969/484343811.png">image-20220429-170044.png</a> (image/png)
+                                <br/>
+                                                    </div>
+                    </div>
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Jun 11, 2025 14:05</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VARLab : Current State of XR in Unity</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="VARLab_44990773.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Learning-Experience_972881951.html">Learning Experience</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="General-Release-DLX_729973721.html">General Release DLX</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="XTP2.02-CSI-Crime-Scene-Investigation_409731372.html">XTP2.02 CSI Crime Scene Investigation</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="RD4.01-Room-Scale-VR_409731176.html">RD4.01 Room-Scale VR</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            VARLab : Current State of XR in Unity
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                            
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> Jordan Robinson (Unlicensed)</span>, last modified on Aug 25, 2021
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <p>The XR toolkit packages are still in preview which means they are subject to change and core features can become deprecated as new versions are released.</p><p>At the moment it appears Unity’s focus is on action-oriented XR rigs which allows for a homogenization of controls across all major XR devices.</p><h2 id="CurrentStateofXRinUnity-SettingUpVRforUnity">Setting Up VR for Unity</h2><p>To begin developing for VR in Unity, we start by installing the XR Interaction Toolkit from the Unity Package Manager after enabling preview packages.</p><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/413073592/413073603.png" data-image-src="attachments/413073592/413073603.png" data-height="525" data-width="1436" data-unresolved-comment-count="0" data-linked-resource-id="413073603" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20210825-143426.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="413073592" data-linked-resource-container-version="2" data-media-id="ff4ece04-011d-4b48-b0ba-abbf8950224d" data-media-type="file"></span><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/413073592/415334425.png" data-image-src="attachments/413073592/415334425.png" data-height="318" data-width="1679" data-unresolved-comment-count="0" data-linked-resource-id="415334425" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20210825-143501.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="413073592" data-linked-resource-container-version="2" data-media-id="91f19627-28d5-428e-8407-4d4c8e9f95ce" data-media-type="file"></span><p>Upon installing this package, there will be a prompt to enable the new input system which we will agree to.</p><p>After installing this package, open the <strong>Samples </strong>dropdown and import the <strong>Default Input Actions</strong> sample.</p><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/413073592/415334431.png" data-image-src="attachments/413073592/415334431.png" data-height="291" data-width="1173" data-unresolved-comment-count="0" data-linked-resource-id="415334431" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20210825-143610.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="413073592" data-linked-resource-container-version="2" data-media-id="2c49f38f-1454-4fca-bbd5-983d2493eac7" data-media-type="file"></span><p>This will provide us with all the default controls for our VR controllers.</p><p>Now we need to go to the Project Settings window.</p><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/413073592/409534649.png" data-image-src="attachments/413073592/409534649.png" data-height="612" data-width="285" data-unresolved-comment-count="0" data-linked-resource-id="409534649" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20210825-151217.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="413073592" data-linked-resource-container-version="2" data-media-id="64ff2601-2df7-455b-b998-8da0ecd4d806" data-media-type="file"></span><p>In the Project Settings window, head to <strong>Player-&gt;Other-&gt;Configuration</strong> and set <strong>Active Input Handling</strong> to <strong>Both</strong>.</p><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/413073592/409534661.png" data-image-src="attachments/413073592/409534661.png" data-height="672" data-width="1417" data-unresolved-comment-count="0" data-linked-resource-id="409534661" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20210825-151342.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="413073592" data-linked-resource-container-version="2" data-media-id="3e27696f-ef32-418c-8d80-57c9f86962b1" data-media-type="file"></span><p>This change makes it so that sims using the old input system do not break after enabling the new input system.</p><p>After that, go to <strong>XR Plug-in Management</strong> and select the devices you would like to target. As this initial research was performed with an <strong>Oculus Rift CV1</strong>, we have selected <strong>Oculus</strong>.</p><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/413073592/413073652.png" data-image-src="attachments/413073592/413073652.png" data-height="528" data-width="1438" data-unresolved-comment-count="0" data-linked-resource-id="413073652" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20210825-151446.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="413073592" data-linked-resource-container-version="2" data-media-id="72d756bf-67bd-46ab-8bd1-c2fa302eac36" data-media-type="file"></span><p>Now we’re ready to begin creating our VR experience.</p><h2 id="CurrentStateofXRinUnity-CreatingaVRExperience">Creating a VR Experience</h2><p>In a Unity scene that contains any collider that can act as a floor, such as a simple plane, we can place a rig and begin testing almost immediately.</p><h3 id="CurrentStateofXRinUnity-AddingtheXRRig">Adding the XR Rig</h3><p>Right-click in the Hierarchy window and select XR-&gt;XR Rig (Action-based) to create a complete rig ready for playmode.</p><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/413073592/409469158.png" data-image-src="attachments/413073592/409469158.png" data-height="477" data-width="470" data-unresolved-comment-count="0" data-linked-resource-id="409469158" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20210825-144016.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="413073592" data-linked-resource-container-version="2" data-media-id="5082b61f-0e7c-4e0b-84d3-499dc594a5eb" data-media-type="file"></span><p>You’ll see now that you have your rig in the <strong>Hierarchy </strong>and that all the components have been added for us in the<strong> Inspector</strong>.</p><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/413073592/409469164.png" data-image-src="attachments/413073592/409469164.png" data-height="82" data-width="189" data-unresolved-comment-count="0" data-linked-resource-id="409469164" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20210825-144149.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="413073592" data-linked-resource-container-version="2" data-media-id="7074b367-bff8-4d09-813a-d1df852cae8c" data-media-type="file"></span><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/413073592/409469170.png" data-image-src="attachments/413073592/409469170.png" data-height="364" data-width="432" data-unresolved-comment-count="0" data-linked-resource-id="409469170" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20210825-144156.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="413073592" data-linked-resource-container-version="2" data-media-id="f7ab1cbe-4c0d-4fa2-9f2d-4501d23446ef" data-media-type="file"></span><p>Here you can specify the <a class="external-link" href="https://docs.unity3d.com/2019.1/Documentation/ScriptReference/XR.TrackingOriginMode.html" rel="nofollow">Tracking Origin Mode</a> for the VR experience, whether that be based on the location of the device itself or the “floor” as determined within the scene.</p><h3 id="CurrentStateofXRinUnity-FixingtheControllerTracking">Fixing the Controller Tracking</h3><p>By default the <strong>LeftHand Controller</strong> &amp; <strong>RightHand Controller</strong> objects in the <strong>Hierarchy </strong>lack any settings for their <strong>XR Controller (Action-based)</strong> component.</p><p>To properly initialize these settings based on the samples we downloaded earlier from the <strong>Package Manager</strong>, click the preset icon :presets: in the top bar of the <strong>XR Controller (Action-based)</strong> component and select the corresponding preset for the left and right hand.</p><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/413073592/415334490.png" data-image-src="attachments/413073592/415334490.png" data-height="336" data-width="431" data-unresolved-comment-count="0" data-linked-resource-id="415334490" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20210825-145153.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="413073592" data-linked-resource-container-version="2" data-media-id="9477b233-8a32-44b9-b926-72c53a7bbe62" data-media-type="file"></span><p>With this complete your controllers will now track properly and register actions such as select/activate/etc.</p><h3 id="CurrentStateofXRinUnity-AddingVisibleHands">Adding Visible Hands</h3><p>For users to actually view hands in VR, we need a hand model with the various poses we would like the user to be able to shape their hand into given the constraints of their controller.</p><p>In the proof of concept the hand models used were taken from the a <a class="external-link" href="https://www.dropbox.com/s/dl/mpgeh97jpf4z4rn/oculus%20hands.unitypackage" rel="nofollow">Unity package</a> that converted the models from the Oculus official SDK into usable Unity prefabs.</p><p>This is also true for the controller models which can be found <a class="external-link" href="https://www.dropbox.com/s/dl/9ajsxoa6u3ps1y8/vr%20controllers%20model-fixed.unitypackage" rel="nofollow">here</a>.</p><p>When hand or controller prefabs are ready to be used to represent the user’s hands in VR, drag their prefabs into the <strong>Model Prefab</strong> field.</p><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/413073592/414154885.png" data-image-src="attachments/413073592/414154885.png" data-height="750" data-width="419" data-unresolved-comment-count="0" data-linked-resource-id="414154885" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20210825-145702.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="413073592" data-linked-resource-container-version="2" data-media-id="a137b5f8-52ec-4b27-b8d7-28433d57ee02" data-media-type="file"></span><p>With this step complete the VR rig is ready and will have properly tracked hands with models.</p><p>This is quite simplified as there is a lot you can do with the hands from having dynamic controller models based on detected device and properly posed/animated hands however there are many tutorials covering that so we will skip it for now.</p><h2 id="CurrentStateofXRinUnity-InteractingWithCORESimulations">Interacting With CORE Simulations</h2><p>Now that the VR rig is ready and we’ve confirmed everything works as intended, we need to create a translation layer to allow our VR controllers to interact with CORE Interactables.</p><p>Without this translation layer we would need to couple VR with our <a href="https://varlab-dev.atlassian.net/wiki/spaces/CE/pages/138805291/Interaction+System" data-linked-resource-id="138805291" data-linked-resource-version="8" data-linked-resource-type="page">Interaction System</a> somehow or create our sims with a VR focus from the start.</p><p>This translation layer is obviously not going to be perfect as it’s limited to things that a mouse is capable of. As a result of this, <strong>Motive Power Hoist Inspection</strong> was chosen as the proof of concept sim as our VR rig does not need to provide much interaction beyond what is possible with simple mouse clicks.</p><p>The way this system was coded was that initial collisions of the index finger with an Interactable object call <strong>OnMouseDown </strong>as if the user clicked the object and when the collision exits, <strong>OnMouseUp </strong>is called.</p><h3 id="CurrentStateofXRinUnity-AlternativeSolutions">Alternative Solutions</h3><p>The XR toolkit comes with a fully fleshed out Interaction system of its own, not much research has been done into whether this system is viable in a situation where both flat screen and VR experiences are desired within the same player.</p><p>From what I’ve seen this system allows for a lot of basic/standardized VR interactions such as picking up objects, teleporting, locomotion, etc without requiring much extra code.</p><h3 id="CurrentStateofXRinUnity-HoistInspectionExample">Hoist Inspection Example</h3><p>With the translation layer in place, it is possible to run through the Hoist Inspection sim after a few changes to the scenario/module code to ignore the flat screen experience’s <strong>Core Camera Controller</strong> as it is no longer present.</p><p>This was saved as <strong>MotivePowerVR.unity</strong> with a corresponding scenario file <strong>HoistInspectionScenarioVR.xml</strong> saved within the MotivePower project.</p><p>Currently the VR version of the sim has been tested with an Oculus Rift CV1 using Touch controllers successfully.</p>
+                    </div>
+
+                                        <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="attachments" class="pageSectionTitle">Attachments:</h2>
+                        </div>
+
+                        <div class="greybox" align="left">
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/413073592/413073603.png">image-20210825-143426.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/413073592/415334425.png">image-20210825-143501.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/413073592/415334431.png">image-20210825-143610.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/413073592/409469158.png">image-20210825-144016.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/413073592/415334465.png">image-20210825-144117.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/413073592/409469164.png">image-20210825-144149.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/413073592/409469170.png">image-20210825-144156.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/413073592/415334490.png">image-20210825-145153.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/413073592/414154885.png">image-20210825-145702.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/413073592/409534649.png">image-20210825-151217.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/413073592/409534661.png">image-20210825-151342.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/413073592/413073652.png">image-20210825-151446.png</a> (image/png)
+                                <br/>
+                                                    </div>
+                    </div>
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Jun 11, 2025 14:06</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

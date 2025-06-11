@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VARLab : Trucking Save &amp; Load</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="VARLab_44990773.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Learning-Experience_972881951.html">Learning Experience</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="General-Release-DLX_729973721.html">General Release DLX</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="LSM3.01-Trucking-Pre-Trip-Inspection_386367493.html">LSM3.01 Trucking Pre Trip Inspection</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            VARLab : Trucking Save &amp; Load
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                            
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> Ujjwal Prashar (Unlicensed)</span>, last modified on Jul 17, 2023
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <p>This document contains information regarding the Save &amp; Load structure of Trucking and how to manipulate it to make changes to it. </p><p /><div class="confluence-information-macro confluence-information-macro-information"><span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"></span><div class="confluence-information-macro-body"><p>This structure was adapted due to the limitations of Core V1. This is not an ideal way to target save and load, but due to the limitations of Core V1, this system was formulated.</p></div></div><h1 id="TruckingSave&amp;Load-GeneralStructure">General Structure</h1><p>All calls are made from the Sim to the Web API, which authenticates and processes them and passes them to the Azure Portal.<br/><br/>Upon starting, the Sim will try to obtain a unique Student ID used as a file name to identify user information. Depending upon what the call retrieves, the sim carries out appropriate functions.<br/><br/>Whenever the interacts with any components of the trucking, whether that be moving to the next inspection or selecting a truck component, a save happens where all the information regarding the truck and the graph is saved.<br/><br/>When a save call is made, the data is parsed into a JSON file and upon retrieval of that JSON file, it is de-serialized from the JSON so that the data can be fed to the sim.</p><p /><p>Both Guided and Advanced have a separate save files. The save file for guided is just the unique ID followed by .json, while for advanced, it’s the Unique ID followed for advanced.json</p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" width="210" loading="lazy" src="attachments/685375489/687112197.png?width=210" data-image-src="attachments/685375489/687112197.png" data-height="36" data-width="239" data-unresolved-comment-count="0" data-linked-resource-id="687112197" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20230425-130307.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="685375489" data-linked-resource-container-version="3" data-media-id="311c0464-d74f-4977-ae5c-0bb0f45311e3" data-media-type="file"></span><h2 id="TruckingSave&amp;Load-CoreComponents"><br/>Core Components </h2><ul><li><p>AzureSaveSystem.cs</p></li><li><p>ModeController.cs</p></li><li><p>TruckingSaveManager.cs</p></li><li><p>Serializer.cs</p></li><li><p>DynamicInspectableElement.cs</p></li></ul><p /><h3 id="TruckingSave&amp;Load-AzureSaveSystem">Azure Save System</h3><p>Azure Save System is concerned with making the calls to the Web API. This is the heart of The save and load. This script also concerned with getting the User ID, Containers, Save Structs (Bools for saving specific flags) and Endpoints<br/><br/>Functions included -</p><ul><li><p>Get Request (Load / Retrieving Data)</p></li><li><p>Post Request (Save / Sending Data)</p></li><li><p>Delete Request</p></li><li><p>Authorization</p></li></ul><p /><p>Upon starting the sim loading will automatically trigger and the sim will be presented with a loading screen until Azure responds or a timeout occurs after 30 seconds. If the get response for the file is successful then the data will get Deserialized with the help of the serializer and then it will be stored in the appropriate bool (LoadData &gt; Guided &amp; LoadDataAdvanced &gt; Advanced).</p><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: c#; gutter: false; theme: Confluence" data-theme="Confluence">private IEnumerator GetRequest(string uri)
+        {
+            using (UnityWebRequest webRequest = UnityWebRequest.Get(uri))
+            {
+                webRequest.SetRequestHeader(&quot;Authorization&quot;, &quot;Bearer &quot; + authorizeToken);
+
+                yield return webRequest.SendWebRequest();
+
+                string[] pages = uri.Split(&#39;/&#39;);
+                int page = pages.Length - 1;
+
+                if (IsExtAdvanced(uri))
+                {
+                    AdvLoadedData = Constants.EMPTY_SAVE_FILE_DATA;
+                }
+                else
+                {
+                    LoadedData = Constants.EMPTY_SAVE_FILE_DATA;
+                }
+                switch (webRequest.result)
+                {
+                    case UnityWebRequest.Result.ConnectionError:
+                    case UnityWebRequest.Result.DataProcessingError:
+                        Debug.Log(pages[page] + &quot;: Error: &quot; + webRequest.error);
+
+                        if (IsExtAdvanced(uri))
+                            SaveFileExistsAdv = false;
+                        else
+                            SaveFileExists = false;
+
+                        break;
+
+                    case UnityWebRequest.Result.ProtocolError:
+                        Debug.Log(pages[page] + &quot;: HTTP Error: &quot; + webRequest.error);
+                        if (IsExtAdvanced(uri))
+                            SaveFileExistsAdv = false;
+                        else
+                            SaveFileExists = false;
+                        break;
+
+                    case UnityWebRequest.Result.Success:
+                        FeedLoadedData(uri, webRequest.downloadHandler.text);
+                        Debug.Log(&quot;Load Successful&quot;);
+                        if (IsExtAdvanced(uri))
+                        {
+                            TempAdvLoadedData = webRequest.downloadHandler.text;
+                        }
+                        else
+                        {
+                            TempLoadedData = webRequest.downloadHandler.text;
+                        }
+                        break;
+                }
+                if (IsExtAdvanced(uri))
+                {
+                    HasLoadedAdv = true;
+                }
+                else
+                {
+                    HasLoaded = true;
+                }
+            }
+        }</pre>
+</div></div><p /><p><br/>Calls made to the API need to get validated and the method being used here is the JWT token. When any call is made an authorization request is made before it to API using the Password and user name. The API responds with a Token and using the Bearer and the Token as a Authorization header the call is made.</p><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: c#; gutter: false; theme: Confluence" data-theme="Confluence"> private IEnumerator AuthorizeRequest(ActionType actionType, string url, string saveData = null)
+        {
+            PasswordPacket passwordData = new PasswordPacket();
+            passwordData.Password = &quot;icecreamb23i4b2kh&quot;;
+            string jsonPassword = JsonUtility.ToJson(passwordData);
+
+            using (UnityWebRequest request = UnityWebRequest.Put(ENDPOINT_URL + &quot;authenticate&quot;, jsonPassword))
+            {
+                request.method = UnityWebRequest.kHttpVerbPOST;
+                request.SetRequestHeader(&quot;Content-Type&quot;, &quot;application/json&quot;);
+                request.SetRequestHeader(&quot;Accept&quot;, &quot;application/json&quot;);
+
+                yield return request.SendWebRequest();
+
+                if (request.result != UnityWebRequest.Result.Success)
+                {
+                    Debug.LogError(request.error);
+                }
+                else
+                {
+                    authorizeToken = request.downloadHandler.text.Trim(&#39;&quot;&#39;);
+
+                    if (actionType == ActionType.Save)
+                    {
+                        StartCoroutine(PostRequest(url, saveData));
+                    }
+                    else if (actionType == ActionType.Load)
+                    {
+                        StartCoroutine(GetRequest(url));
+                    }
+                    else if (actionType == ActionType.Delete)
+                    {
+                        StartCoroutine(DeleteRequest(url));
+                    }
+                }
+            }
+        }</pre>
+</div></div><p /><p>User ID - The Sim identifies weather the user is playing on econestoga or unity and calls the appropriate functions to proceed forward</p><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: c#; gutter: false; theme: Confluence" data-theme="Confluence">private void SetFileName()
+        {
+#if UNITY_EDITOR || !UNITY_WEBGL
+            FileName = $&quot;{SystemInfo.deviceUniqueIdentifier}.json&quot;;
+            AdvFileName = $&quot;{SystemInfo.deviceUniqueIdentifier}&quot; + ADV_FILE_LOC_CHECK;
+            Debug.Log($&quot;SaveLoad: Your save file&#39;s name is {FileName}.&quot;);
+#else
+            FileName = $&quot;{(ScormIntegrator.LearnerId == INSTRUCTOR_ID ? GetInstructorId() : ScormIntegrator.LearnerId)}.json&quot;;
+            AdvFileName = $&quot;{(ScormIntegrator.LearnerId == INSTRUCTOR_ID ? GetInstructorId() : ScormIntegrator.LearnerId)}advanced.json&quot;;
+#endif
+        }
+</pre>
+</div></div><div class="confluence-information-macro confluence-information-macro-information"><span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"></span><div class="confluence-information-macro-body"><p>When The user is using the sim on unity their local device unique ID is generated and used. </p></div></div><p /><h3 id="TruckingSave&amp;Load-ModeController">Mode Controller</h3><p>Mode Controller is the location where the current state of the sim is changed. When the starts a either Guided or Advanced a validation is triggered which does several checks ranging from weather the save file is valid to weather the save file exists. After Doing the all the validation of the file appropriate functions trigger to activate the next sequence. <br/><br/>Save File not Found                &gt;  Start From Beginning<br/>Save File Version Difference   &gt;  Start From Beginning<br/>Save File Corrupted                &gt; Start From Beginning<br/>Save File Found and is Valid   &gt; Save Menu Opens<br/>Connect to Azure Not Found &gt; Try Again Menu</p><p /><p /><p>Validation for both Advanced and Guided are handled separately</p><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: c#; gutter: false; theme: Confluence" data-theme="Confluence">private void CheckValidity(Mode mode)
+        {
+            //Depending upon the response different save menu outcomes will be presented
+            bool isLoadValid = Mode.Guided == mode ? isValid : isAdvValid;
+            bool hasLoadedCurrentReq = Mode.Guided == mode ? hasLoaded : hasLoadedAdv;
+            Debug.Log(LastAdvancedVertexReached + &quot; &quot;+ isLoadValid + &quot; &quot; + hasLoadedCurrentReq);
+            //Azure responded and the save file is valid
+            if (isLoadValid &amp;&amp; hasLoadedCurrentReq)
+            {
+                if (LastAdvancedVertexReached &amp;&amp; currentMode == Mode.Advanced)
+                {
+                    SetSave(SaveMode.StartFromBeginning);
+                }
+                else if (LastGuidedVertexReached &amp;&amp; currentMode == Mode.Guided)
+                {
+                    SetSave(SaveMode.StartFromBeginning);
+                }
+                else
+                {
+                    saveMenuTitle.text = &quot;TruckingInspection.saveMenu.title&quot;.Localize();
+
+                    // Enable black background to hide weather so it won&#39;t be showing switched quickly
+                    weatherManager.ModeMenuBackground.SetActive(true);
+                    module.SaveManager.CanSave = false;
+                    module.DisplaySaveMenu(false);
+                }
+            }
+            //Azure responded but the save file is invalid
+            else if (hasLoadedCurrentReq &amp;&amp; !isLoadValid)
+            {
+                if (currentMode == Mode.Advanced)
+                {
+                    FirstAdvancedVertexBool = true;
+                }
+                FreshStartMode();
+            }
+            //Azure didn&#39;t responde
+            else
+            {
+                // Enable black background to hide weather so it won&#39;t be showing switched quickly
+                saveMenuTitle.text = &quot;TruckingInspection.LoadFetch.TimeOut&quot;.Localize();
+                weatherManager.ModeMenuBackground.SetActive(true);
+                module.SaveManager.CanSave = false;
+                module.DisplaySaveMenu(true);
+            }
+        }</pre>
+</div></div><h3 id="TruckingSave&amp;Load-TruckingSaveManager">Trucking Save Manager</h3><p>After the Mode Controller has been told what to perform it hands over the task to Trucking Save Manager. The Save manager is responsible for validating the save file and carrying out the functions that are responsible for the components for Core (Graph controller)<br/><br/>Not only does this script transmit load information to the components but it also gathers save information and sends it back to the other save and load components. The function SaveGeneratedTasks() is called when a save is made. <br/></p><div class="confluence-information-macro confluence-information-macro-information"><span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"></span><div class="confluence-information-macro-body"><p>In Guided a save is made when the user moves a vertex and in advanced when the user interacts with a function. </p></div></div><p /><p>This script is also mode sensitive and knows how to load and save data according to which mode it is in.</p><p /><h3 id="TruckingSave&amp;Load-Serializer&amp;DynamicInspectableElement">Serializer &amp; DynamicInspectableElement</h3><p /><p>The Serializer is responsible for wrapping and unwrapping the data in json while the Dynamic Inspectable Element is a modified version of the inspectable element which was created with save and load in mind. It has a serializer and deserializer component added along with a GUID component which is responsible for giving elements a unique ID which is instrumental in the save and load process. <br/><br/></p><p />
+                    </div>
+
+                                        <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="attachments" class="pageSectionTitle">Attachments:</h2>
+                        </div>
+
+                        <div class="greybox" align="left">
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/685375489/687308807.png">image-20230425-130302.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/685375489/687112197.png">image-20230425-130307.png</a> (image/png)
+                                <br/>
+                                                    </div>
+                    </div>
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Jun 11, 2025 14:06</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VARLab : Cutscenes</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="VARLab_44990773.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Learning-Experience_972881951.html">Learning Experience</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="General-Release-DLX_729973721.html">General Release DLX</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Campus-RPG_247660655.html">Campus RPG</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Process-Documents_432996353.html">Process Documents</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="RPG-Maker-Documentation_432439297.html">RPG Maker Documentation</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="3.-Creating-Events_434471172.html">3. Creating Events</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            VARLab : Cutscenes
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                            
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> Colm Ambler (Unlicensed)</span> on Sept 21, 2021
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <p>Cutscenes in RPG Maker are essentially just autorun events that involve movement and/or dialogue. There’s a lot you can do with cutscenes and this document will be an explanation of some of these ideas.</p><p /><div class="table-wrap"><table data-layout="full-width" data-local-id="862578b6-5757-48e4-9053-e8f7bf140b58" class="confluenceTable"><colgroup><col style="width: 226.67px;"/><col style="width: 226.67px;"/><col style="width: 226.67px;"/></colgroup><tbody><tr><th class="confluenceTh"><p><strong>Idea</strong></p></th><th class="confluenceTh"><p><strong>Implementation</strong></p></th><th class="confluenceTh"><p><strong>A nice picture</strong></p></th></tr><tr><td class="confluenceTd"><p>Dialogue</p></td><td class="confluenceTd"><ul><li><p>Open an event.</p></li><li><p>Click “Show Text” it’s on the first event tab under “Message”.</p></li><li><p>Choose the face (if the character has one).</p></li><li><p>Write the text (The black line on the right means the space where the dialogue will cut off in the dialogue box).</p></li><li><p>Write the name of the character.</p></li><li><p>The background refers to how the text will appear visually, whether on a drawn background, the rest of the game dimming, or if it will just appear overtop. The position is whether the text will appear on the bottom, center or top of the screen.</p></li><li><p>Preview allows you to see how your text will look (this is a good way to test if you’re text is going outside of the box.</p></li><li><p>Batch entry allows you to write more than 4 lines of dialogue in one box, and RPG Maker will separate them into multiple “Show text” content lines with the same picture and name.</p></li></ul></td><td class="confluenceTd"><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/446955596/447053879.png" data-image-src="attachments/446955596/447053879.png" data-height="196" data-width="459" data-unresolved-comment-count="0" data-linked-resource-id="447053879" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="BartyDialogie.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="446955596" data-linked-resource-container-version="1" data-media-id="4885ad82-d70e-4c2b-8c53-abeb1238df01" data-media-type="file"></span><p /></td></tr><tr><td class="confluenceTd"><p>Movement Routes and Timing</p></td><td class="confluenceTd"><ul><li><p>Open an event.</p></li><li><p>Click “Set Movement Route” it’s on the second event tab under “Movement”.</p></li><li><p>You must select the event that you want to move (you can only select events to move).</p><ul><li><p>*It defaults to “Player” no matter what so be aware of that.</p></li></ul></li><li><p>The movement commands you input will appear in the route on the left side. The event will move in the exact motions you decide.</p></li><li><p>The preview allows you to see where your movement will be moving to.</p></li><li><p>The options allow you to repeat movements, skip a movement if the next move in the route is unavailable, and wait for this movement to complete before continuing with the event.</p></li><li><p>There are many other options available, from turning the event, having them move to and away from the player, turn switches on and off, change the speed and frequency, whether to keep the walking animation on or not, change event options, the image, opacity etc.</p></li><li><p>Another option is to wait, but there is a separate event command specifically for waiting under “Timer” in the second tab.</p></li></ul></td><td class="confluenceTd"><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/446955596/446791834.png" data-image-src="attachments/446955596/446791834.png" data-height="379" data-width="662" data-unresolved-comment-count="0" data-linked-resource-id="446791834" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="MovementRoute.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="446955596" data-linked-resource-container-version="1" data-media-id="b032ec39-07d2-428a-a819-8aea6e28f357" data-media-type="file"></span><p /></td></tr><tr><td class="confluenceTd"><p>Dialogue Choices</p></td><td class="confluenceTd"><ul><li><p>Open an event.</p></li><li><p>Click “Show Choices” in the first tab under “Message.”</p></li><li><p>Input the choices you want to add.</p></li><li><p>Decide how they will be presented to the player, ie. through a window, spawning to the right.</p></li><li><p>The default choice is the choice it begins on, whereas cancel is the choice that is picked when the player presses back.</p><ul><li><p>The choices in game scale so they can be as large as you want.</p></li></ul></li><li><p>Input what you want to happen when certain options are picked. </p><ul><li><p>The event will end when one option is completed.</p></li></ul></li></ul></td><td class="confluenceTd"><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/446955596/446791906.png" data-image-src="attachments/446955596/446791906.png" data-height="226" data-width="298" data-unresolved-comment-count="0" data-linked-resource-id="446791906" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Choices.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="446955596" data-linked-resource-container-version="1" data-media-id="2e60359a-8a70-494a-b9fb-3f5a6deb002b" data-media-type="file"></span><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/446955596/447054208.png" data-image-src="attachments/446955596/447054208.png" data-height="415" data-width="494" data-unresolved-comment-count="0" data-linked-resource-id="447054208" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="ChoicesScripting.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="446955596" data-linked-resource-container-version="1" data-media-id="0f745916-c0c0-48b6-a91f-b3c181f85f71" data-media-type="file"></span><p /></td></tr><tr><td class="confluenceTd"><p>Controlling Variables, Switches, Items and Actors</p></td><td class="confluenceTd"><ul><li><p>Open an event.</p></li><li><p>Select anything from “Game Progression” or “Party” both on the first tab.</p></li><li><p>There are many different ways to approach editing variables, self-switches and switches</p><ul><li><p>You can edit a single one or a range of variables, switches and self-switches. The range option refers to the numbers associated with them.</p></li><li><p>With variables, you have a wealth of operations to choose from, like adding, subtracting, multiplying etc. There are many different operands you can perform afterwards from a set number, from a variable to a random number etc.</p></li><li><p>With Switches and Self Switches, it’s more restrictive, but the method is the same. </p></li></ul></li><li><p>As long as the event happens the variables will change.</p></li><li><p>Changing items, actors, money etc. is the more or less the same process except it’s just an add or subtract.</p></li></ul></td><td class="confluenceTd"><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/446955596/446988558.png" data-image-src="attachments/446955596/446988558.png" data-height="324" data-width="334" data-unresolved-comment-count="0" data-linked-resource-id="446988558" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="ControlVariables.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="446955596" data-linked-resource-container-version="1" data-media-id="80641e89-7ee3-4859-ba34-bfc3793d4d87" data-media-type="file"></span><p /></td></tr></tbody></table></div><p />
+                    </div>
+
+                                        <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="attachments" class="pageSectionTitle">Attachments:</h2>
+                        </div>
+
+                        <div class="greybox" align="left">
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/446955596/447053879.png">BartyDialogie.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/446955596/446791834.png">MovementRoute.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/446955596/446955729.png">BTiles.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/446955596/446791906.png">Choices.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/446955596/447054208.png">ChoicesScripting.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/446955596/446988558.png">ControlVariables.png</a> (image/png)
+                                <br/>
+                                                    </div>
+                    </div>
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Jun 11, 2025 14:07</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

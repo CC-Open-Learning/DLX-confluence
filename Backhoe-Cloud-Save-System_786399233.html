@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VARLab : Backhoe Cloud Save System</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="VARLab_44990773.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Learning-Experience_972881951.html">Learning Experience</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="General-Release-DLX_729973721.html">General Release DLX</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="LSM8.04---HE-Backhoe-1.1_752779276.html">LSM8.04 - HE-Backhoe 1.1</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Current-State-of-Backhoe-Uplift_784596996.html">Current State of Backhoe Uplift</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            VARLab : Backhoe Cloud Save System
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                            
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> User b0804</span>, last modified by <span class='editor'> User aa77f</span> on Oct 02, 2023
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <p>This document outlines the different files that are used for the save/load system as it is right now.</p><style type='text/css'>/*<![CDATA[*/
+div.rbtoc1749651184738 {padding: 0px;}
+div.rbtoc1749651184738 ul {list-style: disc;margin-left: 0px;}
+div.rbtoc1749651184738 li {margin-left: 0px;padding-left: 0px;}
+
+/*]]>*/</style><div class='toc-macro rbtoc1749651184738'>
+<ul class='toc-indentation'>
+<li><a href='#BackhoeCloudSaveSystem-SaveData.cs'>SaveData.cs</a></li>
+<li><a href='#BackhoeCloudSaveSystem-SavedInformation'>Saved Information</a></li>
+<li><a href='#BackhoeCloudSaveSystem-UserProgressData'>User Progress Data</a>
+<ul class='toc-indentation'>
+
+<ul class='toc-indentation'>
+<li><a href='#BackhoeCloudSaveSystem-ProgressDataClass'>Progress Data Class</a></li>
+</ul>
+<li><a href='#BackhoeCloudSaveSystem-Initialization/PersistenceData'>Initialization/Persistence Data</a></li>
+</ul>
+</li>
+<li><a href='#BackhoeCloudSaveSystem-SaveDataSupport.cs'>SaveDataSupport.cs</a>
+<ul class='toc-indentation'>
+<li><a href='#BackhoeCloudSaveSystem-GetElementsFromControllerList'>GetElementsFromControllerList</a></li>
+<li><a href='#BackhoeCloudSaveSystem-GatherAllInspectableElements'>GatherAllInspectableElements</a></li>
+<li><a href='#BackhoeCloudSaveSystem-UpdateVertexID'>UpdateVertexID</a></li>
+<li><a href='#BackhoeCloudSaveSystem-OnLoadSetSavePointVertexID'>OnLoadSetSavePointVertexID</a></li>
+<li><a href='#BackhoeCloudSaveSystem-LoadElementsFromList'>LoadElementsFromList</a></li>
+<li><a href='#BackhoeCloudSaveSystem-WasLoadSuccessful'>WasLoadSuccessful</a></li>
+<li><a href='#BackhoeCloudSaveSystem-LoadBackhoeState'>LoadBackhoeState</a></li>
+<li><a href='#BackhoeCloudSaveSystem-LoadSavetoInspectableElements'>LoadSavetoInspectableElements</a></li>
+<li><a href='#BackhoeCloudSaveSystem-OnLoadToggleLights'>OnLoadToggleLights</a></li>
+<li><a href='#BackhoeCloudSaveSystem-OnLoadOpenEngineCover'>OnLoadOpenEngineCover</a></li>
+<li><a href='#BackhoeCloudSaveSystem-SaveDebrisGroupStates'>SaveDebrisGroupStates</a></li>
+<li><a href='#BackhoeCloudSaveSystem-OnLoadSetDebrisGroups'>OnLoadSetDebrisGroups</a></li>
+<li><a href='#BackhoeCloudSaveSystem-DeleteSave'>DeleteSave</a></li>
+</ul>
+</li>
+</ul>
+</div><h1 id="BackhoeCloudSaveSystem-SaveData.cs">SaveData.cs</h1><p>SaveData is the file we use to store all information needed for save/load. It is integrated into the cloud system and on save the file gets serialized and send to the cloud using the VARLab cloud save system.</p><p /><h1 id="BackhoeCloudSaveSystem-SavedInformation">Saved Information</h1><h1 id="BackhoeCloudSaveSystem-UserProgressData">User Progress Data</h1><p /><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">public List&lt;ProgressData&gt; AllElements;</pre>
+</div></div><p>This List stores the progress data objects containing information about every inspectableElement in the backhoe. See the <strong>Progress Data Class</strong> section for more info.</p><p /><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">public int VertexID;</pre>
+</div></div><p>This variable stores the current VertexID that has been reached. Vertices are like actions in the graph, camera moves, user tasks etc. and numbered incrementally from 1 as the graphs are created.</p><h3 id="BackhoeCloudSaveSystem-ProgressDataClass">Progress Data Class</h3><p>This class is used to store select data from an inspectable element which is essential for tracking if/how the user has interacted with that element.</p><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">public class ProgressData
+{
+    [JsonProperty]
+    public string ElementName;
+
+    [JsonProperty]
+    public int CurrentStatus;
+
+    [JsonProperty]
+    public int UserSelectedIdentifier;
+
+    [JsonProperty]
+    public int StateIdentifier;
+
+    [JsonProperty]
+    public int State;
+
+    [JsonProperty]
+    public bool currentlyInspectable;
+}</pre>
+</div></div><h2 id="BackhoeCloudSaveSystem-Initialization/PersistenceData">Initialization/Persistence Data</h2><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">public List&lt;string&gt; badElements;</pre>
+</div></div><p>This list stores the string representation of all damaged elements on the backhoe. It </p><p /><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">[JsonProperty]
+    public List&lt;bool&gt; debrisGroupStates</pre>
+</div></div><p>This is used to store information related to removable debris groups, so that the states of them can be loaded in the same way.</p><h1 id="BackhoeCloudSaveSystem-SaveDataSupport.cs">SaveDataSupport.cs</h1><p>This file contains a set of helper methods which are used to manipulate the save data.</p><h3 id="BackhoeCloudSaveSystem-GetElementsFromControllerList">GetElementsFromControllerList</h3><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: c#; gutter: false; theme: Confluence" data-theme="Confluence">public void GetElementsFromControllerList(Dictionary&lt;InspectableController, List&lt;InspectableElement&gt;&gt; elementsByController)</pre>
+</div></div><p>This method is used to get all elements from a dictionary of InspectableControllers and store them in a list. This method also triggers the upload to the cloud when it’s finished.</p><h3 id="BackhoeCloudSaveSystem-GatherAllInspectableElements">GatherAllInspectableElements</h3><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: c#; gutter: false; theme: Confluence" data-theme="Confluence">public void GatherAllInspectableElements(List&lt;InspectableElement&gt; elements)</pre>
+</div></div><p>This method is used to gather all the necessary progress information from each inspectableElement. It generates a dictionary of all the data needed for each inspectableElement to restore the user’s progress, then  sends that data into the SaveData file. It also triggers the cloud upload once complete.</p><p /><h3 id="BackhoeCloudSaveSystem-UpdateVertexID">UpdateVertexID</h3><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">public void UpdateVertexID(int vertexID)</pre>
+</div></div><p>This method is essentially a setter that passes along the argument into the SaveData.VertexID property that will be serialized.</p><h3 id="BackhoeCloudSaveSystem-OnLoadSetSavePointVertexID">OnLoadSetSavePointVertexID</h3><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">public void OnLoadSetSavePointVertexID(Action&lt;int&gt; callback)</pre>
+</div></div><p>This function calls a series of “OnLoad” functions to trigger animations, toggle lights, start sounds, and set removable debris, and provides a callback value of the loaded vertexID.</p><h3 id="BackhoeCloudSaveSystem-LoadElementsFromList">LoadElementsFromList</h3><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">public void LoadElementsFromList()</pre>
+</div></div><p>This method uses the saved “bad element” prefab strings that were saved to load a list of those prefabs and invokes a unity event to pass the loaded information along.</p><h3 id="BackhoeCloudSaveSystem-WasLoadSuccessful">WasLoadSuccessful</h3><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">public void WasLoadSuccessful(bool success)</pre>
+</div></div><p>This method is used to trigger a load action if it is passed a success(true) the calls an onLoadEvent, which is a unity event used to pass information and trigger onLoadActions.</p><h3 id="BackhoeCloudSaveSystem-LoadBackhoeState">LoadBackhoeState</h3><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">public void LoadBackhoeState(Action&lt;List&lt;Tuple&lt;string, int&gt;&gt;&gt; callback)</pre>
+</div></div><p>This method takes the list of all bad elements progress data from the SaveData object, and passes the information along in a callback. so that it can be loaded into the appropriate manager.</p><h3 id="BackhoeCloudSaveSystem-LoadSavetoInspectableElements">LoadSavetoInspectableElements</h3><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">public void LoadSaveToInspectableElements(Action&lt;List&lt;InspectableElement&gt;&gt; callback, List&lt;InspectableElement&gt; elements)</pre>
+</div></div><p>This method is about talking the saved List of ProgressData and iterating of the list of InspectableElements in the manager to update their properties to match the save data. This is called after the List of InspectableElements has been properly initialized with the saved elements, to ensure the game state is the same. It passes the elements back through a callback.</p><h3 id="BackhoeCloudSaveSystem-OnLoadToggleLights">OnLoadToggleLights</h3><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">public void OnLoadToggleLights()</pre>
+</div></div><p>This method is used to toggle on backhoe’s lights based on user progression.</p><h3 id="BackhoeCloudSaveSystem-OnLoadOpenEngineCover">OnLoadOpenEngineCover</h3><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">public void OnLoadOpenEngineCover()</pre>
+</div></div><p>This method is used to toggle an animation based off its current state at a specific savepoint.</p><h3 id="BackhoeCloudSaveSystem-SaveDebrisGroupStates">SaveDebrisGroupStates</h3><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">public void SaveDebrisGroupStates()</pre>
+</div></div><p>This method is used to iterate of the removable debris groups, and save their states to our save data object as a list.</p><h3 id="BackhoeCloudSaveSystem-OnLoadSetDebrisGroups">OnLoadSetDebrisGroups</h3><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">public void OnLoadSetDebrisGroups()</pre>
+</div></div><p>This method is used on a load to iterate over the removable debris components of the back hoe and set their state to match the save data.</p><h3 id="BackhoeCloudSaveSystem-DeleteSave">DeleteSave</h3><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">public void DeleteSave()</pre>
+</div></div><p>Clears information from the SaveData object and deletes the cloud save.</p>
+                    </div>
+
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Jun 11, 2025 14:13</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

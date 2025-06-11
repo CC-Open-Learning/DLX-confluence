@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VARLab : Adding Audio Effects</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="VARLab_44990773.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Learning-Experience_972881951.html">Learning Experience</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="General-Release-DLX_729973721.html">General Release DLX</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="LSM9.01---Public-Health-Inspection_805306369.html">LSM9.01 - Public Health Inspection</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Development-Documentation_1066991653.html">Development Documentation</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            VARLab : Adding Audio Effects
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                            
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> User 6fa8c</span> on Aug 13, 2024
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <style type='text/css'>/*<![CDATA[*/
+div.rbtoc1749651329686 {padding: 0px;}
+div.rbtoc1749651329686 ul {list-style: none;margin-left: 0px;}
+div.rbtoc1749651329686 li {margin-left: 0px;padding-left: 0px;}
+
+/*]]>*/</style><div class='toc-macro rbtoc1749651329686'>
+<ul class='toc-indentation'>
+<li><span class='TOCOutline'>1</span> <a href='#AddingAudioEffects-Introduction'>Introduction</a></li>
+<li><span class='TOCOutline'>2</span> <a href='#AddingAudioEffects-BeforeyouBegin'>Before you Begin</a></li>
+<li><span class='TOCOutline'>3</span> <a href='#AddingAudioEffects-SetUp'>Set Up</a></li>
+</ul>
+</div><h1 id="AddingAudioEffects-Introduction">Introduction</h1><p>This article covers the process used in PHI to add audio effects in the Unity scene. This article and process is up to date as of 12/08/2024. </p><h1 id="AddingAudioEffects-BeforeyouBegin">Before you Begin</h1><p>This article assumes you have a basic working knowledge of navigating the Unity Editor, particularly the Inspector, Hierarchy, Prefabs, and Project tabs.</p><p /><h1 id="AddingAudioEffects-SetUp">Set Up</h1><ol start="1"><li><p>Find the object you would like to have the audio source come from. If there is No object or you would like the audio to come from a specific part of the object create an empty and move it to the correct location. Preferably this should be apart of a prefab.</p></li><li><p>Add an Audio Source component.</p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20240812-190217.png" width="736" loading="lazy" src="attachments/1277296696/1277395010.png?width=736" data-image-src="attachments/1277296696/1277395010.png" data-height="757" data-width="1727" data-unresolved-comment-count="0" data-linked-resource-id="1277395010" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20240812-190217.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1277296696" data-linked-resource-container-version="1" data-media-id="a050929d-6532-4ff6-b228-d2d391eca6f2" data-media-type="file"></span><p> </p></li><li><p>Select your audio clip either found at “<strong>Assets/Audio/SoundEffects</strong>” or just select the arrow in the Resource field</p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20240812-190413.png" width="517" loading="lazy" src="attachments/1277296696/1276248139.png?width=517" data-image-src="attachments/1277296696/1276248139.png" data-height="414" data-width="517" data-unresolved-comment-count="0" data-linked-resource-id="1276248139" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20240812-190413.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1277296696" data-linked-resource-container-version="1" data-media-id="7cae88b7-b226-4bfd-8bd7-354e9cf4f21d" data-media-type="file"></span><p> </p></li><li><p>Select the Sound Effects for the Output field this will tie it to the audio mixer and the volume sliders.</p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20240812-190549.png" width="515" loading="lazy" src="attachments/1277296696/1276706874.png?width=515" data-image-src="attachments/1277296696/1276706874.png" data-height="259" data-width="515" data-unresolved-comment-count="0" data-linked-resource-id="1276706874" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20240812-190549.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1277296696" data-linked-resource-container-version="1" data-media-id="690c7cfd-7f42-4b12-bc85-d5326cc68cb2" data-media-type="file"></span><p> </p></li><li><p>set the minimum and maximum distance to set where the audio can be heard from this can be visualized from the circle appearing around the object. If you need to fine tune it you can use custom volume rolloff to make exact ranges but its better to stick to just messing with the range values.</p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20240812-191412.png" width="736" loading="lazy" src="attachments/1277296696/1276903489.png?width=736" data-image-src="attachments/1277296696/1276903489.png" data-height="849" data-width="1580" data-unresolved-comment-count="0" data-linked-resource-id="1276903489" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20240812-191412.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1277296696" data-linked-resource-container-version="1" data-media-id="54052227-acd8-4d1d-bdae-6934e69247e3" data-media-type="file"></span><p>Now you should be done setting up the audio. Play test it and make sure everything sounds OK. if not mess around with the min and max ranges to fine tune it. </p></li></ol>
+                    </div>
+
+                                        <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="attachments" class="pageSectionTitle">Attachments:</h2>
+                        </div>
+
+                        <div class="greybox" align="left">
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1277296696/1277395010.png">image-20240812-190217.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1277296696/1276248139.png">image-20240812-190413.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1277296696/1276411971.png">image-20240812-190422.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1277296696/1276706874.png">image-20240812-190549.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1277296696/1276903489.png">image-20240812-191412.png</a> (image/png)
+                                <br/>
+                                                    </div>
+                    </div>
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Jun 11, 2025 14:15</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

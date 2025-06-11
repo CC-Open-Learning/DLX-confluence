@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VARLab : Workflow for Fade Transitions Bulldozer</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="VARLab_44990773.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Learning-Experience_972881951.html">Learning Experience</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="General-Release-DLX_729973721.html">General Release DLX</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="LSM6.02---Heavy-Equipment---Bulldozer_505151489.html">LSM6.02 - Heavy Equipment - Bulldozer</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            VARLab : Workflow for Fade Transitions Bulldozer
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                            
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> Brodin Collins-Robb</span>, last modified on Jul 31, 2023
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <h1 id="WorkflowforFadeTransitionsBulldozer-CreatingAFadeTransitionForTheStartOfAnInspection">Creating A Fade Transition For The Start Of An Inspection</h1><h3 id="WorkflowforFadeTransitionsBulldozer-Step1-Confirmassetsaresetup"><strong>Step 1 - Confirm assets are setup</strong></h3><p>Check to ensure that your animations folder has the following files:</p><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/773357569/773357614.png" data-image-src="attachments/773357569/773357614.png" data-height="258" data-width="461" data-unresolved-comment-count="0" data-linked-resource-id="773357614" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20230614-184250.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="773357569" data-linked-resource-container-version="3" data-media-id="faab3875-5746-43dd-bb5f-07d15a76c20c" data-media-type="file"></span><p>Now double-click on the dashboard position animation. This should load the animator window like below:</p><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/773357569/773357608.png" data-image-src="attachments/773357569/773357608.png" data-height="719" data-width="1822" data-unresolved-comment-count="0" data-linked-resource-id="773357608" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20230614-184451.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="773357569" data-linked-resource-container-version="3" data-media-id="1a5536d0-7402-484e-9478-7dfff3d62a8c" data-media-type="file"></span><p>Next, select the FadeCam node (the orange node) in the animator, and your inspector window should populate with the node details. The inspection should show under the motion row that the FadeCam animation is being used, as shown below:</p><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/773357569/773357605.png" data-image-src="attachments/773357569/773357605.png" data-height="729" data-width="1821" data-unresolved-comment-count="0" data-linked-resource-id="773357605" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20230614-184634.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="773357569" data-linked-resource-container-version="3" data-media-id="42e356c1-49b5-4bb7-9e1d-c8fb057355a0" data-media-type="file"></span><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" width="544" loading="lazy" src="attachments/773357569/773357602.png?width=544" data-image-src="attachments/773357569/773357602.png" data-height="422" data-width="652" data-unresolved-comment-count="0" data-linked-resource-id="773357602" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20230614-184728.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="773357569" data-linked-resource-container-version="3" data-media-id="26f2b730-888b-4701-8850-15082a468f3a" data-media-type="file"></span><p>If the inspector window does not match what is above, you must drag the FadeCam.anim that you added a few steps back into the highlighted area that is shown in the image above.</p><h3 id="WorkflowforFadeTransitionsBulldozer-Step2-Settingupthecomponentsforthecameraposition"><strong>Step 2 - Setting up the components for the camera position</strong></h3><p>Now you can close out of the animator and navigate to the camera position where you would like to add the fade transition to the beginning of (A fade transition will only show in the scene when the inspection is moving to the position you select).</p><p>After selecting the camera position you would like to add the transition for, you will need to add two new components under the inspection window, a cinemachine storyboard (scripts) and an animator (see image below).</p><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/773357569/773357599.png" data-image-src="attachments/773357569/773357599.png" data-height="522" data-width="648" data-unresolved-comment-count="0" data-linked-resource-id="773357599" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20230614-190224.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="773357569" data-linked-resource-container-version="3" data-media-id="439297e0-755d-4f4d-8177-a76292c310f6" data-media-type="file"></span><p>Before continuing, ensure to drag the dashboard position controller into the animator component and drag the fade image png into the cinemachine storyboard script and set all other values to match the values in the screenshot.</p><p>Next, you must link the animator component to the CinemachineVirtualCamera inside the inspector window of the same camera position. To do this, click the plus button inside of the yellow highlighting (see image below) and drag the animator component from the bottom of the inspector window into the box under the Runtime Only box. Then ensure the box beside the animator link is checked off and that the dropdown above the checkbox is set to Animator.enabled.</p><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/773357569/773357596.png" data-image-src="attachments/773357569/773357596.png" data-height="512" data-width="647" data-unresolved-comment-count="0" data-linked-resource-id="773357596" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20230614-190816.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="773357569" data-linked-resource-container-version="3" data-media-id="5085e2cc-ef5d-45b7-bd9d-5de7ec86e87e" data-media-type="file"></span><p>Before continuing to the next step, ensure that all other settings in the above screenshot match the settings of the CinemachineVirtualCamera in your project.</p><p>The last step involved with comment setup is to confirm that the other components are set up. These components should already be in place from when the camera position was first implemented. See the image below to confirm the Cinemachine Recomposer, cinemachine zoom settings, and cinemachine pan settings are added to the camera position.</p><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/773357569/773357593.png" data-image-src="attachments/773357569/773357593.png" data-height="332" data-width="641" data-unresolved-comment-count="0" data-linked-resource-id="773357593" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20230614-191348.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="773357569" data-linked-resource-container-version="3" data-media-id="6f4f79fb-f9c4-4ca1-93c7-85ccb2d1c372" data-media-type="file"></span><h3 id="WorkflowforFadeTransitionsBulldozer-Step3-AddthecameratransitiontotheMainCamera"><strong>Step 3 - Add the camera transition to the Main Camera</strong></h3><p>The last step of adding a fade transition is to add it to the main camera of your project.</p><p>Under the Hierarchy, look for the main camera like below:</p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" width="442" loading="lazy" src="attachments/773357569/773357590.png?width=442" data-image-src="attachments/773357569/773357590.png" data-height="164" data-width="307" data-unresolved-comment-count="0" data-linked-resource-id="773357590" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20230614-191705.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="773357569" data-linked-resource-container-version="3" data-media-id="2d912468-9558-4be4-a1b0-fce195228a31" data-media-type="file"></span><p>Once you have clicked on the main camera, look in the inspector panel for the cinemachineBrain (as below).</p><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/773357569/773357581.png" data-image-src="attachments/773357569/773357581.png" data-height="426" data-width="642" data-unresolved-comment-count="0" data-linked-resource-id="773357581" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20230614-191853.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="773357569" data-linked-resource-container-version="3" data-media-id="ed3db6d9-51d3-40f7-ab02-8d73eb4cefea" data-media-type="file"></span><p>Then you will need to select the plus button on the custom blends area. Which will look like the following:</p><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/773357569/773357587.png" data-image-src="attachments/773357569/773357587.png" data-height="170" data-width="628" data-unresolved-comment-count="0" data-linked-resource-id="773357587" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20230614-191951.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="773357569" data-linked-resource-container-version="3" data-media-id="028cd2c0-ca57-449f-82d8-48efb18ce342" data-media-type="file"></span><p>Under the “From” tab, you will need to expand the row and select **ANY CAMERA** as the image shows below:</p><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/773357569/773357578.png" data-image-src="attachments/773357569/773357578.png" data-height="729" data-width="648" data-unresolved-comment-count="0" data-linked-resource-id="773357578" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20230614-192052.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="773357569" data-linked-resource-container-version="3" data-media-id="369ac6dc-2514-4399-bbbd-5f32bedb0497" data-media-type="file"></span><p>And for the “To” tab, you will need to select the camera position you just added the components to (the position you are adding the fade to the beginning of). In our example case, this is the Travel Pedals and Sticks Position. Once you have filled in both the “From” and “To” boxes, change the Style option to cut, as the screenshot below shows:</p><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/773357569/773357575.png" data-image-src="attachments/773357569/773357575.png" data-height="339" data-width="626" data-unresolved-comment-count="0" data-linked-resource-id="773357575" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20230614-192402.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="773357569" data-linked-resource-container-version="3" data-media-id="3f75c03d-d9b3-4dca-8cbb-7b58f1ccd88c" data-media-type="file"></span><p>And that's it! At this point, you should have successfully added a fade transition for the start of your camera position.</p><div class="panel" style="background-color: #EAE6FF;border-color: #998DD9;border-width: 1px;"><div class="panelContent" style="background-color: #EAE6FF;">
+<p>Note: Only one image asset and one animation asset is necessary for a single project no matter the number of fade transition in the project </p>
+</div></div>
+                    </div>
+
+                                        <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="attachments" class="pageSectionTitle">Attachments:</h2>
+                        </div>
+
+                        <div class="greybox" align="left">
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/773357569/773357575.png">image-20230614-192402.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/773357569/773357578.png">image-20230614-192052.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/773357569/773357581.png">image-20230614-191853.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/773357569/773357584.png">image-20230614-192336.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/773357569/773357587.png">image-20230614-191951.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/773357569/773357590.png">image-20230614-191705.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/773357569/773357593.png">image-20230614-191348.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/773357569/773357596.png">image-20230614-190816.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/773357569/773357599.png">image-20230614-190224.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/773357569/773357602.png">image-20230614-184728.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/773357569/773357605.png">image-20230614-184634.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/773357569/773357608.png">image-20230614-184451.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/773357569/773357611.png">image-20230614-184359.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/773357569/773357614.png">image-20230614-184250.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/773357569/773357617.anim">FadeCam.anim</a> (binary/octet-stream)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/773357569/773357620.meta">FadeCam.anim.meta</a> (binary/octet-stream)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/773357569/773357623.controller">Dashboard Position.controller</a> (binary/octet-stream)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/773357569/773357626.meta">Dashboard Position.controller.meta</a> (binary/octet-stream)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/773357569/773357629.png">fadeImage.png</a> (image/png)
+                                <br/>
+                                                    </div>
+                    </div>
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Jun 11, 2025 14:09</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

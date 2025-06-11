@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VARLab : Biopsy Task System</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="VARLab_44990773.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Learning-Experience_972881951.html">Learning Experience</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="216629273.html">Digital Learning Experiences (DLX)</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="LSM9.05---Respiratory-Therapy_1328119833.html">LSM9.05 - Respiratory Therapy</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Documentation_1512341506.html">Documentation</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Biopsy_1748893705.html">Biopsy</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            VARLab : Biopsy Task System
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                            
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> User e88ce</span>, last modified on Apr 15, 2025
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <p>The Biopsy Procedure module of this DLX is composed of several “Scenarios“, each representing a structured part of the overall module.</p><p>Each Scenario is composed of one or many “Tasks” defining specific interactions or instructional elements. These tasks are implemented as scriptable objects that inherit from the BiopsyBaseTaskSO class.</p><p>These are currently six TaskSO types:</p><ul><li><p>PromptTaskSO</p></li><li><p>MessageTaskSO</p></li><li><p>ItemHandlerTaskSO</p></li><li><p>ItemRequestTaskSO</p></li><li><p>POIHandlerTaskSO</p></li><li><p>BronchMonitorTaskSO</p></li></ul><p>Each TaskSO inheritor has its own implementation of Execute() which carries out the required code for that task. For more information on Scenarios, see <a href="Biopsy-Scenario-System_1749254213.html" data-linked-resource-id="1749254213" data-linked-resource-version="3" data-linked-resource-type="page">HERE</a></p><p /><p>To create any of the following:</p><p>Right-click &gt; Create &gt; RT Scriptable Objects &gt; Biopsy &gt; Scenario Tasks</p><p /><p><strong>--Base Class--</strong></p><p><strong>BiopsyBaseTaskSO</strong></p><ul><li><p>The abstract class all other Task classes inherit from</p></li><li><p>Class Properties</p><ul><li><p>TaskIndexIncrement (bool) - a task will proceed to the next one after it is completed</p></li><li><p>ScenarioIndexIncrement (bool) - a task will increment to the next Scenario when it is completed</p></li></ul></li><li><p>Methods</p><ul><li><p>Execute() - executes the given Task, each Task class has its own implementation specific to what needs to occur</p></li></ul></li></ul><p /><p><strong>--Inheritors--</strong></p><p><strong>PromptTaskSO</strong></p><ul><li><p>Main purpose of this task is to display a PromptSO on screen to instruct/inform the user of their next action</p><ul><li><p>a new PromptSO should be created as a property of this task</p></li></ul></li><li><p>Class Properties</p><ul><li><p>Name</p></li><li><p>PromptSO - includes the prompt information</p><ul><li><p>Speaker - name of the speaker (i.e. Physician, Preceptor)</p></li><li><p>Message - description text of the prompt</p></li><li><p>Image - NPC image relating to speaker</p></li><li><p>Colour - Bar (left side bar), Speaker (highlight of speaker name), Image Border (highlight around circular image)</p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" width="468" loading="lazy" src="attachments/1748860944/1748729863.png?width=468" data-image-src="attachments/1748860944/1748729863.png" data-height="61" data-width="468" data-unresolved-comment-count="0" data-linked-resource-id="1748729863" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Screenshot 2025-04-14 at 11.38.55 AM.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1748860944" data-linked-resource-container-version="12" data-media-id="f0069dab-d9e3-41b6-a0e6-2b1dfd71427c" data-media-type="file"></span></li></ul></li></ul></li><li><p>Execute() - calls prompt.HandleDisplayUI()</p><ul><li><p>shows the prompt - dismissed after delay</p></li></ul></li></ul><p /><p><strong>MessageTaskSO</strong></p><ul><li><p>Main purpose of this task is to display a ModalSO on screen to instruct/inform the user of their next action</p><ul><li><p>a new ModalSO should be created as a property of this task</p></li></ul></li><li><p>Class Properties</p><ul><li><p>Name</p></li><li><p>ModalSO - includes the modal information</p><ul><li><p>Name, title, description, sub-description, note (blue text), button text, image, note image</p></li></ul></li></ul></li></ul><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" width="540" loading="lazy" src="attachments/1748860944/1748434962.png?width=540" data-image-src="attachments/1748860944/1748434962.png" data-height="313" data-width="540" data-unresolved-comment-count="0" data-linked-resource-id="1748434962" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Screenshot 2025-04-14 at 11.53.30 AM.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1748860944" data-linked-resource-container-version="12" data-media-id="d52137bd-c1f4-4724-8f1b-a183cdc8e530" data-media-type="file"></span><ul><li><p>Execute() - calls modal.HandleDisplayUI()</p><ul><li><p>shows the modal - dismissed by button click</p></li></ul></li></ul><p /><p><strong>POIHandlerTaskSO</strong></p><ul><li><p>Main purpose of this task is to set the current POI, and open the current POI of interest</p></li><li><p>Class Properties</p><ul><li><p>ProcedurePOI</p><ul><li><p>selected from a POIType enum option</p></li></ul></li></ul></li><li><p>Execute() - calls poiManager.HandleExecutePOITask()</p><ul><li><p>opens to the parameter POI (ProcedurePOI)</p></li></ul></li></ul><p /><p><strong>ItemHandlerTaskSO</strong></p><ul><li><p>Main purpose of this task is to enable a particular item in scene as item of interest </p></li><li><p>Class Properties</p><ul><li><p>ProcedureEquipment</p><ul><li><p>selected from a BiopsyProcedureEquipment enum option</p></li></ul></li><li><p>EnableAllTableItems</p><ul><li><p>bool - toggle option to set all procedure items to active in the scene</p></li></ul></li></ul></li><li><p>Execute() - calls biopsyProcedureComponentHandler()</p><ul><li><p>enables the parameter BiopsyProcedureEquipment (ProcedureEquipment)</p></li><li><p>example - in the current scenario the Bronchoscope is the selected ProcedureEquipment and is active in the scene. Another task may require the Bronchoscope with Saline for example to be active in the physician’s hand</p></li></ul></li></ul><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" width="697" loading="lazy" src="attachments/1748860944/1748992044.png?width=697" data-image-src="attachments/1748860944/1748992044.png" data-height="340" data-width="697" data-unresolved-comment-count="0" data-linked-resource-id="1748992044" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Screenshot 2025-04-14 at 12.02.43 PM.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1748860944" data-linked-resource-container-version="12" data-media-id="c60ff5be-b48b-4798-aeeb-9d2c4c57aefb" data-media-type="file"></span><p /><p><strong>ItemRequestTaskSO</strong></p><ul><li><p>Main purpose of this task is to set an item on the procedure table as the RequestedItem. Certain Scenarios/Tasks require the user to identify a correct item amongst many, they are informed by prompt when they select a right/wrong item</p></li><li><p>Class Properties</p><ul><li><p>RequestedItem</p><ul><li><p>this is the item the user is needing to find on the table</p><ul><li><p>it is a BiopsyProcedureEquipment enum option</p></li></ul></li></ul></li><li><p>RequestPrompt</p><ul><li><p>the prompt that is displayed when the user is searching for the item</p><ul><li><p>the same prompt as the PromptTask for the corresponding Scenario</p><ul><li><p>when the user selects an incorrect item, a prompt is shown informing them of this, the RequestPrompt is displayed afterwards so the user knows which item they are searching for</p></li></ul></li></ul></li></ul></li><li><p>Actions after finding the requested item</p><ul><li><p>GoToNextTask - increments to next scenario task</p></li><li><p>GoToNextScenario - increments to next scenario</p></li></ul></li></ul></li><li><p>Execute() - calls tableController.SetRequestedItem()</p><ul><li><p>sets the parameter RequestedItem as the item to be “checked”</p></li><li><p>when the user clicks on table items they will be informed if right/wrong based off this item</p></li><li><p>example - in this task, the Saline20cc is the RequestedItem, clicking other items triggers the WrongItemPrompt, RequestPrompt is displayed after a small delay</p></li></ul></li></ul><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" width="760" loading="lazy" src="attachments/1748860944/1749221386.png?width=760" data-image-src="attachments/1748860944/1749221386.png" data-height="561" data-width="973" data-unresolved-comment-count="0" data-linked-resource-id="1749221386" data-linked-resource-version="4" data-linked-resource-type="attachment" data-linked-resource-default-alias="Screenshot 2025-04-14 at 12.12.27 PM.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1748860944" data-linked-resource-container-version="12" data-media-id="9efbbf1a-323e-463e-882a-4ea900665d1a" data-media-type="file"></span><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" width="760" loading="lazy" src="attachments/1748860944/1749057602.png?width=760" data-image-src="attachments/1748860944/1749057602.png" data-height="553" data-width="985" data-unresolved-comment-count="0" data-linked-resource-id="1749057602" data-linked-resource-version="2" data-linked-resource-type="attachment" data-linked-resource-default-alias="Screenshot 2025-04-14 at 12.12.41 PM.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1748860944" data-linked-resource-container-version="12" data-media-id="bbef7348-76d3-4816-bcbd-5b368426b77e" data-media-type="file"></span><p /><p><strong>BronchMonitorTaskSO</strong></p><ul><li><p>Main purpose of this task is to display a set of images that correspond to actions the user is taking with regards to the Bronch Monitor. One scenario for example requires the user to advance and retract the forceps. As the user interacts with the UI, the BronchMonitorStatus is updated, and the corresponding image is displayed on the Bronch Monitor based off this status</p></li><li><p>Class Properties</p><ul><li><p>BronchMonitorStatus</p><ul><li><p>the current status of the screen (i.e. off, retract needle, advance needle, etc.)</p><ul><li><p>this is a BronchMonitorStatus enum option</p></li></ul></li></ul></li><li><p>BronchMonitorDataList &lt;List&gt;</p><ul><li><p>list of images that will be cycled through for a given task to reflect the current status of the monitor</p></li></ul></li><li><p>Actions after finding the requested item</p><ul><li><p>GoToNextTask - increments to next scenario task</p></li><li><p>GoToNextScenario - increments to next scenario</p></li></ul></li></ul></li><li><p>Execute() - calls bronchMonitorController.SetBronchMonitorData()</p><ul><li><p>depending on the BronchMonitorStatus, displays the corresponding image, as the user completes the sub parts of the task, the BronchMonitorStatus changes, as does the current BronchMonitorDataList image being displayed  </p></li></ul></li></ul>
+                    </div>
+
+                                        <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="attachments" class="pageSectionTitle">Attachments:</h2>
+                        </div>
+
+                        <div class="greybox" align="left">
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1748860944/1748729863.png">Screenshot 2025-04-14 at 11.38.55 AM.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1748860944/1749057568.png">Screenshot 2025-04-14 at 11.52.22 AM.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1748860944/1748434962.png">Screenshot 2025-04-14 at 11.53.30 AM.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1748860944/1748992044.png">Screenshot 2025-04-14 at 12.02.43 PM.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1748860944/1749123133.png">Screenshot 2025-04-14 at 12.12.27 PM.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1748860944/1748598826.png">Screenshot 2025-04-14 at 12.12.27 PM.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1748860944/1748926493.png">Screenshot 2025-04-14 at 12.12.27 PM.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1748860944/1748697111.png">Screenshot 2025-04-14 at 12.12.41 PM.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1748860944/1749221386.png">Screenshot 2025-04-14 at 12.12.27 PM.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1748860944/1749057602.png">Screenshot 2025-04-14 at 12.12.41 PM.png</a> (image/png)
+                                <br/>
+                                                    </div>
+                    </div>
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Jun 11, 2025 14:20</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

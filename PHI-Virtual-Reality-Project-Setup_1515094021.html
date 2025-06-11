@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VARLab : PHI Virtual Reality Project Setup</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="VARLab_44990773.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Learning-Experience_972881951.html">Learning Experience</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="General-Release-DLX_729973721.html">General Release DLX</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="LSM9.01---Public-Health-Inspection_805306369.html">LSM9.01 - Public Health Inspection</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="PHI-VR-Research-Project_1514897411.html">PHI-VR Research Project</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            VARLab : PHI Virtual Reality Project Setup
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                            
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> User 55f04</span>, last modified on Dec 12, 2024
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <p>We followed the instructions at <a href="https://varlab-dev.atlassian.net/wiki/spaces/CV2/pages/1283883075/CORE+XR" data-linked-resource-id="1283883075" data-linked-resource-version="3" data-linked-resource-type="page">CORE XR</a> to set up the project for VR. We ensured that the project had the following packages:</p><ul><li><p>OpenXR v1.10.0</p></li><li><p>XR Interaction Toolkit v2.5.4</p></li></ul><p>See Jira issue 
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue resolved" data-jira-key="PHI-1335" >
+                <a href="https://varlab-dev.atlassian.net/browse/PHI-1335" class="jira-issue-key"><img class="icon" src="https://varlab-dev.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10315?size=medium" />PHI-1335</a>
+                    -
+            <span class="summary">As a developer I want to configure CORE XR for the PHI to start implementing VR capabilities.</span>
+                                                            <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-success jira-macro-single-issue-export-pdf">Done</span>
+            </span>
+ 
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue resolved" data-jira-key="PHI-1335" >
+                <a href="https://varlab-dev.atlassian.net/browse/PHI-1335" class="jira-issue-key"><img class="icon" src="https://varlab-dev.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10315?size=medium" />PHI-1335</a>
+                    -
+            <span class="summary">As a developer I want to configure CORE XR for the PHI to start implementing VR capabilities.</span>
+                                                            <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-success jira-macro-single-issue-export-pdf">Done</span>
+            </span>
+ for detailed implementation:</p><p>Once the setup, including the installation of the packages is complete as per the instructions in the link above. Search for XR system under the project and you will notice a prefab that belongs to the <code>com.varlab.xr</code> package.</p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20241211-174806.png" width="760" loading="lazy" src="attachments/1515094021/1514569746.png?width=760" data-image-src="attachments/1515094021/1514569746.png" data-height="319" data-width="1049" data-unresolved-comment-count="0" data-linked-resource-id="1514569746" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20241211-174806.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1515094021" data-linked-resource-container-version="2" data-media-id="353dea89-14ee-46ed-9bb6-8238d1ee4f96" data-media-type="file"></span><p>You do not edit this or use this in the scene. You would want to drag it into the scene first and then create its prefab variant in a folder that encompasses any XR related files. This variant of the XRSystem prefab can be modified without changing the package file. For my implementation I have it under the <code>Assets/Prefabs/</code> folder. See Jira issue 
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue resolved" data-jira-key="PHI-1337" >
+                <a href="https://varlab-dev.atlassian.net/browse/PHI-1337" class="jira-issue-key"><img class="icon" src="https://varlab-dev.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10315?size=medium" />PHI-1337</a>
+                    -
+            <span class="summary">As a developer, I want to add the XR system to the project to implement VR functionalities.</span>
+                                                            <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-success jira-macro-single-issue-export-pdf">Done</span>
+            </span>
+.</p><p>The XRSystem prefab has everything that is needed to get the simulation running in VR. Note that I added the new variant of the prefab under master components object in the main scene (You can drag and drop it anywhere as long as it is in the main scene.</p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20241211-180614.png" width="266" loading="lazy" src="attachments/1515094021/1514635360.png?width=266" data-image-src="attachments/1515094021/1514635360.png" data-height="472" data-width="266" data-unresolved-comment-count="0" data-linked-resource-id="1514635360" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20241211-180614.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1515094021" data-linked-resource-container-version="2" data-media-id="4b3cd79d-e06f-4bf3-a2bd-e65e2b18ac98" data-media-type="file"></span><p>You also will need add the packages to the Assembly Definition References to ensure the Root Namespace (in this case <code>VARLab.PublicHealth</code>) is using them:</p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20241211-181344.png" width="571" loading="lazy" src="attachments/1515094021/1514668116.png?width=571" data-image-src="attachments/1515094021/1514668116.png" data-height="545" data-width="571" data-unresolved-comment-count="0" data-linked-resource-id="1514668116" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20241211-181344.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1515094021" data-linked-resource-container-version="2" data-media-id="f51f3af5-c359-4ef1-9891-a371864df2cf" data-media-type="file"></span><p>Make sure to link the Meta Quest 3 headset to your computer using the Meta Quest Link application. Launch the simulation while Link is active and you will find yourself within the simulation in VR.</p><p>There are generic controls that are active by default. Walking and Turning are the few that were noted as the default controls.</p>
+                    </div>
+
+                                        <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="attachments" class="pageSectionTitle">Attachments:</h2>
+                        </div>
+
+                        <div class="greybox" align="left">
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1515094021/1514537017.png">image-20241211-174800.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1515094021/1514569746.png">image-20241211-174806.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1515094021/1514635360.png">image-20241211-180614.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1515094021/1514668116.png">image-20241211-181344.png</a> (image/png)
+                                <br/>
+                                                    </div>
+                    </div>
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Jun 11, 2025 14:16</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

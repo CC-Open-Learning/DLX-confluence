@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VARLab : Score</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="VARLab_44990773.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Learning-Experience_972881951.html">Learning Experience</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="216629273.html">Digital Learning Experiences (DLX)</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="RSM9.06---CCSIF-Trucking_1107918849.html">RSM9.06 - CCSIF Trucking</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="GDD_1362722819.html">GDD</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Feature-List_1363083276.html">Feature List</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            VARLab : Score
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                            
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> Germán Gaussmann</span>, last modified on Oct 04, 2024
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <h1 id="Score-Context">Context</h1><p>With this we will be able to determine the “performance” of the user. By the end of the game this will determine what “ending” they get (Good, Neutral, Bad)</p><h2 id="Score-Hypothesis">Hypothesis</h2><p>This should push players to perform the way they are expected to, making the “right” choices which means they will have to pay closer attention to their interactions.</p><h2 id="Score-Measuringsuccess">Measuring success</h2><p>Since this is not a pass/fail assignment in real life, we expect people to play around with this mechanic, potentially wanting to have a second go to see “what would happen if I do something differently” or if they get a score they’re not satisfied with, they might want to start over to rectify that.</p><h1 id="Score-Design">Design</h1><p>Might need to discuss with Kim where do we want the “priority” for the scoring to be. Do we favour inspections, the timer, the road choices? Do we try to keep them balanced and having all equal weight?</p><h2 id="Score-Summary">Summary</h2><p>There are a few ways of scoring, the player will get points in each round of inspections, based on their interactions during the inspection and where the Timer is at when they finish the inspection. While on the road they will make decisions that will have an impact on their final score as well.</p><h2 id="Score-Userjourney">User journey</h2><p><em>Sketch out screens of what the player will see and do, step by step.</em></p><h2 id="Score-Flow">Flow</h2><p><em>Create a flow diagram of how the feature works.</em></p><h2 id="Score-Values">Values</h2><p>At this point, score values are placeholder values and will have to be adjusted in the future to properly balance the game</p><div class="table-wrap"><table data-table-width="760" data-layout="default" data-local-id="5765f1ac-c45a-41dd-a742-8ee35244bc5e" class="confluenceTable"><tbody><tr><th class="confluenceTh"><p><strong>Name</strong></p></th><th class="confluenceTh"><p><strong>Value</strong></p></th></tr><tr><td class="confluenceTd"><p>Fixed inspectable</p></td><td class="confluenceTd"><p>+10</p></td></tr><tr><td class="confluenceTd"><p>Missed inspectable</p></td><td class="confluenceTd"><p>-5</p></td></tr><tr><td class="confluenceTd"><p>Timer below threshold</p></td><td class="confluenceTd"><p>+50</p></td></tr><tr><td class="confluenceTd"><p>Timer at or above threshold (multiplied by “amount of thresholds crossed”)</p></td><td class="confluenceTd"><p>-20</p></td></tr></tbody></table></div><h2 id="Score-Edgecases">Edge cases</h2><p>If the player makes “bad choices” on the road, this will result in extra inspectables in the second inspection, affecting their total inspection time. Should the score for those extra inspectables be different? Will it provide an opportunity for a “better score”? Needs testing and balance to confirm/deny if this could be an issue. </p><h1 id="Score-Researchandtesting">Research and testing</h1><p>We need to test the following cases to reach a proper balance:</p><ul><li><p>User does everything in the expected “time” and makes all the right choices</p><ul><li><p>[Score] will be our optimal score</p></li></ul></li><li><p>User does everything in the expected “time” and makes all the wrong choices</p><ul><li><p>[Score]</p></li></ul></li><li><p>User misses every inspectable, makes all the right choices</p><ul><li><p>[Score] </p></li></ul></li><li><p>User misses every inspectable, makes all the wrong choices</p><ul><li><p>[Score] will be the worst possible score without ‘wasting time’</p></li></ul></li><li><p>User gets fixes all the inspectables, wastes a lot of time, makes all the right choices</p><ul><li><p>[Score] will tel us how much time you need to ‘waste’ to balance out getting everything else right</p></li></ul></li></ul>
+                    </div>
+
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Jun 11, 2025 14:21</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

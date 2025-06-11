@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VARLab : Trucking FRS - Exterior Inspection</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="VARLab_44990773.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Learning-Experience_972881951.html">Learning Experience</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="General-Release-DLX_729973721.html">General Release DLX</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="LSM3.01-Trucking-Pre-Trip-Inspection_386367493.html">LSM3.01 Trucking Pre Trip Inspection</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            VARLab : Trucking FRS - Exterior Inspection
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                            
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> Stacey Dineen (Unlicensed)</span>, last modified on Apr 19, 2022
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <p>See DLS level Functional Requirements describing Visual Inspection and Physical Inspection user interactions.</p><style type='text/css'>/*<![CDATA[*/
+div.rbtoc1749650728565 {padding: 0px;}
+div.rbtoc1749650728565 ul {list-style: disc;margin-left: 0px;}
+div.rbtoc1749650728565 li {margin-left: 0px;padding-left: 0px;}
+
+/*]]>*/</style><div class='toc-macro rbtoc1749650728565'>
+<ul class='toc-indentation'>
+<li><a href='#TruckingFRS-ExteriorInspection-TruckExterior'>Truck Exterior</a></li>
+<li><a href='#TruckingFRS-ExteriorInspection-Windows'>Windows</a></li>
+<li><a href='#TruckingFRS-ExteriorInspection-Mirrors'>Mirrors</a></li>
+<li><a href='#TruckingFRS-ExteriorInspection-Wheels/Tires'>Wheels/Tires</a></li>
+<li><a href='#TruckingFRS-ExteriorInspection-FluidLeaks'>Fluid Leaks</a></li>
+<li><a href='#TruckingFRS-ExteriorInspection-ExteriorLights'>Exterior Lights</a></li>
+</ul>
+</div><h2 id="TruckingFRS-ExteriorInspection-TruckExterior">Truck Exterior</h2><p>Jira Epic 
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="TI-21"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_455639089_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/TI-21" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>TI-21</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p><div class="table-wrap"><table data-layout="default" data-local-id="52ecc8a9-3364-4491-aba2-6cef9bb77363" class="confluenceTable"><colgroup><col style="width: 124.0px;"/><col style="width: 141.0px;"/><col style="width: 120.0px;"/><col style="width: 120.0px;"/><col style="width: 86.0px;"/><col style="width: 78.0px;"/><col style="width: 91.0px;"/></colgroup><tbody><tr><th class="confluenceTh"><p><strong>Epic Link</strong></p></th><th class="confluenceTh"><p><strong>Jira Issue</strong></p></th><th class="confluenceTh"><p><strong>User Interaction</strong></p></th><th class="confluenceTh"><p><strong>Inspection Interaction</strong></p></th><th class="confluenceTh"><p><strong>On initial load</strong></p></th><th class="confluenceTh"><p><strong>States</strong></p></th><th class="confluenceTh"><p><strong>Notes</strong></p></th></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="TI-21"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_455639089_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/TI-21" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>TI-21</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>As a student, I need to inspect the overall condition of the exterior of the truck and trailer so that I can identify any damage prior to beginning a trip</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>User clicks to select damage. </p><p>On click: Object outline is highlighted (e.g. bumper, door, or maybe just the damage itself)</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>When the user clicks on the model, the Inspection UI opens to the specific component selected (e.g. grill, front bumper, or drivers door) so that the user can record appropriate “damaged” state in the inspection checklist.</p><p>User is not required to record the absence of exterior damage. If the user does not click on the model to report damage, they will click on a “Continue” or “Next Inspection” option that will indicate they are ready to move on to the next inspectable or POI.</p><p>Options: dented, cracked, abraded</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>2-4 visible dents or abrasions to the exterior of the cab or the trailer. </p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>Good: No significant damage, just very minor light scuffs or minor dirt.</p><p>Dented: 1 or more areas of the vehicle show dents larger than 2cm.</p><p>Cracked: 1 or more areas of the vehicle show visible cracks</p><p>Abraded: 1 or more areas of the vehicle show abrasions that break the paint and are larger than 1cm</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>This is separate from window/mirror inspection, even though both types of damage are visible on the exterior. Windows/mirrors will not be selectable in this task.</p></td></tr><tr><td class="confluenceTd"><p>
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="TI-21"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_455639089_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/TI-21" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>TI-21</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p></td><td class="confluenceTd"><p>As a student, I need to see the overall condition of the exterior of the truck and trailer so that I can identify any damage prior to beginning a trip</p></td><td class="confluenceTd"><p>User clicks to select any exterior damage that is presesnt.</p><p>On click: Damage area outline is highlighted.</p></td><td data-highlight-colour="#ffffff" class="confluenceTd"><p>When the user clicks on the model, the Inspection UI opens to the specific component selected (e.g. grill, front bumper, or drivers door) so that the user can record appropriate “damaged” state in the inspection checklist.</p><p>User is not required to record the absence of exterior damage. If the user does not click on the model to report damage, they will click on a “Continue” or “Next Inspection” option that will indicate they are ready to move on to the next inspectable or POI.</p><p>Options: dented, cracked, abraded</p></td><td class="confluenceTd"><p>0 visible dents or abrasions to the exterior of the cab or the trailer. </p></td><td data-highlight-colour="#ffffff" class="confluenceTd"><p>Good: No significant damage, just very minor light scuffs or minor dirt.</p><p>Dented: 1 or more areas of the vehicle show dents larger than 2cm.</p><p>Cracked: 1 or more areas of the vehicle show visible cracks</p><p>Abraded: 1 or more areas of the vehicle show abrasions that break the paint and are larger than 1cm</p></td><td class="confluenceTd"><p>John indicates that it is very unrealistic to ever have a truck/trailer combo that is completely unmarked.  As soon as a truck or trailer is in active duty use, it gets at least a few minor scuffs, dings, and scrapes.  </p></td></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="TI-21"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_455639089_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/TI-21" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>TI-21</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p><p>Cargo Area</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>As a student, I need to inspect the cargo area of the trailer so that I can learn to identify conditions that may make it unsafe to operate my vehicle.</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>User clicks to select damage, when present. </p><p>On click: Damaged area or debris outline is highlighted</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>When the user clicks on the model, the Inspection UI opens to the Cargo Area so that the user can record appropriate “damaged” state in the inspection checklist.</p><p>User is not required to record the absence of cargo area debris or damage. </p><p>Options: debris, damaged</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>1-4 visible pieces of debris or damage in the cargo area of the trailer. </p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>Good: No debris or damage.</p><p>Debris: These could be loose tools (wrench, box cutter) or garbage (broken skids, broken cardboard)</p><p>Damage: Interior trailer damage such as bent/broken roof supports, big abrasions on the trailer floor.</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>Cargo Area damage:<a class="external-link" data-card-appearance="inline" href="https://stuconestogacon.sharepoint.com/:i:/s/VARLab/EYUgFn_VnhlNsCQJo-vdHuMB78TRStun9t_IUTbVxXe4Qw?e=DUzTrE" rel="nofollow">https://stuconestogacon.sharepoint.com/:i:/s/VARLab/EYUgFn_VnhlNsCQJo-vdHuMB78TRStun9t_IUTbVxXe4Qw?e=DUzTrE</a> </p><p>Cargo area debris <a class="external-link" data-card-appearance="inline" href="https://stuconestogacon.sharepoint.com/:i:/s/VARLab/EaLCiIz2IyVNhwVewunKXXkBfP-5F79WJDV2XciC3tiM1Q?e=4Ahplc" rel="nofollow">https://stuconestogacon.sharepoint.com/:i:/s/VARLab/EaLCiIz2IyVNhwVewunKXXkBfP-5F79WJDV2XciC3tiM1Q?e=4Ahplc</a> </p></td></tr><tr><td data-highlight-colour="#ffffff" class="confluenceTd"><p>
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="TI-21"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_455639089_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/TI-21" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>TI-21</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p><p>Cargo Area</p></td><td data-highlight-colour="#ffffff" class="confluenceTd"><p>As a student, I need to see the cargo area of the trailer so that I can learn to identify conditions that may make it unsafe to operate my vehicle.</p></td><td data-highlight-colour="#ffffff" class="confluenceTd"><p>User clicks to select damage, when present. </p><p>On click: Damaged area or debris outline is highlighted</p></td><td data-highlight-colour="#ffffff" class="confluenceTd"><p>When the user clicks on the model, the Inspection UI opens to the Cargo Area so that the user can record appropriate “damaged” state in the inspection checklist.</p><p>User is not required to record the absence of cargo area debris or damage. </p><p>Options: debris, damaged</p></td><td data-highlight-colour="#ffffff" class="confluenceTd"><p>1-4 visible pieces of debris or damage in the cargo area of the trailer. </p></td><td data-highlight-colour="#ffffff" class="confluenceTd"><p>Good: No debris or damage.</p><p>Debris: These could be loose tools (wrench, box cutter) or garbage (broken skids, broken cardboard)</p><p>Damage: Interior trailer damage such as bent/broken roof supports, big abrasions on the trailer floor.</p></td><td data-highlight-colour="#ffffff" class="confluenceTd"><p>Cargo Area damage:<a class="external-link" data-card-appearance="inline" href="https://stuconestogacon.sharepoint.com/:i:/s/VARLab/EYUgFn_VnhlNsCQJo-vdHuMB78TRStun9t_IUTbVxXe4Qw?e=DUzTrE" rel="nofollow">https://stuconestogacon.sharepoint.com/:i:/s/VARLab/EYUgFn_VnhlNsCQJo-vdHuMB78TRStun9t_IUTbVxXe4Qw?e=DUzTrE</a> </p><p>Cargo area debris <a class="external-link" data-card-appearance="inline" href="https://stuconestogacon.sharepoint.com/:i:/s/VARLab/EaLCiIz2IyVNhwVewunKXXkBfP-5F79WJDV2XciC3tiM1Q?e=4Ahplc" rel="nofollow">https://stuconestogacon.sharepoint.com/:i:/s/VARLab/EaLCiIz2IyVNhwVewunKXXkBfP-5F79WJDV2XciC3tiM1Q?e=4Ahplc</a> </p></td></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="TI-26"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_455639089_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/TI-26" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>TI-26</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p><p>Coupling/Fifth Wheel</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>As a student, I need to inspect the coupling mechanism or fifth wheel that connects the truck cab to the trailer so that I can learn to identify conditions that may make it unsafe to operate my vehicle.</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>User clicks to select damage, when present. </p><p>On click: Damage or object outline is highlighted</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>When the user clicks on the model, the Inspection UI opens to Coupling/Fifth Wheel so that the user can record appropriate “damaged” state in the inspection checklist.</p><p>User is not required to record the absence of coupling/5th wheel debris or damage. </p><p>Options: Not secured</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>Rarely, the trailer is not securely coupled to the tractor at the fifth wheel. </p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>Good: Trailer kingpin is securely coupled at the fifth wheel.  Pin handle is IN (closed) and indicator pin is IN (closed).  Jaws of the fifth wheel coupling are securely closed around the trailer kingpin.</p><p>Not secured: Trailer is not securely coupled at the fifth wheel. Pin handle is OUT (open), or indicator pin is OUT (open), or the jaws of the fifth wheel coupling are visibly open or partially closed so that the trailer kingpin is not securely held in the coupling.</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>Photo explaining the location and appearance of the pin handle and indicator pin. <a class="external-link" data-card-appearance="inline" href="https://stuconestogacon.sharepoint.com/:i:/s/VARLab/ESeIH1OPO3VNl9PLfsm9Fb4BL3-PShTDurOA9scscNWJew?e=irzTgP" rel="nofollow">https://stuconestogacon.sharepoint.com/:i:/s/VARLab/ESeIH1OPO3VNl9PLfsm9Fb4BL3-PShTDurOA9scscNWJew?e=irzTgP</a> </p></td></tr><tr><td data-highlight-colour="#ffffff" class="confluenceTd"><p>
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="TI-26"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_455639089_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/TI-26" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>TI-26</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p><p>Coupling/Fifth Wheel</p></td><td data-highlight-colour="#ffffff" class="confluenceTd"><p>As a student, I need to see the  fifth wheel coupling mechanism that connects the truck to the trailer so that I can learn to identify conditions that may make it unsafe to operate my vehicle.</p></td><td data-highlight-colour="#ffffff" class="confluenceTd"><p>User clicks to select damage, when present. </p><p>On click: Damage or object outline is highlighted</p></td><td data-highlight-colour="#ffffff" class="confluenceTd"><p>When the user clicks on the model, the Inspection UI opens to Coupling/Fifth Wheel so that the user can record appropriate “damaged” state in the inspection checklist.</p><p>User is not required to record the absence of coupling/5th wheel debris or damage. </p><p>Options: Not secured</p></td><td data-highlight-colour="#ffffff" class="confluenceTd"><p>Rarely, the trailer is not securely coupled to the tractor at the fifth wheel. </p></td><td data-highlight-colour="#ffffff" class="confluenceTd"><p>Good: Trailer kingpin is securely coupled at the fifth wheel.  Pin handle is IN (closed) and indicator pin is IN (closed).  Jaws of the fifth wheel coupling are securely closed around the trailer kingpin.</p><p>Not secured: Trailer is not securely coupled at the fifth wheel. These are the visible indicators that the coupling is not secure:</p><ol><li><p>Pin handle is OUT (open), or </p></li><li><p>indicator pin is OUT (open), or </p></li><li><p>the jaws of the fifth wheel coupling are visibly open or partially open so that the trailer kingpin is not securely held in the coupling.</p></li></ol></td><td data-highlight-colour="#ffffff" class="confluenceTd"><p>Photo explaining the location and appearance of the pin handle and indicator pin. <a class="external-link" data-card-appearance="inline" href="https://stuconestogacon.sharepoint.com/:i:/s/VARLab/ESeIH1OPO3VNl9PLfsm9Fb4BL3-PShTDurOA9scscNWJew?e=irzTgP" rel="nofollow">https://stuconestogacon.sharepoint.com/:i:/s/VARLab/ESeIH1OPO3VNl9PLfsm9Fb4BL3-PShTDurOA9scscNWJew?e=irzTgP</a> </p><p>In our simulation, the trailer will be attached, so there will be no opportunity to inspect of the fifth wheel coupling WITHOUT a trailer on.  We will only model the secure and unsecured coupling with the trailer.</p></td></tr><tr><td class="confluenceTd"><p>
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="TI-21"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_455639089_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/TI-21" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>TI-21</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p><p>Mud Flaps</p></td><td class="confluenceTd"><p>As a student, I need to inspect the mud flaps on each wheel so that I can learn to identify maintenance issues with my vehicle</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>User clicks to select any damaged mud flaps that they find. </p><p>On click: Object outline is highlighted</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>If the user clicks on the model, the Inspection UI opens to the selected component. User records the specific damage/bad state in the inspection checklist.</p><p>Options: damaged, missing</p><p>If the user does not click on the model, they can select the “Continue” option to move to the next inspectable or POI without reporting any damage in the checklist.</p><p /></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>0-2 mud flaps are missing or damaged.</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>Good: Mud flaps are present, no damage</p><p>Damaged: Mud flaps are torn, missing pieces.</p><p>Missing: Empty bracket is shown, mud flap has been torn off.</p><p /></td><td class="confluenceTd"><p /><p /></td></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="TI-46"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_455639089_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/TI-46" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>TI-46</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+<del> </del></p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><del>As a student I need to inspect the wheel chocks so that I can ensure my trailer is properly secured when parked.</del></p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><del>User clicks to report damaged, misplaced, or missing wheel chocks. </del></p><p><del>On click: Wheel chocks are highlighted to show selection, but otherwise to not change appearance when clicked.</del></p><p><del>If 0 wheel chocks are present:</del></p><p><del>User clicks the empty space immediately in front of or behind the centre tire in the group of 3 tires on either side of the trailer to indicate that a wheel chock is missing.  The empty space will be highlighted (outlined) to show selection.</del></p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><del>When the user clicks on the model, the Inspection UI opens to the wheel chocks so that the user can record appropriate “bad” state in the inspection checklist. </del></p><p><del>Options: missing, damaged, incorrect placement.</del></p><p><del>User is not required to record correctly placed wheel chocks. If the user does not click on the model to report damage, they may click the Next Inspection option to move on to the next inspectable or POI.</del></p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><del>0-4 wheel chocks may be present.    </del></p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><del>Good: 4 wheel chocks, placed correctly)</del></p><p><del>Bad: Fewer than 4 wheel chocks are present, 1 or more wheel chocks are severely cracked or damaged, 1 or more wheel chocks are not placed correctly.</del></p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p /></td></tr><tr><td class="confluenceTd"><p>
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="TI-46"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_455639089_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/TI-46" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>TI-46</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+<del> </del></p></td><td class="confluenceTd"><p><del>As a student I need to see wheel chocks so that I can identify correct and incorrect placement of wheel chocks for a parked trailer</del></p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><del>User clicks to report damaged, misplaced, or missing wheel chocks. </del></p><p><del>On click: Wheel chocks are highlighted to show selection, but otherwise to not change appearance when clicked.</del></p><p><del>If 0 wheel chocks are present:</del></p><p><del>User clicks the empty space immediately in front of or behind the centre tire in the group of 3 tires on either side of the trailer to indicate that the wheel chocks are missing.  The empty space will be highlighted (outlined) to show selection.</del></p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><del>When the user clicks on the model, the Inspection UI opens to the wheel chocks so that the user can record appropriate “bad” state in the inspection checklist. </del></p><p><del>Options: missing, damaged, incorrect placement.</del></p><p><del>User is not required to record correctly placed wheel chocks. If the user does not click on the model to report damage, they may click the Next Inspection option to move on to the next inspectable or POI.</del></p></td><td class="confluenceTd"><p><del>0-2 wheel chocks may be present.  Wheel chocks must be brightly coloured either orange or yellow.   </del></p></td><td class="confluenceTd"><p><del>Good: 2 wheel chocks, placed immediately in front of and behind the centre tire in the set of 3 tires on the trailer. The pointed edge of the wheel chock faces toward the tire (so that the 2 wheel chocks point toward each other when placed correctly)</del></p><p><del>Bad: 0 or 1 wheel chock is present, 1 or 2 wheel chocks are severely cracked or damaged, 1 or 2 wheel chocks are not placed exactly as described (e.g. beside wheel, on incorrect wheel(s), backwards).</del></p></td><td class="confluenceTd"><p /></td></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="TI-25"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_455639089_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/TI-25" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>TI-25</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p><p>Fuel tanks</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>As a student, I need to inspect the fuel tanks on  the exterior of the truck so that I can identify conditions that may make it unsafe to operate my vehicle</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>User clicks to select any damage or problem with the fuel tanks. </p><p>On click: Object outline is highlighted</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>When the user clicks on the model, the Inspection UI opens to Fuel Tank so that the user can record appropriate “damaged” state in the inspection checklist.</p><p>User is not required to record the absence of exterior damage. </p><p>Options: damaged, not secure, leaking</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>0-2 fuel tanks have issues</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>Good: Fuel tanks are intact, securely attached, and show no damage</p><p>Damaged: 1 or more fuel tanks are dented or misshapen.</p><p>Not secure: 1 or more fuel tanks show visible signs of being insecurely attached to the truck, such as broken straps, crooked.</p><p>Leaking: 1 or more fuel tanks show obvious signs of leakage, either from a seam or because the fill cap is misthreaded and crooked.</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>Hard to say if a leaking fuel tank would just be covered by the Fluid Leaks epic or if it should also be an option when inspecting at the component level.  Not all leaks would result in a puddle, so we might allow leaks to be reported generally as well as specifically.</p></td></tr><tr><td data-highlight-colour="#ffffff" class="confluenceTd"><p>
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="TI-25"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_455639089_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/TI-25" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>TI-25</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p><p>Fuel tanks</p></td><td data-highlight-colour="#ffffff" class="confluenceTd"><p>As a student, I need to see the fuel tanks on  the exterior of the truck so that I can identify conditions that may make it unsafe to operate my vehicle</p></td><td data-highlight-colour="#ffffff" class="confluenceTd"><p>User clicks to select any damage or problem with the fuel tanks. </p><p>On click: Object outline is highlighted</p></td><td data-highlight-colour="#ffffff" class="confluenceTd"><p>When the user clicks on the model, the Inspection UI opens to Fuel Tank so that the user can record appropriate “damaged” state in the inspection checklist.</p><p>User is not required to record the absence of exterior damage. </p><p>Options: damaged, not secure, leaking</p></td><td data-highlight-colour="#ffffff" class="confluenceTd"><p>0-2 fuel tanks have issues</p></td><td data-highlight-colour="#ffffff" class="confluenceTd"><p>Good: Fuel tanks are intact, securely attached, and show no damage</p><p>Damaged: 1 or more fuel tanks are dented or misshapen.</p><p>Not secure: 1 or more fuel tanks show visible signs of being insecurely attached to the truck, such as broken straps, crooked.</p><p>Leaking: 1 or more fuel tanks show obvious signs of leakage because the fill cap is misthreaded and crooked.  Diesel fuel evaporates very quickly, so the only way to identify a leak is usually by the excessive dust/dirt that sticks to the tank in a defined area where the diesel fuel touched the tank.  The dirty area looks fuzzy, almost like velvet, and the dirt wipes easily away because it is sitting on top of the greasy residue from the evaporated diesel.</p></td><td data-highlight-colour="#ffffff" class="confluenceTd"><p>Fuel leaks do not normally result in a puddle, because diesel fuel evaporates very quickly. Instead of a puddle or dripping liquid, a diesel leak leaves a dark greasy stain behind, which is very sticky. As the truck drives, dirt and dust will stick to the diesel residue, and can get quite thick as more fuel leaks on top of existing dirt/dust, collecting more dirt/dust.  The result is a well-defined patch of thick, furry-looking black-brown dirt stuck to the tank in the area of the leak.  The rest of the tank will look normal, the dirt will specifically stick to the fuel residue.</p></td></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="TI-273"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_455639089_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/TI-273" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>TI-273</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p><p>DEF Tank</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>As a student, I need to inspect the DEF tank so that I can identify conditions that may make it unsafe to operate my vehicle</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>User triggers the evaluation activity, an animated cut scene that demonstrates the opening of the panel on the exterior of the truck, where the DEF tank and batteries are housed.</p><p>In the cut scene, the panel will open and the camera will move to the DEF tank. </p><p>If the user observes that the DEF tank or cap are damaged or leaking, they will click on the model to report damage in the Inspection UI.</p><p>On click: Object outline is highlighted</p><p>User may trigger the evaluation activity multiple times to observe the cut scene repeatedly, if desired.</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>When the user clicks on the model, the Inspection UI opens to DEF Tank so that the user can record appropriate “damaged” state in the inspection checklist.</p><p>User is not required to record the absence of exterior damage. </p><p>Options: damaged, leaking</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>0-1 DEF tanks have issues</p><p /></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>Good: DEF tank shows no damage, cap is intact and secured.</p><p>Damaged: DEF tank or cap is cracked.</p><p>Leaking: DEF tank shows obvious signs of leakage, including dripping fluid and chalky white residue on exterior of tank</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>See reference video Inspection Video 8 at around the 7-9 minute segment. This shows the access panel for the DEF tank and battery array.</p><p /></td></tr><tr><td data-highlight-colour="#ffffff" class="confluenceTd"><p>
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="TI-273"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_455639089_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/TI-273" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>TI-273</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p><p>DEF Tank</p></td><td data-highlight-colour="#ffffff" class="confluenceTd"><p>As a student, I need to see the DEF tank so that I can identify conditions that may make it unsafe to operate my vehicle</p></td><td data-highlight-colour="#ffffff" class="confluenceTd"><p>User triggers the evaluation activity, an animated cut scene that demonstrates the opening of the panel on the exterior of the truck, where the DEF tank and batteries are housed.</p><p>In the cut scene, the panel will open and the camera will move to the DEF tank. </p><p>If the user observes that the DEF tank or cap are damaged or leaking, they will click on the model to report damage in the Inspection UI.</p><p>On click: Object outline is highlighted</p><p>User may trigger the evaluation activity multiple times to observe the cut scene repeatedly, if desired.</p></td><td data-highlight-colour="#ffffff" class="confluenceTd"><p>When the user clicks on the model, the Inspection UI opens to DEF Tank so that the user can record appropriate “damaged” state in the inspection checklist.</p><p>User is not required to record the absence of exterior damage. </p><p>Options: damaged, leaking</p></td><td data-highlight-colour="#ffffff" class="confluenceTd"><p>0-1 DEF tanks have issues</p><p><strong>The DEF tank is always made of black plastic and has a bright blue cap that is threaded to twist on.</strong></p></td><td data-highlight-colour="#ffffff" class="confluenceTd"><p>Good: DEF tank shows no damage, cap is intact and secured.</p><p>Damaged: DEF tank or cap is cracked.</p><p>Leaking: DEF tank shows obvious signs of leakage, including dripping clear watery fluid and chalky white residue on exterior of black plastic tank and blue plastic fill cap.</p></td><td data-highlight-colour="#ffffff" class="confluenceTd"><p>See reference video Inspection Video 8 at around the 7-9 minute segment. This shows the access panel for the DEF tank and battery array.</p></td></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="TI-273"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_455639089_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/TI-273" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>TI-273</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p><p>Batteries</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>As a student, I need to inspect the batteries so that I can identify conditions that may make it unsafe to operate my vehicle</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>User triggers the evaluation activity, an animated cut scene that demonstrates the opening of the panel on the exterior of the truck, where the DEF tank and batteries are housed.</p><p>In the cut scene, the panel will open and the camera will move to the batteries. </p><p>If the user observes that the batteries are damaged or sparking/smoking, they will click on the model to report damage in the Inspection UI.</p><p>On click: Object outline is highlighted</p><p>User may trigger the evaluation activity multiple times to observe the cut scene repeatedly, if desired.</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>When the user clicks on the model, the Inspection UI opens to Batteries so that the user can record appropriate “damaged” state in the inspection checklist.</p><p>User is not required to record the absence of exterior damage. </p><p>Options: damaged, malfunctioning</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>0-1 batteries have issues</p><p /></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>Good: Batteries show no damage, no sparks or smoke or blackening is seen.</p><p>Damaged: 1 or more batteries are heavily corroded or damaged.</p><p>Malfunctioning: 1 or more batteries are showing signs of electrical fault, such as blackening of the battery or the panel, smoke, or sparks.</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>See reference video Inspection Video 8 at around the 7-9 minute segment. This shows the access panel for the DEF tank and battery array.</p></td></tr><tr><td data-highlight-colour="#ffffff" class="confluenceTd"><p>
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="TI-273"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_455639089_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/TI-273" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>TI-273</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p><p>Batteries</p></td><td data-highlight-colour="#ffffff" class="confluenceTd"><p>As a student, I need to see the batteries so that I can identify conditions that may make it unsafe to operate my vehicle</p></td><td data-highlight-colour="#ffffff" class="confluenceTd"><p>User triggers the evaluation activity, an animated cut scene that demonstrates the opening of the panel on the exterior of the truck, where the DEF tank and batteries are housed.</p><p>In the cut scene, the panel will open and the camera will move to the batteries. </p><p>If the user observes that the batteries are damaged or sparking/smoking, they will click on the model to report damage in the Inspection UI.</p><p>On click: Object outline is highlighted</p><p>User may trigger the evaluation activity multiple times to observe the cut scene repeatedly, if desired.</p></td><td data-highlight-colour="#ffffff" class="confluenceTd"><p>When the user clicks on the model, the Inspection UI opens to Batteries so that the user can record appropriate “damaged” state in the inspection checklist.</p><p>User is not required to record the absence of exterior damage. </p><p>Options: damaged, malfunctioning</p></td><td data-highlight-colour="#ffffff" class="confluenceTd"><p>0-1 batteries have issues</p><p>Batteries are located under a panel which is normally located immediately below the driver’s side door, above/behind the top step. It can also be located along the side of the cab, underneath the sleeper section.  </p><p>There are 4 batteries arranged in a straight line, wired in parallel. They are rectangular 12V batteries. Each battery has 2 terminals on top.  To visually inspect the batteries, the cover must be opened. The cover should automatically close when the student continues to the next step of the inspection.</p></td><td data-highlight-colour="#ffffff" class="confluenceTd"><p>Good: Batteries show no damage, exterior of battery is intact and shows no signs of swelling or leaking. Terminals are connected securely. No sparks or smoke or blackening is seen.</p><p>Damaged: 1 or more batteries are damaged, as follows: </p><p>Swollen or misshapen (battery sides are bulging outward, battery does not line up neatly with others)</p><p>Leaking (greasy, chalky, yellow-brown residue on exterior of battery, especially at the seams)</p><p>Heavily Corroded (battery terminals are caked in amber-brown rusty residue)</p><p>Malfunctioning: 1 or more batteries are showing signs of electrical fault, such as blackening of the battery, terminals, cover, or the battery box, in extreme cases this could include smoke or sparks.</p></td><td data-highlight-colour="#ffffff" class="confluenceTd"><p>See reference video Inspection Video 8 at around the 7-9 minute segment. This shows the access panel for the DEF tank and battery array.</p><p>In our video footage, the batteries are covered by a wide plastic cover, but this cover will NOT be included in our simulation, to improve the visibility of the batteries and terminals.</p></td></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="TI-21"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_455639089_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/TI-21" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>TI-21</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p><p>Trailer Doors - Open</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>As a student, I need to inspect the condition and functionality of the trailer doors so that I can learn to identify conditions that make it unsafe to operate my vehicle</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>User triggers the evaluation activity, an animated cut scene that demonstrates the opening and closing of the rear trailer doors.</p><p>In the cut scene, the trailer doors should start in a closed and secured position. The scene should demonstrate releasing the door closure mechanism and opening the trailer doors to the full extent.  </p><p>If the user observes that the trailer doors are damaged or not functioning as expected, they will click on the door, door hinge, or door closure mechanism to report damage in the Inspection UI.</p><p>On click: Object outline is highlighted</p><p>User may trigger the evaluation activity multiple times to observe the cut scene repeatedly, if desired.</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>If the user clicks on the model, the Inspection UI opens to the Trailer Doors component. User records the specific damage/bad state in the inspection checklist.</p><p>Options: door damaged, latch damaged, hinge damaged</p><p>If the user does not click on the model, they can select the “Next Inspection” option to move to the next inspectable or POI without reporting any damage in the checklist.</p><p /></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>0-1 doors show damage or malfunction. </p><p /></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>Good: Doors show no visible damage (particularly around the edges, the latches, and hinges).  Both doors unlatch smoothly when the handle/mechanism is activated. both doors swing smoothly open on their hinges and can be opened fully.  </p><p>Door damaged: Either door shows visible dents, abrasions, particularly around the edges.</p><p>Latch damaged: This will  not occur when the doors are opening, only when they are closing (to avoid interfering with the Cargo Area inspection)</p><p>Hinge damaged: One or more hinges is damaged such that the door is unstable and the hinge is visibly damaged.  The door must still open to at least 90 degrees to facilitate Cargo Area inspection. </p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>Sound effects can be used to help identify hinge damage, as bent hinges are very noisy.</p></td></tr><tr><td data-highlight-colour="#ffffff" class="confluenceTd"><p>
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="TI-21"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_455639089_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/TI-21" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>TI-21</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p><p>Trailer Doors - Open</p></td><td data-highlight-colour="#ffffff" class="confluenceTd"><p>As a student, I need to see an animation of the trailer doors unclasping and opening so that I can learn to identify conditions that make it unsafe to operate my vehicle</p></td><td data-highlight-colour="#ffffff" class="confluenceTd"><p>User triggers the evaluation activity, an animated cut scene that demonstrates the opening and closing of the rear trailer doors.</p><p>In the cut scene, the trailer doors should start in a closed and secured position. The scene should demonstrate releasing the door closure mechanism and opening the trailer doors to the full extent.  </p><p>If the user observes that the trailer doors are damaged or not functioning as expected, they will click on the door, door hinge, or door closure mechanism to report damage in the Inspection UI.</p><p>On click: Object outline is highlighted</p><p>User may trigger the evaluation activity multiple times to observe the cut scene repeatedly, if desired.</p></td><td data-highlight-colour="#ffffff" class="confluenceTd"><p>If the user clicks on the model, the Inspection UI opens to the Trailer Doors component. User records the specific damage/bad state in the inspection checklist.</p><p>Options: door damaged, latch damaged, hinge damaged</p><p>If the user does not click on the model, they can select the “Next Inspection” option to move to the next inspectable or POI without reporting any damage in the checklist.</p><p /></td><td data-highlight-colour="#ffffff" class="confluenceTd"><p>0-1 doors show damage or malfunction. </p><p /></td><td data-highlight-colour="#ffffff" class="confluenceTd"><p>Good: Doors show no visible damage (particularly around the edges, the latches, and hinges).  Both doors unlatch smoothly when the handle/mechanism is activated. both doors swing smoothly open on their hinges and can be opened fully.  </p><p>Door damaged: Either door shows visible dents, abrasions, particularly around the edges.</p><p>Latch damaged: This will  not occur when the doors are opening, only when they are closing (to avoid interfering with the Cargo Area inspection)</p><p>Hinge damaged: One or more hinges is damaged such that the door is unstable and the hinge is visibly damaged.  The door must still open to at least 90 degrees to facilitate Cargo Area inspection. </p></td><td data-highlight-colour="#ffffff" class="confluenceTd"><p>Sound effects can be used to help identify hinge damage, as bent hinges are very noisy.</p></td></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="TI-21"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_455639089_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/TI-21" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>TI-21</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p><p>Dolly legs on Trailer</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>As a student, I need to inspect the dolly legs on the front of the trailer to ensure that they are in the correct position and the handle is secured.</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>User clicks to select any damage or problem with the dolly legs. </p><p>On click: Object outline is highlighted</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>When the user clicks on the model, the Inspection UI opens to Dolly Leg so that the user can record appropriate “damaged” state in the inspection checklist.</p><p>User is not required to record the absence of exterior damage. </p><p>Options: not secured</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>0-2 dolly legs are in the incorrect position or the handle is not secured.</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>Good: Dolly legs are in the raised position and the handle is securely stowed.</p><p>Not secured: 1 or both dolly legs are in the lowered position (touching the ground) OR the handle is not secured (hanging loose)</p><p /></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>Note that the dolly legs must be raised and the handle secured in order to drive the truck. The dolly legs are normally only in the lowered position when the trailer is not connected to a tractor.</p></td></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="TI-21"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_455639089_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/TI-21" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>TI-21</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p><p>Air and Power Connections from Tractor to Trailer</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>As a student, I need to inspect the air lines and power cables going from the tractor to the trailer to ensure that they are securely connected and in good condition.</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>User clicks to select any damage or problem with the air lines or power cable. </p><p>On click: Object outline is highlighted</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>When the user clicks on the model, the Inspection UI opens to Trailer Connections so that the user can record appropriate “damaged” state in the inspection checklist.</p><p>User is not required to record the absence of exterior damage. </p><p>Options: power cable damaged, power cable not secure, air line leaking, air line damaged</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>0-2 lines or connections are not secure or in good condition.</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>Good: Air lines and power cable are securely connected, no visible damage, not dragging on the deck plate, no sound of hissing air escaping.</p><p>Power cable damaged: Power cable is visibly abraded and damaged from dragging on the deck plate.</p><p>Power cable not secure: Power cable is not connected.</p><p>Air line leaking: Connection may appear to be good, but a loud hissing sound indicates a fault with the glad hand connection, air is escaping under pressure.</p><p>Air line damaged: Air line is visibly abraded and worn. It is not leaking but looks like it could fail at any moment.</p><p /></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>Good video of this inspection is available in SharePoint and on the YouTube playlist.</p></td></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="TI-21"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_455639089_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/TI-21" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>TI-21</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p><p>Trailer Doors - Close</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>As a student, I need to inspect the functionality of closing and latching the trailer doors securely so that I can learn to identify conditions that make it unsafe to operate my vehicle</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>User triggers the evaluation activity, an animated cut scene that demonstrates the closing and latching of the rear trailer doors.</p><p>In the cut scene, the trailer doors should start in the fullest open position. The scene should demonstrate closing the doors and latching the trailer doors securely.  </p><p>If the user observes that the trailer doors are damaged or not functioning as expected, they will click on the door, or door closure mechanism to report damage in the Inspection UI.</p><p>On click: Object outline is highlighted</p><p>User may trigger the evaluation activity multiple times to observe the cut scene repeatedly, if desired.</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>If the user clicks on the model, the Inspection UI opens to the Trailer Doors component. User records the specific damage/bad state in the inspection checklist.</p><p>Options: door damaged, latch damaged, hinge damaged</p><p>If the user does not click on the model, they can select the “Next Inspection” option to move to the next inspectable or POI without reporting any damage in the checklist.</p><p /></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>0-1 doors show damage or malfunction. </p><p /></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>Good: Doors show no visible damage (particularly around the edges, the latches, and hinges).  Both doors swing smoothly closed on their hinges and can be closed and latched securely.  </p><p>Door damaged: Either door shows visible dents, abrasions, particularly around the edges.</p><p>Latch damaged: Either or both doors cannot be successfully clasped. This is usually caused by a bent or damaged clasp.</p><p>Hinge damaged: One or more hinges is damaged such that the door is unstable and when the learner tries to close it, it becomes crooked and the hinge is visibly broken.</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>Sound effects can be used to help identify hinge or clasp damage.</p></td></tr><tr><td data-highlight-colour="#ffffff" class="confluenceTd"><p>
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="TI-21"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_455639089_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/TI-21" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>TI-21</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p><p>Trailer Doors - Close</p></td><td data-highlight-colour="#ffffff" class="confluenceTd"><p>As a student, I need to see an animation of closing and latching the trailer doors securely so that I can learn to identify conditions that make it unsafe to operate my vehicle</p></td><td data-highlight-colour="#ffffff" class="confluenceTd"><p>User triggers the evaluation activity, an animated cut scene that demonstrates the closing and latching of the rear trailer doors.</p><p>In the cut scene, the trailer doors should start in the fullest open position. The scene should demonstrate closing the doors and latching the trailer doors securely.  </p><p>If the user observes that the trailer doors are damaged or not functioning as expected, they will click on the door, or door closure mechanism to report damage in the Inspection UI.</p><p>On click: Object outline is highlighted</p><p>User may trigger the evaluation activity multiple times to observe the cut scene repeatedly, if desired.</p></td><td data-highlight-colour="#ffffff" class="confluenceTd"><p>If the user clicks on the model, the Inspection UI opens to the Trailer Doors component. User records the specific damage/bad state in the inspection checklist.</p><p>Options: door damaged, latch damaged, hinge damaged</p><p>If the user does not click on the model, they can select the “Next Inspection” option to move to the next inspectable or POI without reporting any damage in the checklist.</p><p /></td><td data-highlight-colour="#ffffff" class="confluenceTd"><p>0-1 doors show damage or malfunction. </p><p /></td><td data-highlight-colour="#ffffff" class="confluenceTd"><p>Good: Doors show no visible damage (particularly around the edges, the latches, and hinges).  Both doors swing smoothly closed on their hinges and can be closed and latched securely.  </p><p>Door damaged: Either door shows visible dents, abrasions, particularly around the edges.</p><p>Latch damaged: Either or both doors cannot be successfully clasped. This is usually caused by a bent or damaged clasp.</p><p>Hinge damaged: One or more hinges is damaged such that the door is unstable and when the learner tries to close it, it becomes crooked and the hinge is visibly broken.</p></td><td data-highlight-colour="#ffffff" class="confluenceTd"><p>Sound effects can be used to help identify hinge or latch damage.</p></td></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="TI-21"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_455639089_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/TI-21" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>TI-21</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p><p>Conspicuity Tape</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>As a student, I need to inspect the conspicuity tape on the trailer to ensure my vehicle is properly visible for highway use</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>User clicks to select any damage or problem with the conspicuity tape. </p><p>On click: Object outline is highlighted</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>When the user clicks on the model, the Inspection UI opens to the conspicuity tape so that the user can record appropriate “bad” state in the inspection checklist. </p><p>Options: damaged, missing.</p><p>User is not required to record conspicuity tape that is present  as expected. If the user does not click on the model to report damage, they may click the Next Inspection option to move on to the next inspectable or POI. </p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>Conspicuity tape is  present as expected on the cargo van trailer. Occasionally, tape may be damaged (peeling away from the surface of the trailer) or it might be missing completely from a section where it is required. </p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>Good: Conspicuity tape is present and intact.</p><p>Damaged: 1 or more pieces of conspicuity tape are peeling away from the surface of the trailer (curled up from the edges)</p><p>Missing: 1 or more pieces of conspicuity tape are missing (or more than 80% of the piece is missing) from a required location on the trailer. The most common location for this failure to occur is on the rear bumper bar, aka the Mansfield guard.</p></td><td class="confluenceTd"><p /></td></tr></tbody></table></div><h2 id="TruckingFRS-ExteriorInspection-Windows">Windows</h2><p>Jira link 
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="TI-19"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_455639089_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/TI-19" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>TI-19</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p><div class="table-wrap"><table data-layout="default" data-local-id="bcdc326c-25f6-4272-a9e1-62ad7ea2d1dd" class="confluenceTable"><colgroup><col style="width: 157.0px;"/><col style="width: 108.0px;"/><col style="width: 120.0px;"/><col style="width: 120.0px;"/><col style="width: 86.0px;"/><col style="width: 78.0px;"/><col style="width: 91.0px;"/></colgroup><tbody><tr><th class="confluenceTh"><p><strong>Epic Link</strong></p></th><th class="confluenceTh"><p><strong>Jira Issue</strong></p></th><th class="confluenceTh"><p><strong>User Interaction</strong></p></th><th class="confluenceTh"><p><strong>Inspection Interaction</strong></p></th><th class="confluenceTh"><p><strong>On initial load</strong></p></th><th class="confluenceTh"><p><strong>States</strong></p></th><th class="confluenceTh"><p><strong>Notes</strong></p></th></tr><tr><td class="confluenceTd"><p>
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="TI-19"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_455639089_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/TI-19" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>TI-19</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>As a student I need to inspect the windows on the truck to ensure they are in good, clear condition so that my view is unobstructed while driving</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>User does not click on the model unless they wish to report damage/bad state. If clicked, the selected component will be highlighted to show it is selected.</p><p>User is not required to record that any component is “good”.</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>If the user clicks on the model, the Inspection UI will open to the selected component (e.g. drivers door window). User records the specific damage/bad state observed.</p><p>Options: cracked, dirty</p><p>If the user does not click on the model, they have no damage to report. They click to “Continue” or move on to the next inspection POI without reporting any damage in the Inspection UI.</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>0-2 damaged windows. <br/></p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>Good: Windows are intact and visibility is unobstructed.</p><p>Cracked: Window has a visible crack</p><p><del>Dirty: Window is excessively dirty such that visibility through the window is reduced or impaired.</del></p></td><td class="confluenceTd"><p><del>When the windshield is the very dirty window, the path of wiper blades should be somewhat clean. The problem here is not that the student needs to use the windshield washer feature, the student needs to identify when windows do not meet common sense standards for good visibility. </del></p><p>Further discussion with John has concluded that we will not have a “dirty” state for windows. There is no reason to record dirty windows as part of the pre-trip inspection, even though it frequently occurs that the entire outside of the truck (including exterior lights, reflectors, or license plate) could get dirty in the normal course of operating the truck. The operator sometimes just wipes these clean with a rag or will take a few minutes to get the truck washed when his schedule permits. This is not an inspection concern.</p></td></tr><tr><td class="confluenceTd"><p>
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="TI-19"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_455639089_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/TI-19" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>TI-19</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p></td><td class="confluenceTd"><p>As a student I need to see the windows on the truck in good, clear condition so that I can visualize the ideal state for truck windows.</p></td><td class="confluenceTd"><p>User does not click on the model unless they wish to report damage/bad state.</p><p>User is not required to record that any component is “good”.</p></td><td class="confluenceTd"><p> If the user does not click on the model, they can select the “Continue” option to move to the next inspectable or POI without reporting any damage in the checklist.</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>0-2 damaged windows. <br/></p></td><td class="confluenceTd"><p>Good: Intact, clean, unobstructed</p><p /></td><td class="confluenceTd"><p /></td></tr><tr><td class="confluenceTd"><p>
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="TI-19"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_455639089_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/TI-19" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>TI-19</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p></td><td class="confluenceTd"><p>As a student, I need to see windows that are cracked or chipped so that I can learn to identify conditions that may obstruct my view when driving</p></td><td class="confluenceTd"><p>User clicks to select any window that is observed to be dirty or damaged.</p><p>On click: Object outline is highlighted</p></td><td class="confluenceTd"><p>When the user clicks on the model, the Inspection UI opens to the selected component (e.g. passenger cab window). User records the specific bad state in the inspection checklist.</p><p>Options: dirty, damaged</p><p>If the user does not click on the model, they can select the “Continue” option to move to the next inspectable or POI without reporting any damage in the checklist.</p></td><td class="confluenceTd"><p>0-2 windows will show visible crack(s) or chip(s)</p></td><td class="confluenceTd"><p>Bad state: damaged</p></td><td class="confluenceTd"><p>John says any crack or chip that is within the coverage area of the windshield wipers is considered critical - vehicle is inoperable until it can be fixed.</p><p>Also note that the glass used is shatter-proof, so glass will never look shattered with pieces missing.</p></td></tr><tr><td class="confluenceTd"><p>
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="TI-19"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_455639089_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/TI-19" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>TI-19</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p></td><td class="confluenceTd"><p><del>As a student, I need to see windows that are excessively dirty, so that I can identify conditions that may obstruct my view when driving</del></p></td><td class="confluenceTd"><p><del>User clicks to select any window that is observed to be dirty or damaged.</del></p><p><del>On click: Object outline is highlighted</del></p></td><td class="confluenceTd"><p><del>When the user clicks on the model, the Inspection UI opens to the selected component (e.g. passenger cab window). User records the specific bad state in the inspection checklist.</del></p><p><del>Options: dirty, damaged</del></p><p><del>If the user does not click on the model, they can select the “Continue” option to move to the next inspectable or POI without reporting any damage in the checklist.</del></p></td><td class="confluenceTd"><p><del>1 or more windows will show excessive dirt such that the view through the window is fully or partially obstructed.</del></p></td><td class="confluenceTd"><p><del>Bad state: dirty</del></p></td><td class="confluenceTd"><p><del>When the windshield is the very dirty window, the path of wiper blades should be somewhat clean. The problem here is not that the student needs to use the windshield washer feature, the student needs to identify when windows do not meet common sense standards for good visibility.</del></p></td></tr></tbody></table></div><h2 id="TruckingFRS-ExteriorInspection-Mirrors">Mirrors</h2><p>Jira link 
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="TI-20"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_455639089_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/TI-20" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>TI-20</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p><div class="table-wrap"><table data-layout="default" data-local-id="68c9767f-ee9e-4d8a-b40b-8e484756303c" class="confluenceTable"><colgroup><col style="width: 157.0px;"/><col style="width: 108.0px;"/><col style="width: 120.0px;"/><col style="width: 120.0px;"/><col style="width: 86.0px;"/><col style="width: 78.0px;"/><col style="width: 91.0px;"/></colgroup><tbody><tr><th class="confluenceTh"><p><strong>Epic Link</strong></p></th><th class="confluenceTh"><p><strong>Jira Issue</strong></p></th><th class="confluenceTh"><p><strong>User Interaction</strong></p></th><th class="confluenceTh"><p><strong>Inspection Interaction</strong></p></th><th class="confluenceTh"><p><strong>On initial load</strong></p></th><th class="confluenceTh"><p><strong>States</strong></p></th><th class="confluenceTh"><p><strong>Notes</strong></p></th></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="TI-20"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_455639089_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/TI-20" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>TI-20</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>As a learner, I need to inspect the mirrors on the truck to ensure that they are in good, clear condition so that my view is unobstructed while driving</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>User clicks to select any mirror (or select an empty bracket or mirror housing, if mirror is not present) that appears to be damaged or missing</p><p>On click: Object outline is highlighted</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>If the user clicks on the model, the Inspection UI opens to the selected component. User records the specific damage/bad state in the inspection checklist.</p><p>Options: damaged, <del>dirty</del>, missing, loose</p><p>If the user does not click on the model, they can select the “Continue” option to move to the next inspectable or POI without reporting any damage in the checklist.</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>0-1 mirrors are cracked, <del>dirty</del>, missing, <del>or loose</del>. <br/></p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>Good: Intact, clean, unobstructed</p><p>Bad: cracked, <del>excessively dirty, </del>missing, <del>loose</del></p></td><td class="confluenceTd"><p>It became very difficult in modelling to differentiate between a mirror that is “damaged” vs “cracked” so we just decided to go with cracked.</p><p>For missing mirrors, we really struggled to create realistic damage to the hood where the mirror was knocked off, there were several technical challenges with making this work. As a compromise, only the hood mirrors will be “missing” and the missing mirrors will be broken off, leaving the base attached to the hood of the truck. Door mirrors will not be missing, as is it very uncommon for them to be knocked off.</p></td></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="TI-20"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_455639089_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/TI-20" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>TI-20</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><del>As a learner, I need to inspect the mirrors on the truck to ensure they are not loose so that I can safely operate my vehicle in traffic</del></p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><del>User clicks to trigger evaluation activity. Animated cut scene demonstrates that mirror is securely attached or is loose when rattled.</del></p><p><del>If the user observes that the mirror moves inappropriately in the cut scene, they will click on the model to report damage.</del></p><p><del>On click: Object outline is highlighted</del></p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><del>If the user clicks on the model, the Inspection UI will open to the selected component (e.g. drivers door window). User records the specific damage/bad state observed.</del></p><p><del>Options: damaged, dirty, missing, loose</del></p><p><del>If the user does not click on the model, they have no damage to report. They click to “Continue” or move on to the next inspection POI without reporting any damage in the Inspection UI.</del></p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><del>0-1 mirrors are loose such that they are positioned at an odd angle on initial load, or they move when the learner clicks and moves the mouse.</del></p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><del>Bad state: loose</del></p></td><td class="confluenceTd"><p /></td></tr><tr><td class="confluenceTd"><p>
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="TI-20"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_455639089_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/TI-20" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>TI-20</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p></td><td class="confluenceTd"><p>As a learner, I need to see mirrors that are cracked so that I can learn to visually identify conditions that may make it unsafe to operate my vehicle</p></td><td class="confluenceTd"><p>User clicks to select any mirror that appears to be cracked</p><p>On click: Object outline is highlighted</p></td><td class="confluenceTd"><p>If the user clicks on the model, the Inspection UI opens to the selected component. User records the specific damage/bad state in the inspection checklist.</p><p>Options: damaged, dirty, missing, loose</p><p>If the user does not click on the model, they can select the “Continue” option to move to the next inspectable or POI without reporting any damage in the checklist.</p></td><td class="confluenceTd"><p>0-1 mirrors are  cracked.<br/></p></td><td class="confluenceTd"><p>Bad state:  mirror glass is obviously cracked</p></td><td class="confluenceTd"><p>John indicated that any mirror on the truck can be dented or cracked.  The glass used is shatter-proof, so glass will never look shattered with pieces missing.</p></td></tr><tr><td class="confluenceTd"><p>
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="TI-20"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_455639089_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/TI-20" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>TI-20</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p></td><td class="confluenceTd"><p>As a learner, I need to see a truck with mirrors that are missing so that I can identify conditions that may make it unsafe to operate my vehicle</p></td><td class="confluenceTd"><p>User clicks to select the damaged mounting bracket where a hood mirror should be.</p><p>On click: Object outline is highlighted</p></td><td class="confluenceTd"><p>If the user clicks on the model, the Inspection UI opens to the selected component. User records the specific damage/bad state in the inspection checklist.</p><p>Options: cracked, missing</p><p>If the user does not click on the model, they can select the “Continue” option to move to the next inspectable or POI without reporting any damage in the checklist.</p></td><td class="confluenceTd"><p>0-1 mirrors are missing, such that <del>the empty mirror housing is present with no mirror, or </del>the entire mirror housing is missing, leaving only the damaged base behind on the hood of the truck. <del>obvious damage to the mirror location. </del><br/></p></td><td class="confluenceTd"><p>Bad state: missing</p></td><td class="confluenceTd"><p>The most common mirrors to be knocked off the truck are the ones that are mounted on the hood. When the hood is left open, these mirrors are easily “clipped off” by a passing vehicle. Door mirrors will not be “missing”</p></td></tr></tbody></table></div><p /><h2 id="TruckingFRS-ExteriorInspection-Wheels/Tires">Wheels/Tires</h2><p>Jira link 
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="TI-228"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_455639089_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/TI-228" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>TI-228</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p><div class="table-wrap"><table data-layout="default" data-local-id="f80ffe83-104d-4e30-85bc-b2419523d748" class="confluenceTable"><colgroup><col style="width: 157.0px;"/><col style="width: 108.0px;"/><col style="width: 120.0px;"/><col style="width: 120.0px;"/><col style="width: 86.0px;"/><col style="width: 78.0px;"/><col style="width: 91.0px;"/></colgroup><tbody><tr><th class="confluenceTh"><p><strong>Epic Link</strong></p></th><th class="confluenceTh"><p><strong>Jira Issue</strong></p></th><th class="confluenceTh"><p><strong>User Interaction</strong></p></th><th class="confluenceTh"><p><strong>Inspection Interaction</strong></p></th><th class="confluenceTh"><p><strong>On initial load</strong></p></th><th class="confluenceTh"><p><strong>States</strong></p></th><th class="confluenceTh"><p><strong>Notes</strong></p></th></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="TI-228"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_455639089_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/TI-228" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>TI-228</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>As a student, I need to inspect the tires on the truck and the trailer for any damage or excessive wear so that I can learn to identify conditions that would make it dangerous to operate the vehicle.</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>User clicks to select any tire that shows damage or excessive/uneaven tread wear. </p><p>On click: Object outline is highlighted</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>If the user clicks on the model, the Inspection UI opens to the selected component. User records the specific damage/bad state in the inspection checklist.</p><p>Options: damaged, underinflated, excessive/uneven tread wear</p><p>If the user does not click on the model, they can select the “Continue” option to move to the next inspectable or POI without reporting any damage in the checklist.</p><p /></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>0-2 damaged tires.</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>Good: intact, no damage, good tread condition</p><p>Damaged:  Wheel rim may appear cracked or damaged. Tire may appear cracked or have an embedded object.</p><p>Underinflated: Animation will show mallet test, tire will sound dull and mallet will not bounce up properly. </p><p>Tread wear: Tire may show overall tread wear, such that the tread is very shallow, tire appears “bald”. Alternatively, tread wear may be uneven, with only the inner or outermost circumference of the tire showing excessive wear.</p><p /></td><td class="confluenceTd"><p>No flat tires: John explained that truck tires that have lost air pressure do not LOOK any different from tires with correct pressure. Tire pressure must be evaluated by rapping on the tire with a mallet or hammer. Student will learn to evaluate/compare the bounceback of the mallet along with the sound the tire makes, to determine if any tire is underinflated or flat. John explained that every tire must be “thumped” more than once - each tire should be struck 2-3 x in quick succession so that the operator can hear the sound and evaluate the bounceback of the mallet.  Once is not enough.</p></td></tr><tr><td class="confluenceTd"><p>
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="TI-228"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_455639089_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/TI-228" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>TI-228</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p></td><td class="confluenceTd"><p>As a student, I need to see a tire that is in good condition so that I can learn to identify the ideal appearance for a tire on my truck</p></td><td class="confluenceTd"><p>User does not click the tire unless they see damage they wish to record on the inspection checklist.</p><p>If no damage is reported, user clicks to continue to the next inspectable item or next POI.</p></td><td class="confluenceTd"><p>User is not required to record inspection results for tires that are in good condition.</p><p>If the user does not click on the model, they can select the “Continue” option to move to the next inspectable or POI without reporting any damage in the checklist.</p><p /></td><td class="confluenceTd"><p>0-1 damaged tires</p></td><td class="confluenceTd"><p /><p>Good: Good</p></td><td class="confluenceTd"><p>Note the difference in appearance between steer tires and other tires on the truck or trailer.</p></td></tr><tr><td class="confluenceTd"><p>
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="TI-228"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_455639089_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/TI-228" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>TI-228</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p></td><td class="confluenceTd"><p>As a student, I need to see a tire that has a damaged side wall or rim so that I can learn to identify conditions that make it unsafe to operate my vehicle</p></td><td data-highlight-colour="#ffffff" class="confluenceTd"><p>User clicks to select any tire that shows damage or excessive/uneaven tread wear. </p><p>On click: Object outline is highlighted</p></td><td data-highlight-colour="#ffffff" class="confluenceTd"><p>If the user clicks on the model, the Inspection UI opens to the selected component. User records the specific damage/bad state in the inspection checklist.</p><p>Options: damaged, underinflated, excessive/uneven tread wear</p><p>If the user does not click on the model, they can select the “Continue” option to move to the next inspectable or POI without reporting any damage in the checklist.</p><p /></td><td class="confluenceTd"><p>0-1 tires show damage on the sidewall or the wheel rim. This may occur on the inward or outward facing sidewall of the tire.</p></td><td class="confluenceTd"><p /><p>Bad: Damaged tire has an obvious crack in the sidewall of the tire or on the rim.</p></td><td class="confluenceTd"><p>Cracks form in an arc that follows the circumference of the tire, often at the midpoint between the rim and the tread.</p><p>Cracks do not go from the centre point of the tire outward toward the tread surface.</p><p>Tiny, feathering cracks that appear evenly over the tread surface of the tire are NOT “cracks” at all and are just a normal tire wear.</p></td></tr><tr><td class="confluenceTd"><p>
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="TI-228"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_455639089_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/TI-228" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>TI-228</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p></td><td class="confluenceTd"><p>As a student, I need to see a tire that has excessive or uneven tread wear so that I can learn to identify conditions that make it unsafe to operate my vehicle</p></td><td data-highlight-colour="#ffffff" class="confluenceTd"><p>User clicks to trigger a specialized tread view that may show an embedded object or excessive/uneven tread wear. </p><p>On click: Object outline is highlighted</p></td><td data-highlight-colour="#ffffff" class="confluenceTd"><p>If the user clicks on the model, the Inspection UI opens to the selected component. User records the specific damage/bad state in the inspection checklist.</p><p>Options: excessive tread wear, uneven tread wear, embedded object</p><p>If the user does not click on the model, they can select the “Next Inspection” option to move to the next inspectable or POI without reporting any damage in the checklist.</p><p /></td><td class="confluenceTd"><p>2-4 tires show excessive or uneven tread wear.  This will be represented by visible loss of the tread texture. The change of tread texture can be all over any tire, or it can be uneven (very worn on the outside edge, normal tread on the inside edge)</p><p>NOTE: John indicates that the tire tread should be examined vertically, with the ‘stripes’ of the tread going from top to bottom, not side to side on the screen.</p></td><td class="confluenceTd"><p>Good: Tire tread is adequate depth and is well defined and even across the width of the tread.</p><p>Excessive tread wear: Tread will appear very shallow, with poor edge definition. Tire appears “bald”</p><p>Uneven tread wear: Tread appears normal on one side of the tire but is noticeably different on the opposite side (e.g. outer circumference of the tire is very worn while inner circumference appears normal.</p><p>Embedded object: A large nail or screw or sharp piece of metal embedded in the tire tread.</p><p /></td><td class="confluenceTd"><p>Tread wear is most dangerous on steer tires, but it can happen with any tire.</p><p>An embedded object does not necessarily result in loss of air pressure in the affected tire, but should be reported anyway.</p><p>Note that steer tires are closely surrounded by the cab body, making it more difficult to see the tread surface. Steer tire tread can be inspected as part of the exterior inspection, by looking at the lower portion of the tread surface that is visible between the cab body and the ground.  </p></td></tr><tr><td class="confluenceTd"><p>
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="TI-227"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_455639089_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/TI-227" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>TI-227</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p><p>Brake Chamber/Drum/Hoses</p></td><td class="confluenceTd"><p>As a student, I need to see behind the wheel to inspect the brake chamber, drum, and hoses so that I can learn to identify conditions that make it unsafe to operate my vehicle</p></td><td data-highlight-colour="#ffffff" class="confluenceTd"><p>User clicks to trigger a specialized behind the wheel view that will allow for inspection of the brake chamber and hoses. In this view, the brake chamber may be cracked or loose.  The brake hoses may be loose or damaged. </p><p>Note that the student will be prompted to visually inspect the brake drums as part of the voiceover prompt, but there is no inspection task for the brake drums and they will never be damaged on our model.</p><p>On click: Object outline is highlighted</p></td><td data-highlight-colour="#ffffff" class="confluenceTd"><p>If the user clicks on the model, the Inspection UI opens to the selected component. User records the specific damage/bad state in the inspection checklist.</p><p>Options: brake chamber cracked, brake chamber loose, brake hose leaking, brake hose damaged</p><p>If the user does not click on the model, they can select the “Next Inspection” option to move to the next inspectable or POI without reporting any damage in the checklist.</p><p /></td><td class="confluenceTd"><p>0-1 wheels show damage to brake chamber or hoses</p><p /></td><td class="confluenceTd"><p>Good: Brake chamber is undamaged and securely attached.  Brake hoses are intact, and securely attached.</p><p>Brake chamber cracked: Chamber has a visible crack.</p><p>Brake chamber loose: One or more bolts securing the brake chamber may be missing, component is visibly crooked.</p><p>Brake hose leaking: Hose clamp(s) may be missing or damaged, hose may be disconnected. This could be accompanied by a hissing sound.</p><p>Brake hose damaged: Brake hose may appear cracked or abraded.</p><p /></td><td class="confluenceTd"><p>This is a visual inspection, but it requires a specialized view, like tire tread inspection.</p><p>Note that it is not possible to inspect the brakes or axle seals of steer tires until the hood is opened.  Because of the cab body that forms the wheel well for the steer tires, it is not possible to complete this inspection as part of the exterior inspection of the truck (Release I).  The inspection of the brakes and axle seals, as well as suspension springs and bushings will be completed in Release III when the hood is opened.</p></td></tr><tr><td class="confluenceTd"><p>
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="TI-227"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_455639089_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/TI-227" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>TI-227</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p><p>Axle Seals - not actually part of the Braking system, but located in the same view.</p></td><td class="confluenceTd"><p>As a student, I need to identify evidence of leaking axle seals so that I can learn to identify conditions that make it unsafe to operate my vehicle</p></td><td data-highlight-colour="#ffffff" class="confluenceTd"><p>User clicks to trigger a specialized behind the wheel view that will allow for inspection of the brake chamber, drum, and hoses. In this view, the learner will be able to see evidence of a leaking axle seal, even though the seal itself is not visible without removing the tires. </p><p>A leaking axle seal will spatter oil outward from the wheel hub, splattering the interior aspect of the wheel rim and tire. To report this leak, the learner will click on the splattered oil.</p><p>On click: Oil spatter outline is highlighted</p></td><td data-highlight-colour="#ffffff" class="confluenceTd"><p>If the user clicks on the model, the Inspection UI opens to the selected component. User records the specific damage/bad state in the inspection checklist.</p><p>Options: axle seal leak</p><p>If the user does not click on the model, they can select the “Next Inspection” option to move to the next inspectable or POI without reporting any damage in the checklist.</p><p /></td><td class="confluenceTd"><p>0-1 wheels show leaking axle seal.</p><p /></td><td class="confluenceTd"><p>Good: No oil splattered on interior aspect of wheel rim and tire.</p><p>Axle seal leak: Dark brown oil will be splattered on the interior aspect of the wheel rim and tire in a distinctive “starburst” pattern. The leak happens at the hub of the wheel and the oil splatters outward in all directions by centrifugal force.</p><p /></td><td class="confluenceTd"><p>This is a visual inspection, but it requires a specialized view, like tire tread inspection.</p><p>Note that it is not possible to inspect the brakes or axle seals of steer tires until the hood is opened.  Because of the cab body that forms the wheel well for the steer tires, it is not possible to complete this inspection as part of the exterior inspection of the truck (Release I).  The inspection of the brakes and axle seals, as well as suspension springs and bushings will be completed in Release III when the hood is opened.</p></td></tr><tr><td class="confluenceTd"><p>
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="TI-228"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_455639089_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/TI-228" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>TI-228</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p></td><td class="confluenceTd"><p>As a student, I need to see and hear a tire that has loose lug nuts so that I can learn to identify conditions that make it unsafe to operate my vehicle</p></td><td class="confluenceTd"><p>User triggers the evaluation activity, an animated cut scene that demonstrates checking the lug nuts for tightness. There will also be a visual torque indicator (yellow fletch) on every lug nut.</p><p>In the cut scene, lug nuts which are loose will rotate and make a sound to indicate they are are not secure. Lug nuts that are loose will also have a torque indicator that does not line up properly (is pointing in a random direction).</p><p>If the user observes any lug nuts that are not secure, they will click on the lug nut to report damage in the Inspection UI.</p><p>On click: Object outline is highlighted</p><p>User may trigger the evaluation activity multiple times to observe the cut scene repeatedly, if desired.</p></td><td class="confluenceTd"><p>If the user clicks on the model, the Inspection UI opens to the selected component. User records the specific damage/bad state in the inspection checklist.</p><p>Options: loose</p><p>If the user does not click on the model, they can select the “Continue” option to move to the next inspectable or POI without reporting any damage in the checklist.</p><p /></td><td class="confluenceTd"><p>0-1 tires show loose lug nuts, such that the nuts move when clicked on. Adding a “loose” sound effect and also providing a label “This lug nut is loose” or “This lug nut is tight” will make the results more obvious to the learner.</p><p /></td><td class="confluenceTd"><p>Good: All lug nuts are tight, no sound effect, all torque indicators are pointing in the correct direction.</p><p>Loose: 1 or more lug nuts show indications of being loose:</p><ol><li><p>torque indicator is pointing in a random direction (not aligned with other indicators.</p></li><li><p>animation will show that the lug nut is moving in the manual inspection</p></li><li><p>sound effect (squeaking) to indicate the lug nut is loose.</p></li></ol><p /></td><td class="confluenceTd"><p>Adding the label and sound effect is copied from HE backhoe inspection. We might want to experiment with how much info is needed in the cut scene to make the damage noticeable for the learner.</p><p>Note: Additional bad states such as cracked or missing can be added to the UI so that the learner can be specific about the bad state that they observed. However, we have no plans to model other bad states for lug nuts in this release.</p><p /></td></tr><tr><td class="confluenceTd"><p>
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="TI-228"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_455639089_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/TI-228" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>TI-228</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p></td><td class="confluenceTd"><p>As a student, I need to see and hear the signs that a tire that is underinflated so that I can learn to identify conditions that make it unsafe to operate my vehicle</p></td><td class="confluenceTd"><p>User triggers the evaluation activity, an animated cut scene that demonstrates hitting the tire with a mallet or hammer, so that the learner can hear the sound and observe the bounce back of the mallet. Each tire will be “thumped” 2-3x in the animation, to give the student ample opportunity to hear the sound and evaluate the bounceback of the hammer.</p><p><strong>Double Tires:</strong> When tires are present in double sets (e.g. rear tractor tires, trailer tires) with an inner and outer tire, the double set of tires will be inspected as one object.  When the user triggers the animation for a double set of tires, the animation will show the mallet thumping the outer tire (2-3 thumps) followed by a short 1-2 second pause, then thumping the inner tire (2-3 thumps).</p><p>In the cut scene, tires which are underinflated will make a very dull sound when struck with the mallet, and the mallet will not bounce up from the tire.  By comparison, a tire that is properly inflated will make a noticeably hollow sound when struck with the mallet, and the mallet will bounce up smartly.</p><p>If the user observes that the tire is underinflated, they will click on the tire to report damage in the Inspection UI.</p><p>On click: Object outline is highlighted</p><p>User may trigger the evaluation activity multiple times to observe the cut scene repeatedly, if desired.</p></td><td class="confluenceTd"><p>If the user clicks on the tire, the Inspection UI opens to the selected component. User records the specific damage/bad state in the inspection checklist.</p><p><strong>Single Tire Options: </strong>underinflated</p><p><strong>Double Tire Options: </strong>Outer tire underinflated, Inner tire underinflated</p><p>If the user does not click on the model, they can select the “Continue” option to move to the next inspectable or POI without reporting any damage in the checklist.</p><p>Note that BOTH the inner and outer tire cannot be underinflated at the same time. Both tires can be properly inflated, but they cannot both be “flat”. The rationale is that we want to give the learner the best possible opportunity to compare the bounce and sound of an underinflated tire with a properly inflated tire.</p><p /></td><td class="confluenceTd"><p>0-1 tires show distinct signs of being underinflated or flat. </p><p>Note: Only 1 of any set of double tires can be underinflated. Either the inner or the outer tire may be underinflated, but never both.  Both tires can be properly inflated.</p><p /></td><td class="confluenceTd"><p>Good: Mallet bounces back smartly after striking the tire, sound is bright and hollow, like bouncing a basketball.</p><p>Underinflated: Mallet does not bounce back much after striking the tire, and the sound is dull and flat, like hitting a piece of rubber with a mallet.</p><p /></td><td class="confluenceTd"><p>We might want to experiment with how much info is needed in the cut scene to make the underinflated state noticeable for the learner. Consider adding a voiceover or label, such as “This tire sounds different from the others” or “Hmm, the mallet is not bouncing up after hitting the tire”</p><p>Note that steer tires must be thumped on the sidewall rather than the tread surface, because the tread is not easy to access due to the cab body surrounding the wheel.</p><p>Here are a couple of good videos so you can hear the sound of tires being thumped:</p><p>This one does not have the engine running: <a class="external-link" data-card-appearance="inline" href="https://www.youtube.com/watch?v=NA8KODX_aAY" rel="nofollow">https://www.youtube.com/watch?v=NA8KODX_aAY</a> </p><p /><p>This one has the engine running <a class="external-link" data-card-appearance="inline" href="https://www.youtube.com/watch?v=6yboxSUt26s" rel="nofollow">https://www.youtube.com/watch?v=6yboxSUt26s</a> </p><p /></td></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="TI-228"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_455639089_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/TI-228" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>TI-228</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p><p>Debris between tires</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>As a student, I need to inspect the tires on the truck and the trailer for any debris so that I can learn to identify conditions that would make it dangerous to operate the vehicle.</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>User clicks to select any debris that exists between double sets of tires. </p><p>On click: Debris outline is highlighted</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>If the user clicks on the model, the Inspection UI opens to the selected component. User records the specific damage/bad state in the inspection checklist.</p><p>Options: debris</p><p>If the user does not click on the model, they can select the “Continue” option to move to the next inspectable or POI without reporting any damage in the checklist.</p><p /></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>0-2 debris in tires.</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>Good: no debris</p><p>Debris:  Debris such as rocks or mud may show between tires when two tires are used together.</p><p /></td><td class="confluenceTd"><p>Debris should be noted in the inspection, but the student is NOT expected to take any action to attempt to clear the debris.  Usually, the only way to remove debris without causing damage to the tires is to remove the outer tire.  This is not done during the inspection.</p></td></tr><tr><td data-highlight-colour="#ffffff" class="confluenceTd"><p>
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="TI-228"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_455639089_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/TI-228" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>TI-228</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p><p>Debris between tires</p></td><td data-highlight-colour="#ffffff" class="confluenceTd"><p>As a student, I need to see debris that is stuck between the double sets of tires on the truck or the trailer so that I can learn to identify conditions that would make it dangerous to operate the vehicle.</p></td><td data-highlight-colour="#ffffff" class="confluenceTd"><p>User clicks to select any debris that exists between double sets of tires. </p><p>On click: Debris outline is highlighted</p></td><td data-highlight-colour="#ffffff" class="confluenceTd"><p>If the user clicks on the model, the Inspection UI opens to the selected component. User records the specific damage/bad state in the inspection checklist.</p><p>Options: debris</p><p>If the user does not click on the model, they can select the “Continue” option to move to the next inspectable or POI without reporting any damage in the checklist.</p><p /></td><td data-highlight-colour="#ffffff" class="confluenceTd"><p>0-2 debris in tires.</p></td><td data-highlight-colour="#ffffff" class="confluenceTd"><p>Good: no debris</p><p>Debris:  Debris such as rocks may show between tires when two tires are used together.</p><p /></td><td data-highlight-colour="#ffffff" class="confluenceTd"><p>Confirmed with John, the student/operator is not required to try to remove debris that is wedged between tires - it is not even possible to remove the debris safely without removing one of the tires.  The inspection must record that debris is present and the operator must continue with the wheel inspection to identify any other damage.</p></td></tr></tbody></table></div><h2 id="TruckingFRS-ExteriorInspection-FluidLeaks">Fluid Leaks</h2><p>Jira link 
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="TI-22"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_455639089_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/TI-22" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>TI-22</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p><div class="table-wrap"><table data-layout="default" data-local-id="bd936882-fe57-422f-92de-bb57d3379894" class="confluenceTable"><colgroup><col style="width: 157.0px;"/><col style="width: 108.0px;"/><col style="width: 120.0px;"/><col style="width: 120.0px;"/><col style="width: 86.0px;"/><col style="width: 78.0px;"/><col style="width: 91.0px;"/></colgroup><tbody><tr><th class="confluenceTh"><p><strong>Epic Link</strong></p></th><th class="confluenceTh"><p><strong>Jira Issue</strong></p></th><th class="confluenceTh"><p><strong>User Interaction</strong></p></th><th class="confluenceTh"><p><strong>Inspection Interaction</strong></p></th><th class="confluenceTh"><p><strong>On initial load</strong></p></th><th class="confluenceTh"><p><strong>States</strong></p></th><th class="confluenceTh"><p><strong>Notes</strong></p></th></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="TI-22"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_455639089_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/TI-22" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>TI-22</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>As a student, I need to identify puddles of liquid near or below my truck, so that I can learn to recognize the characteristics of different fluid leaks versus harmless liquids that do not indicate a problem</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>User clicks to select puddle. On click: Object outline is highlighted</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>User clicks to record appropriate “leak” state in the inspection checklist.</p><p>User is not required to record the absence of fluid leaks.</p><p>Options: fluid leak</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>0-3 visible puddles on the ground beneath the vehicle. </p><p>See this <a class="external-link" href="https://stuconestogacon.sharepoint.com/:x:/s/VARLab/ERvdW7L1GwlFvAFkokOlaLcB0XVpKX4XQVS-cOcJ-YabjA?e=ht2hMV" rel="nofollow">chart of truck fluids and leak characteristics</a> for details.</p><p /></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>Good: no puddles OR colourless puddles located away from engine or fluid lines, where characteristics and location indicate puddle is not related to a fluid leak</p><p>Bad: Puddle of coloured fluid located near engine or fluid lines, indicating a possible leak.</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>The point here is not necessarily to have the learner identify the fluid or source of the leak, but to be able to identify that a leak exists. We will  include puddles that are totally harmless, such as rainwater puddles, to drive home that a puddle does not instantly mean there’s a leak - you have to look closer.</p></td></tr><tr><td class="confluenceTd"><p>
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="TI-22"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_455639089_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/TI-22" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>TI-22</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p></td><td class="confluenceTd"><p>As a student, I need to see puddles of different sizes, colours, and locations around my truck so that I can learn to identify fluid leaks </p></td><td class="confluenceTd"><p>User clicks to select puddle. </p><p>On click: Object outline is highlighted</p></td><td class="confluenceTd"><p>User clicks to record appropriate “leak” state in the inspection checklist.</p><p>User is not required to record the absence of leaks. </p><p>Options: fluid leak</p></td><td class="confluenceTd"><p>0-3 visible puddles on the ground beneath the vehicle. </p><p>See this <a class="external-link" href="https://stuconestogacon.sharepoint.com/:x:/s/VARLab/ERvdW7L1GwlFvAFkokOlaLcB0XVpKX4XQVS-cOcJ-YabjA?e=ht2hMV" rel="nofollow">chart of truck fluids and leak characteristics</a> for details.</p><p /></td><td class="confluenceTd"><p>Good: no puddles OR colourless puddles located away from engine or fluid lines, where characteristics and location indicate puddle is not related to a fluid leak</p><p>Bad: Puddle of coloured fluid located near engine or fluid lines, indicating a possible leak.</p></td><td class="confluenceTd"><p /></td></tr></tbody></table></div><h2 id="TruckingFRS-ExteriorInspection-ExteriorLights">Exterior Lights</h2><p>Jira link 
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="TI-27"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_455639089_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/TI-27" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>TI-27</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p><div class="table-wrap"><table data-layout="default" data-local-id="fc07f7a6-92fe-4388-95a7-383901510ff0" class="confluenceTable"><colgroup><col style="width: 157.0px;"/><col style="width: 108.0px;"/><col style="width: 120.0px;"/><col style="width: 120.0px;"/><col style="width: 86.0px;"/><col style="width: 78.0px;"/><col style="width: 90.0px;"/></colgroup><tbody><tr><th class="confluenceTh"><p><strong>Epic Link</strong></p></th><th class="confluenceTh"><p><strong>Jira Issue</strong></p></th><th class="confluenceTh"><p><strong>User Interaction</strong></p></th><th class="confluenceTh"><p><strong>Inspection Interaction</strong></p></th><th class="confluenceTh"><p><strong>On initial load</strong></p></th><th class="confluenceTh"><p><strong>States</strong></p></th><th class="confluenceTh"><p><strong>Notes</strong></p></th></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="TI-27"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_455639089_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/TI-27" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>TI-27</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p><p>Brake lights</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>As a student, I need to inspect the brake lights on the truck so that I can learn to identify conditions that would make it unsafe to operate my vehicle</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>User clicks the icon to activate the exterior lights. </p><p>When the icon is clicked, all of the brake lights on the truck and trailer will be activated.</p><p>User clicks to select any brake light that is not in a good state.. </p><p>On click: Object outline is highlighted</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>When the user clicks on the model, the Inspection UI opens to the brake lights so that the user can record appropriate “bad” state in the inspection checklist. </p><p>Options: damaged, burned out.</p><p>User is not required to record brake lights that are working as expected. If the user does not click on the model to report damage, they may click the Next Inspection option to move on to the next inspectable or POI. The brake lights will go out when the learner indicates that they have completed their inspection.</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>All except 0-2 brake lights are lit and undamaged while the spike is activated. </p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>Good: Brake lights are lit up when the spike is activated.</p><p>Damaged: 1 or more brake lights is damaged (visible abrasion or crack)</p><p>Burned out: 1 or more brake lights is burnt out (does not light up)</p></td><td class="confluenceTd"><p /></td></tr><tr><td class="confluenceTd"><p>
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="TI-27"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_455639089_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/TI-27" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>TI-27</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p><p>Brake lights</p></td><td class="confluenceTd"><p>As a student, I need to see the brake lights on the truck in various good and damaged states so that I can learn to identify conditions that would make it unsafe to operate my vehicle</p></td><td class="confluenceTd"><p>User clicks the icon to activate the exterior lights. </p><p>When the icon is clicked, all of the brake lights on the truck and trailer will be activated.</p><p>User clicks to select any brake light that is not in a good state.. </p><p>On click: Object outline is highlighted</p></td><td class="confluenceTd"><p>When the user clicks on the model, the Inspection UI opens to the brake lights so that the user can record appropriate “bad” state in the inspection checklist. </p><p>Options: damaged, burned out.</p><p>User is not required to record brake lights that are working as expected. If the user does not click on the model to report damage, they may click the Next Inspection option to move on to the next inspectable or POI. The brake lights will go out when the learner indicates that they have completed their inspection.</p></td><td class="confluenceTd"><p>All except 0-2 brake lights are lit while the spike is activated. </p><p>Note: There are brake lights on the truck AND on the trailer, and both sets must be functioning as expected.</p></td><td class="confluenceTd"><p>Good: Brake lights are lit up when the spike is activated.</p><p>Damaged: 1 or more brake lights is damaged (visible abrasion or crack)</p><p>Burned out: 1 or more brake lights is burnt out (does not light up)</p></td><td class="confluenceTd"><p>The “spike” or trailer brake is a yellow t-shaped lever on the dashboard of the Cascadia.  It may have slightly different appearance, or be mounted on the side of the steering column, in different tractor models.</p><p>To activate the “spike” in a Cascadia, the lever is pulled downward, so that it is pointing toward the back of the cab.  To deactivate the spike, it should be pushed upward.</p></td></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="TI-27"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_455639089_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/TI-27" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>TI-27</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p><p>Headlights</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>As a student, I need to inspect the headlights on the truck so that I can learn to identify conditions that would make it unsafe to operate my vehicle</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>User clicks the icon to activate the exterior lights. </p><p>When the icon is clicked, all of the exterior lights on the truck and trailer will be activated in the Test Lights sequence.</p><p>User clicks to select any light that is not in a good state.. </p><p>On click: Object outline is highlighted</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>When the user clicks on the model, the Inspection UI opens to the appropriate truck or trailer light so that the user can record appropriate “bad” state in the inspection checklist. </p><p>Options: damaged, burned out.</p><p>User is not required to record results for any lights that are working as expected. If the user does not click on the model to report damage, they may click the Next Inspection option to move on to the next inspectable or POI. The “Test Lights” feature will automatically be deactivated (lights will go out) when the learner indicates that they have completed their inspection.</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>1-2 headlights are lit while the button is activated. </p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>Good: Headlights are intact, undamaged, and lit up when the check lights button is activated.</p><p>Damaged: 1 or more headlights is damaged (visible abrasion or crack)</p><p>Burned out: 1 or more headlights is burnt out (does not light up)</p></td><td class="confluenceTd"><p>The “Test Lights” or “Check Lights” button is a toggle switch on the dashboard of the Cascadia.  It has a logo with two flashing lights.  To activate this button, it should be toggled upward, so that the top half of the button is flush with the dashboard, and the bottom half of the button is sticking up from the dashboard.  This will activate the exterior lights in “test lights sequence”.  Check Reference Videos in SharePoint for footage of the lights in test mode.</p></td></tr><tr><td class="confluenceTd"><p>
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="TI-27"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_455639089_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/TI-27" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>TI-27</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p><p>Headlights</p></td><td class="confluenceTd"><p>As a student, I need to see the headlights on the truck in various good and damaged states so that I can learn to identify conditions that would make it unsafe to operate my vehicle</p></td><td class="confluenceTd"><p>User clicks the icon to activate the exterior lights. </p><p>When the icon is clicked, all of the exterior lights on the truck and trailer will be activated in the Test Lights sequence.</p><p>User clicks to select any light that is not in a good state.. </p><p>On click: Object outline is highlighted</p></td><td class="confluenceTd"><p>When the user clicks on the model, the Inspection UI opens to the appropriate truck or trailer light so that the user can record appropriate “bad” state in the inspection checklist. </p><p>Options: damaged, burned out.</p><p>User is not required to record results for any lights that are working as expected. If the user does not click on the model to report damage, they may click the Next Inspection option to move on to the next inspectable or POI. The “Test Lights” feature will automatically be deactivated (lights will go out) when the learner indicates that they have completed their inspection.</p></td><td class="confluenceTd"><p>1-2 headlights are lit while the button is activated. </p></td><td class="confluenceTd"><p>Good: Headlights are intact, undamaged, and lit up when the check lights button is activated.</p><p>Damaged: 1 or more headlights is damaged (visible abrasion or crack)</p><p>Burned out: 1 or more headlights is burnt out (does not light up)</p></td><td class="confluenceTd"><p /></td></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="TI-27"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_455639089_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/TI-27" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>TI-27</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p><p>Emergency hazard lights, (aka 4-way flashers)</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>As a student, I need to inspect the emergency hazard lights on the truck and trailer so that I can learn to identify conditions that would make it unsafe to operate my vehicle</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>User clicks the icon to activate the exterior lights. </p><p>When the icon is clicked, all of the exterior lights on the truck and trailer will be activated in the Test Lights sequence.</p><p> </p><p>User clicks to select any light that is not in a good state.. </p><p>On click: Object outline is highlighted</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>When the user clicks on the model, the Inspection UI opens to the appropriate hazard light so that the user can record appropriate “bad” state in the inspection checklist. </p><p>Options: damaged, burned out.</p><p>User is not required to record results for any hazard lights that are working as expected. If the user does not click on the model to report damage, they may click the Next Inspection option to move on to the next inspectable or POI. The Hazard button will automatically be deactivated (lights will go out) when the learner indicates that they have completed their inspection.</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>All except 0-2 emergency hazard lights are lit while the button is activated. </p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>Good: Emergency hazard lights are lit up and flashing simultaneously when the button is activated.</p><p>Damaged: 1 or more hazard lights is damaged (visible abrasion or crack)</p><p>Burned out: 1 or more hazard lights is burnt out (does not light up)</p></td><td class="confluenceTd"><p /></td></tr><tr><td class="confluenceTd"><p>
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="TI-27"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_455639089_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/TI-27" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>TI-27</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p><p>Emergency hazard lights, (aka 4-way flashers)</p></td><td class="confluenceTd"><p>As a student, I need to see the emergency hazard lights on the truck and trailer in various good and bad condition, so that I can learn to identify conditions that would make it unsafe to operate my vehicle</p></td><td class="confluenceTd"><p>User clicks the icon to activate the exterior lights. </p><p>When the icon is clicked, all of the exterior lights on the truck and trailer will be activated in the Test Lights sequence.</p><p>User clicks to select any light that is not in a good state.. </p><p>On click: Object outline is highlighted</p></td><td class="confluenceTd"><p>When the user clicks on the model, the Inspection UI opens to the appropriate hazard light so that the user can record appropriate “bad” state in the inspection checklist. </p><p>Options: damaged, burned out.</p><p>User is not required to record results for any hazard lights that are working as expected. If the user does not click on the model to report damage, they may click the Next Inspection option to move on to the next inspectable or POI. The Hazard button will automatically be deactivated (lights will go out) when the learner indicates that they have completed their inspection.</p></td><td class="confluenceTd"><p>All except 0-2 emergency hazard lights are lit while the button is activated. </p></td><td class="confluenceTd"><p>Good: Emergency hazard lights are lit up and flashing simultaneously when the button is activated.</p><p>Damaged: 1 or more hazard lights is damaged (visible abrasion or crack)</p><p>Burned out: 1 or more hazard lights is burnt out (does not light up)</p></td><td class="confluenceTd"><p /></td></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="TI-27"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_455639089_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/TI-27" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>TI-27</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+<del> </del></p><p><del>Turn signal lights</del></p><p /></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><del>As a student, I need to inspect the turn signal lights on the truck and trailer so that I can learn to identify conditions that would make it unsafe to operate my vehicle</del></p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><del>User clicks the icon to activate the exterior lights. </del></p><p><del>When the icon is clicked, all of the exterior lights on the truck and trailer will be activated in the Test Lights sequence.</del></p><p><del> User clicks to select any light that is not in a good state. </del></p><p><del>On click: Object outline is highlighted</del></p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><del>When the user clicks on the model, the Inspection UI opens to the selected component so that the user can record appropriate “bad” state in the inspection checklist. </del></p><p><del>Options:damaged, burned out</del></p><p><del>User is not required to record inspection results for components that are working as expected. If the user does not click on the model to report damage, they may click the Next Inspection option to move on to the next inspectable or POI. </del></p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><del>All except 0-2 turn signal lights are lit while the button is activated. </del></p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><del>Good: Turn signal lights are intact, undamaged, and flashing simultaneously.</del></p><p><del>Damaged: 1 or more turn signal lights is damaged (visible abrasion or crack)</del></p><p><del>Burned out: 1 or more turn signal lights is burnt out (does not light up)</del></p></td><td class="confluenceTd"><p>We have learned that the turn signal lights on the exterior of the vehicle ARE the same lights as the emergency hazard lights. These are not separate lights. </p></td></tr><tr><td class="confluenceTd"><p>
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="TI-27"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_455639089_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/TI-27" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>TI-27</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+<del> </del></p><p><del>Turn signal lights</del></p></td><td class="confluenceTd"><p><del>As a student, I need to see turn signal lights on the truck and trailer in various good and damaged states so that I can learn to identify conditions that would make it unsafe to operate my vehicle</del></p></td><td class="confluenceTd"><p><del>User clicks the icon to activate the exterior lights. </del></p><p><del>When the icon is clicked, all of the exterior lights on the truck and trailer will be activated in the Test Lights sequence.</del></p><p><del>User clicks to select any light that is not in a good state. </del></p><p><del>On click: Object outline is highlighted</del></p></td><td class="confluenceTd"><p><del>When the user clicks on the model, the Inspection UI opens to the selected component so that the user can record appropriate “bad” state in the inspection checklist. </del></p><p><del>Options:damaged, burned out</del></p><p><del>User is not required to record inspection results for components that are working as expected. If the user does not click on the model to report damage, they may click the Next Inspection option to move on to the next inspectable or POI.</del></p></td><td class="confluenceTd"><p><del>All except 0-2 turn signal lights are lit while the button is activated. </del></p></td><td class="confluenceTd"><p><del>Good: Turn signal lights are intact, undamaged, and flashing simultaneously.</del></p><p><del>Damaged: 1 or more turn signal lights is damaged (visible abrasion or crack)</del></p><p><del>Burned out: 1 or more turn signal lights is burnt out (does not light up)</del></p></td><td class="confluenceTd"><p>We have learned that the turn signal lights on the exterior of the vehicle ARE the same lights as the emergency hazard lights. These are not separate lights. </p></td></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="TI-27"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_455639089_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/TI-27" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>TI-27</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p><p>Marker lights</p><p /></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>As a student, I need to inspect the marker lights on the truck and trailer so that I can learn to identify minor damages that require the attention of the service team.</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>User walks around the truck and trailer to observe small marker lights at the most exterior edges of the truck and trailer.</p><p>User clicks to select any marker light that is not in a good state.. </p><p>On click: Object outline is highlighted</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>User records inspection results in the inspection checklist to report condition of the marker lights on the truck.</p><p>Options:  damaged, burnt out</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>All except 2-4 marker lights are lit and undamaged. </p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>Good: Marker lights are intact, undamaged, and lit.</p><p>Damagd: 1 or more marker lights is damaged (visible abrasion or crack) </p><p>Burnt out (does not light up)</p></td><td class="confluenceTd"><p>This step needs to be done after the step where the “Test Lights” button is activated.</p></td></tr><tr><td class="confluenceTd"><p>
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="TI-27"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_455639089_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/TI-27" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>TI-27</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p><p>Marker lights</p></td><td class="confluenceTd"><p>As a student, I need to see marker lights on the truck and trailer in various good and damaged states so that I can learn to identify conditions that require the attention of my service team</p></td><td class="confluenceTd"><p>User walks around the truck and trailer to observe small marker lights at the most exterior edges of the truck and trailer.</p><p>User clicks to select any marker light that is not in a good state..</p><p>On click: Object outline is highlighted</p></td><td class="confluenceTd"><p>User records inspection results in the inspection checklist to report condition of the marker lights on the truck.</p><p>Options: good, damaged, burnt out</p></td><td class="confluenceTd"><p>All except 2-4 marker lights are lit and undamaged. </p><p>At least 1 marker light must be burnt out (not lit) and remaining lights may be visibly damaged (cracked, broken, abraded)  </p></td><td class="confluenceTd"><p>Good: Marker lights are intact, undamaged, and lit.</p><p>Damagd: 1 or more marker lights is damaged (visible abrasion or crack) </p><p>Burnt out (does not light up)</p></td><td class="confluenceTd"><p>This step needs to be done after the step where the “Test Lights” button is activated.</p></td></tr><tr><td class="confluenceTd"><p>
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="TI-27"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_455639089_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/TI-27" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>TI-27</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p><p>License plate lights</p></td><td class="confluenceTd"><p>As a student, I need to inspect the license plate lights so that I can ensure my license plates are visible at night </p></td><td class="confluenceTd"><p>User walks around the truck and trailer to observe the license plate lights at three required locations: front bumper, rear tractor bumper, rear trailer.</p><p>User clicks to select any license plate light that is not in a good state..</p><p>On click: Object outline is highlighted</p></td><td class="confluenceTd"><p>User records inspection results in the inspection checklist to report condition of the license plate lights on the truck.</p><p>Options: good, malfunctioning</p><p>Additional FAKE bad state: license plate missing</p><p>Note that license plate lights are intended to point at the license plate, so that the lamp itself is not usually visible on the truck. Our student will verify that the light is functioning, but will not visualize the light itself.</p></td><td class="confluenceTd"><p>Infrequently, 1 of the 3 license plate lights will be malfunctioning (does not stay lit, flickers on erratically).  This will replace the more traditional “burnt out” state, since it would be very difficult for the user to identify a burned out license plate light while inspecting a truck in broad daylight.</p></td><td class="confluenceTd"><p>Good: License plate light is on steady and uninterrupted.</p><p>Malfunctioning: 1 or more license plate lights is flickering erratically, does not stay lit for more than 1 second at a time.</p><p>FAKE BAD STATE License plate missing:  This will never be a correct answer, but will be present in the Inspection UI to remind the student that rarely, license plates are stolen from the truck.</p></td><td class="confluenceTd"><p>This step needs to be done after the step where the “Test Lights” button is activated.</p></td></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="TI-27"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_455639089_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/TI-27" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>TI-27</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p><p>Fog lights</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>As a student, I need to inspect the fog lights on the truck so that I can learn to identify conditions that would make it unsafe to operate my vehicle</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>User clicks the icon to activate the exterior lights. </p><p>When the icon is clicked, all of the exterior lights on the truck and trailer will be activated in the Test Lights sequence.</p><p>User clicks to select any light that is not in a good state.. </p><p>On click: Object outline is highlighted</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>When the user clicks on the model, the Inspection UI opens to the appropriate truck or trailer light so that the user can record appropriate “bad” state in the inspection checklist. </p><p>Options: damaged, burned out.</p><p>User is not required to record results for any lights that are working as expected. If the user does not click on the model to report damage, they may click the Next Inspection option to move on to the next inspectable or POI. The “Test Lights” feature will automatically be deactivated (lights will go out) when the learner indicates that they have completed their inspection.</p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>1-2 fog lights are lit while the button is activated. </p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p>Good: Fog lights are intact, undamaged, and lit up when the check lights button is activated.</p><p>Damaged: 1 or more fog lights is damaged (visible abrasion or crack)</p><p>Burned out: 1 or more fog lights is burnt out (does not light up)</p></td><td class="confluenceTd"><p>The “Test Lights” or “Check Lights” button is a toggle switch on the dashboard of the Cascadia.  It has a logo with two flashing lights.  To activate this button, it should be toggled upward, so that the top half of the button is flush with the dashboard, and the bottom half of the button is sticking up from the dashboard.  This will activate the exterior lights in “test lights sequence”.  Check Reference Videos in SharePoint for footage of the lights in test mode.</p></td></tr></tbody></table></div><p />
+                    </div>
+
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Jun 11, 2025 14:05</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

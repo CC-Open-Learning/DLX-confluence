@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VARLab : POI Setup</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="VARLab_44990773.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Learning-Experience_972881951.html">Learning Experience</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="216629273.html">Digital Learning Experiences (DLX)</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="LSM9.05---Respiratory-Therapy_1328119833.html">LSM9.05 - Respiratory Therapy</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Documentation_1512341506.html">Documentation</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            VARLab : POI Setup
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                            
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> User bf53c</span>, last modified on Jan 15, 2025
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <h2 id="POISetup-Definitions:">Definitions:</h2><ul><li><p>POI: Camera view used to get a closer look at an area. Stans for “Point Of Interest”.</p></li><li><p>Main POI: Highest level POIs that have no parent POIs.</p></li></ul><h2 id="POISetup-CreatingaPOI:">Creating a POI:</h2><ol start="1"><li><p>Add the POI, Interactable, Collider and Outlinable components to the GameObject for the POI.</p></li><li><p><del>If the POI needs a “Box” outline, follow the steps here.</del> If not, double-check that the Outlinable component is registering the correct meshes. The POI GameObject doesn’t have to contain the meshes for your outline, but they’ll have to be somewhere in its child GameObjects.</p></li></ol><div class="confluence-information-macro confluence-information-macro-information"><span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"></span><div class="confluence-information-macro-body"><p>All POIs will eventually use dynamic outlines (see <a class="external-link" href="https://varlab-dev.atlassian.net/browse/RT-254" rel="nofollow">related ticket</a>)</p></div></div><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20241210-170449.png" width="760" loading="lazy" src="attachments/1512144908/1511817269.png?width=760" data-image-src="attachments/1512144908/1511817269.png" data-height="591" data-width="792" data-unresolved-comment-count="0" data-linked-resource-id="1511817269" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20241210-170449.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1512144908" data-linked-resource-container-version="5" data-media-id="864f326e-b117-43e1-996b-b3269b3a8884" data-media-type="file"></span><ol start="3"><li><p>Add the GameObject to the EventSystem interactables list.</p></li><li><p>Place the GameObject appropriately in the hierarchy so it’s the child object of the POI where it’s opened. If the POI isn’t meant to have a parent, place it at the highest level and check the “IsMainPOI” box on the POI component.</p></li><li><p>Disable the Interactable and Collider components if the POI isn’t a MainPOI.</p></li><li><p>Set the “MouseClick” event on the Interactable component to this GameObjects POI.open() method.</p></li><li><p>Change the “poiName” value to the name of the POI.</p><ol start="1"><li><p>If the name isn’t on the list, add it to the POIName enum, and it should show up.</p></li></ol></li><li><p>Populate the childPOI and explorables lists with the appropriate GameObjects. One or both of these lists can be left empty if needed. Explorables don’t need to be children of their POIs, but child POIs must be children of their parents.</p></li></ol><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20241210-164703.png" width="653" loading="lazy" src="attachments/1512144908/1512144951.png?width=653" data-image-src="attachments/1512144908/1512144951.png" data-height="498" data-width="653" data-unresolved-comment-count="0" data-linked-resource-id="1512144951" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20241210-164703.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1512144908" data-linked-resource-container-version="5" data-media-id="3f682475-c485-45db-a65b-a92ee29d3efd" data-media-type="file"></span><ol start="8"><li><p>Create a CinemachineVirualCamera for the POI, as seen <a href="#poi-camera" rel="nofollow">here</a>.</p></li></ol><h2 id="POISetup-CreatingThePOICamera:poi-camera">Creating The POI Camera: <span class="confluence-anchor-link" id="POISetup-poi-camera"><span class="confluence-anchor-link" id="poi-camera"></span></span></h2><ol start="1"><li><p>Enter the “Camera” prefab and create a new CinemachineVirtualCamera object.</p></li><li><p>Adjust the position/rotation of the camera so it’s in the desired location (make sure to leave room for the Progress Indicator on the right side of the screen).</p><ol start="1"><li><p>The camera view can be seen in scene view via the camera window, but it’s often easier to modify values during play mode.</p></li></ol></li><li><p>Set the priority of the CinemachineVirtualCamera to 0 and rename the camera to match the intended POI.</p></li><li><p>Disable the CinemachineVirtualCamera GameObject.</p></li><li><p>Reference the camera in the poiCamera field of the POI (must be done at the Main Scene level).</p></li></ol><p />
+                    </div>
+
+                                        <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="attachments" class="pageSectionTitle">Attachments:</h2>
+                        </div>
+
+                        <div class="greybox" align="left">
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1512144908/1512243254.png">image-20241210-163811.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1512144908/1512243260.png">image-20241210-163817.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1512144908/1511981098.png">image-20241210-164654.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1512144908/1512144951.png">image-20241210-164703.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1512144908/1512636442.png">image-20241210-164942.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1512144908/1511817269.png">image-20241210-170449.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1512144908/1558052888.png">image-20250115-193321.png</a> (image/png)
+                                <br/>
+                                                    </div>
+                    </div>
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Jun 11, 2025 14:20</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

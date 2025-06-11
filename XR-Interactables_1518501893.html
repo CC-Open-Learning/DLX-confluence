@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VARLab : XR Interactables</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="VARLab_44990773.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Learning-Experience_972881951.html">Learning Experience</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="General-Release-DLX_729973721.html">General Release DLX</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="LSM9.01---Public-Health-Inspection_805306369.html">LSM9.01 - Public Health Inspection</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="PHI-VR-Research-Project_1514897411.html">PHI-VR Research Project</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            VARLab : XR Interactables
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                            
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> User 55f04</span>, last modified on Dec 12, 2024
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <p>This documentation is solely based on research and findings related to how compatible the current state of PHI is for XR Interactables implementation. For XR Interactables to function, you simply will need to attach script components to Inspectable prefabs that can be Inspected.</p><p>For our purpose and use case, <code>XRSimpleInteractable</code> was used as an additional component in the prefabs for the Inspectables to respond to any of the <code>XRSimpleInteractable</code> methods. The three methods implemented are listed below:</p><ul><li><p><code>selectEntered</code></p></li><li><p><code>hoverEntered</code></p></li><li><p><code>hoverExited</code></p></li></ul><p>You would need to add Listeners to these XRInteractable methods like below to subscribe to <code>XRInteractable</code> events:</p><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">        // In Awake method
+        private XRSimpleInteractable _xrInteractable;
+        
+        _xrInteractable.hoverEntered.AddListener(OnHoverEntered);
+        _xrInteractable.hoverExited.AddListener(OnHoverExited);
+        _xrInteractable.selectEntered.AddListener(OnSelectEntered);</pre>
+</div></div><div class="panel" style="background-color: #EAE6FF;border-color: #998DD9;border-width: 1px;"><div class="panelContent" style="background-color: #EAE6FF;">
+<p>Within the Listeners you can call methods or invoke events based on the action that was performed. Keep in mind that you may not be able to call certain method due to abstraction, visibility etc. For example, enabling outline for the object inspected method is private.</p>
+</div></div><p>You can also include the required component i-e <code>XRSimpleInteractable</code> by adding this into the script before the class definition:</p><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">[RequireComponent(typeof(XRSimpleInteractable))]
+public class XRInspectable : MonoBehaviour</pre>
+</div></div><p>This would automatically add the additional component onto the prefab without manual intervention.</p><h3 id="XRInteractables-IssueswiththecurrentstateofPHI">Issues with the current state of PHI</h3><p>Since all of the methods used for interactions are situated in the <code>InteractableManager</code>, It was rather difficult making the XRInteractions work. This was especially prominent with functionality that were running in Update method in the <code>InteractableManager</code> overriding the Listener calls. </p><p>Technically, you could call the <code>Inspect()</code> method from <code>InteractableManager</code> object for the <code>OnSelectEntered()</code> Listener method, but there are so many links and dependencies you’d have to account for, which would lead to refactoring the code base. We had to create a whole new <code>PlayerControllerVR</code> that handles only the VR related functionality to mitigate this problem. Because of this and the time constraint that we had for this research project, the implementation for XRInteractables was set aside for further research.</p><div class="confluence-information-macro confluence-information-macro-information"><span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"></span><div class="confluence-information-macro-body"><p>What we know so far is that the Inspectables can be interacted with using the controllers if the <code>XRSimpleInteractable</code> components and the listeners were simply added to every Inspectable prefab without making any drastic changes to the code base.</p></div></div>
+                    </div>
+
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Jun 11, 2025 14:16</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

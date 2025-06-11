@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VARLab : Database and Character Generator</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="VARLab_44990773.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Learning-Experience_972881951.html">Learning Experience</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="General-Release-DLX_729973721.html">General Release DLX</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Campus-RPG_247660655.html">Campus RPG</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Process-Documents_432996353.html">Process Documents</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="RPG-Maker-Documentation_432439297.html">RPG Maker Documentation</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            VARLab : Database and Character Generator
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                            
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> Colm Ambler (Unlicensed)</span> on Sept 21, 2021
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <p>The database is an incredibly important location to familiarize yourself with inside RPG Maker. It handles most of the information within your game (though not variables or switches, it’s a little inconsistent actually.)</p><p>As for the character generator, it’s an easy way to create new and unique characters with assets that are already in RPG Maker. They’ll export automatically into the correct folders with walking, fighting and portraits.</p><p /><p><strong>Database</strong></p><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/446824652/447021240.png" data-image-src="attachments/446824652/447021240.png" data-height="551" data-width="886" data-unresolved-comment-count="0" data-linked-resource-id="447021240" data-linked-resource-version="2" data-linked-resource-type="attachment" data-linked-resource-default-alias="DatabaseOpen.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="446824652" data-linked-resource-container-version="1" data-media-id="4459aed9-0bcd-47ad-89a8-d1b31d090ac3" data-media-type="file"></span><p style="margin-left: 30.0px;">The first time you open the database, you’ll be in the Actors tab. We’re gonna zoom through the Actors, Classes, Skills, Items, Weapons, Armors, Enemies, Troops, States, and Animations tab cause they’re all similar enough in how they work. Also, we’re not looking into most of them for this project.</p><p /><p style="margin-left: 30.0px;"><strong>The List</strong> is the entire list of whichever tab you’re looking at. You can add more by clicking “Change Maximum.” </p><p style="margin-left: 30.0px;">On each one, you can change the <strong>name, nickname, class, intial and max level, profile, images, and equipment.</strong> You must change each element individually including images. </p><p /><p><strong>Tilesets</strong></p><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/446824652/446791961.png" data-image-src="attachments/446824652/446791961.png" data-height="554" data-width="884" data-unresolved-comment-count="0" data-linked-resource-id="446791961" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="DatabaseTilesets.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="446824652" data-linked-resource-container-version="1" data-media-id="870227ed-12f6-4622-993e-265097b7d8e6" data-media-type="file"></span><p style="margin-left: 30.0px;">The tilesets menu allows you to build, well, tilesets. You can name them, change the mode (from world type for overworlds and area type for everything else.)</p><p style="margin-left: 30.0px;">You change the tilesheets here as well. Just click on the button associated with each set. As mentioned elsewhere, the A tiles are properly labelled as to what should be in which one. </p><p style="margin-left: 30.0px;">On the right hand side, we can edit many things about the tiles. Currently, on passage, we decide whether the tile is blow, the same level, or above the characters. Passage allows you to choose where the player can enter a tile from. Ladder means that when the player is on the tile, they will appear away from the camera. Bush will hide bottom tiles of the characters as if they are standing in bushes. Counter increases a variable whenever the player steps on the tile. Damage means the player takes damage when touching the tile. Terrain Tag adds tags to each tile, these don’t inherently mean anything, you need to define them.</p><p /><p><strong>System 1 and 2</strong></p><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/446824652/446824673.png" data-image-src="attachments/446824652/446824673.png" data-height="553" data-width="886" data-unresolved-comment-count="0" data-linked-resource-id="446824673" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="DatabaseSystem1.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="446824652" data-linked-resource-container-version="1" data-media-id="40e7df7f-d9b6-48e3-b20e-eef96ac22206" data-media-type="file"></span><p>If you take anything away from this, it should be to check the systems menus as there is a lot of information you can edit, like…</p><p><strong>Game Title - </strong>Name of the game that appears on the title screen only.</p><p><strong>Starting Party - </strong>The party at the beginning of the game.</p><p><strong>Currency - </strong>The symbol used for the currency of the game, it defaults to G.</p><p><strong>Starting Positions - </strong>The important location tiles where certain things (including the player) start.</p><p><strong>Title Image - </strong>The background for the title screen.</p><p><strong>Music and basic Sound Effects - </strong>The sounds for more generic elements like UI, title screen theme, battle theme etc.</p><p /><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/446824652/446988586.png" data-image-src="attachments/446824652/446988586.png" data-height="556" data-width="886" data-unresolved-comment-count="0" data-linked-resource-id="446988586" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="DatabaseSystem2.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="446824652" data-linked-resource-container-version="1" data-media-id="a980bdfc-9b3c-4257-afed-5619fed9634c" data-media-type="file"></span><p><strong>Menu Commands - </strong>What the player is able to access in the pause menu</p><p><strong>Item Categories - </strong>The types of items the player will come across.</p><p><strong>Advanced Settings - </strong>You can change elements like the screen resolution, UI resolution, font, and window opacity.</p>
+                    </div>
+
+                                        <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="attachments" class="pageSectionTitle">Attachments:</h2>
+                        </div>
+
+                        <div class="greybox" align="left">
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/446824652/447021254.png">DatabaseOpen.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/446824652/447021240.png">DatabaseOpen.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/446824652/446791961.png">DatabaseTilesets.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/446824652/446824673.png">DatabaseSystem1.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/446824652/446791971.png">image-20210921-211738.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/446824652/447054237.png">image-20210921-211809.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/446824652/446824685.png">image-20210921-211854.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/446824652/446988586.png">DatabaseSystem2.png</a> (image/png)
+                                <br/>
+                                                    </div>
+                    </div>
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Jun 11, 2025 14:07</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VARLab : Quest Details</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="VARLab_44990773.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Learning-Experience_972881951.html">Learning Experience</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="General-Release-DLX_729973721.html">General Release DLX</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Campus-RPG_247660655.html">Campus RPG</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Development-Documents_432373866.html">Development Documents</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Early-Development_432898074.html">Early Development</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            VARLab : Quest Details
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                            
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> Colm Ambler (Unlicensed)</span> on Jun 09, 2021
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <p><strong>One Card Quest</strong> </p><ol><li><p>Quest begins with the opening cutscene </p><ol><li><p>The game directly tells the player they’re meant to find the One Card </p></li><li><p>They also receive $100 here for the second quest </p></li></ol></li><li><p> The player is restricted to a certain section in this wing </p><ol><li><p>It's very much meant to guide them along, people block all pathways in other directions </p></li><li><p>The player can talk with German and ask where to collect their One Card, he directs the player to the Condor's Nest which is just below the character </p></li></ol></li><li><p>The player interacts with the employee who asks for their name. After the player enters it, they will obtain their one card </p><ol><li><p>There is a variable called HasOneCard, it increases when they collect this and affects many other events, specifically the message and the NPCs that blocked the way Disappearing. </p></li><li><p>Currently, the game just increases the player's level, we could give them experience instead and check each time they get it if they gain a level </p></li><li><p>If the player tries to get another One Card the employee will recognize them, this is also tracked by HasOneCard </p></li></ol></li><li><p>As the player finishes this conversation, the quest has been completed </p></li></ol><p> </p><p><strong>Book Store Supplies Quest</strong> </p><ol><li><p>Quest begins as the player leaves the Condor's Nest, the character similarly reminds themselves that they need to get supplied </p><ol><li><p>Just like the One Card quest opening, there are events for every possible square leaving the Condor's Nest in case the player goes there </p></li><li><p>Also like the One Card Quest, there's a variable that destroys these events after they've been triggered </p></li></ol></li><li><p>The player needs to head eastward to the book store on the other side of the school </p><ol><li><p>They can once again ask helpful German about where they can get supplied, this is where the game straight up tells them that they need to go to the book store and that it's in A Building to the far east </p></li></ol></li><li><p>The player must walk through C building and B Building to reach A building where the book store is </p><ol><li><p>Again, the path there will be more linear than normal with NPCs and objects placed in the way  </p></li><li><p>The game will also show the area they're in, since each map is a building (aside from A) this should help them reach their destination easily </p></li><li><p>When they reach CSI services, most of the NPCs will tell the player that it's northward in the other section of A Building (this is very important since this is the only building that has two maps) </p></li></ol></li><li><p>Once they reach the book store they will be given one option to purchase an item, that item being called supplies </p><ol><li><p>Once the following event happens, the rest of the shop will open up </p></li><li><p>This method stops the player from spending their money on things they don't need to advance the game </p></li></ol></li><li><p>Once they leave the shop after purchasing something and walk in any direction they will be given a message about heading towards the library </p><ol><li><p>There are many events placed here, all of them in case the player checks the book store in any of the 6 possible spots </p></li><li><p>The event checks to see if the player has the supplies item in their inventory, if they do then the event will trigger. Like others, it will delete itself afterward </p></li><li><p>The supplies are not a consumable so there is no worry of the player accidently using two of the supplies and locking themselves out of progressing </p></li></ol></li></ol><p> </p><p><strong>Student Services Quest</strong> </p><ol><li><p>As the player re-enters the CSI part of A Building, they'll encounter another student who's anxious to talk with the receptionist of Student Services. They booked a room online but need the key  </p><ol><li><p>This is an optional quest the player can do </p></li><li><p>There is a cutscene here that is triggered as the player enters specific spaces </p></li><li><p>The quest may be optional, but the player must enter these spaces to progress, they are placed in the path and to the east in case they entered from the other side </p></li><li><p>There are two events here, one where the scene is triggered, the other holding the sprite for Ellie </p></li></ol></li><li><p>If the player talks with the receptionist, they can get the key from them </p><ol><li><p>The player gets a level up here, this is an error, they should get the level up when they complete the quest </p></li></ol></li><li><p>If the player talks with the student again with the key, they will thank the protagonist and the quest will end. Ellie will ask if the player is heading to the library and joins the party </p><ol><li><p>Ellie joins the party no matter what, there is no option </p></li><li><p>Ellie's event is deleted as she joins you </p></li></ol></li></ol><p> </p><p><strong>Library Quest</strong> </p><ol><li><p>Begins at the end of the supplies quest </p><ol><li><p>As mentioned elsewhere, there are many events the player can interact with that will start this quest and completely finish the last one </p></li><li><p>This event starts also begins the Student Services Quest </p></li></ol></li><li><p>Player walks towards the library, with or without Ellie </p></li><li><p>The player enters the library </p><ol><li><p>This is the only time the library will be available </p></li><li><p>The background sound begins to die out immediately </p></li></ol></li><li><p>A cutscene plays where they meet up with Nichkolas </p><ol><li><p>There is an event set on autorun that runs the event at the start, it also needs to end so it doesn’t loop forever </p></li><li><p>The music changes at the beginning of this event </p></li></ol></li><li><p>The quest ends when the cutscene ends, Nichkolas joins the party </p><ol><li><p>Nichk is added after the player is transferred so there aren't two of him </p></li><li><p>There is a switch that's activated when he is with you that causes the next quest to occur properly as well as some characters disappearing (yes for the purposes of what it is used for, an actor condition could have been used too) </p></li></ol></li></ol><p> </p><p><strong>Classroom Quest </strong> </p><ol><li><p>During the Library Quest, the player character and friend decide to find their classroom </p><ol><li><p>With Nichk, a new switch variable is active allowing for the room to be properly activated </p></li></ol></li><li><p>The two find their classroom </p><ol><li><p>Dialogue happens as well as a new switch variable that changes the dialogue for the door as well as begins the next and final quest </p></li></ol></li></ol><p> </p><p><strong>End Quest</strong> </p><ol><li><p>Quest begins at the end of the Classroom Quest, orientation is done </p><ol><li><p>A switch variable is activated at the end of the Classroom quest </p></li></ol></li><li><p>Simple find an exit quest, any door will work to complete the quest </p><ol><li><p>All available exits have the events that allow this to transition into the ending </p></li></ol></li><li><p>Demo is completed </p><ol><li><p>An autorun event occurs that ends with the game being taken back to the title screen </p></li></ol></li></ol><p> </p><p> </p><p><strong>Missing Big Yellow Quest (Most important Quest)</strong> </p><ol><li><p>BIG YELLOW IS MISSING YOU NEED TO FIND HIM </p></li><li><p>This quest is just an idea right now, but the basic concept is that the player would explore the school finding clues with the help of security to try and find where Big Yellow is. </p></li></ol><p> </p><p><strong>Secrets</strong> </p><p>Everybody loves finding secrets, and since the game is mostly walking around, talking and investigating objects, secrets are fairly important. </p><p> </p><p>So far we have two, both sort of linked together. </p><p> </p><ol><li><p>Ice Cream, if the player investigates a certain payphone they will get a call from an unknown man that has some sort of surprise for them if the player can find them. The player must inspect a hidden door to find the man and find the surprise.  </p></li><li><p>In the same room, there's a door with a mysterious man asking for a password, the password is scattered in pieces across random objects throughout the school. Once collected, the password is received and the player gets a nice item. </p></li></ol>
+                    </div>
+
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Jun 11, 2025 14:06</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

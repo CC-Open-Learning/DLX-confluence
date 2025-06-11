@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VARLab : Designing Learning Simulations</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="VARLab_44990773.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Learning-Experience_972881951.html">Learning Experience</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="General-Release-DLX_729973721.html">General Release DLX</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="221839404.html">LSM1.00 - Hydraulics (NOT GR)</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            VARLab : Designing Learning Simulations
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                            
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> Isiah S</span>, last modified by <span class='editor'> David Inglis (Unlicensed)</span> on May 31, 2021
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <blockquote><p><em>“Design is so much more than just the way something looks. It's the whole thing: the way something works on so many different levels. Ultimately, of course, design defines so much of our experience.”</em><br/>Jony Ive</p></blockquote><p>Reference will be made to the hydraulic labs module, and how design principles are applied.</p><p>Example of a simulation breakdown:</p><style>
+    #media-viewer-content_hydraulics_lab_reference_document_pdf_5287 {
+        height: 650px;
+        width: 95%;
+        position: relative;
+    }
+
+    /* PGXT-4046: Prevent the header from showing for the PDF macro */
+    .conf-macro .cp-header.cp-header-group {
+        display: none;
+    }
+
+    .cp-spinner .cp-spinner-blades div {
+        background: #333;
+    }
+
+</style>
+
+<div class="office-container">
+                <img src="https://api.media.atlassian.com/file/e2c3173b-dbff-47bb-b845-8c7e0a6f9ff3/image?token=eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiI4NGY1Y2Y3ZC04MzY5LTQzYTMtOWViNC1kODdkNTdjN2Q3MGQiLCJhY2Nlc3MiOnsidXJuOmZpbGVzdG9yZTpmaWxlOmUyYzMxNzNiLWRiZmYtNDdiYi1iODQ1LThjN2UwYTZmOWZmMyI6WyJyZWFkIl19LCJleHAiOjE3NDk2NTM1NDEsIm5iZiI6MTc0OTY1MDU0MSwiYWFJZCI6IjcxMjAyMDo4YTZkNDk4MC0xYjdhLTQ4OTAtOTUwYy1mNWQ4Yjg2MDJjY2UifQ.zZ-yOHARcOXXYbJGS6bR-bZyO_S2Y7DFuEQL3x8rXp4&client=84f5cf7d-8369-43a3-9eb4-d87d57c7d70d&name=Hydraulics%20Lab%20Reference%20Document.pdf" />
+    </div>
+<h2 id="DesigningLearningSimulations-FromLabtoSimulation">From Lab to Simulation</h2><p>Thoroughly review the lab, take note of…</p><ul><li><p>Theoretical applications (the logic of connected components and reactive states)</p></li><li><p>Physical objects (for 3D modelling, moving parts for users to interact with, theoretical constraints, etc.)</p></li><li><p>Emphasis of learning (ex. observation in <strong>audible </strong>cues from a Hydraulic Power Unit upon increasing its relative output pressure)</p></li><li><p>Steps and process (for user guidance, task verification, etc.)</p></li></ul><hr/><h2 id="DesigningLearningSimulations-ModellingofRealWorldtoVirtualWorld">Modelling of Real World to Virtual World</h2><p>The 2D or 3D model should offer itself as a functional component, for the <strong>emphasis of learning</strong> within the user interactions of the simulations.</p><p>Find the answers to these questions…</p><ul class="inline-task-list" data-inline-tasks-content-id="13992558"><li data-inline-task-id="4"><span class="placeholder-inline-tasks">What part(s) of the object are essential for developers to implement function?</span></li><li data-inline-task-id="5"><span class="placeholder-inline-tasks">What part(s) of it are essential for users to utilize its function?</span></li></ul><h3 id="DesigningLearningSimulations-DeterminingValueandPurpose">Determining Value and Purpose</h3><p>Ask…</p><p><strong>Why? </strong></p><ul><li><p>What value does this bring for the user?</p></li><li><p>Does it align with the goal of the application?</p></li><li><p>Does it fit within the context of the application?</p></li></ul><p>You can also apply some principles from root cause analysis, to help determine the purpose of implementing a certain feature.</p><p>Learn more about <a class="external-link" href="https://kanbanize.com/lean-management/improvement/5-whys-analysis-tool" rel="nofollow">The Five Whys</a> and how it helps boil down problems to the most <strong>fundamental</strong> principle.</p><hr/><h2 id="DesigningLearningSimulations-HumanCenteredInteractionDesign">Human Centered Interaction Design</h2><p>The interaction should be based within the core actions required by the lab. UI elements should be minimal, and provide value without being a distraction.</p><p>Some of these points are an interpretation from the design principles of Don Norman.</p><h3 id="DesigningLearningSimulations-Constraints">Constraints</h3><p>The limitations put in place for the user to interact with the interface.</p><p>Put yourself in the shoes of the person performing the activities in this lab.</p><p>Try to constrain the focus to the key area of where the users sustained attention is required.</p><div id="expander-282073687" class="expand-container"><div id="expander-control-282073687" class="expand-control"><span class="expand-control-icon"><img style="vertical-align:middle;" class="expand-control-image" src="images/icons/grey_arrow_down.png"></span><span class="expand-control-text">For example...</span></div><div id="expander-content-282073687" class="expand-content"><p>In a hydraulics lab - students will be typically be working on a station with the parts available in a drawer. So, we keep our camera focused on this zone.</p></div></div><h3 id="DesigningLearningSimulations-Visibility">Visibility</h3><p>Use universal symbols for iconography.</p><p>Utilize visual cues to form instinctive mental models to the objects in the simulation.</p><div id="expander-1969455082" class="expand-container"><div id="expander-control-1969455082" class="expand-control"><span class="expand-control-icon"><img style="vertical-align:middle;" class="expand-control-image" src="images/icons/grey_arrow_down.png"></span><span class="expand-control-text">For example...</span></div><div id="expander-content-1969455082" class="expand-content"><p>Building a menu? Try a Unicode character: ☰</p><p>The “hamburger” menu icon is universal, and you know when you click it something will expand.</p><p>Of course, if you are feeling creative - feel free to try and create a more appealing design.</p></div></div><h3 id="DesigningLearningSimulations-Feedback">Feedback</h3><p>For every action, there should be some sort of response from the system.</p><div id="expander-569502681" class="expand-container"><div id="expander-control-569502681" class="expand-control"><span class="expand-control-icon"><img style="vertical-align:middle;" class="expand-control-image" src="images/icons/grey_arrow_down.png"></span><span class="expand-control-text">For example...</span></div><div id="expander-content-569502681" class="expand-content"><p>For example, turning the Flow Control Valve (a knob per se) within a circuit will increase or decrease the pressure to the HPU. When this is done correctly, the HPU reacts with audible feedback, and other parts may react in a similar fashion. For example, the speed of retraction and extension of a cylinder.</p><p>What if the circuit is not connected properly, and the Flow Control Valve gives no response? Typically, in the real world the situation could be messy - but in the confines of a simulation we should try to give some sort of feedback for every action. Hence, an error message to let the user know that something is wrong. If it is their fault, or the systems fault.</p></div></div><h3 id="DesigningLearningSimulations-Consistency">Consistency</h3><p>A particular action should always cause the same reaction.</p><div id="expander-234932905" class="expand-container"><div id="expander-control-234932905" class="expand-control"><span class="expand-control-icon"><img style="vertical-align:middle;" class="expand-control-image" src="images/icons/grey_arrow_down.png"></span><span class="expand-control-text">For example...</span></div><div id="expander-content-234932905" class="expand-content"><p>This expansion box has a consistent reaction and purpose throughout the page.</p><p>The arrow which symbolizes it’s function is explained below, it is a combination of affordances and mapping.</p></div></div><h3 id="DesigningLearningSimulations-Affordances&amp;Mapping">Affordances &amp; Mapping</h3><p>In the hydraulics lab, we highlight clickable objects.</p><p>Having a fairly simple UI, the user may be inclined to click on such an object to see what happens.</p><p>From there, the user learns the function from the visual feedback provided to them.</p><p>Design enough to bring awareness of the object, and pique their curiosity to interact with it.</p><blockquote><p><em>“Good design is unobtrusive. Products fulfilling a purpose are like tools. They are neither decorative objects nor works of art. Their design should therefore be both neutral and restrained, to leave room for the user’s self-expression.”</em><br/>Dieter Rams</p></blockquote><hr/><h3 id="DesigningLearningSimulations-Resources">Resources</h3><p><a class="external-link" href="https://www.youtube.com/playlist?list=PL6L6rivp1i8Kh8f1YMJBDXq5smlleku3b" rel="nofollow">Audiobook: The Design of Everyday Things</a></p><p><a class="external-link" href="https://youtu.be/nXwpn90Gdec" rel="nofollow">Video: Dieter Rams</a></p><p><a class="external-link" href="https://medium.com/@lineindesign/be-a-designer-who-can-also-help-with-writing-copy-2f4ea02a5646" rel="nofollow">Article: Visual Hierarchy</a></p>
+                    </div>
+
+                                        <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="attachments" class="pageSectionTitle">Attachments:</h2>
+                        </div>
+
+                        <div class="greybox" align="left">
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/13992558/18087937.pdf">Hydraulics Lab Reference Document.pdf</a> (application/pdf)
+                                <br/>
+                                                    </div>
+                    </div>
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Jun 11, 2025 14:02</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

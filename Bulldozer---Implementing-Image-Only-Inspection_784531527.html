@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VARLab : Bulldozer - Implementing Image-Only Inspection</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="VARLab_44990773.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Learning-Experience_972881951.html">Learning Experience</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="General-Release-DLX_729973721.html">General Release DLX</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="LSM6.02---Heavy-Equipment---Bulldozer_505151489.html">LSM6.02 - Heavy Equipment - Bulldozer</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            VARLab : Bulldozer - Implementing Image-Only Inspection
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                            
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> Armando Interaminense</span> on Aug 16, 2023
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <p>This article will show how to implement the Image-Only Inspection in the Heavy Equipment DLX.</p><h2 id="Bulldozer-ImplementingImage-OnlyInspection-Instructions"><img class="emoticon emoticon-blue-star" data-emoji-id="1f4d8" data-emoji-shortname=":blue_book:" data-emoji-fallback="\uD83D\uDCD8" src="images/icons/emoticons/72/1f4d8.png" width="16" height="16" data-emoticon-name="blue-star" alt="(blue star)"/> Instructions</h2><p></p><ol start="1"><li><p><strong>Add the Image-Only Inspection component to the game object that will do the Image-Only Inspection and fill in the fields properly. </strong></p><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/784531527/784597131.png" data-image-src="attachments/784531527/784597131.png" data-height="455" data-width="594" data-unresolved-comment-count="0" data-linked-resource-id="784597131" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20230815-171134.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="784531527" data-linked-resource-container-version="1" data-media-id="52b536ce-eb87-42a3-8103-5af9c442eccb" data-media-type="file"></span></li><li><p><strong>Create the Image Display Window inside WindowManager/Windows. Add all the components in the image below, or copy a similar window, for example, the Video Player Window, and add the Image Player UI component to it. If you are duplicating the Video Player Window, delete the Video Player UI.</strong></p></li><li><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/784531527/784564289.png" data-image-src="attachments/784531527/784564289.png" data-height="738" data-width="597" data-unresolved-comment-count="0" data-linked-resource-id="784564289" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20230815-173052.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="784531527" data-linked-resource-container-version="1" data-media-id="fbe3fb24-e49e-444c-b90e-a529ad6dee24" data-media-type="file"></span><p><strong>Open Preferred Types Editor to add ImageOnlyInspection and ImagePlayerUI that will be used in the FSM.</strong></p><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/784531527/784531547.png" data-image-src="attachments/784531527/784531547.png" data-height="443" data-width="569" data-unresolved-comment-count="0" data-linked-resource-id="784531547" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20230815-175500.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="784531527" data-linked-resource-container-version="1" data-media-id="95ae3c6c-4433-4dee-907c-95b3d54b1f99" data-media-type="file"></span></li><li><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/784531527/784662565.png" data-image-src="attachments/784531527/784662565.png" data-height="203" data-width="635" data-unresolved-comment-count="0" data-linked-resource-id="784662565" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20230815-175647.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="784531527" data-linked-resource-container-version="1" data-media-id="f9f7e720-f9e8-4554-96a7-4dc61557683f" data-media-type="file"></span><p><strong>In the FSM prefab and a Blackboard variable of ImagePlayerUI type. Then serialize with the Window object you created before.</strong></p></li><li><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/784531527/784531559.png" data-image-src="attachments/784531527/784531559.png" data-height="704" data-width="977" data-unresolved-comment-count="0" data-linked-resource-id="784531559" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20230815-180342.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="784531527" data-linked-resource-container-version="1" data-media-id="a2807754-2b6c-4c02-9d8d-3126a151f454" data-media-type="file"></span><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/784531527/784564312.png" data-image-src="attachments/784531527/784564312.png" data-height="263" data-width="1419" data-unresolved-comment-count="0" data-linked-resource-id="784564312" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20230815-180532.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="784531527" data-linked-resource-container-version="1" data-media-id="ba4e3ffa-2082-49b3-8dcd-a832e4e251e1" data-media-type="file"></span><p><strong>In the FSM add a conditional statement that checks whether CurrentInspection is ImageOnlyInspection type and leads to the Repeatable Inspection Lane.</strong></p></li><li><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/784531527/784597139.png" data-image-src="attachments/784531527/784597139.png" data-height="445" data-width="579" data-unresolved-comment-count="0" data-linked-resource-id="784597139" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20230815-174246.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="784531527" data-linked-resource-container-version="1" data-media-id="ef8f2a84-28b9-4832-bcaf-5ff39a6faa18" data-media-type="file"></span><p><strong>In the subgraph Repeatable Inspection Lane create a node with that set Current UI to the Image UI and add the CheckType function to its connection to check whether it Inspection is of ImageOnlyInspection type.</strong></p><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/784531527/784466013.png" data-image-src="attachments/784531527/784466013.png" data-height="563" data-width="1053" data-unresolved-comment-count="0" data-linked-resource-id="784466013" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20230815-180659.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="784531527" data-linked-resource-container-version="1" data-media-id="dbce4a4c-cf33-4634-8754-6c379fc63573" data-media-type="file"></span></li></ol><p></p>
+                    </div>
+
+                                        <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="attachments" class="pageSectionTitle">Attachments:</h2>
+                        </div>
+
+                        <div class="greybox" align="left">
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/784531527/784597131.png">image-20230815-171134.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/784531527/784564289.png">image-20230815-173052.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/784531527/784597139.png">image-20230815-174246.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/784531527/784531547.png">image-20230815-175500.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/784531527/784662565.png">image-20230815-175647.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/784531527/784531559.png">image-20230815-180342.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/784531527/784498727.png">image-20230815-180500.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/784531527/783745237.png">image-20230815-180514.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/784531527/783614181.png">image-20230815-180517.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/784531527/784171177.png">image-20230815-180520.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/784531527/784564312.png">image-20230815-180532.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/784531527/784466013.png">image-20230815-180659.png</a> (image/png)
+                                <br/>
+                                                    </div>
+                    </div>
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Jun 11, 2025 14:09</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VARLab : Updated Hydraulics Tutorial</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="VARLab_44990773.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Learning-Experience_972881951.html">Learning Experience</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="General-Release-DLX_729973721.html">General Release DLX</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="221839404.html">LSM1.00 - Hydraulics (NOT GR)</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            VARLab : Updated Hydraulics Tutorial
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                            
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> Duane Cressman (Unlicensed)</span>, last modified on Dec 01, 2021
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <p>This tutorial will rely heavily on the Graph Management system. Please read the <a class="external-link" href="https://varlab-dev.atlassian.net/l/c/Q9f1zKAc" rel="nofollow">Documentation</a> if you are not familiar with the system. It can take a bit to figure out all the features, but once you get it, you can do almost anything. There is a tutorial video at the top of the documentation page. Being succinct is not my strong suit, so the video is pretty long. It has a lot of great information in it though.</p><p /><p><a class="external-link" data-card-appearance="inline" href="https://varlab-dev.atlassian.net/browse/HY-133" rel="nofollow">https://varlab-dev.atlassian.net/browse/HY-133</a> </p><h3 id="UpdatedHydraulicsTutorial-ProposedTutorialSteps">Proposed Tutorial Steps</h3><ol><li><p><strong>Open the drawer - </strong>Have the user open the drawer.</p></li><li><p><strong>Select the Pressure Guage - </strong>Have the user click on the pressure gauge to place it on the board.</p></li><li><p><strong>Close the Drawer - </strong>Close the drawer by clicking on it.</p></li><li><p><strong>Move the Pressure Gauge - </strong>Click and drag the object around the board.<strong> </strong></p></li><li><p><strong>Select the Pressure Gauge</strong> - Click on the Pressure Gauge to select it. </p></li><li><p><strong>Rotate the Pressure Gauge</strong> - While the object is selected, press the rotation buttons to rotate the object.</p></li><li><p><strong>View the Magnifier</strong> - While the pressure gauge is selected, view it in the magnifier. (notes A)</p></li><li><p><strong>Remove the Pressure Guage</strong> - Select the object and press the 'X' icon to put it back into the drawer.</p></li><li><p><strong>Place 2 Objects on the board</strong> - Open the drawer and place an FCV and FlowMeter on the board. </p></li><li><p><strong>Connect the Ports</strong> - Make a connection between the 2 objects. (notes B)   </p></li><li><p><strong>Remove the Connection</strong> - Click and release on one of the ports to remove the connection.</p></li><li><p><strong>Connect a component to the HPU</strong> - Create connections to the Hydraulic power unit. (notes C)</p></li><li><p><strong>Move to the HPU</strong> - Click on the HPU to move to the camera to the HPU</p></li><li><p><strong>Turn on the HPU</strong> - Click on the switch to on the HUP. (notes D)</p></li><li><p><strong>Turn off the HPU</strong> - Click on the switch again to turn off the HPU</p></li><li><p><strong>Place a DCV and FCV</strong> - Open the drawer and select a Directional Control Valve and Flow Control Valve on the board.</p></li><li><p><strong>Select the DCV</strong> - Click on the DCV to select it. It is selected once there is a dark blue outline on it.</p></li><li><p><strong>Move the DCV Handle</strong> - While selected, click and drag the handle to move it back and forth.</p></li><li><p><strong>Select the FCV</strong> -  Click on the FCV to select it. It is selected once there is a dark blue outline on it.</p></li><li><p><strong>Open the FCV Valve</strong> - While selected, click and drag on the handle to open or close it. </p></li></ol><p>Feel free to alter these steps as you see fit, these are just an outline. </p><p>The steps should not be restrictive. I think we should lean more on the side of “A user accidentally completes a task” rather than “The task is too complex and the user can figure it out.” The tasks should be completed by the user doing something, not setting something to a set value. For example, the task shouldn't be “Open the FCV to 25%”, it should be “Move the handle on the FCV” where any movement completes the task. The ITaskables are not nessasarlly set up for this, but it should be pretty easy to change. See the PressureGaugeController class and how it tracks if it has moved to see how this can be done.  </p><h4 id="UpdatedHydraulicsTutorial-TutorialNotes">Tutorial Notes </h4><p><strong>A)</strong> This could be tracked with the Button Graph interface. More about the button graph interface can be found in the Graph Management documentation. </p><p><strong>B) </strong>Tracking specific connections can be tricky. It can be set up that the task only passes when the connections on the board are set up in 1 specific way; see how the old Lab 1 &amp; 2 graph scenarios set this up. We could also just have this task track when any connection is made. See how the PressureGaugeController tracks when it is moved around the board for an example of how this could be done.  <br/>The PortConnectionManager class is used to track the connections that are made. You should make it implement ITaskable to track the connections that are made.</p><p><strong>C)</strong>  You could apply the Auxiliary Highlight to the ports on the HPU so that they know where to make the connections to.</p><p><strong>D) </strong>You can not make connections or remove connections when the HPU is turned on. We should make sure that this is explained to the user.  </p><h3 id="UpdatedHydraulicsTutorial-TutorialObjects">Tutorial Objects</h3><span class="confluence-embedded-file-wrapper image-left-wrapper"><img class="confluence-embedded-image image-left" loading="lazy" src="attachments/461668359/462094355.png" data-image-src="attachments/461668359/462094355.png" data-height="106" data-width="297" data-unresolved-comment-count="0" data-linked-resource-id="462094355" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20211201-160638.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="461668359" data-linked-resource-container-version="4" data-media-id="953f826a-2d4d-4186-be0f-4a46c640f815" data-media-type="file"></span><p>This class is used to reference GameObject from the Unity Scene into the Graph Scenario. You can add as many properties to this class as you need. Reference the GameObjects in the script in the scene. These objects will be available in the HydraulicsTutorialGS class where the graph is built. </p><h3 id="UpdatedHydraulicsTutorial-UsingInteractableSubsetsandAuxiliaryHighlights">Using Interactable Subsets and Auxiliary Highlights</h3><p><a data-card-appearance="inline" href="https://varlab-dev.atlassian.net/wiki/spaces/CE/pages/138805291/Interaction+System#Creating-a-Subset-of-Active-Objects" rel="nofollow">https://varlab-dev.atlassian.net/wiki/spaces/CE/pages/138805291/Interaction+System#Creating-a-Subset-of-Active-Objects</a> <br/>By using subsets of active objects, you can control what objects the user can interact with on the screen. This can be used with the Auxiliary Highlights to highlight the object the objects you want the user to focus on. There isn’t any official documentation for the Auxiliary Highlight, but the AuxiliaryHighlight class has some useful information in it.  </p><h3 id="UpdatedHydraulicsTutorial-GettingdataaboutComponentsontheBoardintheGraphScenario">Getting data about Components on the Board in the Graph Scenario</h3><p>The Hydraulic Components that are placed on the board are instantiated at runtime. This means that we can not directly access them when we are building the Graph scenario. The ITaskable system will still work as expected, we just couldn’t call something like <code>Interactable.SetSubsetActivated(tutorialObjects.PressureGaugeOnBoard);</code> because there is no way that tutorialObjects could have a reference to the PressureGaugeController object that is on the board. <br/>To get around this we could make a new method on the HydraulicsBoardController class. This method would return the HydraulicComponentController objects on the board. (note that Component and HydraulicComponentController are very different classes. The Component is used in the hydraulic circuit simulations, the HydraulicComponentController is the actual GameObject that is on the board. Make sure the classes you’re accessing are children of the right class for your purpose.) Add a lambda expression to the OnEnterVertex() for the task where you want to access the component on the board. Inside the expression, get the HydraulicComponentController from the HydraulicsBoardController. You can then directly access the object on the board while inside the expression. This could be useful for adding an Auxiliary Highlight or using it in the Interactable.SetSubsetActive().</p><h3 id="UpdatedHydraulicsTutorial-UsefulClasses">Useful Classes</h3><div class="table-wrap"><table data-layout="default" data-local-id="96df20f4-20b2-48ed-b039-d712700c097a" class="confluenceTable"><colgroup><col style="width: 239.0px;"/><col style="width: 519.0px;"/></colgroup><tbody><tr><th class="confluenceTh"><p><strong>Class Name</strong></p></th><th class="confluenceTh"><p><strong>Description</strong></p></th></tr><tr><td class="confluenceTd"><p>StationController</p></td><td class="confluenceTd"><p>The top level GameObject for everything on the work station.</p></td></tr><tr><td class="confluenceTd"><p>PortConnectionManager</p></td><td class="confluenceTd"><p>Handles the createing and deletion of hydraulic connections</p></td></tr><tr><td class="confluenceTd"><p>HydraulicComponentController</p></td><td class="confluenceTd"><p>The parent class for all of the components that go on the board</p></td></tr></tbody></table></div><h3 id="UpdatedHydraulicsTutorial-LookingattheLabsandTutorial">Looking at the Labs and Tutorial </h3><p>The 2 labs are still in the project but are hidden from the start scene. The graph scenarios can be found at Assets/Packages/RemoteEducation/Hydraulics/Scripts/Scenarios/ScenarioGraphs. </p><p>The old tutorial has been deleted from the project. I don't think there is anything that you will need from it, but if for some reason you do, go back in the repo to pretty much any commit before Nov 30, 2021 and you should be able to find it. </p><p /><p />
+                    </div>
+
+                                        <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="attachments" class="pageSectionTitle">Attachments:</h2>
+                        </div>
+
+                        <div class="greybox" align="left">
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/461668359/462094355.png">image-20211201-160638.png</a> (image/png)
+                                <br/>
+                                                    </div>
+                    </div>
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Jun 11, 2025 14:02</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

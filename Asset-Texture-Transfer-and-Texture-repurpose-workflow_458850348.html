@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VARLab : Asset Texture Transfer and Texture repurpose workflow</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="VARLab_44990773.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Learning-Experience_972881951.html">Learning Experience</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="General-Release-DLX_729973721.html">General Release DLX</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="LSM3.01-Trucking-Pre-Trip-Inspection_386367493.html">LSM3.01 Trucking Pre Trip Inspection</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            VARLab : Asset Texture Transfer and Texture repurpose workflow
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                            
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> Rounuk Kumaran (Unlicensed)</span>, last modified on Nov 11, 2021
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <p>For the Trucking Sim, we have an acquired 3D model of the Truck that has its own UV layouts and Textures already available. Our goal is to use these models to get our high Poly and Low Polyrestructured.</p><p>We can transfer the existing textures of these HighPoly models onto the Low Poly model that has its UVs updated. For this demonstration, I am going to use an example to simplify what it means.</p><h1 id="AssetTextureTransferandTexturerepurposeworkflow-UNDERSTANDINGTHEPOLYGONANDITSUVS"><strong>UNDERSTANDING THE POLYGON AND ITS UVS</strong></h1><p>For example, here we have a Tire that was taken from the Existing Truck model</p><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/458850348/458981427.png" data-image-src="attachments/458850348/458981427.png" data-height="989" data-width="1902" data-unresolved-comment-count="0" data-linked-resource-id="458981427" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20211110-190112.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="458850348" data-linked-resource-container-version="2" data-media-id="dbaea0ea-3a35-44a4-bbc3-6e9294da83bb" data-media-type="file"></span><p>The Model has a higher number of polygons and has its existing Uv setup and textures accordingly.</p><p> </p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" width="680" loading="lazy" src="attachments/458850348/459014562.png?width=680" data-image-src="attachments/458850348/459014562.png" data-height="363" data-width="1015" data-unresolved-comment-count="0" data-linked-resource-id="459014562" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20211111-134203.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="458850348" data-linked-resource-container-version="2" data-media-id="093eb75c-b10c-4a25-9e62-606a0ca8a195" data-media-type="file"></span><p /><p>What we now need to do is convert the high Poly to a Low poly and change its UVS to a better Layout, or the layout we need. For this demo, I have just unwrapped the Low UVS to the whole UV page.</p><p /><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" width="680" loading="lazy" src="attachments/458850348/458883521.png?width=680" data-image-src="attachments/458850348/458883521.png" data-height="637" data-width="1290" data-unresolved-comment-count="0" data-linked-resource-id="458883521" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20211111-134606.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="458850348" data-linked-resource-container-version="2" data-media-id="4278622d-e228-48b5-abac-1a180e004eef" data-media-type="file"></span><p>Our goal is to use the Highpoly above and its textures to transfer the texture details to the low poly according to its UVS. It can be done in very simple steps using the <strong>XNormal</strong> software which is free to download.</p><p><strong>XNormals</strong> download Link: <a class="external-link" data-card-appearance="inline" href="https://xnormal.net/" rel="nofollow">https://xnormal.net/</a> </p><h1 id="AssetTextureTransferandTexturerepurposeworkflow-TEXTURETRANSFER"><strong>TEXTURE TRANSFER</strong></h1><p /><p>After downloading and opening the XNormals software you will find it to look Like this:</p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" width="680" loading="lazy" src="attachments/458850348/459014579.png?width=680" data-image-src="attachments/458850348/459014579.png" data-height="730" data-width="1018" data-unresolved-comment-count="0" data-linked-resource-id="459014579" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20211111-135546.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="458850348" data-linked-resource-container-version="2" data-media-id="54a89db1-b839-479a-8713-a0cee7d76f52" data-media-type="file"></span><p /><p /><p>It would be advised to go through the overview video tutorial to learn more about XNormals and the basics.</p><p>Overview:</p><p><a class="external-link" data-card-appearance="inline" href="https://www.youtube.com/watch?v=5n8XsbrUxNI&amp;t=26s" rel="nofollow">https://www.youtube.com/watch?v=5n8XsbrUxNI&amp;t=26s</a></p><p>For the work that we are doing, having that knowledge will make the process explained ahead easier to be understood.</p><p> </p><p>Firstly for our project we are Using the PBR (Metallic/Roughness) workflow. So we need Albedo maps and Normal maps transferred from the existing mesh to the new mesh.</p><p>What we have is the Bump map, we need to convert it to a Normal map, this can be done in XNormals.</p><p /><p><strong>What is a Bump Map</strong></p><p>A bump map is a Black and white Map and is somewhat similar to a Displacement map to look like, but both maps fill different requirements.</p><p>In a Bump map, the whites represent raised platform and the blacks represent depth. </p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" width="448" loading="lazy" src="attachments/458850348/458916060.png?width=448" data-image-src="attachments/458850348/458916060.png" data-height="4096" data-width="4096" data-unresolved-comment-count="0" data-linked-resource-id="458916060" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20211111-143752.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="458850348" data-linked-resource-container-version="2" data-media-id="0bcc1923-e7fe-4468-a67a-ac988de15dbb" data-media-type="file"></span><p /><p>While transferring this Bump map into Normal Map, The software uses the brightness/darkness values to determine how to translate bumps and depths in the normal map.</p><p>Not all bump maps have good brightness values so we need to double-check that and increase the brightness values wherever necessary.</p><p /><p><strong>Bump Map to Normal Map</strong></p><p>In XNormals go to the tools options.</p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" width="680" loading="lazy" src="attachments/458850348/458916066.png?width=680" data-image-src="attachments/458850348/458916066.png" data-height="726" data-width="1096" data-unresolved-comment-count="0" data-linked-resource-id="458916066" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20211111-144226.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="458850348" data-linked-resource-container-version="2" data-media-id="fc9cc77a-29ad-46d0-9126-e1bb15e466cb" data-media-type="file"></span><p /><p>Of the multiple options choose the HeightMap to Normal Map</p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" width="680" loading="lazy" src="attachments/458850348/458883536.png?width=680" data-image-src="attachments/458850348/458883536.png" data-height="749" data-width="1019" data-unresolved-comment-count="0" data-linked-resource-id="458883536" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20211111-144331.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="458850348" data-linked-resource-container-version="2" data-media-id="35488d8d-3b6c-4e48-bb82-3d0902987ef9" data-media-type="file"></span><p>This will open a window where we can plug in the Bump map and Generate a normal Map, The window looks like this:</p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" width="680" loading="lazy" src="attachments/458850348/458916072.png?width=680" data-image-src="attachments/458850348/458916072.png" data-height="702" data-width="992" data-unresolved-comment-count="0" data-linked-resource-id="458916072" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20211111-144504.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="458850348" data-linked-resource-container-version="2" data-media-id="49e276d9-b01c-4db4-a10d-056653167233" data-media-type="file"></span><p /><p>Initially, both slots look empty. We need a couple of steps to create the map:</p><ul><li><p>Drag and drop your bump Map texture on the Left-hand side of the two panels. </p></li><li><p>Right mouse click on the empty right slot, amongst the options click Generate.</p></li><li><p>Right mouse click on the now generated Normal Map on the right slot and click save Normal Map.</p></li></ul><p>This makes the Normal Map to be exported from XNormals to the downloads folder.</p><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/458850348/458883552.png" data-image-src="attachments/458850348/458883552.png" data-height="534" data-width="983" data-unresolved-comment-count="0" data-linked-resource-id="458883552" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20211111-151015.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="458850348" data-linked-resource-container-version="2" data-media-id="14dab03a-e020-45a2-baf4-8ee1606cc1ee" data-media-type="file"></span><p>The Normal maps created might not have the background Flat colors sometimes, so we need to go to a photo editing software and add the color to it. The flat color for Normal Map has the Hex Code: 8080ff, or it can be created by adding RGB values: R=128, G=128, B=255. </p><p /><p><strong>Transferring Albedo/Normal Map from High to Low</strong></p><p>This method was discovered from a post. Having watched the overview tab the next post makes more sense.</p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" width="680" loading="lazy" src="attachments/458850348/458916126.png?width=680" data-image-src="attachments/458850348/458916126.png" data-height="423" data-width="1079" data-unresolved-comment-count="0" data-linked-resource-id="458916126" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20211111-151411.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="458850348" data-linked-resource-container-version="2" data-media-id="4a5f753c-85d3-4d89-b947-00995b030f97" data-media-type="file"></span><p>Thus we are using the same idea for both Normal Maps and Albedo map transfers.</p><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/458850348/459046926.png" data-image-src="attachments/458850348/459046926.png" data-height="1034" data-width="1246" data-unresolved-comment-count="0" data-linked-resource-id="459046926" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20211111-155502.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="458850348" data-linked-resource-container-version="2" data-media-id="10bce733-f05f-4730-808e-81ef02339f70" data-media-type="file"></span><p>In the Highpoly window, add the Highpoly object with its Original UVs in the file tab</p><p>In the base texture to bake tab, we will add the Original Albedo or Normal map for the high poly.</p><p>In the next box, depending on what map we plan on transfer we check or uncheck it. The box has to be checked only if we are transferring the Normal Map. We shall now add the Low Poly</p><p /><p>For the Low poly stage, we just need to drag and drop the low poly just like in the photo below, we can also right-mouse click on the File tab and click add mesh… similarly to adding HighPoly mesh in the Highpoly window. After that, we go to the baking options.</p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" width="680" loading="lazy" src="attachments/458850348/459046932.png?width=680" data-image-src="attachments/458850348/459046932.png" data-height="838" data-width="1107" data-unresolved-comment-count="0" data-linked-resource-id="459046932" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20211111-163008.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="458850348" data-linked-resource-container-version="2" data-media-id="b71b724c-f0a0-4d1b-a7ff-dc68279a1c15" data-media-type="file"></span><p>In the baking options, </p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" width="680" loading="lazy" src="attachments/458850348/459046940.png?width=680" data-image-src="attachments/458850348/459046940.png" data-height="1077" data-width="1831" data-unresolved-comment-count="0" data-linked-resource-id="459046940" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20211111-165751.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="458850348" data-linked-resource-container-version="2" data-media-id="743bc3d4-4bc3-4e62-83a5-d01271dec3ee" data-media-type="file"></span><p /><p>The final step is to hit the Generate  Map button on the Bottom Right Corner of the software to </p><p>export the map to our desired location that we had mentioned in the output file tab.</p><p><strong>RESULTS</strong></p><p>Therefore we converted the texture from High poly to a new texture with the low poly UV base.</p><p>Albedo:</p><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/458850348/459046946.png" data-image-src="attachments/458850348/459046946.png" data-height="467" data-width="1032" data-unresolved-comment-count="0" data-linked-resource-id="459046946" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20211111-180353.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="458850348" data-linked-resource-container-version="2" data-media-id="e6cc8211-f019-463a-a43f-20befe87a274" data-media-type="file"></span><p />
+                    </div>
+
+                                        <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="attachments" class="pageSectionTitle">Attachments:</h2>
+                        </div>
+
+                        <div class="greybox" align="left">
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/458850348/459014164.png">image-20211110-184217.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/458850348/458850359.png">image-20211110-184454.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/458850348/458981427.png">image-20211110-190112.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/458850348/459014543.png">image-20211111-044802.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/458850348/459014562.png">image-20211111-134203.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/458850348/458883521.png">image-20211111-134606.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/458850348/459014579.png">image-20211111-135546.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/458850348/458916060.png">image-20211111-143752.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/458850348/458916066.png">image-20211111-144226.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/458850348/458883536.png">image-20211111-144331.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/458850348/458916072.png">image-20211111-144504.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/458850348/458883552.png">image-20211111-151015.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/458850348/458916126.png">image-20211111-151411.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/458850348/459046926.png">image-20211111-155502.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/458850348/459046932.png">image-20211111-163008.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/458850348/459046940.png">image-20211111-165751.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/458850348/459046946.png">image-20211111-180353.png</a> (image/png)
+                                <br/>
+                                                    </div>
+                    </div>
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Jun 11, 2025 14:05</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VARLab : Setting Up Door Triggers</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="VARLab_44990773.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Learning-Experience_972881951.html">Learning Experience</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="216629273.html">Digital Learning Experiences (DLX)</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="LSM9.01B---PHI-Tattoo-and-Piercing-Studio-Inspection_1550090242.html">LSM9.01B - PHI-Tattoo and Piercing Studio Inspection</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="TPI---Development-Documentation_1748172801.html">TPI - Development Documentation</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            VARLab : Setting Up Door Triggers
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                            
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> User f2c35</span>, last modified on Apr 16, 2025
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <style type='text/css'>/*<![CDATA[*/
+div.rbtoc1749651747500 {padding: 0px;}
+div.rbtoc1749651747500 ul {list-style: default;margin-left: 0px;padding-left: ;}
+div.rbtoc1749651747500 li {margin-left: 0px;padding-left: 0px;}
+
+/*]]>*/</style><div class='toc-macro rbtoc1749651747500'>
+<ul class='toc-indentation'>
+<li><a href='#SettingUpDoorTriggers-Introduction'>Introduction</a></li>
+<li><a href='#SettingUpDoorTriggers-SetupSteps'>Setup Steps</a>
+<ul class='toc-indentation'>
+<li><a href='#SettingUpDoorTriggers-Step1:AddDoorTriggerPrefab'>Step 1: Add DoorTrigger Prefab</a></li>
+<li><a href='#SettingUpDoorTriggers-Step2:AdjusttheDoorTriggerColliderArea'>Step 2: Adjust the DoorTrigger Collider Area</a></li>
+<li><a href='#SettingUpDoorTriggers-Step3:ConfiguretheDoorTriggerVolumecomponent'>Step 3: Configure the DoorTriggerVolume component</a></li>
+</ul>
+</li>
+<li><a href='#SettingUpDoorTriggers-Troubleshooting'>Troubleshooting</a>
+<ul class='toc-indentation'>
+<li><a href='#SettingUpDoorTriggers-DoorDoesn&#39;tMove:'>Door Doesn&#39;t Move:</a></li>
+<li><a href='#SettingUpDoorTriggers-DoorRotatesIncorrectly:'>Door Rotates Incorrectly:</a></li>
+</ul>
+</li>
+</ul>
+</div><hr/><h1 id="SettingUpDoorTriggers-Introduction">Introduction</h1><p>This guide explains how to set up the <code>DoorTrigger</code> prefab for an existing door, so that it automatically opens and closes when the player approaches.</p><p><strong>Key Prefabs:</strong></p><ul><li><p><strong>Door Object (e.g., </strong><code>DoorOrigin</code><strong>):</strong> The existing object representing the actual door model that will rotate. This should already be placed in the scene.</p></li><li><p><strong>DoorTrigger.prefab:</strong> A pre-configured prefab containing the door trigger logic (<code>DoorTriggerVolume.cs</code>), the trigger area (<code>Box Collider</code>), etc. This is what will be added.</p></li></ul><hr/><h1 id="SettingUpDoorTriggers-SetupSteps">Setup Steps</h1><h3 id="SettingUpDoorTriggers-Step1:AddDoorTriggerPrefab">Step 1: Add DoorTrigger Prefab</h3><ol start="1"><li><p><strong>Identify the Target Door:</strong> In the Hierarchy window, navigate to the existing GameObject that represents the physical door you want to make interactive (e.g., <code>DoorOrigin</code>).</p></li><li><p><strong>Place the DoorTrigger Prefab:</strong></p></li></ol><ul><li><p>From the <code>Assets/Prefabs/</code> folder, drag the <code>DoorTrigger.prefab</code> file into the Hierarchy window.</p></li><li><p>Make the <code>DoorTrigger</code> prefab a <strong>sibling</strong> to the target door object (i.e., place it under the <strong>same parent GameObject</strong> as the door object identified above).</p></li></ul><div class="panel" style="background-color: #EAE6FF;border-color: #998DD9;border-width: 1px;"><div class="panelContent" style="background-color: #EAE6FF;">
+<p><em>For room doors within POIs, both the door object and the trigger is usually placed under a </em><code>LevelGeo</code><em> GameObject.</em></p>
+</div></div><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20250415-172452.png" width="189" loading="lazy" src="attachments/1750892546/1751351324.png?width=189" data-image-src="attachments/1750892546/1751351324.png" data-height="192" data-width="189" data-unresolved-comment-count="0" data-linked-resource-id="1751351324" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20250415-172452.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1750892546" data-linked-resource-container-version="6" data-media-id="8f56fa42-1d34-45b4-b936-c9dfea15a8d8" data-media-type="file"></span><p /><h3 id="SettingUpDoorTriggers-Step2:AdjusttheDoorTriggerColliderArea">Step 2: Adjust the DoorTrigger Collider Area</h3><ol start="1"><li><p>Select the <code>DoorTrigger</code> GameObject you just placed in the Hierarchy.</p></li><li><p>Find the <code>Box Collider</code> component in the Inspector window.</p></li><li><p>Adjust the <code>Size</code> and <code>Center</code> values of the <code>Box Collider</code> component to define an <strong>appropriate range</strong> in front of and behind the door.</p></li></ol><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20250415-172826.png" width="440" loading="lazy" src="attachments/1750892546/1751154699.png?width=440" data-image-src="attachments/1750892546/1751154699.png" data-height="836" data-width="894" data-unresolved-comment-count="0" data-linked-resource-id="1751154699" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20250415-172826.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1750892546" data-linked-resource-container-version="6" data-media-id="a0ee9a8b-3b40-4bba-9c83-e6f6390dc2f9" data-media-type="file"></span><p /><h3 id="SettingUpDoorTriggers-Step3:ConfiguretheDoorTriggerVolumecomponent">Step 3: Configure the DoorTriggerVolume component</h3><ol start="1"><li><p>Keep the <code>DoorTrigger</code> GameObject selected.</p></li><li><p>Find the <code>Door Trigger Volume (Script)</code> component in the Inspector window.</p></li><li><p>You need to configure the following fields:</p></li></ol><ul><li><p><code>Door</code><strong>:</strong> <strong>(Required Connection)</strong> Drag the door object from the Hierarchy onto this field. The door will not move without this connection.</p></li><li><p><code>End Rotation</code><strong>:</strong> <strong>(Required Adjustment)</strong> Enter the rotation angle value for when the door is fully open. This value differs for each door.</p></li><li><p><code>Start Rotation</code><strong>:</strong> <strong>(Required Adjustment)</strong> Enter the rotation angle value for when the door is fully closed. Like 'End Rotation', you must verify and set this value correctly for each specific door.</p></li><li><p><code>Speed</code><strong>:</strong> Controls how fast the door opens and closes. The default value is <strong>5</strong>, which is usually sufficient. Adjust if needed.</p></li></ul><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20250415-173537.png" width="496" loading="lazy" src="attachments/1750892546/1750728722.png?width=496" data-image-src="attachments/1750892546/1750728722.png" data-height="135" data-width="496" data-unresolved-comment-count="0" data-linked-resource-id="1750728722" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20250415-173537.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1750892546" data-linked-resource-container-version="6" data-media-id="c40b787c-38c2-463b-9565-1518b52fd899" data-media-type="file"></span><hr/><h1 id="SettingUpDoorTriggers-Troubleshooting">Troubleshooting</h1><h3 id="SettingUpDoorTriggers-DoorDoesn&#39;tMove:">Door Doesn't Move:</h3><ul><li><p>Double-check that the <code>Door</code> field in the <code>DoorTriggerVolume</code> script is correctly linked to the actual door object's Transform. If it's empty or linked incorrectly, the door won't move.</p></li><li><p>Verify the <code>Box Collider</code> area isn't too small or misplaced relative to the player's path.</p></li><li><p>Ensure <code>Start Rotation</code> and <code>End Rotation</code> values are different.</p></li></ul><h3 id="SettingUpDoorTriggers-DoorRotatesIncorrectly:">Door Rotates Incorrectly:</h3><ul><li><p>Double-check the <code>Start Rotation</code> and <code>End Rotation</code> values.</p></li></ul>
+                    </div>
+
+                                        <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="attachments" class="pageSectionTitle">Attachments:</h2>
+                        </div>
+
+                        <div class="greybox" align="left">
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1750892546/1751351324.png">image-20250415-172452.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1750892546/1751154699.png">image-20250415-172826.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1750892546/1750728722.png">image-20250415-173537.png</a> (image/png)
+                                <br/>
+                                                    </div>
+                    </div>
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Jun 11, 2025 14:22</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

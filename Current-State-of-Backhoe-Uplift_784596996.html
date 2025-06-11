@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VARLab : Current State of Backhoe Uplift</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="VARLab_44990773.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Learning-Experience_972881951.html">Learning Experience</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="General-Release-DLX_729973721.html">General Release DLX</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="LSM8.04---HE-Backhoe-1.1_752779276.html">LSM8.04 - HE-Backhoe 1.1</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            VARLab : Current State of Backhoe Uplift
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                            
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> User b0804</span>, last modified by <span class='editor'> User aa77f</span> on Oct 02, 2023
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <style type='text/css'>/*<![CDATA[*/
+div.rbtoc1749651183901 {padding: 0px;}
+div.rbtoc1749651183901 ul {list-style: disc;margin-left: 0px;}
+div.rbtoc1749651183901 li {margin-left: 0px;padding-left: 0px;}
+
+/*]]>*/</style><div class='toc-macro rbtoc1749651183901'>
+<ul class='toc-indentation'>
+<li><a href='#CurrentStateofBackhoeUplift-CurrentState'>Current State</a></li>
+<li><a href='#CurrentStateofBackhoeUplift-ImplementationDetailofFeatures'>Implementation Detail of Features</a>
+<ul class='toc-indentation'>
+<li><a href='#CurrentStateofBackhoeUplift-Analytics'>Analytics</a></li>
+<li><a href='#CurrentStateofBackhoeUplift-CloudSave-Saving'>CloudSave - Saving</a></li>
+<li><a href='#CurrentStateofBackhoeUplift-CloudSave-Loading'>CloudSave - Loading</a></li>
+</ul>
+</li>
+</ul>
+</div><h2 id="CurrentStateofBackhoeUplift-CurrentState">Current State</h2><p><strong>Analytics Events</strong> - <span class="status-macro aui-lozenge aui-lozenge-visual-refresh aui-lozenge-success">COMPLETED</span> </p><ul><li><p>DXL Complete Event - <span class="status-macro aui-lozenge aui-lozenge-visual-refresh aui-lozenge-success">COMPLETED</span> </p></li><li><p>Segment Complete Event - <span class="status-macro aui-lozenge aui-lozenge-visual-refresh aui-lozenge-success">COMPLETED</span> </p></li><li><p>Progression Event - <span class="status-macro aui-lozenge aui-lozenge-visual-refresh aui-lozenge-success">COMPLETED</span> </p></li></ul><p /><p><strong>CloudSave</strong> - <span class="status-macro aui-lozenge aui-lozenge-visual-refresh aui-lozenge-success">COMPLETED</span> </p><p>Saving - <span class="status-macro aui-lozenge aui-lozenge-visual-refresh aui-lozenge-success">COMPLETED</span> </p><ul><li><p>Save Initial Randomized State - <span class="status-macro aui-lozenge aui-lozenge-visual-refresh aui-lozenge-success">COMPLETED</span> </p></li><li><p>Save User Progress - <span class="status-macro aui-lozenge aui-lozenge-visual-refresh aui-lozenge-success">COMPLETED</span> </p></li><li><p>Save Notification - <span class="status-macro aui-lozenge aui-lozenge-visual-refresh aui-lozenge-success">COMPLETED</span> </p></li></ul><p>Loading - <span class="status-macro aui-lozenge aui-lozenge-visual-refresh aui-lozenge-success">COMPLETED</span> </p><ul><li><p>Fetching Saved Data - <span class="status-macro aui-lozenge aui-lozenge-visual-refresh aui-lozenge-success">COMPLETED</span> </p></li><li><p>Loading Prompt - <span class="status-macro aui-lozenge aui-lozenge-visual-refresh aui-lozenge-success">COMPLETED</span> </p></li><li><p>Load Pervious Randomized State - <span class="status-macro aui-lozenge aui-lozenge-visual-refresh aui-lozenge-success">COMPLETED</span> </p></li><li><p>Load Pervious User Progress - <span class="status-macro aui-lozenge aui-lozenge-visual-refresh aui-lozenge-success">COMPLETED</span> </p></li></ul><p /><h2 id="CurrentStateofBackhoeUplift-ImplementationDetailofFeatures">Implementation Detail of Features</h2><h3 id="CurrentStateofBackhoeUplift-Analytics">Analytics</h3><div id="expander-382210237" class="expand-container"><div id="expander-control-382210237" class="expand-control"><span class="expand-control-icon"><img style="vertical-align:middle;" class="expand-control-image" src="images/icons/grey_arrow_down.png"></span><span class="expand-control-text">Login Event</span></div><div id="expander-content-382210237" class="expand-content"><p>Login Event happens in the Persistent Object scene</p><p>The EditorLogin.cs script on the Analytics object (prefab) provides login functionality when the DLX is launched in the Editor</p><p>When the DLX is launched outside of Unity Editor, the login happens in the SCORM Integrator’s InitializeData method.</p></div></div><div id="expander-470661860" class="expand-container"><div id="expander-control-470661860" class="expand-control"><span class="expand-control-icon"><img style="vertical-align:middle;" class="expand-control-image" src="images/icons/grey_arrow_down.png"></span><span class="expand-control-text">DLX Complete Event</span></div><div id="expander-content-470661860" class="expand-content"><p>DLX complete event happens in EndCheck.cs, part of the PreTripInspectionGS’s graph system.</p></div></div><div id="expander-2130355994" class="expand-container"><div id="expander-control-2130355994" class="expand-control"><span class="expand-control-icon"><img style="vertical-align:middle;" class="expand-control-image" src="images/icons/grey_arrow_down.png"></span><span class="expand-control-text">Segment Complete Event</span></div><div id="expander-content-2130355994" class="expand-content"><p>Segment Complete Event happens in multiple places in the graph system, the StageCompleted method in PreTripInspectionGS.cs is method get called in the graph, and it calls on a delegate that being set by HeavyEquipmentModule.cs, the actual method containing the items to execute after a stage/segment is completed is in PreTripInspection_OnStageComplete.</p><p>There is a SegmentTracker that tracks and increment the segment number each time a stage is completed.</p></div></div><div id="expander-87856285" class="expand-container"><div id="expander-control-87856285" class="expand-control"><span class="expand-control-icon"><img style="vertical-align:middle;" class="expand-control-image" src="images/icons/grey_arrow_down.png"></span><span class="expand-control-text">Progression Event</span></div><div id="expander-content-87856285" class="expand-content"><p>Progression Event happens in the graph system at each graph node’s OnVertexLeave, Progression Event is added to the graph during the creation of a UserTaskVertex object. ProgressionEventHandler.cs is where all the magic happens, setting the delegate in UserTaskVertex class on start, and dealing with each method call based on the data it receives.</p></div></div><h3 id="CurrentStateofBackhoeUplift-CloudSave-Saving">CloudSave - Saving</h3><p>Saving was done at a less granular level, the sim currently saves at the end of each individual graph. This means it saves in “sections”, like the engine compartment, interior, etc.</p><div id="expander-901794628" class="expand-container"><div id="expander-control-901794628" class="expand-control"><span class="expand-control-icon"><img style="vertical-align:middle;" class="expand-control-image" src="images/icons/grey_arrow_down.png"></span><span class="expand-control-text">Save Notification</span></div><div id="expander-content-901794628" class="expand-content"><p>The SaveDataSupport.cs takes in a reference of AzureSaveSystem then sets the delegate RequestCompleted in the AzureSaveSystem.cs to trigger the save notification.</p><p>The actual toast message popup is a method called OnProgressSaveSuccess in HeavyEquipmentModule.cs, which is passed into SaveDataSupport by editor reference.</p></div></div><div id="expander-1699723681" class="expand-container"><div id="expander-control-1699723681" class="expand-control"><span class="expand-control-icon"><img style="vertical-align:middle;" class="expand-control-image" src="images/icons/grey_arrow_down.png"></span><span class="expand-control-text">Save Initial Randomized State</span></div><div id="expander-content-1699723681" class="expand-content"><p>This happens in the InspectableManager.cs. We use a Unity Event called “onStoreBadElements” to expose a list of the generated “bad” elements to SaveDataSupport.cs. This happens in the various Initialize() methods as this is where the random “bad” elements are generated. Once SaveDataSupport receives this list it parses out the name of each elements pre fab and store it in a list. The idea is to use these prefab names in the future loading to load the prefabs themselves, this means we can store very little data as it is just a list of strings. When it finishes that data is added to or serializable SaveData object and then saved to the cloud.</p></div></div><div id="expander-735645258" class="expand-container"><div id="expander-control-735645258" class="expand-control"><span class="expand-control-icon"><img style="vertical-align:middle;" class="expand-control-image" src="images/icons/grey_arrow_down.png"></span><span class="expand-control-text">Save User Progress</span></div><div id="expander-content-735645258" class="expand-content"><p>This happens in the HeavyEquipmentModule.cs. We use a Unity Event called “StageCompleteSave” to expose a list of inspectable elements to our SaveDataSupport.cs. This happens in PreTripInspectionGS_OnStageComplete() which is a method that happens once a “stage” or “graph” has completed. Once this list reaches SaveDataSupport.cs the method GatherAllInspectableElements() goes through the list picking out the important information for saving user progress and the state of inspections and creating a dictionary that has each element as the key with the information tied to that key. Once this finishes the data is put into out serializable SaveData object and saved to the cloud.</p></div></div><h3 id="CurrentStateofBackhoeUplift-CloudSave-Loading">CloudSave - Loading</h3><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/784596996/786202648.png" data-image-src="attachments/784596996/786202648.png" data-height="1088" data-width="2213" data-unresolved-comment-count="0" data-linked-resource-id="786202648" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Blank diagram.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="784596996" data-linked-resource-container-version="11" data-media-id="2795b8b2-59b1-4c3f-9471-5b9e89cbc3bd" data-media-type="file"></span><p /><div id="expander-827585425" class="expand-container"><div id="expander-control-827585425" class="expand-control"><span class="expand-control-icon"><img style="vertical-align:middle;" class="expand-control-image" src="images/icons/grey_arrow_down.png"></span><span class="expand-control-text">Fetching Saved Data</span></div><div id="expander-content-827585425" class="expand-content"><p>The first thing for loading should be fetching saved data from the azure blob storage, if there is a pervious attempts, show loading prompt, if no save is found, continue with a new game.</p><p>If there is an error fetching the save data the game will continue as if it was a new game.</p></div></div><div id="expander-1975475051" class="expand-container"><div id="expander-control-1975475051" class="expand-control"><span class="expand-control-icon"><img style="vertical-align:middle;" class="expand-control-image" src="images/icons/grey_arrow_down.png"></span><span class="expand-control-text">Saved Data Loading Prompt</span></div><div id="expander-content-1975475051" class="expand-content"><p>After fetch data in the cloud, ask the user if they want to continue with their previous save, if the choose to load the save, continue to loading, else, start a new game.</p></div></div><div id="expander-1934108558" class="expand-container"><div id="expander-control-1934108558" class="expand-control"><span class="expand-control-icon"><img style="vertical-align:middle;" class="expand-control-image" src="images/icons/grey_arrow_down.png"></span><span class="expand-control-text">Load Previous Randomized State</span></div><div id="expander-content-1934108558" class="expand-content"><p>This only happens after the loading prompt and only when the user chooses to load pervious attempt.</p><p>In our SavedataSupport.cs there are functions that are used to pass the saved state information back into the DLX and it’s managers, as well as set the state of certain things like engine sounds/lights being turned on based on how far the save file has progressed.</p></div></div><div id="expander-548686504" class="expand-container"><div id="expander-control-548686504" class="expand-control"><span class="expand-control-icon"><img style="vertical-align:middle;" class="expand-control-image" src="images/icons/grey_arrow_down.png"></span><span class="expand-control-text">Load Previous User Progress</span></div><div id="expander-content-548686504" class="expand-content"><p>This only happens after the loading prompt and only when the user choose to load pervious attempt.</p><p>This skips through the graphs until it reaches the matching vertex ID then updates the task list so it matches the users current location in the graph.</p></div></div>
+                    </div>
+
+                                        <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="attachments" class="pageSectionTitle">Attachments:</h2>
+                        </div>
+
+                        <div class="greybox" align="left">
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/784596996/786202648.png">Blank diagram.png</a> (image/png)
+                                <br/>
+                                                    </div>
+                    </div>
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Jun 11, 2025 14:13</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

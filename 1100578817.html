@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VARLab : Climate Change V3_Network Testing (Web)</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="VARLab_44990773.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Learning-Experience_972881951.html">Learning Experience</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="216629273.html">Digital Learning Experiences (DLX)</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="XTP7.02---Climate-Change_548929547.html">XTP7.02 - Climate Change</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            VARLab : Climate Change V3_Network Testing (Web)
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                            
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> Sana Javeed</span>, last modified by <span class='editor'> Cristina Barillas</span> on May 14, 2024
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <p>This process guide should be followed when assessing a DLX simulation build as a potential playable or releasable candidate build. This would include receiving incremental or ‘hotfix’ builds from an external vendor. </p><p>The goal of this network testing protocol is to arrive at a level of confidence that the sim can be played in its network context with little to no worry of negative impact on CE’s, students, or other testers.</p><p><strong>TEST BUILD</strong>: <a class="external-link" href="https://conestoga.desire2learn.com/d2l/le/content/418015/viewContent/23022984/View" rel="nofollow">Climate Change Scorm_534_v3.0_Release_Build 28.Mar.24 - VARLAB-DEV1 (desire2learn.com)</a></p><p><strong>MODE: </strong>MULTIPLAYER</p><h1 id="ClimateChangeV3_NetworkTesting(Web)-Overview">Overview</h1><ol start="1"><li><p><strong>Baseline Network Systems Tests</strong> – Track a minimal, but necessary set of network performance metrics</p></li><li><p><strong>Multiplayer Experience Tests</strong> – Similar to above, but extends testing for the multiplayer context </p></li></ol><h2 id="ClimateChangeV3_NetworkTesting(Web)-Whodoesthistesting?">Who does this testing?</h2><p>Anyone with familiarity with computer networks and some of the tools mentioned below that would assist in capturing quantitative measures of network performance. IT/Ops personnel are a good standard of the experience required. Anyone may consider teaming up to conduct these tests (esp. when <strong>Multiplayer </strong>is in context for the testing).</p><div class="panel" style="background-color: #EAE6FF;border-color: #998DD9;border-width: 1px;"><div class="panelContent" style="background-color: #EAE6FF;">
+<p>IT/OPS need to ensure they test both for <strong>A) Baseline Network Systems Tests</strong> and collaborate with others to test for  <strong>B )Multiplayer experience tests</strong></p>
+</div></div><h1 id="ClimateChangeV3_NetworkTesting(Web)-A)BaselineNetworkSystemsTests">A)     Baseline Network Systems Tests</h1><p>To document baseline performance, use tools such as Task Manager and/or Wireshark running on the user’s PC AND from the web host/server to collect following metrics:</p><ol start="1"><li><p><span class="inline-comment-marker" data-ref="828ea14f-3d21-4902-a6a0-ff3066f845ed">Latency: Measure the time it takes for data to travel between players and the server.</span></p></li><li><p>Bandwidth: Monitor data transfer rates.</p></li><li><p><del><span class="inline-comment-marker" data-ref="65c36f59-0966-4edb-9706-5e41bb709702">Packet loss: Detect dropped packets.</span></del></p></li><li><p><del><span class="inline-comment-marker" data-ref="e0016127-2a54-4ec2-9cd1-7fba3c55b0bb">Server load: Assess how well the server handles multiple connections</span></del><span class="inline-comment-marker" data-ref="e0016127-2a54-4ec2-9cd1-7fba3c55b0bb">.</span></p></li><li><p><span class="inline-comment-marker" data-ref="92673263-5633-46a0-9e43-1818cca5fc1f">Test under various conditions (e.g., different browsers, network speeds) to identify bottlenecks and optimize performance.</span></p></li></ol><p /><p><strong>Please follow the procedure (before, during, after test) and document your findings</strong>: </p><p><a href="Collecting-Network-Statistics_1106509853.html" data-linked-resource-id="1106509853" data-linked-resource-version="6" data-linked-resource-type="page">Collecting Network Statistics</a> </p><h1 id="ClimateChangeV3_NetworkTesting(Web)-B)MultiplayerExperience(MP)Tests">B)    Multiplayer Experience (MP) Tests</h1><ol start="1"><li><p>Record wait time(s) to load and launch the sim, including lobby access (if applicable). How long until you can play with others, assuming reasonable conditions for all?</p></li><li><p>Is progress saved automatically or manually by the player? (if a requirement)</p><ol start="1"><li><p>Is this achievable according to spec in the MP context?</p></li></ol></li><li><p>What is the outcome if the player closes their web browser?</p><ol start="1"><li><p>What happens to the rest of the game experience for the other players?</p></li><li><p>Can the MP session be easily rejoined by the disconnected player?</p></li></ol></li><li><p>Disconnect from the network or go into airplane mode. What happens when the network goes away?</p><ol start="1"><li><p>What happens to the rest of the game experience for the other players?</p></li><li><p>Can the MP session be easily rejoined by the disconnected player?</p></li></ol></li><li><p>Throttle bandwidth lower (some browsers support this) and/or access the sim from a known slow/poorly performing network. Document performance impact (e.g. appx what bandwidth or performance impact was inflicted?).</p><ol start="1"><li><p>What happens to the rest of the game experience for the other players?</p></li></ol></li></ol><p><strong>Please document your findings:</strong><a href="1100578827.html" data-linked-resource-id="1100578827" data-linked-resource-version="26" data-linked-resource-type="page">Multiplayer Experience (MP) Test Findings</a> </p><p><strong>Lessons Learned Document:</strong> <a class="external-link" href="https://stuconestogacon.sharepoint.com/:w:/s/VARLab/ETJmzpcGZXRLm92G2IzseqIBAWrtkwHQZypa1Cl7vmfvcg?e=waRyVN" rel="nofollow">Live Document Here</a></p>
+                    </div>
+
+                                        <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="attachments" class="pageSectionTitle">Attachments:</h2>
+                        </div>
+
+                        <div class="greybox" align="left">
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1100578817/1115193348.docx">LESSONS LEARNED REPORT - Climate Change Beta Test.docx</a> (application/vnd.openxmlformats-officedocument.wordprocessingml.document)
+                                <br/>
+                                                    </div>
+                    </div>
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Jun 11, 2025 14:22</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

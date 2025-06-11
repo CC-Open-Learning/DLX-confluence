@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VARLab : Dynamic Modal and Information Modal</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="VARLab_44990773.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Learning-Experience_972881951.html">Learning Experience</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="General-Release-DLX_729973721.html">General Release DLX</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="LSM9.01---Public-Health-Inspection_805306369.html">LSM9.01 - Public Health Inspection</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Development-Documentation_1066991653.html">Development Documentation</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            VARLab : Dynamic Modal and Information Modal
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                            
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> Carolina Naoum Junqueira</span>, last modified on Apr 18, 2024
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <style type='text/css'>/*<![CDATA[*/
+div.rbtoc1749651342647 {padding: 0px;}
+div.rbtoc1749651342647 ul {list-style: none;margin-left: 0px;}
+div.rbtoc1749651342647 li {margin-left: 0px;padding-left: 0px;}
+
+/*]]>*/</style><div class='toc-macro rbtoc1749651342647'>
+<ul class='toc-indentation'>
+<li><a href='#DynamicModalandInformationModal-DynamicModal'>Dynamic Modal</a>
+<ul class='toc-indentation'>
+<li><a href='#DynamicModalandInformationModal-CreatingtheDynamicModalScriptableObject'>Creating the Dynamic Modal Scriptable Object</a></li>
+<li><a href='#DynamicModalandInformationModal-SettingUptheScriptableObject'>Setting Up the Scriptable Object</a></li>
+<li><a href='#DynamicModalandInformationModal-HowtoDisplayaDynamicModal'>How to Display a Dynamic Modal</a></li>
+<li><a href='#DynamicModalandInformationModal-ChangingtheButtonsandcheckmarkCallbacks'>Changing the Buttons and checkmark Callbacks</a></li>
+</ul>
+</li>
+<li><a href='#DynamicModalandInformationModal-InformationModal'>Information Modal</a>
+<ul class='toc-indentation'>
+<li><a href='#DynamicModalandInformationModal-CreatingtheInformationModalScriptableObject'>Creating the Information Modal Scriptable Object</a></li>
+<li><a href='#DynamicModalandInformationModal-SettingUptheScriptableObject.1'>Setting Up the Scriptable Object</a></li>
+<li><a href='#DynamicModalandInformationModal-HowtoDisplayaInformationModal'>How to Display a Information Modal</a></li>
+</ul>
+</li>
+</ul>
+</div><h2 id="DynamicModalandInformationModal-DynamicModal">Dynamic Modal</h2><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20240417-203117.png" width="480" loading="lazy" src="attachments/1072594993/1073610804.png?width=480" data-image-src="attachments/1072594993/1073610804.png" data-height="241" data-width="480" data-unresolved-comment-count="0" data-linked-resource-id="1073610804" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20240417-203117.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1072594993" data-linked-resource-container-version="4" data-media-id="7479ede3-2ec6-41fe-81ff-5f9e9bf5a19f" data-media-type="file"></span><p /><h3 id="DynamicModalandInformationModal-CreatingtheDynamicModalScriptableObject">Creating the Dynamic Modal Scriptable Object</h3><p>To create a new Dynamic Modal you should first create the Modal Pop-Up Scriptable object by going to <strong>Assets/Scriptable Objects/Modal Popups</strong> and right-clicking inside the folder and selecting <strong>Create&gt;ScriptableObjects&gt;ModalPopup</strong> and giving the name of the pop-up to the scriptable object.</p><p /><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20240417-193422.png" width="760" loading="lazy" src="attachments/1072594993/1072660594.png?width=760" data-image-src="attachments/1072594993/1072660594.png" data-height="928" data-width="971" data-unresolved-comment-count="0" data-linked-resource-id="1072660594" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20240417-193422.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1072594993" data-linked-resource-container-version="4" data-media-id="36da5d3b-b850-4fe6-a97d-8d71e3836b9e" data-media-type="file"></span><h3 id="DynamicModalandInformationModal-SettingUptheScriptableObject">Setting Up the Scriptable Object</h3><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20240417-194136.png" width="730" loading="lazy" src="attachments/1072594993/1073447015.png?width=730" data-image-src="attachments/1072594993/1073447015.png" data-height="860" data-width="730" data-unresolved-comment-count="0" data-linked-resource-id="1073447015" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20240417-194136.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1072594993" data-linked-resource-container-version="4" data-media-id="fd0b29a9-2eed-4ad1-96fb-c7dd4c4c6b08" data-media-type="file"></span><p>Fill out the fields in the scriptable object with the text that should be displayed in the dynamic modal.</p><ul><li><p><strong>Modal Name:</strong> is not displayed and is usually the same as the file name.</p></li><li><p><strong>Modal Title:</strong> is the Window Title in the header.</p></li><li><p><strong>Content Title: </strong>optional title text that can be added at the top of the content box.</p></li><li><p><strong>Content: </strong>information text inside the content box</p></li><li><p><strong>Footer Text: </strong>optional text that can be added to the window footer. It’s default color is blue.</p></li><li><p><strong>Footer Icon: </strong>optional icon that can be added to the left of the footer text.</p></li><li><p><strong>Confirmation Toggle Text: </strong>optional text for a confirmation checkbox.</p></li><li><p><strong>Primary Btn Text: </strong>text displayed on the primary button.</p></li><li><p><strong>Secondary Btn Text: </strong>text displayed on the secondary button.</p></li><li><p><strong>Primary Btn Color, Secondary Btn Color, Primary Btn Txt Color, Secondary Btn Txt Color: </strong>sets the color for the buttons and the text on the buttons.</p></li><li><p><strong>Btn Font Size: </strong>sets the font size for the button text.</p></li><li><p><strong>Alignment: </strong>sets the alignment using <a class="external-link" data-card-appearance="inline" href="https://docs.unity3d.com/2023.2/Documentation/Manual/UIElements.html" rel="nofollow">https://docs.unity3d.com/2023.2/Documentation/Manual/UIElements.html</a> alignment for the different elements listed.</p></li><li><p><strong>Options: </strong>toggles of what should be displayed in the dynamic modal, if the window will be displayed over the inspection window or the review window, and if the background should be dimmed.</p></li><li><p><strong>Button Custom USS Classes: </strong>custom button classes can be added.</p></li></ul><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20240418-161122.png" width="651" loading="lazy" src="attachments/1072594993/1076101168.png?width=651" data-image-src="attachments/1072594993/1076101168.png" data-height="194" data-width="651" data-unresolved-comment-count="0" data-linked-resource-id="1076101168" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20240418-161122.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1072594993" data-linked-resource-container-version="4" data-media-id="2d08cbdd-6a12-4b1f-885b-94615c33087a" data-media-type="file"></span><p /><p><strong>Examples:</strong></p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20240418-155740.png" width="760" loading="lazy" src="attachments/1072594993/1076461603.png?width=760" data-image-src="attachments/1072594993/1076461603.png" data-height="711" data-width="849" data-unresolved-comment-count="0" data-linked-resource-id="1076461603" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20240418-155740.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1072594993" data-linked-resource-container-version="4" data-media-id="defab6fa-b32e-420d-864b-7dbac5935cf3" data-media-type="file"></span><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20240418-160138.png" width="760" loading="lazy" src="attachments/1072594993/1075707969.png?width=760" data-image-src="attachments/1072594993/1075707969.png" data-height="709" data-width="892" data-unresolved-comment-count="0" data-linked-resource-id="1075707969" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20240418-160138.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1072594993" data-linked-resource-container-version="4" data-media-id="e7f88e23-3f4b-4029-9f1d-f65276a55a32" data-media-type="file"></span><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20240418-160550.png" width="733" loading="lazy" src="attachments/1072594993/1076101162.png?width=733" data-image-src="attachments/1072594993/1076101162.png" data-height="611" data-width="733" data-unresolved-comment-count="0" data-linked-resource-id="1076101162" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20240418-160550.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1072594993" data-linked-resource-container-version="4" data-media-id="8affca1e-eff1-4fef-bb54-e52fac1ef7c7" data-media-type="file"></span><h3 id="DynamicModalandInformationModal-HowtoDisplayaDynamicModal">How to Display a Dynamic Modal</h3><p>To set the content and display the Dynamic Modal call the function <strong>HandleDisplayModal( )</strong> and pass the scriptable object as a parameter from the <strong>ModalPopupBuilder.cs</strong>.</p><h3 id="DynamicModalandInformationModal-ChangingtheButtonsandcheckmarkCallbacks">Changing the Buttons and checkmark Callbacks</h3><p>Before calling the function HandleDisplayModal( ) in the same method, set the button actions for the scriptable object.</p><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence"> {scriptableObjectName}.SetPrimaryAction(() =&gt; MethodCalledByTheButton());
+ {scriptableObjectName}.SetSecondaryAction(() =&gt; MethodCalledByTheButton());
+ {scriptableObjectName}.SetToggleAction((val) =&gt; ToggleValue = val);</pre>
+</div></div><h2 id="DynamicModalandInformationModal-InformationModal">Information Modal</h2><p /><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20240418-191024.png" width="501" loading="lazy" src="attachments/1072594993/1075740726.png?width=501" data-image-src="attachments/1072594993/1075740726.png" data-height="252" data-width="501" data-unresolved-comment-count="0" data-linked-resource-id="1075740726" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20240418-191024.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1072594993" data-linked-resource-container-version="4" data-media-id="143184a0-7626-44f8-a5c5-d1c8b050a2da" data-media-type="file"></span><p>The information modal has a fixed size and only one button. The image in the message body is optional.</p><h3 id="DynamicModalandInformationModal-CreatingtheInformationModalScriptableObject">Creating the Information Modal Scriptable Object</h3><p>To create a new Information Modal you should first create the Modal Pop-Up Scriptable object by going to <strong>Assets/Scriptable Objects/InformationModal </strong>and right-clicking inside the folder and selecting <strong>Create&gt;ScriptableObjects&gt;InformationModal</strong> and giving the name of the pop-up to the scriptable object.</p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20240418-191408.png" width="760" loading="lazy" src="attachments/1072594993/1075511345.png?width=760" data-image-src="attachments/1072594993/1075511345.png" data-height="312" data-width="973" data-unresolved-comment-count="0" data-linked-resource-id="1075511345" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20240418-191408.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1072594993" data-linked-resource-container-version="4" data-media-id="2b37e23c-0aff-4845-bc16-03fab3e9b588" data-media-type="file"></span><h3 id="DynamicModalandInformationModal-SettingUptheScriptableObject.1">Setting Up the Scriptable Object</h3><p /><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20240418-191644.png" width="378" loading="lazy" src="attachments/1072594993/1075576891.png?width=378" data-image-src="attachments/1072594993/1075576891.png" data-height="293" data-width="378" data-unresolved-comment-count="0" data-linked-resource-id="1075576891" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20240418-191644.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1072594993" data-linked-resource-container-version="4" data-media-id="3971217e-a9fe-411c-99fc-2f939f14c892" data-media-type="file"></span><p>Fill out the fields with the information that will be displayed in the Information Modal</p><ul><li><p><strong>Modal Name:</strong> is not displayed and is usually the same as the file name. </p></li><li><p><strong>Window Title: </strong>is the window title in the header.</p></li><li><p><strong>Body Title: </strong>optional message title located in the message body.</p></li><li><p><strong>Body Message: </strong>information message that will be displayed.</p></li><li><p><strong>Button Text: </strong>text that will be displayed on the button.</p></li><li><p><strong>Is Title Enabled: </strong>the body title is optional and needs to be checked if the body has a title.</p></li><li><p><strong>Is Icon Enabled: </strong>the icon is optional and this needs to be checked if the message has an icon.</p></li><li><p><strong>Keep Blur On: </strong>if this option is checked everything that is not UI will be blurred in the background.</p></li></ul><p /><p><strong>Examples:</strong></p><p /><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20240418-193133.png" width="760" loading="lazy" src="attachments/1072594993/1076297787.png?width=760" data-image-src="attachments/1072594993/1076297787.png" data-height="514" data-width="1508" data-unresolved-comment-count="0" data-linked-resource-id="1076297787" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20240418-193133.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1072594993" data-linked-resource-container-version="4" data-media-id="b4ed2c9f-c54c-4fa9-9df7-e3b11588ed24" data-media-type="file"></span><p /><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20240418-193439.png" width="760" loading="lazy" src="attachments/1072594993/1076723792.png?width=760" data-image-src="attachments/1072594993/1076723792.png" data-height="516" data-width="1517" data-unresolved-comment-count="0" data-linked-resource-id="1076723792" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20240418-193439.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1072594993" data-linked-resource-container-version="4" data-media-id="d00449c8-65a1-4614-a5e0-eef410b45810" data-media-type="file"></span><p /><h3 id="DynamicModalandInformationModal-HowtoDisplayaInformationModal">How to Display a Information Modal</h3><p>To set the content and display the Information Modal call the function <strong>HandleDisplayModal( )</strong> and pass the scriptable object as a parameter from the <strong>InformationModalBuilder.cs</strong>.</p>
+                    </div>
+
+                                        <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="attachments" class="pageSectionTitle">Attachments:</h2>
+                        </div>
+
+                        <div class="greybox" align="left">
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1072594993/1073184820.png">image-20240417-182622.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1072594993/1072660594.png">image-20240417-193422.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1072594993/1073447015.png">image-20240417-194136.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1072594993/1072922753.png">image-20240417-201228.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1072594993/1073610804.png">image-20240417-203117.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1072594993/1076461603.png">image-20240418-155740.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1072594993/1075707969.png">image-20240418-160138.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1072594993/1076101162.png">image-20240418-160550.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1072594993/1076101168.png">image-20240418-161122.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1072594993/1075740726.png">image-20240418-191024.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1072594993/1075511345.png">image-20240418-191408.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1072594993/1075576891.png">image-20240418-191644.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1072594993/1076297787.png">image-20240418-193133.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1072594993/1076723792.png">image-20240418-193439.png</a> (image/png)
+                                <br/>
+                                                    </div>
+                    </div>
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Jun 11, 2025 14:15</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

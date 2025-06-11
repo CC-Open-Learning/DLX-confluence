@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VARLab : Orientation Explorable Setup</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="VARLab_44990773.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Learning-Experience_972881951.html">Learning Experience</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="216629273.html">Digital Learning Experiences (DLX)</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="LSM9.05---Respiratory-Therapy_1328119833.html">LSM9.05 - Respiratory Therapy</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Documentation_1512341506.html">Documentation</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            VARLab : Orientation Explorable Setup
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                            
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> Ryan Wallace</span>, last modified by <span class='editor'> User e88ce</span> on Jan 22, 2025
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <div class="contentLayout2">
+<div class="columnLayout fixed-width" data-layout="fixed-width">
+<div class="cell normal" data-type="normal">
+<div class="innerCell">
+<style type='text/css'>/*<![CDATA[*/
+div.rbtoc1749651642518 {padding: 0px;}
+div.rbtoc1749651642518 ul {list-style: none;margin-left: 0px;}
+div.rbtoc1749651642518 li {margin-left: 0px;padding-left: 0px;}
+
+/*]]>*/</style><div class='toc-macro rbtoc1749651642518'>
+<ul class='toc-indentation'>
+<li><a href='#OrientationExplorableSetup-TypesofExplorables'>Types of Explorables</a></li>
+<li><a href='#OrientationExplorableSetup-ExplorableSetup'>Explorable Setup</a>
+<ul class='toc-indentation'>
+<li><a href='#OrientationExplorableSetup-Components'>Components</a></li>
+<li><a href='#OrientationExplorableSetup-ComponentReferences'>Component References</a></li>
+<li><a href='#OrientationExplorableSetup-SceneReferences'>Scene References</a>
+<ul class='toc-indentation'>
+<li><a href='#OrientationExplorableSetup-SceneExplorables'>Scene Explorables</a></li>
+<li><a href='#OrientationExplorableSetup-InventoryExplorables'>Inventory Explorables</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href='#OrientationExplorableSetup-Finishingup'>Finishing up</a>
+<ul class='toc-indentation'>
+<li><a href='#OrientationExplorableSetup-ForSceneExplorables'>For Scene Explorables</a></li>
+<li><a href='#OrientationExplorableSetup-ForInventoryExplorables'>For Inventory Explorables</a></li>
+</ul>
+</li>
+</ul>
+</div><h1 id="OrientationExplorableSetup-TypesofExplorables">Types of Explorables</h1><p>There are two types of explorables in the Orientation segment. First are the ones that are always in the scene, and must be explored by the learner navigating to them in the scene. Currently, the only ones like these are the Bronch Tower explorables.</p><p>The second type of explorable and the more abundant one are the ones in the inventory. These are not active on the scene (they’re in the scene, just not active) and only become active while the learner is viewing them in the Object Viewer panel. They can be found on the Hierarchy under the “InventoryObjects” GameObject.</p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20241211-192846.png" width="272" loading="lazy" src="attachments/1514274818/1514766415.png?width=272" data-image-src="attachments/1514274818/1514766415.png" data-height="154" data-width="272" data-unresolved-comment-count="0" data-linked-resource-id="1514766415" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20241211-192846.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1514274818" data-linked-resource-container-version="20" data-media-id="528fd794-3cf9-47da-87e8-82e216393231" data-media-type="file"></span><p>“InventoryObjects” is the parent object that holds everything. Below that we have 3 more game objects, each for holding a category of inventory objects. These are just for organization. They serve no other purpose. Lastly under these GameObjects is where the actual explorables are.</p><p>They are inactive by default as we do not want every single one to be active, it would cause a lot of lag, so they’re all set up and just left inactive.</p><h1 id="OrientationExplorableSetup-ExplorableSetup">Explorable Setup</h1><p>The process for adding the explorables is very similar, no matter which way you are doing it, so follow this tutorial for both, and any differences will be noted.</p><p>Find the explorable model in the project’s game assets and drop it onto the scene. Right click the object, under Prefab, select Unpack Completely.</p><h2 id="OrientationExplorableSetup-Components">Components</h2><p>Both types of explorables will need a common set of components in order to function properly:</p><ul><li><p>Explorable (so it can be explored)</p></li><li><p>Interactable (required by Explorable, comes with it)</p></li><li><p>World Object (for Object Viewer)</p></li><li><p>Rotate Object (for Object Viewer)</p></li><li><p>Box Collider (Required for Object Viewer scripts)</p></li></ul><p>Here are two images showing the setup for both scene explorables (left) and inventory explorables (right). As can be seen, the only difference is that the scene explorable has an “Outlineable” component, but this will be mentioned in more detail later; you can leave it out for now if preferred.</p></div>
+</div>
+</div>
+<div class="columnLayout two-equal" data-layout="two-equal">
+<div class="cell normal" data-type="normal">
+<div class="innerCell">
+<p /><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20241211-192130.png" width="354" loading="lazy" src="attachments/1514274818/1514635372.png?width=354" data-image-src="attachments/1514274818/1514635372.png" data-height="549" data-width="450" data-unresolved-comment-count="0" data-linked-resource-id="1514635372" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20241211-192130.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1514274818" data-linked-resource-container-version="20" data-media-id="7f308fdd-cb18-4034-ad62-0a08a50f4865" data-media-type="file"></span></div>
+</div>
+<div class="cell normal" data-type="normal">
+<div class="innerCell">
+<p /><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20241211-192157.png" width="354" loading="lazy" src="attachments/1514274818/1515159626.png?width=354" data-image-src="attachments/1514274818/1515159626.png" data-height="510" data-width="438" data-unresolved-comment-count="0" data-linked-resource-id="1515159626" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20241211-192157.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1514274818" data-linked-resource-container-version="20" data-media-id="0321237c-d552-4455-915e-8051ffbf39ed" data-media-type="file"></span></div>
+</div>
+</div>
+<div class="columnLayout fixed-width" data-layout="fixed-width">
+<div class="cell normal" data-type="normal">
+<div class="innerCell">
+<h2 id="OrientationExplorableSetup-ComponentReferences">Component References</h2><p>Now that you have all the components on your GameObject, you need to pass the scripts all the necessary references to function properly. Luckily, only one script needs references, and it is the same no matter what type of Explorable it is.</p><p>The script that needs some more information is <strong>Explorable</strong>. When looking at it, you’ll see that it needs 2 different scriptable objects.<br/><br/>The 2 Scriptable objects that it needs are the following:</p><ul><li><p><strong>ExplorableInformation</strong> - This one holds all the basic information about the explorable, its name, description, sprite (used for inventory) and the category it belongs to.</p><ul><li><p>Navigate to Assets/Scriptable Objects/Explorables and create a new Scriptable Object (Explorable Information SO) name it after the item you are adding.</p></li><li><p>This SO needs the following.</p><ul><li><p>Sprite - checkout image_capture branch, open “Photo“ scene</p><ul><li><p>Drag model into scene, position in view of camera, take screenshot</p></li><li><p>The image needs to have 145x145 aspect ratio</p></li><li><p>Add the captured PNG file to Assets/Art/Images/Inventory Item Thumbnails</p><ul><li><p>In the Inspector window, change “Texture Type“ to “Sprite (2D and UI)” and change “Sprite Mode“ to “Single”</p></li><li><p>You should now have a generated sprite to use for the “Explorable Information SO”</p></li></ul></li></ul></li><li><p>Category - Set from dropdown</p></li><li><p>Task Name and Description - This one holds the task name and description</p><ul><li><p>This information can be found here - <a class="external-link" href="https://stuconestogacon.sharepoint.com.mcas.ms/:x:/r/sites/VARLab/_layouts/15/Doc.aspx?sourcedoc=%7B7F5056E9-0007-478D-886B-8E835C43983D%7D&amp;file=RT%20Script.xlsx&amp;action=default&amp;mobileredirect=true" rel="nofollow">RT Script</a></p></li></ul></li><li><p>Explorable Audio - The audio clip that plays for the explorable</p><ul><li><p>Use these websites for the process of making an audio clip</p><ul><li><p><a href="https://varlab-dev.atlassian.net/wiki/spaces/VAR/pages/543752193/Voiceover+Using+a+Text+to+Speech+Generator" data-linked-resource-id="543752193" data-linked-resource-version="6" data-linked-resource-type="page">Guide for making voice clips</a></p></li><li><p><a class="external-link" href="https://stuconestogacon.sharepoint.com/:x:/s/VARLab/EelWUH8HAI1HiGuOg1xDmD0BS9cn27QKjv5gI17f9m6ChA?e=NnixRK" rel="nofollow">Respiratory Therapy Script</a></p></li><li><p>Upload the new clip to - <a class="external-link" href="https://stuconestogacon.sharepoint.com/:f:/s/VARLab/Eg5vyyGJG-5Fhf_q1Y2afb4B_uUs5C8w1S0WN1P_Knwc4g?e=4uVPZs" rel="nofollow">VoiceClip SharePoint folder</a> - and link in the above RT Script xls</p></li><li><p>Add the clip to the appropriate folder under Assets/Audio - add it to slot in the “Explorable Information SO” you have created</p></li></ul></li></ul></li></ul></li></ul></li><li><p><strong>Transform Details</strong> - This is a custom set of rotation and scale values that the explorable gets set to when entering the Object Viewer panel</p><ul><li><p>Navigate to Assets/Scriptable Objects/Explorable Transforms and create a new Scriptable Object (Explorable Transform Details) name it after the item you are adding + “…Transform Details“</p></li><li><p>You may have to edit the scale and rotation values based on how your object appears in the game</p></li></ul></li></ul><h2 id="OrientationExplorableSetup-SceneReferences">Scene References</h2><p>At this point, you should have the Explorable itself all setup. The last step is putting it in the scene and finishing any other script references that are needed for the Explorable. Both types of explorables have different things that need to be done in order to function properly. Please go to whichever explorable type you have (scene/inventory) and finish the last few steps.</p><h3 id="OrientationExplorableSetup-SceneExplorables">Scene Explorables</h3><p>The two differences that need to be done for scene explorables and <strong>NOT </strong>for Inventory explorables are the following</p><ul><li><p>It <strong>NEEDS </strong>to have an “Outlineable” component, so it can be highlighted. </p></li><li><p>The explorable has to be added to the list of Interactables, which can be found under EventSystem and on the “Interaction Handler” script component</p></li></ul><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20241211-193655.png" width="760" loading="lazy" src="attachments/1514274818/1514930250.png?width=760" data-image-src="attachments/1514274818/1514930250.png" data-height="706" data-width="1564" data-unresolved-comment-count="0" data-linked-resource-id="1514930250" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20241211-193655.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1514274818" data-linked-resource-container-version="20" data-media-id="b1b7d286-b2e7-49fb-9522-fc603471a097" data-media-type="file"></span><p>These two extra steps allow the explorable to be outlineable when hovering over it in-game.</p><h3 id="OrientationExplorableSetup-InventoryExplorables">Inventory Explorables</h3><p>Inventory Explorables have a different set of tasks that they need done to function properly. These changes should <strong>NOT </strong>be done to scene explorables, only Inventory Explorables.</p><ul><li><p>The GameObject needs to be added to the correct list under Managers &gt; UIManager &gt; Inventory. On the Inventory script you will see 3 lists, one for each category. Add the GameObject to the correct category it falls under</p></li></ul><p /><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20241212-150148.png" width="416" loading="lazy" src="attachments/1514274818/1517748246.png?width=416" data-image-src="attachments/1514274818/1517748246.png" data-height="317" data-width="416" data-unresolved-comment-count="0" data-linked-resource-id="1517748246" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20241212-150148.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1514274818" data-linked-resource-container-version="20" data-media-id="d4ca6fca-d24f-49bf-a40e-02d4e7354aa7" data-media-type="file"></span><p /><ul><li><p>They need to be added to the “InventoryObjects” GameObject in the scene, under the correct category, and the GameObject needs to be set to inactive, this can be done in the inspector, beside the GameObject name, uncheck the checkbox.</p></li><li><p>Once this is done, drag the new object from the hierarchy into the prefabs folder under the appropriate subdirectory.</p></li></ul><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20241212-145224.png" width="337" loading="lazy" src="attachments/1514274818/1518370822.png?width=337" data-image-src="attachments/1514274818/1518370822.png" data-height="708" data-width="337" data-unresolved-comment-count="0" data-linked-resource-id="1518370822" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20241212-145224.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1514274818" data-linked-resource-container-version="20" data-media-id="5cde8699-44ad-4921-a4dd-250bc9532183" data-media-type="file"></span><h1 id="OrientationExplorableSetup-Finishingup">Finishing up</h1><p>Lastly, make sure you update the GUID Manager so that the explorable will work correctly with the Save &amp; Load system. To do this, go to the scene hierarchy and navigate to Cloud Save System &gt; Guid Manager script. On this script, you should see a big button that says “Update Tracked Objects.” Click it. This will update the list of items being tracked for Save &amp; Load.</p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20241212-151306.png" width="760" loading="lazy" src="attachments/1514274818/1517649929.png?width=760" data-image-src="attachments/1514274818/1517649929.png" data-height="743" data-width="1592" data-unresolved-comment-count="0" data-linked-resource-id="1517649929" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20241212-151306.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1514274818" data-linked-resource-container-version="20" data-media-id="ff7709b9-b293-4516-a2c7-f742a54d49b9" data-media-type="file"></span><p>You should now have a functioning explorable in the game. Make sure you check it is functioning how you want it to, and no errors are being thrown. The following are some things you should ensure are working:</p><h2 id="OrientationExplorableSetup-ForSceneExplorables">For Scene Explorables</h2><ul><li><p>Does the explorable have an outline when hovering?</p></li><li><p>Does the Object Viewer panel open when clicking on the object</p></li><li><p>Is all the information on the panel correct?</p></li><li><p>Does the audio clip play when clicked on? Is it the correct audio clip?</p></li><li><p>Does this new explorable worth with Save &amp; Load?</p></li></ul><h2 id="OrientationExplorableSetup-ForInventoryExplorables">For Inventory Explorables</h2><ul><li><p>Does the Explorables image show in the Inventory?</p></li><li><p>Does the inventory correctly update when exploring the explorable?</p></li><li><p>Does the Object Viewer panel open when clicking on the object</p></li><li><p>Is all the information on the panel correct?</p></li><li><p>Does the audio clip play when clicked on? Is it the correct audio clip?</p></li><li><p>Does this new explorable worth with Save &amp; Load?</p></li></ul><p /></div>
+</div>
+</div>
+</div>
+                    </div>
+
+                                        <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="attachments" class="pageSectionTitle">Attachments:</h2>
+                        </div>
+
+                        <div class="greybox" align="left">
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1514274818/1514635265.png">image-20241211-135029.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1514274818/1514668033.png">image-20241211-135048.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1514274818/1514733569.png">Paul Character.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1514274818/1514536964.png">image-20241211-135201.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1514274818/1515356223.png">image-20241211-191318.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1514274818/1515585559.png">image-20241211-191340.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1514274818/1514635372.png">image-20241211-192130.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1514274818/1515159626.png">image-20241211-192157.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1514274818/1514766415.png">image-20241211-192846.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1514274818/1514930250.png">image-20241211-193655.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1514274818/1517879307.png">image-20241212-145215.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1514274818/1518370822.png">image-20241212-145224.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1514274818/1517977617.png">image-20241212-150144.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1514274818/1517748246.png">image-20241212-150148.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1514274818/1517649929.png">image-20241212-151306.png</a> (image/png)
+                                <br/>
+                                                    </div>
+                    </div>
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Jun 11, 2025 14:20</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

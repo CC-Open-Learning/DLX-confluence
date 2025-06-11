@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VARLab : Design Proposal for Flawed Circuit Components</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="VARLab_44990773.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Learning-Experience_972881951.html">Learning Experience</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="General-Release-DLX_729973721.html">General Release DLX</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="LSM7.07---MP-Circuits_588283905.html">LSM7.07 - MP Circuits</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            VARLab : Design Proposal for Flawed Circuit Components
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                            
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> Stephane (Unlicensed)</span>, last modified by <span class='editor'> David Inglis</span> on Feb 01, 2024
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <h2 id="DesignProposalforFlawedCircuitComponents-Overview">Overview</h2><p>To complete labs 8-9 we need a system that allows the user to debug circuits that have the following faulty components (<strong>the list is currently incomplete</strong>):</p><div class="table-wrap"><table data-local-id="b0094310-dd5c-4b6f-917e-90db3d023a88" data-layout="default" data-table-width="760" class="confluenceTable"><tbody><tr><th class="confluenceTh"><p><strong>Component type</strong></p></th><th class="confluenceTh"><p><strong>Component On Board</strong></p></th><th class="confluenceTh"><p><strong>Flaw</strong></p></th></tr><tr><td class="confluenceTd"><p>Lightbulb</p></td><td class="confluenceTd"><p>L1, L2, L3</p></td><td class="confluenceTd"><p>Burned out</p></td></tr><tr><td class="confluenceTd"><p>Cable</p></td><td class="confluenceTd"><p>N/A</p></td><td class="confluenceTd"><p>High resistance</p></td></tr></tbody></table></div><h2 id="DesignProposalforFlawedCircuitComponents-DesignProposals">Design Proposals</h2><h3 id="DesignProposalforFlawedCircuitComponents-ProposedSolution1">Proposed Solution 1</h3><div class="confluence-information-macro confluence-information-macro-information"><span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"></span><div class="confluence-information-macro-body"><p>This solution was discussed and proposed at the end of sprint W24-1. After group discussions on <time datetime="2024-01-22" class="date-past">22 Jan 2024</time> it was determined that users will not need the ability to develop circuits themselves, and Labs 8-9 will be delivered as pre-configured labs. See <strong>Proposed Solution 2 </strong>for more details.</p></div></div><p /><p><strong>The proposed solution is the following:</strong></p><ul><li><p>Any user <span class="inline-comment-marker" data-ref="ff75c0b2-cbe0-45ed-8276-d9f435bdac7d">can place flawed components onto the board</span> and determine their flaws</p></li><li><p>Any user can save the current circuit on the board into a save file ie: Lab8.ckt</p></li><li><p><span class="inline-comment-marker" data-ref="66d29517-e2fa-407f-b275-fad19e8a36c6">At the start of the sim, the user can choose to load a save file *.ckt whereupon they start the sim with that circuit already created on the board.</span></p></li></ul><p /><p><strong>This will allow the CE to:</strong></p><ol start="1"><li><p>Design a circuit within the sim that may or may not have flaws in it</p></li><li><p>save that circuit as a *.ckt file</p></li><li><p>distribute that file to students</p></li><li><p>students load the sim, select the .ckt file, and begin debugging the circuit</p></li><li><p>This will allow the creation of Lab 8 and Lab 9 while adhering to a “sandbox” style of play.</p></li></ol><p /><p><strong>Additional benefits:</strong></p><ul><li><p>Students can save their creations and share them</p></li><li><p>Circumvents the need for “Instructor mode” vs “Student mode”</p></li></ul><p /><p><strong>Challenges:</strong></p><ul><li><p>Every user now has to have the ability to modify existing components on the board to have flaws</p></li></ul><hr/><h3 id="DesignProposalforFlawedCircuitComponents-ProposedSolution2">Proposed Solution 2</h3><p>Labs 8 and 9, which are focused on voltage drop testing to identify faulty components in a pre-made series and parallel circuit, will be delivered as standalone deliverables with pre-configured labs built on top of the <strong>Digital Twin</strong> functionality. </p><p /><h4 id="DesignProposalforFlawedCircuitComponents-Requirements">Requirements</h4><p>The trainer board must have the ability to configure a circuit in the Unity Editor so that the lab can be launched with the circuit already set up. </p><p>The required circuit will already be present on the board when the Lab 8 or 9 module is launched. As with all labs 6-9, there will be no user prompts or feedback in-game, so the student will need to rely on the accompanying Lab Worksheet or similar document.</p><p>There must be components with “faults” (as noted in the table above) in the pre-configured circuits. These defects will be consistent between executions of the simulation and do not need to be randomly generated.</p><p>By pre-building the circuit, we will have total control over the presence and placement of faulty components, thereby eliminating the risk of not knowing where (or if) the faulty component(s) were used.</p><p><strong>Lab 8</strong></p><ul><li><p>In Lab 8, there is one specific lead that is damaged in the pre-made series circuit so that it has much higher resistance than expected, causing the circuit to not function as expected. </p></li><li><p>The student will need to identify the faulty component using the DMM to measure voltage drops throughout the circuit. </p></li><li><p>After replacing the faulty lead, the circuit will behave as expected. </p></li><li><p>The student will record measurements and results in the separate worksheet.</p></li></ul><p><strong>Lab 9</strong></p><ul><li><p>In Lab 9, there are two faulty components in a parallel circuit that the student must identify using voltage drop testing with the DMM. </p></li><li><p>The light bulb in the pre-made circuit will be faulty (open filament) and the student must identify the problem and replace the bulb. </p></li><li><p><span class="inline-comment-marker" data-ref="41c0d7d5-3ba6-453e-b20c-dcc7e0ce53ae">Another lead in the circuit will have high resistance, and the student must identify the problem and replace the lead so that the circuit functions as expected. </span></p></li><li><p>The student will record measurements and results in the the separate worksheet.</p></li></ul><p /><h4 id="DesignProposalforFlawedCircuitComponents-DevelopmentEnvironment">Development Environment </h4><p>Although labs 8 and 9 define specific content, they will be developed within the <a class="external-link" data-card-appearance="inline" href="https://bitbucket.org/VARLab/mpc-trainer-digital-twin/src/development/" rel="nofollow">https://bitbucket.org/VARLab/mpc-trainer-digital-twin/src/development/</a> repository, since they require functionality built for the digital twin deliverable. </p><p>Care must be taken to ensure that code changes made for labs 8 and 9 do not introduce unintended behaviour or complexity for the “digital twin” environment which is being used to host labs 6 and 7 and may in the future be used in a content-agnostic context.</p>
+                    </div>
+
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Jun 11, 2025 14:12</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

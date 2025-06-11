@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VARLab : Setting up Poi (Point Of Interest)</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="VARLab_44990773.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Learning-Experience_972881951.html">Learning Experience</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="216629273.html">Digital Learning Experiences (DLX)</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="LSM9.01B---PHI-Tattoo-and-Piercing-Studio-Inspection_1550090242.html">LSM9.01B - PHI-Tattoo and Piercing Studio Inspection</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="TPI---Development-Documentation_1748172801.html">TPI - Development Documentation</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            VARLab : Setting up Poi (Point Of Interest)
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                            
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> User 55f04</span>, last modified on Apr 16, 2025
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <style type='text/css'>/*<![CDATA[*/
+div.rbtoc1749651744127 {padding: 0px;}
+div.rbtoc1749651744127 ul {list-style: default;margin-left: 0px;padding-left: ;}
+div.rbtoc1749651744127 li {margin-left: 0px;padding-left: 0px;}
+
+/*]]>*/</style><div class='toc-macro rbtoc1749651744127'>
+<ul class='toc-indentation'>
+<li><a href='#SettingupPoi(PointOfInterest)-Introduction'>Introduction</a></li>
+<li><a href='#SettingupPoi(PointOfInterest)-PoiSetup'>Poi Setup</a>
+<ul class='toc-indentation'>
+<li><a href='#SettingupPoi(PointOfInterest)-Prefabcomponents'>Prefab components</a></li>
+<li><a href='#SettingupPoi(PointOfInterest)-Boxcollider'>Box collider</a></li>
+</ul>
+</li>
+<li><a href='#SettingupPoi(PointOfInterest)-IssuesandRisks'>Issues and Risks</a>
+<ul class='toc-indentation'>
+<li><a href='#SettingupPoi(PointOfInterest)-MultiplePoiinthesamearea'>Multiple Poi in the same area</a></li>
+<li><a href='#SettingupPoi(PointOfInterest)-InspectableswithinPoiboxcollider'>Inspectables within Poi box collider</a></li>
+</ul>
+</li>
+</ul>
+</div><hr/><h2 id="SettingupPoi(PointOfInterest)-Introduction">Introduction</h2><p>The following documentation outlines the steps required to properly set up a Poi within the simulation environment using a reference example. It covers the necessary configurations for the Poi and can be used as a template for adding more Poi in the future. It also addresses potential issues that may arise from the current implementation and that includes any workarounds and suggestion that can be used to mitigate them.</p><hr/><h2 id="SettingupPoi(PointOfInterest)-PoiSetup">Poi Setup</h2><p>For this documentation, we are going to use the <code>Piercing Tray</code> Poi that already exists in the project as an example.</p><p>First, we are going to add a new Poi name to the <code>PoiList.cs</code> script as follows:</p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="Screenshot 2025-04-14 160143-20250414-200557.png" width="423" loading="lazy" src="attachments/1749024830/1748566190.png?width=423" data-image-src="attachments/1749024830/1748566190.png" data-height="415" data-width="423" data-unresolved-comment-count="0" data-linked-resource-id="1748566190" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Screenshot 2025-04-14 160143-20250414-200557.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1749024830" data-linked-resource-container-version="12" data-media-id="dfa92d89-f724-42d1-9fa2-64b8f68777df" data-media-type="file"></span><p><span class="inline-comment-marker" data-ref="2111817f-e681-49db-83ab-c20841e3e0fa">Then create a prefab of the </span><code><span class="inline-comment-marker" data-ref="2111817f-e681-49db-83ab-c20841e3e0fa">Piercing Tray</span></code><span class="inline-comment-marker" data-ref="2111817f-e681-49db-83ab-c20841e3e0fa"> Poi with all the necessary child objects and placing it as a child of the Inspectables and POIs object as follows:</span></p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20250414-200721.png" width="461" loading="lazy" src="attachments/1749024830/1749155933.png?width=461" data-image-src="attachments/1749024830/1749155933.png" data-height="235" data-width="461" data-unresolved-comment-count="0" data-linked-resource-id="1749155933" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20250414-200721.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1749024830" data-linked-resource-container-version="12" data-media-id="8d38ff68-eb26-4dfe-a9dc-f6b5317ffca2" data-media-type="file"></span><div class="confluence-information-macro confluence-information-macro-information"><span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"></span><div class="confluence-information-macro-body"><p>Ensure the Poi object prefab is centered in the Poi room/area so child objects will follow suit with the pivot setup for the Poi object.</p><p>Any changes to child object transformations will be an offset from the pivot center of the Poi object prefab.</p></div></div><p>Ensure the Layer for this prefab is set to <code>Ignore Raycast</code>.</p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20250414-201806.png" width="403" loading="lazy" src="attachments/1749024830/1749155941.png?width=403" data-image-src="attachments/1749024830/1749155941.png" data-height="81" data-width="403" data-unresolved-comment-count="0" data-linked-resource-id="1749155941" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20250414-201806.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1749024830" data-linked-resource-container-version="12" data-media-id="97c66fe1-f18d-4a19-b36f-fbeec474f545" data-media-type="file"></span><p>In the screenshot below, <strong>Inspectables</strong> object has Poi specific interactable items in the simulation; Any new inspectables will be added here. The <strong>Navigation Waypoints</strong> object will contain all of the Point and Click waypoints within the Poi (You would need at least one waypoint within the Poi for the setup). The <strong>Environment</strong> object will contain the props within the Poi.</p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20250414-201031.png" width="419" loading="lazy" src="attachments/1749024830/1748828262.png?width=419" data-image-src="attachments/1749024830/1748828262.png" data-height="157" data-width="419" data-unresolved-comment-count="0" data-linked-resource-id="1748828262" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20250414-201031.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1749024830" data-linked-resource-container-version="12" data-media-id="1e0aef0e-c9c1-41df-9aab-4b6de669c871" data-media-type="file"></span><p>Some of the Poi may have a <strong>LevelGeo</strong> game object and this contains Level Geometry objects and other interactable objects like <a href="Setting-Up-Door-Triggers_1750892546.html" data-linked-resource-id="1750892546" data-linked-resource-version="6" data-linked-resource-type="page">doors</a>.</p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="Untitled-20250416-144020.png" width="142" loading="lazy" src="attachments/1749024830/1753940028.png?width=142" data-image-src="attachments/1749024830/1753940028.png" data-height="144" data-width="142" data-unresolved-comment-count="0" data-linked-resource-id="1753940028" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Untitled-20250416-144020.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1749024830" data-linked-resource-container-version="12" data-media-id="61ab0e45-d39b-4771-840c-fb4112818034" data-media-type="file"></span><h3 id="SettingupPoi(PointOfInterest)-Prefabcomponents">Prefab components</h3><p>For starters, you are going to attach the Poi script to the Parent Poi object (in this case the <code>Piercing Tray</code> object) and set it up as follows:</p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20250414-201400.png" width="416" loading="lazy" src="attachments/1749024830/1748861036.png?width=416" data-image-src="attachments/1749024830/1748861036.png" data-height="343" data-width="416" data-unresolved-comment-count="0" data-linked-resource-id="1748861036" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20250414-201400.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1749024830" data-linked-resource-container-version="12" data-media-id="2f284d0c-956a-45b1-acd7-52c691696986" data-media-type="file"></span><div class="confluence-information-macro confluence-information-macro-information"><span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"></span><div class="confluence-information-macro-body"><p>Note that the Default Waypoint should be referencing the Waypoint where the player will spawn as they load into the simulation WHEN the last Poi visited is the <code>Piercing Tray</code> Poi.</p></div></div><h3 id="SettingupPoi(PointOfInterest)-Boxcollider">Box collider</h3><p>You will also need to attach a box collider component to the prefab to define an area where if the player is within, will be able to do Poi specific actions. Set up the box collider component as shown below.</p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20250414-202205.png" width="409" loading="lazy" src="attachments/1749024830/1749483543.png?width=409" data-image-src="attachments/1749024830/1749483543.png" data-height="345" data-width="409" data-unresolved-comment-count="0" data-linked-resource-id="1749483543" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20250414-202205.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1749024830" data-linked-resource-container-version="12" data-media-id="cef1ae75-fd29-40dc-898a-48485acea03d" data-media-type="file"></span><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20250414-202312.png" width="441" loading="lazy" src="attachments/1749024830/1748762736.png?width=441" data-image-src="attachments/1749024830/1748762736.png" data-height="352" data-width="441" data-unresolved-comment-count="0" data-linked-resource-id="1748762736" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20250414-202312.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1749024830" data-linked-resource-container-version="12" data-media-id="a175317e-9b43-4920-9d56-d5cb326bf1f6" data-media-type="file"></span><p>The box collider should only take up enough space at the bottom of the room that is deemed part of the Poi. This can be clearly seen in the above image that the <code>Piercing Tray</code> Poi is ONLY that specific area.</p><p>Once complete, you now have a Poi that has all of the required components for the simulation. Adding inspectables to the Poi will be covered in another documentation.</p><hr/><h2 id="SettingupPoi(PointOfInterest)-IssuesandRisks">Issues and Risks</h2><h3 id="SettingupPoi(PointOfInterest)-MultiplePoiinthesamearea"><strong>Multiple Poi in the same area</strong></h3><ul><li><p>It could be a little unintuitive to have box colliders for Poi that are within a few steps distance from each other especially in the same room. This was noticeable in the Piercing Service Area Poi where <span class="inline-comment-marker" data-ref="6aad304f-8546-495e-be03-d5ec19d73738">I</span> could not inspect an object that is right next to me because I was not in its Poi.</p></li><li><p>A potential fix for this would be to merge Poi that are next to each other and somehow retain the uniqueness of the Poi visits and functionality as is.</p></li></ul><h3 id="SettingupPoi(PointOfInterest)-InspectableswithinPoiboxcollider"><strong>Inspectables within Poi box collider</strong></h3><ul><li><p>Adding an inspectable within the box collider of the Poi interferes with the inspection workflow even though the box collider for the Poi is set to <code>ignore raycast</code>.</p></li><li><p>A workaround used was to set the box collider height of the object to be higher than the Poi box collider so that the raycast can hit the target object as shown below.</p></li></ul><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20250414-204200.png" width="730" loading="lazy" src="attachments/1749024830/1749483549.png?width=730" data-image-src="attachments/1749024830/1749483549.png" data-height="394" data-width="778" data-unresolved-comment-count="0" data-linked-resource-id="1749483549" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20250414-204200.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1749024830" data-linked-resource-container-version="12" data-media-id="0cfdf7b6-dd5a-4c6d-a59b-627064ce4415" data-media-type="file"></span><p style="margin-left: 30.0px;"></p>
+                    </div>
+
+                                        <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="attachments" class="pageSectionTitle">Attachments:</h2>
+                        </div>
+
+                        <div class="greybox" align="left">
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1749024830/1748500594.png">image-20250414-200145.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1749024830/1749221448.png">image-20250414-200406.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1749024830/1748959363.png">Screenshot 2025-04-14 160143.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1749024830/1748566190.png">Screenshot 2025-04-14 160143-20250414-200557.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1749024830/1749155933.png">image-20250414-200721.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1749024830/1748828262.png">image-20250414-201031.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1749024830/1749090382.png">image-20250414-201357.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1749024830/1748861036.png">image-20250414-201400.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1749024830/1749155941.png">image-20250414-201806.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1749024830/1749483543.png">image-20250414-202205.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1749024830/1748762736.png">image-20250414-202312.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1749024830/1749483549.png">image-20250414-204200.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1749024830/1753940028.png">Untitled-20250416-144020.png</a> (image/png)
+                                <br/>
+                                                    </div>
+                    </div>
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Jun 11, 2025 14:22</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

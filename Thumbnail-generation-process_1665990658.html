@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VARLab : Thumbnail generation process</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="VARLab_44990773.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Learning-Experience_972881951.html">Learning Experience</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="216629273.html">Digital Learning Experiences (DLX)</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="706347009.html">LSM8.02 - Conestoga Trades: Electrician Simulator</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Development-Documentations_1066237953.html">Development Documentations</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            VARLab : Thumbnail generation process
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                            
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> User 55f04</span> on Mar 06, 2025
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <h2 id="Thumbnailgenerationprocess-Overview">Overview</h2><p>This document encompasses the process of generating thumbnails for in-game objects used in Trades Electrical. It will specifically focus on generating thumbnails for Device Mountables but this can generally be applied to any object that would possibly be added in the future.</p><h2 id="Thumbnailgenerationprocess-Collectingimagesnapshot">Collecting image snapshot</h2><p>The first step of the process is to find the object that you are looking to generate the thumbnail for, in this case a device. </p><p>I would go to the prefab view of the object so I can get a closer look and adjust the camera angle for consistent snapshots for all devices. For this example, I am going to use the <strong>Light Switch Single Pole </strong>prefab. Go to <em><strong>Assets/Prefab/Mounting/Devices/Light Switches </strong></em>and double click the object to open prefab view.</p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20250306-154530.png" width="760" loading="lazy" src="attachments/1665990658/1665794069.png?width=760" data-image-src="attachments/1665990658/1665794069.png" data-height="889" data-width="1142" data-unresolved-comment-count="0" data-linked-resource-id="1665794069" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20250306-154530.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1665990658" data-linked-resource-container-version="1" data-media-id="9d0fa013-e3f8-4543-bb6f-f7bbb73290d6" data-media-type="file"></span><div class="confluence-information-macro confluence-information-macro-information"><span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"></span><div class="confluence-information-macro-body"><p><span class="inline-comment-marker" data-ref="dc7165dd-f705-4913-9be9-f38cd07d2f8a">Notice the background color of the prefab view above. You will need to set the background to a color that contrasts well with the object so that the image can be isolated from the background cleanly (a crucial step later in the process). </span></p><p>To set the background color, head over to the <strong>Edit </strong>section of the toolbar in Unity editor and click on <strong>Preferences</strong>. Then click on <strong>Colors </strong>and find <strong>Background for Prefabs</strong>.</p></div></div><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20250306-155423.png" width="402" loading="lazy" src="attachments/1665990658/1666088963.png?width=402" data-image-src="attachments/1665990658/1666088963.png" data-height="115" data-width="402" data-unresolved-comment-count="0" data-linked-resource-id="1666088963" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20250306-155423.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1665990658" data-linked-resource-container-version="1" data-media-id="e5f9f5e4-c4fa-45b3-b92a-5fb1046ad603" data-media-type="file"></span><p>Make sure to maximize the scene as shown above to get better resolution/details for the object you are taking a snapshot of. Adjust the camera angle and take a screenshot of the prefab as shown below (Ensure the size of the screenshot <strong>shown in red</strong>, is similar if not the same).</p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20250306-155743.png" width="760" loading="lazy" src="attachments/1665990658/1666056195.png?width=760" data-image-src="attachments/1665990658/1666056195.png" data-height="872" data-width="1910" data-unresolved-comment-count="0" data-linked-resource-id="1666056195" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20250306-155743.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1665990658" data-linked-resource-container-version="1" data-media-id="28be2fed-2920-4032-b077-397371299d8a" data-media-type="file"></span><h2 id="Thumbnailgenerationprocess-Editingtheimage">Editing the image</h2><p>Once the image snapshot is saved, you will need to edit the image such that the background is removed and the size of the image is within certain constraints that is consistent with other thumbnails.</p><div class="confluence-information-macro confluence-information-macro-information"><span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"></span><div class="confluence-information-macro-body"><p> You can use any application to get this done but I personally use <a class="external-link" href="https://www.getpaint.net/" rel="nofollow">Paint.Net</a> because it is the easiest way to do so.</p></div></div><p>Open the image with Paint.Net and select the <strong>Magic Wand</strong> as shown below:</p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20250306-161715.png" width="66" loading="lazy" src="attachments/1665990658/1665433603.png?width=66" data-image-src="attachments/1665990658/1665433603.png" data-height="162" data-width="66" data-unresolved-comment-count="0" data-linked-resource-id="1665433603" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20250306-161715.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1665990658" data-linked-resource-container-version="1" data-media-id="a1c71b7f-bfb1-4bbd-8ff3-18fc45616245" data-media-type="file"></span><p>Reduce the Tolerance of setting to zero and click on the background of the image and hit the delete button to remove any background color “areas” from the object as shown below:</p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20250306-162323.png" width="760" loading="lazy" src="attachments/1665990658/1666023431.png?width=760" data-image-src="attachments/1665990658/1666023431.png" data-height="855" data-width="1093" data-unresolved-comment-count="0" data-linked-resource-id="1666023431" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20250306-162323.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1665990658" data-linked-resource-container-version="1" data-media-id="bbaccbd6-7607-44f5-805e-e64d00af2cbd" data-media-type="file"></span><p>Once the background has been removed, you will need to use the <strong>Rectangle Selection Tool </strong>to target only the object for resizing. The selection proportion for the object in the image should be similar if not the same as shown below.</p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20250306-163245.png" width="760" loading="lazy" src="attachments/1665990658/1665990669.png?width=760" data-image-src="attachments/1665990658/1665990669.png" data-height="805" data-width="805" data-unresolved-comment-count="0" data-linked-resource-id="1665990669" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20250306-163245.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1665990658" data-linked-resource-container-version="1" data-media-id="ceec75cc-8b52-4eef-9c16-957165903a68" data-media-type="file"></span><p>Once selected, head over to the <strong>Image </strong>option in the toolbar and select <strong>Canvas Size</strong>. Ensure the Width of the canvas matches the height as shown below </p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20250306-163942.png" width="395" loading="lazy" src="attachments/1665990658/1665925137.png?width=395" data-image-src="attachments/1665990658/1665925137.png" data-height="677" data-width="395" data-unresolved-comment-count="0" data-linked-resource-id="1665925137" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20250306-163942.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1665990658" data-linked-resource-container-version="1" data-media-id="73476154-110c-474d-8eef-7ecce16cd25a" data-media-type="file"></span><p>Once complete, you will get a square image of the object. This would need resizing as well to fit within constraints for the thumbnails and for consistency with other thumbnails. To do this, simply head over to the <strong>Image </strong>option in the toolbar and select <strong>Resize</strong>. Here you will ensure the image is <strong>512x512 </strong>for Width and Height of the image as shown below:</p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20250306-164259.png" width="414" loading="lazy" src="attachments/1665990658/1665466372.png?width=414" data-image-src="attachments/1665990658/1665466372.png" data-height="564" data-width="414" data-unresolved-comment-count="0" data-linked-resource-id="1665466372" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20250306-164259.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1665990658" data-linked-resource-container-version="1" data-media-id="25b86856-f90a-49e0-a52f-f7847a449162" data-media-type="file"></span><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20250306-164404.png" width="645" loading="lazy" src="attachments/1665990658/1665925143.png?width=645" data-image-src="attachments/1665990658/1665925143.png" data-height="618" data-width="645" data-unresolved-comment-count="0" data-linked-resource-id="1665925143" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20250306-164404.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1665990658" data-linked-resource-container-version="1" data-media-id="41d53a8a-aed6-4191-8923-133723b32c2a" data-media-type="file"></span><p>Save this image as this would then be used as thumbnail in the respective UI in the sim.</p><h2 id="Thumbnailgenerationprocess-LoadingthumbnailintoUnity">Loading thumbnail into Unity</h2><p>For Trades Electrical, the thumbnails folder is in the path <em><strong>Assets/Art/Sprites/UI/Thumbnails</strong></em>. Under this folder you can place your thumbnail into the respective folder; For devices the folder for device thumbnails is <strong>Device Options</strong>. </p><p>Once the thumbnail has been placed in its folder. Set the thumbnail settings in the inspector as shown below:</p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20250306-170649.png" width="555" loading="lazy" src="attachments/1665990658/1666056203.png?width=555" data-image-src="attachments/1665990658/1666056203.png" data-height="596" data-width="555" data-unresolved-comment-count="0" data-linked-resource-id="1666056203" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20250306-170649.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1665990658" data-linked-resource-container-version="1" data-media-id="4c85ce08-a44e-41cd-8cc1-ad171953aa1d" data-media-type="file"></span><p>Once set, you can now use this thumbnail in a Visual Element expecting an image in UI toolkit.</p>
+                    </div>
+
+                                        <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="attachments" class="pageSectionTitle">Attachments:</h2>
+                        </div>
+
+                        <div class="greybox" align="left">
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1665990658/1666187265.png">image-20250306-154033.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1665990658/1665794069.png">image-20250306-154530.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1665990658/1666088963.png">image-20250306-155423.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1665990658/1666056195.png">image-20250306-155743.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1665990658/1665433603.png">image-20250306-161715.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1665990658/1666383875.png">image-20250306-162155.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1665990658/1666023431.png">image-20250306-162323.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1665990658/1665990669.png">image-20250306-163245.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1665990658/1665925129.png">image-20250306-163345.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1665990658/1665925137.png">image-20250306-163942.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1665990658/1665466372.png">image-20250306-164259.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1665990658/1665925143.png">image-20250306-164404.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1665990658/1666056203.png">image-20250306-170649.png</a> (image/png)
+                                <br/>
+                                                    </div>
+                    </div>
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Jun 11, 2025 14:17</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

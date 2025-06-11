@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VARLab : POI and POI Manager</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="VARLab_44990773.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Learning-Experience_972881951.html">Learning Experience</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="General-Release-DLX_729973721.html">General Release DLX</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="LSM9.01---Public-Health-Inspection_805306369.html">LSM9.01 - Public Health Inspection</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Development-Documentation_1066991653.html">Development Documentation</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            VARLab : POI and POI Manager
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                            
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> Carolina Naoum Junqueira</span> on Apr 17, 2024
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <h3 id="POIandPOIManager-POIManager.cs"><strong>POIManager.cs</strong></h3><p><strong>Events</strong></p><ul><li><p>POI Changes</p><ul><li><p>SaveDataSupport.SavePlayerLocation: Saves the current POI every time the POI changes.</p></li></ul></li><li><p>On POI Interacted</p><ul><li><p>SaveDataSupport.SaveVisitedPOIs: Saves list of POIs visited and interacted with.</p></li></ul></li><li><p>Log New Primary</p><ul><li><p>ActivityLogManager.LogPrimaryEvent: Logs enter POI.</p></li></ul></li><li><p> Add Log to Primary</p><ul><li><p>ActivityLogManager.AddToPrimaryEvent: Logs exit POI.</p></li></ul></li><li><p>Set Current POI</p><ul><li><p>Interaction.SetCurrentPOI: Set the current POI so inspectables in the POI are interactable.</p></li></ul></li></ul><p><strong>Serialized Fields</strong></p><ul><li><p>POIs: List of POIs in the scene</p></li><li><p>Current POI: Start POI (updated from save file)</p></li></ul><p /><h2 id="POIandPOIManager-AddingaNewPOI">Adding a New POI</h2><p>To add a new POI to the scene, the first thing that needs to be done is to add the POI name to the POI list. Find the <strong>POIList.cs</strong> script and add the POI name to the end of the list.</p><p /><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20240417-151349.png" width="361" loading="lazy" src="attachments/1073414151/1072857102.png?width=361" data-image-src="attachments/1073414151/1072857102.png" data-height="334" data-width="361" data-unresolved-comment-count="0" data-linked-resource-id="1072857102" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20240417-151349.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1073414151" data-linked-resource-container-version="1" data-media-id="a88fba05-4746-45aa-a6be-48b7620298bc" data-media-type="file"></span><p>Add the new POI right under the last POI listed, in this example it would go under Dining = 8,.</p><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">public enum POIName
+{
+    None = 0,
+    BackKitchen = 1,
+    WalkInCoolerExterior = 2,
+    WalkInCoolerInterior = 3,
+    Pantry = 4,
+    Reception = 5,
+    Bar = 6,
+    Kitchen = 7,
+    Dining = 8,
+    NewPOI = 9,
+}</pre>
+</div></div><p /><p>Next add an empty game object to the Hierarchy as a child of <strong>Areas </strong>inside <strong>Inspectables and POIs. </strong></p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20240417-152137.png" width="488" loading="lazy" src="attachments/1073414151/1072660518.png?width=488" data-image-src="attachments/1073414151/1072660518.png" data-height="589" data-width="488" data-unresolved-comment-count="0" data-linked-resource-id="1072660518" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20240417-152137.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1073414151" data-linked-resource-container-version="1" data-media-id="cfbf331a-8a6d-44d1-80ff-b55ad86d9747" data-media-type="file"></span><p>Adjust the transform to that it is approximately in the center of the new area.</p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20240417-153339.png" width="760" loading="lazy" src="attachments/1073414151/1073479730.png?width=760" data-image-src="attachments/1073414151/1073479730.png" data-height="804" data-width="1066" data-unresolved-comment-count="0" data-linked-resource-id="1073479730" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20240417-153339.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1073414151" data-linked-resource-container-version="1" data-media-id="0cb3fe9d-fa2d-4f74-9db7-9eb406b0c21f" data-media-type="file"></span><p>Create 3 new empty game objects as a child of the New Area named Inspectables, Movement Targets and Environment.</p><p>Add the movement tiles to the area. The Movement Tiles will be children of the the Movement Target game object.</p><p>The movement tile prefab is located at Assets/Prefabs/Scene/MovementTile.prefab</p><p>You can add and remove movement tiles later, but you need at least one to start setting up the POI.</p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20240417-153735.png" width="760" loading="lazy" src="attachments/1073414151/1072562234.png?width=760" data-image-src="attachments/1073414151/1072562234.png" data-height="563" data-width="1448" data-unresolved-comment-count="0" data-linked-resource-id="1072562234" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20240417-153735.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1073414151" data-linked-resource-container-version="1" data-media-id="b0af88f4-f7f6-426e-933c-5f4d6f83ee44" data-media-type="file"></span><p>Add the POI component to the New area game object and set it up by adding each of the movement tiles to the list of Targets In POI and selecting the POI Name from the dropdown list.</p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20240417-160242.png" width="760" loading="lazy" src="attachments/1073414151/1073479741.png?width=760" data-image-src="attachments/1073414151/1073479741.png" data-height="604" data-width="1908" data-unresolved-comment-count="0" data-linked-resource-id="1073479741" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20240417-160242.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1073414151" data-linked-resource-container-version="1" data-media-id="63c323a3-d517-4ce6-a3bb-453ac0e545d0" data-media-type="file"></span><p>Create a prefab of the New Area by dragging and dropping the New Area game object in Assets/Prefabs/Areas</p>
+                    </div>
+
+                                        <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="attachments" class="pageSectionTitle">Attachments:</h2>
+                        </div>
+
+                        <div class="greybox" align="left">
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1073414151/1072857102.png">image-20240417-151349.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1073414151/1073381410.png">image-20240417-152034.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1073414151/1072660518.png">image-20240417-152137.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1073414151/1073152039.png">image-20240417-153332.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1073414151/1073479730.png">image-20240417-153339.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1073414151/1072562234.png">image-20240417-153735.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1073414151/1073479741.png">image-20240417-160242.png</a> (image/png)
+                                <br/>
+                                                    </div>
+                    </div>
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Jun 11, 2025 14:15</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

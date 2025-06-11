@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VARLab : Updated Cable Physics (WIP)</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="VARLab_44990773.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Learning-Experience_972881951.html">Learning Experience</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="General-Release-DLX_729973721.html">General Release DLX</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="LSM7.07---MP-Circuits_588283905.html">LSM7.07 - MP Circuits</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            VARLab : Updated Cable Physics (WIP)
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                            
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> User 5ebc2</span>, last modified on Feb 09, 2024
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <h3 id="UpdatedCablePhysics(WIP)-Requirements:"><strong>Requirements: </strong></h3><p>These requirements are common functionalities that we will need for whichever approach we use.</p><ul><li><p>lead will dynamically stretch and shrink, leaving a controlled amount of slack at all distances</p></li><li><p>lead must use physics to interact with components on the board</p></li><li><p>the user must be able to reposition the lead at the mouse position in order to move it out of the way of other things</p></li><li><p>this lead movement must have a maximum stretchability so that the user can’t grab a lead and move it all across the board</p></li><li><p>Decide if these physics-driven leads should interact with other leads (i.e. can a lead being moved out of the way be wrapped around a stacked lead above it?)</p></li><li><p>Behave properly at any given distance (i.e super far apart, stacked/not stacked, super close together)</p></li><li><p>Find a way to make adjusting these leads from the angle of the camera comfortable and intuitive, as I have a feeling this aspect may be hard to get right</p></li></ul><p /><hr/><h3 id="UpdatedCablePhysics(WIP)-Splines:"><strong>Splines:</strong></h3><p>Approach: In this scenario, we would most likely create and set up the Splines package for our project, and set up a prefab for the cables using a spline. This would start with using a SplineContainer on the parent object and integrating the spline into our existing cable physics/a new script. Ideally, there should only be one active spline at a time, with the positions being cached when lead placement is completed/after a lead is moved. </p><p /><p><strong>Advantages</strong></p><ul><li><p>Gives us a good head start as there is already a bezier option by default</p></li><li><p>Consistent, Unity-supported experience</p></li><li><p>Lots of built-in functions that will likely cover functionality that we would otherwise have to create ourselves</p></li><li><p>Since it is an external library, our testing infrastructure will only need to support the code that we add ourselves (could end up being good or bad)</p></li></ul><p /><p><strong>Disadvantages</strong></p><ul><li><p>I worry that drawing a large amount of dynamic “knots” will be very taxing on performance. Splines are great at drawing static/animated and even dynamic curves (under some circumstances), but drawing the potentially large amount that the user could create on the trainer board may be an issue, along with them additionally needing to be moveable and have their positions updated at all times</p></li><li><p>Will likely require more rework than other solutions</p></li></ul><p /><p><strong>Potentially valuable resources:</strong></p><p><a class="external-link" href="https://forum.unity.com/threads/how-to-display-a-dynamically-changing-spline-path.131281/" rel="nofollow">https://forum.unity.com/threads/how-to-display-a-dynamically-changing-spline-path.131281/</a> </p><p><a class="external-link" data-card-appearance="inline" href="https://blog.unity.com/engine-platform/building-better-paths-with-splines-in-2022-2" rel="nofollow">https://blog.unity.com/engine-platform/building-better-paths-with-splines-in-2022-2</a> </p><p><a class="external-link" data-card-appearance="inline" href="https://medium.com/@jasonbooth_86226/optimizing-spline-operations-d48b5f8fede4" rel="nofollow">https://medium.com/@jasonbooth_86226/optimizing-spline-operations-d48b5f8fede4</a> </p><p><a class="external-link" data-card-appearance="inline" href="https://docs.unity3d.com/Packages/com.unity.splines@2.5/api/index.html" rel="nofollow">https://docs.unity3d.com/Packages/com.unity.splines@2.5/api/index.html</a> </p><p /><p><strong>Things to keep in mind:</strong></p><p><a class="external-link" href="https://forum.unity.com/threads/splines-large-dataset-of-knots-runs-way-too-slow.1509884/" rel="nofollow">https://forum.unity.com/threads/splines-large-dataset-of-knots-runs-way-too-slow.1509884/</a> </p><hr/><h3 id="UpdatedCablePhysics(WIP)-BezierCurves"><strong>Bezier Curves</strong></h3><p>Approach: As this is closer to an option within our implementation, and not a standalone solution, I will document as such. This will likely be used within whichever solution we use, whether as a toggled option in a spline or a variable within the cable physics script, that will define the constant points of the curve (start, and end). In between points will be generated and added/removed from the curve based on the distance from the starting placement/the distance between each point. Functionality for lead slack may also be calculated using the curve (points closer to the center will have higher downwards velocity).</p><p /><p><strong>Potentially valuable resources:</strong></p><p><a class="external-link" data-card-appearance="inline" href="https://www.youtube.com/watch?v=aVwxzDHniEw" rel="nofollow">https://www.youtube.com/watch?v=aVwxzDHniEw</a> </p><p><a class="external-link" data-card-appearance="inline" href="https://www.gamedeveloper.com/business/how-to-work-with-bezier-curve-in-games-with-unity" rel="nofollow">https://www.gamedeveloper.com/business/how-to-work-with-bezier-curve-in-games-with-unity</a> </p><hr/><h3 id="UpdatedCablePhysics(WIP)-UnityPhysics"><strong>Unity Physics</strong></h3><p>Approach: There are a variety of built-in joints that could be useful (Hinge, Configurable, Spring). This will require additional setup in the prefab or in script. Similarly to the Bezier curve, one of these joints will likely be used in our design regardless, the primary decision to make is which one.</p><p /><p>Configurable joints will give us the most freedom, as this joint is what all of the other joints inherit from, the others simply having hidden/unused properties. </p><p /><p><strong>Potentially valuable resources:</strong></p><p><a class="external-link" data-card-appearance="inline" href="https://www.youtube.com/watch?v=MElbAwhMvTc" rel="nofollow">https://www.youtube.com/watch?v=MElbAwhMvTc</a> </p><hr/><h2 id="UpdatedCablePhysics(WIP)-Implementation(unfinished)">Implementation (unfinished)</h2><p /><p>This is still simply a concept, so nothing is finalized regarding this implementation. </p><p /><hr/><h2 id="UpdatedCablePhysics(WIP)-ThirdPartyOptions">Third Party Options</h2><p><a class="external-link" data-card-appearance="inline" href="https://assetstore.unity.com/packages/tools/physics/obi-rope-55579" rel="nofollow">https://assetstore.unity.com/packages/tools/physics/obi-rope-55579</a> (Incompatible with WebGL)</p><p><a class="external-link" data-card-appearance="inline" href="https://assetstore.unity.com/packages/tools/physics/filo-the-cable-simulator-133620" rel="nofollow">https://assetstore.unity.com/packages/tools/physics/filo-the-cable-simulator-133620</a> (Incompatible with WebGL)</p><p><a class="external-link" data-card-appearance="inline" href="https://assetstore.unity.com/packages/tools/particles-effects/real-time-procedural-cable-simple-102196#description" rel="nofollow">https://assetstore.unity.com/packages/tools/particles-effects/real-time-procedural-cable-simple-102196#description</a> </p><p><a class="external-link" data-card-appearance="inline" href="https://assetstore.unity.com/packages/tools/physics/rope-toolkit-154662#reviews" rel="nofollow">https://assetstore.unity.com/packages/tools/physics/rope-toolkit-154662#reviews</a> </p><p><a class="external-link" data-card-appearance="inline" href="https://assetstore.unity.com/packages/tools/physics/rootpi-ropes-248288" rel="nofollow">https://assetstore.unity.com/packages/tools/physics/rootpi-ropes-248288</a> </p><p />
+                    </div>
+
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Jun 11, 2025 14:12</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VARLab : How to Setup Single and Double Doors</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="VARLab_44990773.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Learning-Experience_972881951.html">Learning Experience</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="General-Release-DLX_729973721.html">General Release DLX</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="LSM9.01---Public-Health-Inspection_805306369.html">LSM9.01 - Public Health Inspection</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Development-Documentation_1066991653.html">Development Documentation</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Doors-Setup_1070727169.html">Doors Setup</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            VARLab : How to Setup Single and Double Doors
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                            
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> User 2013e</span>, last modified by <span class='editor'> User 6fa8c</span> on Aug 13, 2024
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <style type='text/css'>/*<![CDATA[*/
+div.rbtoc1749651305315 {padding: 0px;}
+div.rbtoc1749651305315 ul {list-style: none;margin-left: 0px;padding-left: ;}
+div.rbtoc1749651305315 li {margin-left: 0px;padding-left: 0px;}
+
+/*]]>*/</style><div class='toc-macro rbtoc1749651305315'>
+<ul class='toc-indentation'>
+<li><span class='TOCOutline'>1</span> <a href='#HowtoSetupSingleandDoubleDoors-BeforeBeginning'>Before Beginning</a></li>
+<li><span class='TOCOutline'>2</span> <a href='#HowtoSetupSingleandDoubleDoors-SetuptheBackKitchenDoorsBehaviour'>Setup the Back Kitchen Doors Behaviour</a>
+<ul class='toc-indentation'>
+<li><span class='TOCOutline'>2.1</span> <a href='#HowtoSetupSingleandDoubleDoors-SingleDirectionDoor'>Single Direction Door</a></li>
+<li><span class='TOCOutline'>2.2</span> <a href='#HowtoSetupSingleandDoubleDoors-DoubleDirectionalDoors(DoubleDoors)'>Double Directional Doors (Double Doors)</a></li>
+</ul>
+</li>
+</ul>
+</div><h1 id="HowtoSetupSingleandDoubleDoors-BeforeBeginning"><strong>Before Beginning </strong></h1><div class="confluence-information-macro confluence-information-macro-information"><span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"></span><div class="confluence-information-macro-body"><p>This section doesn't cover keyframe animations. Please refer to Unity documentation on how to create them. <a class="external-link" data-card-appearance="inline" href="https://learn.unity.com/tutorial/creating-keyframed-animation-in-timeline" rel="nofollow">https://learn.unity.com/tutorial/creating-keyframed-animation-in-timeline</a> </p></div></div><div class="confluence-information-macro confluence-information-macro-note"><span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"></span><div class="confluence-information-macro-body"><p>Don’t forget to add Occlusion Portal to your keyframes, or else the door will open and the other side won’t be rendered</p></div></div><div class="confluence-information-macro confluence-information-macro-information"><span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"></span><div class="confluence-information-macro-body"><p>For details on animator controllers, please refer to <a href="Animator-Controllers-Setup_1070891009.html" data-linked-resource-id="1070891009" data-linked-resource-version="6" data-linked-resource-type="page">Animator Controllers Setup</a> </p></div></div><p>Please check that a prefab for the door you want does not already exist. These can be found at “<strong>Assets/Prefabs/Doors And Doorways</strong>”</p><h1 id="HowtoSetupSingleandDoubleDoors-SetuptheBackKitchenDoorsBehaviour"><strong>Setup the Back Kitchen Doors Behaviour</strong></h1><p>In this section, you'll find the steps to set up all doors in the back Kitchen. The setup for the other restaurant areas will be similar. </p><div class="confluence-information-macro confluence-information-macro-information"><span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"></span><div class="confluence-information-macro-body"><p>If you have an inspectable attached to the door, please also refer to: <a href="1076461573.html" data-linked-resource-id="1076461573" data-linked-resource-version="2" data-linked-resource-type="page">Edge Case: Loading Image For Inspectable Door</a> </p></div></div><hr/><h2 id="HowtoSetupSingleandDoubleDoors-SingleDirectionDoor">Single Direction Door</h2><p>1. Add an animator controller to the walk-in door. Try to make sure this is in the prefab if possible, and add the correct controller. </p><div class="confluence-information-macro confluence-information-macro-information"><span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"></span><div class="confluence-information-macro-body"><p>see <a href="Animator-Controllers-Setup_1070891009.html" data-linked-resource-id="1070891009" data-linked-resource-version="6" data-linked-resource-type="page">Animator Controllers Setup</a> on how to set up controllers.</p></div></div><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20240416-180802.png" width="401" loading="lazy" src="attachments/1067286555/1069318196.png?width=401" data-image-src="attachments/1067286555/1069318196.png" data-height="480" data-width="401" data-unresolved-comment-count="0" data-linked-resource-id="1069318196" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20240416-180802.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1067286555" data-linked-resource-container-version="13" data-media-id="03699318-1558-4ea1-bc88-60b319f68bba" data-media-type="file"></span><p>2.<strong><span class="inline-comment-marker" data-ref="cd6c1989-d200-448e-bcbb-24646c5aef88"> </span></strong>Add the trigger volume prefab which should be located at “<strong>Assets/Prefabs/TriggerVolume</strong>”.  </p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20240812-150725.png" width="760" loading="lazy" src="attachments/1067286555/1276379148.png?width=760" data-image-src="attachments/1067286555/1276379148.png" data-height="694" data-width="1911" data-unresolved-comment-count="0" data-linked-resource-id="1276379148" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20240812-150725.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1067286555" data-linked-resource-container-version="13" data-media-id="8fdd2ecf-57b4-467f-ada2-856b30daf6fd" data-media-type="file"></span><p style="margin-left: 30.0px;">2.1 adjust the collider to fit over the way point</p><p>3. Set the Animator, Action and State Parameter. If the door opens in a single direction ignore everything from “Is Double Door” and “From Inside” fields.</p><p style="margin-left: 30.0px;">3.1 Select or Drag the door game object for the Animator property.</p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20240812-151239.png" width="708" loading="lazy" src="attachments/1067286555/1276968962.png?width=708" data-image-src="attachments/1067286555/1276968962.png" data-height="85" data-width="525" data-unresolved-comment-count="0" data-linked-resource-id="1276968962" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20240812-151239.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1067286555" data-linked-resource-container-version="13" data-media-id="f1cd6572-fe99-4fdf-a1a2-71d55d5b6e6a" data-media-type="file"></span><p>   </p><p style="margin-left: 30.0px;">3.2 Set Actions according to the Header name and State Parameter to &quot;DoorOpen&quot;</p><p /><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20240812-151517.png" width="704" loading="lazy" src="attachments/1067286555/1276346372.png?width=704" data-image-src="attachments/1067286555/1276346372.png" data-height="187" data-width="517" data-unresolved-comment-count="0" data-linked-resource-id="1276346372" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20240812-151517.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1067286555" data-linked-resource-container-version="13" data-media-id="f540aa45-fc1a-42f8-aa44-5d466c18104f" data-media-type="file"></span><p /><p>4. Add the DoorAudioSource prefab found at “<strong>Assets/Prefabs/Doors and Doorways/DoorAudioSource</strong>”. Move it to where you want to hear the audio come from (usually the centre of the door or hinges is fine).</p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20240812-152229.png" width="760" loading="lazy" src="attachments/1067286555/1277198344.png?width=760" data-image-src="attachments/1067286555/1277198344.png" data-height="753" data-width="1650" data-unresolved-comment-count="0" data-linked-resource-id="1277198344" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20240812-152229.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1067286555" data-linked-resource-container-version="13" data-media-id="b04e71d7-6746-47d9-8954-eb967494b224" data-media-type="file"></span><p>5. Add the Door Audio(script) as a component to the Door. Link the Audio Source to the source field and add audio clips to the sound fields. Audio clips can be found at “<strong>Assets/Audio/SoundEffects</strong>”. </p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20240813-143955.png" width="513" loading="lazy" src="attachments/1067286555/1279066182.png?width=513" data-image-src="attachments/1067286555/1279066182.png" data-height="111" data-width="513" data-unresolved-comment-count="0" data-linked-resource-id="1279066182" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20240813-143955.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1067286555" data-linked-resource-container-version="13" data-media-id="ca198910-0d50-42fa-af5d-97af1ee4ff5b" data-media-type="file"></span><p> </p><h2 id="HowtoSetupSingleandDoubleDoors-DoubleDirectionalDoors(DoubleDoors)">Double Directional Doors (Double Doors)</h2><p>Since double doors open in different directions depending on where the player is moving, the setup has a few extra properties. </p><p>1. Set-up is the same as the single door except the TargetDoorAnimBehaviour script.</p><p>2. Check the “Is Double Door” check box and set the “From Inside Fields”.  </p><p /><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20240812-154317.png" width="517" loading="lazy" src="attachments/1067286555/1277034504.png?width=517" data-image-src="attachments/1067286555/1277034504.png" data-height="436" data-width="517" data-unresolved-comment-count="0" data-linked-resource-id="1277034504" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20240812-154317.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1067286555" data-linked-resource-container-version="13" data-media-id="4eb62206-c7ab-4031-96f6-b9867e966d34" data-media-type="file"></span><p>3. That covers how to set up animated doors!</p><p />
+                    </div>
+
+                                        <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="attachments" class="pageSectionTitle">Attachments:</h2>
+                        </div>
+
+                        <div class="greybox" align="left">
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1067286555/1067515920.png">image-20240415-195813.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1067286555/1067057163.png">image-20240415-200115.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1067286555/1066893336.png">image-20240415-200203.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1067286555/1066893342.png">image-20240415-200255.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1067286555/1067057170.png">image-20240415-200352.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1067286555/1067352075.png">image-20240415-200359.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1067286555/1067712522.png">image-20240415-200417.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1067286555/1067679764.png">image-20240415-200437.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1067286555/1067810825.png">image-20240415-200537.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1067286555/1067253791.png">image-20240415-200552.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1067286555/1067450388.png">image-20240415-200611.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1067286555/1067646998.png">image-20240415-202855.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1067286555/1067352096.png">image-20240415-203310.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1067286555/1067253798.png">image-20240415-203333.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1067286555/1067810833.png">image-20240415-203351.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1067286555/1068662785.png">image-20240415-205609.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1067286555/1068859393.png">image-20240415-210324.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1067286555/1068072964.png">image-20240415-210334.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1067286555/1068498946.png">image-20240415-210355.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1067286555/1070137348.png">image-20240416-133858.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1067286555/1069907974.png">image-20240416-133908.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1067286555/1069547531.png">image-20240416-140634.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1067286555/1069580320.png">image-20240416-140704.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1067286555/1069776902.png">image-20240416-140754.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1067286555/1069744144.png">image-20240416-150750.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1067286555/1069613089.png">WalkInSetup-20240416-160223.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1067286555/1070104603.png">image-20240416-173849.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1067286555/1070268501.png">image-20240416-174404.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1067286555/1069776966.png">image-20240416-174431.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1067286555/1069940799.png">image-20240416-175042.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1067286555/1070465062.png">image-20240416-175248.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1067286555/1069350993.png">image-20240416-175458.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1067286555/1070137387.png">image-20240416-175817.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1067286555/1070006395.png">image-20240416-180107.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1067286555/1069449277.png">image-20240416-180351.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1067286555/1069711392.png">image-20240416-180638.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1067286555/1069318196.png">image-20240416-180802.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1067286555/1070465068.png">image-20240416-182752.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1067286555/1070301201.png">image-20240416-183144.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1067286555/1069580345.png">image-20240416-183246.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1067286555/1069547578.png">image-20240416-184100.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1067286555/1069940809.png">image-20240416-184657.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1067286555/1069547595.png">image-20240416-190356.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1067286555/1069351014.png">BackKitchenComplete-20240416-192437.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1067286555/1277198337.png">image-20240812-150703.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1067286555/1276379148.png">image-20240812-150725.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1067286555/1276248066.png">image-20240812-151220.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1067286555/1276641283.png">image-20240812-151225.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1067286555/1277132804.png">image-20240812-151231.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1067286555/1276968962.png">image-20240812-151239.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1067286555/1276870659.png">image-20240812-151515.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1067286555/1276346372.png">image-20240812-151517.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1067286555/1276444693.png">image-20240812-151744.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1067286555/1277198344.png">image-20240812-152229.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1067286555/1276575763.png">image-20240812-152806.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1067286555/1277034504.png">image-20240812-154317.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1067286555/1279066182.png">image-20240813-143955.png</a> (image/png)
+                                <br/>
+                                                    </div>
+                    </div>
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Jun 11, 2025 14:15</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

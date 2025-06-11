@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VARLab : Converting Interactions To VR</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="VARLab_44990773.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Learning-Experience_972881951.html">Learning Experience</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="General-Release-DLX_729973721.html">General Release DLX</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="LSM9.01---Public-Health-Inspection_805306369.html">LSM9.01 - Public Health Inspection</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="PHI-VR-Research-Project_1514897411.html">PHI-VR Research Project</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            VARLab : Converting Interactions To VR
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                            
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> User 6fa8c</span>, last modified on Dec 12, 2024
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <h2 id="ConvertingInteractionsToVR-TableofContents">Table of Contents</h2><style type='text/css'>/*<![CDATA[*/
+div.rbtoc1749651402535 {padding: 0px;}
+div.rbtoc1749651402535 ul {list-style: none;margin-left: 0px;}
+div.rbtoc1749651402535 li {margin-left: 0px;padding-left: 0px;}
+
+/*]]>*/</style><div class='toc-macro rbtoc1749651402535'>
+<ul class='toc-indentation'>
+<li><span class='TOCOutline'>1</span> <a href='#ConvertingInteractionsToVR-TableofContents'>Table of Contents</a></li>
+<li><span class='TOCOutline'>2</span> <a href='#ConvertingInteractionsToVR-Introduction'>Introduction</a></li>
+<li><span class='TOCOutline'>3</span> <a href='#ConvertingInteractionsToVR-StepsToConvertInteractionsystems'>Steps To Convert Interaction systems</a></li>
+<li><span class='TOCOutline'>4</span> <a href='#ConvertingInteractionsToVR-KnownIssues'>Known Issues</a>
+<ul class='toc-indentation'>
+<li><span class='TOCOutline'>4.1</span> <a href='#ConvertingInteractionsToVR-OutlinesNotAppearingInVR'>Outlines Not Appearing In VR</a></li>
+<li><span class='TOCOutline'>4.2</span> <a href='#ConvertingInteractionsToVR-NotGettingKickedoutproperly/Inspectingallowedafterrestarting'>Not Getting Kicked out properly/Inspecting allowed after restarting</a></li>
+</ul>
+</li>
+</ul>
+</div><h2 id="ConvertingInteractionsToVR-Introduction">Introduction</h2><p>This document will go over the steps taken to convert the interaction system in PHI Restaurant to VR. Keep in mind that this document is a result of research and not to be considered the optimal solution. Rather this is the solution that fit the requirements and time constraints for the time. </p><p>Further emphasizing this point, the method explained here is not ideal and was used as a last resort. This method was used because the alternative required an entire redesign of the Interaction manager script, which was not feasible in the 2 week time constraint we were given. </p><p>The Proper Implementation is using the XRInteractables found in <a href="XR-Interactables_1518501893.html" data-linked-resource-id="1518501893" data-linked-resource-version="2" data-linked-resource-type="page"><ac:inline-comment-marker ac:ref="4790a3b8-0daf-41d8-984d-7620c475b997">another document</ac:inline-comment-marker></a>. please refer to that for proper implementation of how to optimally set up Interactables using XR.</p><div class="confluence-information-macro confluence-information-macro-information"><span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"></span><div class="confluence-information-macro-body"><p>You should have already had the project set up for VR before this. including adding the CORE XR package. On top of this it is recommended that you have already fixed the UI’s to use Flex XR panels.</p></div></div><h2 id="ConvertingInteractionsToVR-StepsToConvertInteractionsystems">Steps To Convert Interaction systems</h2><ol start="1"><li><p>Go to Interactions.cs. it should be a script on the interaction manager. Edit this script</p></li><li><p>Add a public variable for XRRayInteractor this is your reference to the ray cast hand you want to use as your base for the ray cast</p></li><li><p>Add a bool for if VR is enabled</p></li><li><p>Under inspect() function if you have a unique version of PlayerController, i.e PlayerControllerVR make sure you call the correct version based on the VR bool.</p></li><li><p>Under the function “public RaycastHit GetHitPoint(out string tag, float distance = 3f)” have a check for if VR is enabled using the VR bool. If VR is not enabled use the old function for getting a ray and making physics raycast. If VR is enabled use this function “(XRRayInteractor variable). TryGetCurrent3DRaycastHit(out hitPoint)”. The out hitPoint will give the same value as if we did the old physics raycast. you may need to declare the hitPoint variable prior to the if statement so it isn’t scoped to the if statement.</p></li><li><p>This should be all the changes you need for the Interactions.cs file</p></li><li><p>Link the RayInteractor from the controller you wish to use to the interactions component on the manager</p></li><li><p>Navigate to Assets → Script and select the assembly definition file</p></li><li><p>Add an assembly reference to Unity.InputSystem and save the file.</p></li><li><p>Now create a new C# script this will be the link between the controller input and inspection call from interactions.cs</p></li><li><p>This file will have 2 variables one InputActionReference and a UnityEvent</p></li><li><p>This file will have one function that will invoke the unityevent and require the input of a InputAction.CallbackContext.</p></li><li><p>On start this file will link that function to the InputActionReference. see the code snippet below:</p><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">    public class InspectActionCall : MonoBehaviour
+    {
+        public InputActionReference Trigger;
+
+        public UnityEvent InspectEvent;
+        // Start is called before the first frame update
+        void Start()
+        {
+            Trigger.action.started += CallInspect;
+        }
+
+        public void CallInspect(InputAction.CallbackContext context)
+        {
+            InspectEvent?.Invoke();
+        }
+    }</pre>
+</div></div><p /></li><li><p>Attach this script to controller you want to activate the inspection.</p></li><li><p>Link the input action and the inpsect function to this script component. see below image for reference:</p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20241211-193934.png" width="451" loading="lazy" src="attachments/1514799182/1514537047.png?width=451" data-image-src="attachments/1514799182/1514537047.png" data-height="164" data-width="451" data-unresolved-comment-count="0" data-linked-resource-id="1514537047" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20241211-193934.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1514799182" data-linked-resource-container-version="2" data-media-id="903ba88b-e34d-45f1-bfb3-f11a0f0276e1" data-media-type="file"></span><p> if you cant find the input action just drag it from “Packages → Core XR Tools → Runtime → FlexXR → ThirdParty → Unity -&gt;XR Interaction Toolkit → Settings → XRI Default Input”</p></li><li><p>Now you should be ready for inspections to work.</p></li></ol><h2 id="ConvertingInteractionsToVR-KnownIssues">Known Issues</h2><h3 id="ConvertingInteractionsToVR-OutlinesNotAppearingInVR"><strong>Outlines Not Appearing In VR</strong></h3><p>Problem: the outlines do not seem to appear in vr but the inspection is properly selecting the items.</p><p>Fix: ensure that you have an outliner component on your main camera under your XR Rig and that it is active.</p><h3 id="ConvertingInteractionsToVR-NotGettingKickedoutproperly/Inspectingallowedafterrestarting"><strong>Not Getting Kicked out properly/Inspecting allowed after restarting</strong></h3><p>Problem: The restart isn’t functioning properly and this is likely being caused by references to playercontroller or such not being properly handled in your PHISceneManager</p><p>Fix: double check that your PHISceneManager is properly resetting and setting the correct variables if VR is enabled.</p><p />
+                    </div>
+
+                                        <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="attachments" class="pageSectionTitle">Attachments:</h2>
+                        </div>
+
+                        <div class="greybox" align="left">
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1514799182/1515126833.png">image-20241211-193701.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1514799182/1514963004.png">image-20241211-193803.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1514799182/1514537047.png">image-20241211-193934.png</a> (image/png)
+                                <br/>
+                                                    </div>
+                    </div>
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Jun 11, 2025 14:16</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

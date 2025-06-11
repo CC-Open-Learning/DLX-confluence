@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VARLab : PHI Systems That Block VR Execution</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="VARLab_44990773.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Learning-Experience_972881951.html">Learning Experience</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="General-Release-DLX_729973721.html">General Release DLX</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="LSM9.01---Public-Health-Inspection_805306369.html">LSM9.01 - Public Health Inspection</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="PHI-VR-Research-Project_1514897411.html">PHI-VR Research Project</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            VARLab : PHI Systems That Block VR Execution
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                            
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> User 6fa8c</span> on Dec 12, 2024
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <h2 id="PHISystemsThatBlockVRExecution-TableofContents">Table of Contents</h2><style type='text/css'>/*<![CDATA[*/
+div.rbtoc1749651405786 {padding: 0px;}
+div.rbtoc1749651405786 ul {list-style: none;margin-left: 0px;}
+div.rbtoc1749651405786 li {margin-left: 0px;padding-left: 0px;}
+
+/*]]>*/</style><div class='toc-macro rbtoc1749651405786'>
+<ul class='toc-indentation'>
+<li><span class='TOCOutline'>1</span> <a href='#PHISystemsThatBlockVRExecution-TableofContents'>Table of Contents</a></li>
+<li><span class='TOCOutline'>2</span> <a href='#PHISystemsThatBlockVRExecution-Introduction'>Introduction</a></li>
+<li><span class='TOCOutline'>3</span> <a href='#PHISystemsThatBlockVRExecution-HowtoDiagnose'>How to Diagnose</a></li>
+<li><span class='TOCOutline'>4</span> <a href='#PHISystemsThatBlockVRExecution-HowtoDealWith'>How to Deal With</a>
+<ul class='toc-indentation'>
+<li><span class='TOCOutline'>4.1</span> <a href='#PHISystemsThatBlockVRExecution-RemovalofPointandClickNavigation'>Removal of Point and Click Navigation</a></li>
+<li><span class='TOCOutline'>4.2</span> <a href='#PHISystemsThatBlockVRExecution-RemovalofPlayerController'>Removal of Player Controller</a></li>
+<li><span class='TOCOutline'>4.3</span> <a href='#PHISystemsThatBlockVRExecution-RemovalofCameraController'>Removal of Camera Controller</a></li>
+<li><span class='TOCOutline'>4.4</span> <a href='#PHISystemsThatBlockVRExecution-RemovalofVoiceOverManager'>Removal of Voice Over Manager</a></li>
+</ul>
+</li>
+</ul>
+</div><h2 id="PHISystemsThatBlockVRExecution-Introduction">Introduction</h2><p>While converting PHI to VR you will experience many issues due to the fact that it was not originally designed for VR. These issues will often stop execution or mess up execution entirely depending on how you handle the VR conversion.</p><h2 id="PHISystemsThatBlockVRExecution-HowtoDiagnose">How to Diagnose</h2><p>The easiest way to diagnose the issue is check the debug console. if you see a null object chances are its a hard coded reference in the code or a serialized variable. if there is no error what so ever but the sim doesn’t complete or start an action as expected it is most likely a reference in a Unity Event or Wait For line of code waiting for something that no longer exists. Overall, just follow code execution and you will eventually see a line of code where it has been stopped because of a reference no longer existing.</p><h2 id="PHISystemsThatBlockVRExecution-HowtoDealWith">How to Deal With</h2><h3 id="PHISystemsThatBlockVRExecution-RemovalofPointandClickNavigation">Removal of Point and Click Navigation</h3><p>The biggest issue and one to most likely cause issues is the removal of point and click navigation. This will cause issues all over the sim because there are both hard coded reference and contains a bunch of other objects under it. Depending on how you go about removing it, either disabling the script or the entire object, you will get different levels of issues but you are guaranteed to have issues. the easiest way to deal with it is to just remove any reference or links to Point and Click Navigation by circumventing it with a bool check if statement. </p><p>Movement points will also have issues when Point and Click Navigation gets removed. The easiest way to fix this is to put a OnTriggerEnter function on your VR PlayerController and have it call TargetReached with the Movement point it has triggered. This should have it function the same as if you had clicked on the point. Going forward this method should be the preferred way of navigating as it would help with decoupling from Point and Click navigation.</p><h3 id="PHISystemsThatBlockVRExecution-RemovalofPlayerController">Removal of Player Controller</h3><p>Player controller has a lot of references in Unity events. The way we handled it was we made a second player controller script for VR and had to relink everything to this new one. If possible being able to use the same player controller would be better. </p><p>If you make a second version of player controller and making the sim VR and flat screen compatible you will need some way to either duplicate the events that reference player controller with one version referencing the VR variant and the other referencing the non-VR variant. This is the reason reusing the same controller that is under the Point and Click object would be preferable.</p><h3 id="PHISystemsThatBlockVRExecution-RemovalofCameraController">Removal of Camera Controller</h3><p>Camera controller is the hardest one to diagnose because it mainly causes issue with Wait For calls. Lines of code throughout the sim will call a Wait For but main camera is different because we are using the one on the XR Rig. The easiest way to deal with this issue is find any reference to the camera controller look at and avoid it using an if statement.</p><h3 id="PHISystemsThatBlockVRExecution-RemovalofVoiceOverManager">Removal of Voice Over Manager</h3><p>This issue is relatively small and its because it is an object under Point and Click navigation object, so when the Parent object got disabled this one is also disabled. Easiest way to deal with this is just duplicate the object for the XR Rig and create duplicate events or references that reference this version instead of the original one when the sim is played in VR.</p>
+                    </div>
+
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Jun 11, 2025 14:16</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

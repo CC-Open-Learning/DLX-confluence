@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VARLab : BubbleRandomizer</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="VARLab_44990773.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Learning-Experience_972881951.html">Learning Experience</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="General-Release-DLX_729973721.html">General Release DLX</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="LSM6.01-Precision-Machining_487292929.html">LSM6.01 Precision Machining</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Shop-Safety-Orientation_581402646.html">Shop Safety Orientation</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Fit-For-Duty-Mini-game_581238810.html">Fit For Duty Mini-game</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            VARLab : BubbleRandomizer
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                            
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> Leo Bunting</span>, last modified by <span class='editor'> Carolina Naoum Junqueira</span> on Dec 15, 2022
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <p>The BubbleRandomizer script manages the behaviour of the bubbles in the game’s bubble pool. It handles the randomization of the bubble pool, how and when the bubbles are removed or pushed to the bottom of the list, and how the bubbles appear on the screen.</p><h2 id="BubbleRandomizer-SettinguptheBubbleRandomizerinUnity">Setting up the BubbleRandomizer in Unity</h2><p>The BubbleRandomizer is used in conjunction with the Drag And Drop plugin. The plugin must be set up before the BubbleRandomizer is implemented.</p><p>Here is the hierarchy of the first canvas that we set up while implementing the Drag And Drop plugin. Not all of these may be needed in your game, but the important game objects here are the <strong>two Drag and Drop panels</strong> (“DO’S” and “DON’TS” in our case), the <strong>Bubbles</strong> object, and its children, <strong>Left</strong>, <strong>Right</strong>, and <strong>Bubble Pool</strong>.</p><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/581402657/581664813.png" data-image-src="attachments/581402657/581664813.png" data-height="163" data-width="170" data-unresolved-comment-count="0" data-linked-resource-id="581664813" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20221215-183942.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="581402657" data-linked-resource-container-version="3" data-media-id="e632ef9b-f823-4123-8ad9-fcb107763070" data-media-type="file"></span><h3 id="BubbleRandomizer-DragandDroppanels">Drag and Drop panels</h3><p>The BubbleRandomizer uses two panels. Though they are “DO’S” and “DON’TS” in the Fit For Duty mini-game, they can be any two answers that must apply to all bubbles in the bubble pool (true and false, for example.)</p><p>These panels are set up just like any other panel with the Drag and Drop plugin, using the <strong>Panel Settings</strong> script. They <em>must </em>be given a unique ID. Their <strong>Object Position</strong> and <strong>Lock Object</strong> settings should <em>both </em>be set to <strong>Use Object Settings</strong>. Their <strong>Replacement &amp; Multi Object</strong> settings should be set to <strong>Allowed</strong>.</p><h3 id="BubbleRandomizer-Bubbles">Bubbles</h3><p>This game object is where we will add our BubbleRandomizer script. The BubbleRandomizer script has 7 serialized variables:</p><ol start="1"><li><p><strong>Bubble Pool</strong>: The <em>Bubble Pool</em> game object.</p></li><li><p><strong>Left Spot</strong>: The <em>Left </em>game object, where bubbles will spawn on the left.</p></li><li><p><strong>Right Spot</strong>: The <em>Right </em>game object, where bubbles will spawn on the right.</p></li><li><p><strong>Left Thought</strong>: The sprite image used for the left thought bubble.</p></li><li><p><strong>Right Thought</strong>: The sprite image used for the right thought bubble.</p></li><li><p><strong>Left Speech</strong>: The sprite image used for the left speech bubble.</p></li><li><p><strong>Right Speech</strong>: The sprite image used for the right speech bubble.</p></li></ol><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/581402657/580550718.png" data-image-src="attachments/581402657/580550718.png" data-height="197" data-width="463" data-unresolved-comment-count="0" data-linked-resource-id="580550718" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20221215-191550.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="581402657" data-linked-resource-container-version="3" data-media-id="013a8d8e-5d88-49b0-8700-2b454467a7c7" data-media-type="file"></span><h3 id="BubbleRandomizer-LeftandRightgameobjects">Left and Right game objects</h3><p>These are simply “placeholder” spots, and their transforms can be in any shape you prefer. They and their associated sprite images don’t necessarily need to be limited to “left” and “right,” but can be any two spots where you’d like your bubbles to spawn. They only have one component, a <strong>Rect Transform</strong>.</p><h3 id="BubbleRandomizer-BubblePool">Bubble Pool</h3><p>The bubble pool should hold all of the bubble answers you plan on using in your game as children. You can use the <strong>Bubble </strong>prefab to create these bubble answers. Aside from that, the bubble pool doesn’t need anything else set up. However, it should be <strong>deactivated </strong>on start.</p><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/581402657/581632314.png" data-image-src="attachments/581402657/581632314.png" data-height="210" data-width="203" data-unresolved-comment-count="0" data-linked-resource-id="581632314" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20221215-190634.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="581402657" data-linked-resource-container-version="3" data-media-id="c4a76c75-a5ed-4da7-a69e-00d8148cba9c" data-media-type="file"></span><p>The BubbleRandomizer is now set up and ready to use in your Unity project.</p>
+                    </div>
+
+                                        <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="attachments" class="pageSectionTitle">Attachments:</h2>
+                        </div>
+
+                        <div class="greybox" align="left">
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/581402657/581664813.png">image-20221215-183942.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/581402657/581632314.png">image-20221215-190634.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/581402657/580550718.png">image-20221215-191550.png</a> (image/png)
+                                <br/>
+                                                    </div>
+                    </div>
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Jun 11, 2025 14:08</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

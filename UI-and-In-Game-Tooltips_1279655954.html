@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VARLab : UI and In Game Tooltips</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="VARLab_44990773.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Learning-Experience_972881951.html">Learning Experience</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="General-Release-DLX_729973721.html">General Release DLX</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="LSM9.01---Public-Health-Inspection_805306369.html">LSM9.01 - Public Health Inspection</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Development-Documentation_1066991653.html">Development Documentation</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            VARLab : UI and In Game Tooltips
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                            
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> User 39441</span> on Aug 14, 2024
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <style type='text/css'>/*<![CDATA[*/
+div.rbtoc1749651334150 {padding: 0px;}
+div.rbtoc1749651334150 ul {list-style: none;margin-left: 0px;padding-left: ;}
+div.rbtoc1749651334150 li {margin-left: 0px;padding-left: 0px;}
+
+/*]]>*/</style><div class='toc-macro rbtoc1749651334150'>
+<ul class='toc-indentation'>
+<li><a href='#UIandInGameTooltips-BeforeYouBegin'>Before You Begin</a></li>
+<li><a href='#UIandInGameTooltips-AddingaUITooltip'>Adding a UI Tooltip</a>
+<ul class='toc-indentation'>
+<li><a href='#UIandInGameTooltips-Step1:UpdatetheUIDocumentScript'>Step 1: Update the UI Document Script</a></li>
+<li><a href='#UIandInGameTooltips-Step2:CreatetheLabelinUIBuilder'>Step 2: Create the Label in UI Builder</a></li>
+<li><a href='#UIandInGameTooltips-Step3:SetuptheLabelInUIBuilder'>Step 3: Setup the Label In UI Builder</a></li>
+</ul>
+</li>
+<li><a href='#UIandInGameTooltips-AddinganObjectTooltip'>Adding an Object Tooltip</a>
+<ul class='toc-indentation'>
+<li><a href='#UIandInGameTooltips-Step1:Findtheobjectthatisgoingtodisplaythetooltip'>Step 1: Find the object that is going to display the tooltip</a></li>
+<li><a href='#UIandInGameTooltips-Step2:FindtheObjectTooltipsscript'>Step 2: Find the Object Tooltips script</a></li>
+<li><a href='#UIandInGameTooltips-Step3:AddtheObjectTooltips.csscripttotheobject'>Step 3: Add the ObjectTooltips.cs script to the object</a></li>
+<li><a href='#UIandInGameTooltips-Step4:Setupthetooltipsettings'>Step 4: Setup the tooltip settings</a></li>
+</ul>
+</li>
+</ul>
+</div><h2 id="UIandInGameTooltips-BeforeYouBegin"><strong>Before You Begin</strong></h2><p>This page covers how to implement the UI based and in-game tooltips in PHI. This workflow assumes that you have an understanding of UI Builder and the PHI scripts,  and is up to date as of 08/14/24. Steps follow the default workflow and include examples that could be slightly different depending on the object.</p><div class="confluence-information-macro confluence-information-macro-information"><span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"></span><div class="confluence-information-macro-body"><p>This process assumes you have setup the button in the UI already</p></div></div><h2 id="UIandInGameTooltips-AddingaUITooltip"><strong>Adding a UI Tooltip</strong></h2><h4 id="UIandInGameTooltips-Step1:UpdatetheUIDocumentScript"><strong>Step 1: Update the <span class="inline-comment-marker" data-ref="e98ea92d-7a04-4a62-b67b-55f35c13586b">UI Document Script</span></strong></h4><p>First needed is the declaration of the label for the tooltip. Here it is called _exampleTip; </p><p>If you haven’t already, you can also declare the Button here.</p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20240814-173518.png" width="253" loading="lazy" src="attachments/1279655954/1284702269.png?width=253" data-image-src="attachments/1279655954/1284702269.png" data-height="317" data-width="285" data-unresolved-comment-count="0" data-linked-resource-id="1284702269" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20240814-173518.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1279655954" data-linked-resource-container-version="1" data-media-id="803854dd-9dea-4b3a-a683-359282cec817" data-media-type="file"></span><p /><p>Next the SetupTooltips() function needs to be updated with two callbacks. The callback with the Flex DisplayStyle is for when the tooltip is visible and with the DisplayStyle None, it is not visible. Here it is using the  already existing button _exampleBtn, but you should have created your own.</p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20240814-175005.png" width="760" loading="lazy" src="attachments/1279655954/1285029891.png?width=760" data-image-src="attachments/1279655954/1285029891.png" data-height="246" data-width="966" data-unresolved-comment-count="0" data-linked-resource-id="1285029891" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20240814-175005.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1279655954" data-linked-resource-container-version="1" data-media-id="d4130400-e52f-4d67-9990-f57e37701ec6" data-media-type="file"></span><p /><h4 id="UIandInGameTooltips-Step2:CreatetheLabelinUIBuilder"><strong>Step 2: Create the Label in UI Builder</strong></h4><p>Open the<span class="inline-comment-marker" data-ref="e6822679-f476-4c22-afda-3d0a0aebfca5"> UI where the tooltip will be added.</span></p><p>Now while in the UI Builder, it will be showing the existing UI buttons and tooltips in PHI.</p><p>Now find the label under controls and drag it into the hierarchy below the button that will be using the tooltip.</p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20240814-150554.png" width="429" loading="lazy" src="attachments/1279655954/1284210753.png?width=429" data-image-src="attachments/1279655954/1284210753.png" data-height="242" data-width="429" data-unresolved-comment-count="0" data-linked-resource-id="1284210753" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20240814-150554.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1279655954" data-linked-resource-container-version="1" data-media-id="2fdbd590-6fc5-4d3c-86bf-5f9609f6682f" data-media-type="file"></span><h4 id="UIandInGameTooltips-Step3:SetuptheLabelInUIBuilder"><strong>Step 3: Setup the Label In UI Builder</strong></h4><p>First, under attributes only the text option needs to be changed to what the tooltip will say.</p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20240814-151442.png" width="354" loading="lazy" src="attachments/1279655954/1284636718.png?width=354" data-image-src="attachments/1279655954/1284636718.png" data-height="429" data-width="354" data-unresolved-comment-count="0" data-linked-resource-id="1284636718" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20240814-151442.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1279655954" data-linked-resource-container-version="1" data-media-id="9d42b9c1-dac7-42da-8fc2-acee2cf93f31" data-media-type="file"></span><p>Second, under Display, the display option should be turned off as the tooltip should not be visible to start.</p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20240814-151713.png" width="362" loading="lazy" src="attachments/1279655954/1283784810.png?width=362" data-image-src="attachments/1279655954/1283784810.png" data-height="173" data-width="362" data-unresolved-comment-count="0" data-linked-resource-id="1283784810" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20240814-151713.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1279655954" data-linked-resource-container-version="1" data-media-id="f8648947-7131-4ba6-9a50-27ef46e11e2a" data-media-type="file"></span><p>Next, under position, the position mode should be set to Absolute. For the anchors, these will differ based on where the tooltip should be placed. Each of the side values determine how far the label will be displayed from the side being set.</p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20240814-154702.png" width="360" loading="lazy" src="attachments/1279655954/1284767771.png?width=360" data-image-src="attachments/1279655954/1284767771.png" data-height="350" data-width="360" data-unresolved-comment-count="0" data-linked-resource-id="1284767771" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20240814-154702.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1279655954" data-linked-resource-container-version="1" data-media-id="093807bf-a7a8-4668-879c-c92f405ab3a8" data-media-type="file"></span><p>Next, under Spacing, the padding should be changed to be 10px on the left and right sides.</p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20240814-154830.png" width="363" loading="lazy" src="attachments/1279655954/1284145231.png?width=363" data-image-src="attachments/1279655954/1284145231.png" data-height="329" data-width="363" data-unresolved-comment-count="0" data-linked-resource-id="1284145231" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20240814-154830.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1279655954" data-linked-resource-container-version="1" data-media-id="7415618a-213b-407d-8edd-feb00af3d17a" data-media-type="file"></span><p>Under the Text formatting, the Color RGB should be set to 255, 255, 255, 255 to be a white color.</p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20240814-155103.png" width="507" loading="lazy" src="attachments/1279655954/1284276260.png?width=507" data-image-src="attachments/1279655954/1284276260.png" data-height="463" data-width="635" data-unresolved-comment-count="0" data-linked-resource-id="1284276260" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20240814-155103.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1279655954" data-linked-resource-container-version="1" data-media-id="4bd7a89d-aebd-40c0-babf-fed9be781d26" data-media-type="file"></span><p>The background color should be set to 30, 72, 119, 255 to be a nice blue like the other tooltips.</p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20240814-155321.png" width="266" loading="lazy" src="attachments/1279655954/1284210764.png?width=266" data-image-src="attachments/1279655954/1284210764.png" data-height="214" data-width="266" data-unresolved-comment-count="0" data-linked-resource-id="1284210764" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20240814-155321.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1279655954" data-linked-resource-container-version="1" data-media-id="5d3832e3-b0ad-4a41-9f0d-20344ba5cea0" data-media-type="file"></span><p>Finally, for the border, the radius should be set to 8px.</p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20240814-155445.png" width="296" loading="lazy" src="attachments/1279655954/1284046924.png?width=296" data-image-src="attachments/1279655954/1284046924.png" data-height="353" data-width="351" data-unresolved-comment-count="0" data-linked-resource-id="1284046924" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20240814-155445.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1279655954" data-linked-resource-container-version="1" data-media-id="4b89bcce-afcc-45af-8178-6344ee87a73a" data-media-type="file"></span><p /><h2 id="UIandInGameTooltips-AddinganObjectTooltip"><strong>Adding an Object Tooltip</strong></h2><h4 id="UIandInGameTooltips-Step1:Findtheobjectthatisgoingtodisplaythetooltip"><strong>Step 1: Find the object that is going to display the tooltip</strong></h4><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20240813-153735.png" width="450" loading="lazy" src="attachments/1279655954/1279655980.png?width=450" data-image-src="attachments/1279655954/1279655980.png" data-height="501" data-width="758" data-unresolved-comment-count="0" data-linked-resource-id="1279655980" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20240813-153735.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1279655954" data-linked-resource-container-version="1" data-media-id="00c0c739-f8b1-4b5c-a82f-64e31571f9b0" data-media-type="file"></span><h4 id="UIandInGameTooltips-Step2:FindtheObjectTooltipsscript"><strong> Step 2: Find the Object Tooltips script</strong></h4><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20240813-154215.png" width="219" loading="lazy" src="attachments/1279655954/1279754283.png?width=219" data-image-src="attachments/1279655954/1279754283.png" data-height="190" data-width="191" data-unresolved-comment-count="0" data-linked-resource-id="1279754283" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20240813-154215.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1279655954" data-linked-resource-container-version="1" data-media-id="08156482-36ab-43a5-a6ee-306ee65cd2e6" data-media-type="file"></span><h4 id="UIandInGameTooltips-Step3:AddtheObjectTooltips.csscripttotheobject"><strong>Step 3: Add the ObjectTooltips.cs script to the object</strong></h4><div class="confluence-information-macro confluence-information-macro-information"><span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"></span><div class="confluence-information-macro-body"><p>The object must contain a collider to use the Object Tooltip script</p></div></div><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20240813-171754.png" width="542" loading="lazy" src="attachments/1279655954/1281261571.png?width=542" data-image-src="attachments/1279655954/1281261571.png" data-height="419" data-width="716" data-unresolved-comment-count="0" data-linked-resource-id="1281261571" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20240813-171754.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1279655954" data-linked-resource-container-version="1" data-media-id="73f38126-a6d3-4c96-807c-a5a334a754ce" data-media-type="file"></span><h4 id="UIandInGameTooltips-Step4:Setupthetooltipsettings"><strong>Step 4: Setup the tooltip settings</strong></h4><p>The Object Tooltip script includes two different settings to consider when setting it up.</p><p>The first setting is the Tooltip text that will be displayed on the tooltip for the player to read.</p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20240813-181821.png" width="710" loading="lazy" src="attachments/1279655954/1280638990.png?width=710" data-image-src="attachments/1279655954/1280638990.png" data-height="114" data-width="710" data-unresolved-comment-count="0" data-linked-resource-id="1280638990" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20240813-181821.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1279655954" data-linked-resource-container-version="1" data-media-id="61150eed-203a-4377-b561-8c3a1ab1ddc7" data-media-type="file"></span><p>The second setting relates to the POI from which the tooltip can be viewed. This setting is more important for objects like the movement tiles that can be seen from multiple POIs.</p><p>Click the drop down arrow to display the array or POIs, then select the plus symbol on the bottom right of the list to add a POI.</p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20240813-182851.png" width="710" loading="lazy" src="attachments/1279655954/1281327120.png?width=710" data-image-src="attachments/1279655954/1281327120.png" data-height="178" data-width="710" data-unresolved-comment-count="0" data-linked-resource-id="1281327120" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20240813-182851.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1279655954" data-linked-resource-container-version="1" data-media-id="4c9da0a6-9dc2-4aa4-ba64-343c827acd11" data-media-type="file"></span><p>To add the POI find it in the hierarchy on the left side and drag it onto the element that was just created.</p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20240813-183234.png" width="710" loading="lazy" src="attachments/1279655954/1280606221.png?width=710" data-image-src="attachments/1279655954/1280606221.png" data-height="179" data-width="710" data-unresolved-comment-count="0" data-linked-resource-id="1280606221" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20240813-183234.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1279655954" data-linked-resource-container-version="1" data-media-id="fe46eb6b-fe4b-4be3-97a9-e36e24ee4773" data-media-type="file"></span><div class="confluence-information-macro confluence-information-macro-information"><span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"></span><div class="confluence-information-macro-body"><p>Additionally, to add multiple POIs, the number of POIs can be added on the right side of the list.</p></div></div><p />
+                    </div>
+
+                                        <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="attachments" class="pageSectionTitle">Attachments:</h2>
+                        </div>
+
+                        <div class="greybox" align="left">
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1279655954/1280180249.png">image-20240813-150957.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1279655954/1279655980.png">image-20240813-153735.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1279655954/1279754283.png">image-20240813-154215.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1279655954/1279164493.png">image-20240813-154237.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1279655954/1280180261.png">image-20240813-154248.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1279655954/1279426628.png">image-20240813-155412.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1279655954/1281261571.png">image-20240813-171754.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1279655954/1280638990.png">image-20240813-181821.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1279655954/1281327120.png">image-20240813-182851.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1279655954/1280606221.png">image-20240813-183234.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1279655954/1284374535.png">image-20240814-140512.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1279655954/1284079645.png">image-20240814-141352.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1279655954/1284341810.png">image-20240814-145042.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1279655954/1284145198.png">image-20240814-145537.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1279655954/1284210753.png">image-20240814-150554.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1279655954/1284636718.png">image-20240814-151442.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1279655954/1283784810.png">image-20240814-151713.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1279655954/1284767771.png">image-20240814-154702.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1279655954/1284145231.png">image-20240814-154830.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1279655954/1284276260.png">image-20240814-155103.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1279655954/1283850286.png">image-20240814-155250.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1279655954/1284210764.png">image-20240814-155321.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1279655954/1284046924.png">image-20240814-155445.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1279655954/1284702269.png">image-20240814-173518.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1279655954/1284046941.png">image-20240814-173521.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1279655954/1285029891.png">image-20240814-175005.png</a> (image/png)
+                                <br/>
+                                                    </div>
+                    </div>
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Jun 11, 2025 14:15</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

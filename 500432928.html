@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VARLab : Game Design Document (July 2022)</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="VARLab_44990773.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Learning-Experience_972881951.html">Learning Experience</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="General-Release-DLX_729973721.html">General Release DLX</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Campus-RPG_247660655.html">Campus RPG</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Development-Documents_432373866.html">Development Documents</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            VARLab : Game Design Document (July 2022)
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                            
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> Colm Ambler (Unlicensed)</span>, last modified by <span class='editor'> Germán Gaussmann</span> on Jul 18, 2022
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <h1 id="GameDesignDocument(July2022)-ConestogaCampusRPG"><strong>Conestoga Campus RPG</strong></h1><p>All work Copyright (c)2022 by VARLab</p><p><br/>Written by <a class="confluence-userlink user-mention" data-account-id="60be86eea01e11006ab4decd" href="https://varlab-dev.atlassian.net/wiki/people/60be86eea01e11006ab4decd?ref=confluence" target="_blank" data-base-url="https://varlab-dev.atlassian.net/wiki">Colm Ambler (Unlicensed)</a> on <time datetime="2022-07-13" class="date-past">13 Jul 2022</time> </p><p /><style type='text/css'>/*<![CDATA[*/
+div.rbtoc1749650831945 {padding: 0px;}
+div.rbtoc1749650831945 ul {list-style: disc;margin-left: 0px;}
+div.rbtoc1749650831945 li {margin-left: 0px;padding-left: 0px;}
+
+/*]]>*/</style><div class='toc-macro rbtoc1749650831945'>
+<ul class='toc-indentation'>
+<li><span class='TOCOutline'>1</span> <a href='#GameDesignDocument(July2022)-ConestogaCampusRPG'>Conestoga Campus RPG</a>
+<ul class='toc-indentation'>
+<li><span class='TOCOutline'>1.1</span> <a href='#GameDesignDocument(July2022)-GameOverview'>Game Overview</a>
+<ul class='toc-indentation'>
+<li><span class='TOCOutline'>1.1.1</span> <a href='#GameDesignDocument(July2022)-Whatisthegame?'>What is the game?</a></li>
+<li><span class='TOCOutline'>1.1.2</span> <a href='#GameDesignDocument(July2022)-OverallObjectives'>Overall Objectives</a></li>
+<li><span class='TOCOutline'>1.1.3</span> <a href='#GameDesignDocument(July2022)-Tone'>Tone</a></li>
+</ul>
+</li>
+<li><span class='TOCOutline'>1.2</span> <a href='#GameDesignDocument(July2022)-Features'>Features</a>
+<ul class='toc-indentation'>
+<li><span class='TOCOutline'>1.2.1</span> <a href='#GameDesignDocument(July2022)-GeneralFeatures'>General Features</a></li>
+</ul>
+</li>
+<li><span class='TOCOutline'>1.3</span> <a href='#GameDesignDocument(July2022)-Gameplay'>Gameplay</a>
+<ul class='toc-indentation'>
+<li><span class='TOCOutline'>1.3.1</span> <a href='#GameDesignDocument(July2022)-WayfindingQuest'>Wayfinding Quest</a></li>
+<li><span class='TOCOutline'>1.3.2</span> <a href='#GameDesignDocument(July2022)-WinterQuest'>Winter Quest</a></li>
+<li><span class='TOCOutline'>1.3.3</span> <a href='#GameDesignDocument(July2022)-SideQuests'>Side Quests</a></li>
+<li><span class='TOCOutline'>1.3.4</span> <a href='#GameDesignDocument(July2022)-Playerabilities'>Player abilities</a></li>
+<li><span class='TOCOutline'>1.3.5</span> <a href='#GameDesignDocument(July2022)-ItemManagement'>Item Management</a></li>
+</ul>
+</li>
+<li><span class='TOCOutline'>1.4</span> <a href='#GameDesignDocument(July2022)-GameWorld'>Game World</a>
+<ul class='toc-indentation'>
+<li><span class='TOCOutline'>1.4.1</span> <a href='#GameDesignDocument(July2022)-Scale'>Scale</a></li>
+<li><span class='TOCOutline'>1.4.2</span> <a href='#GameDesignDocument(July2022)-Details'>Details</a></li>
+<li><span class='TOCOutline'>1.4.3</span> <a href='#GameDesignDocument(July2022)-KeyLocations'>Key Locations</a></li>
+<li><span class='TOCOutline'>1.4.4</span> <a href='#GameDesignDocument(July2022)-Traveling'>Traveling</a></li>
+<li><span class='TOCOutline'>1.4.5</span> <a href='#GameDesignDocument(July2022)-Layout'>Layout</a></li>
+<li><span class='TOCOutline'>1.4.6</span> <a href='#GameDesignDocument(July2022)-Perspective'>Perspective</a></li>
+<li><span class='TOCOutline'>1.4.7</span> <a href='#GameDesignDocument(July2022)-Lighting'>Lighting</a></li>
+</ul>
+</li>
+<li><span class='TOCOutline'>1.5</span> <a href='#GameDesignDocument(July2022)-Tools'>Tools</a>
+<ul class='toc-indentation'>
+<li><span class='TOCOutline'>1.5.1</span> <a href='#GameDesignDocument(July2022)-RPGMaker'>RPG Maker</a></li>
+<li><span class='TOCOutline'>1.5.2</span> <a href='#GameDesignDocument(July2022)-Aseprite'>Aseprite</a></li>
+<li><span class='TOCOutline'>1.5.3</span> <a href='#GameDesignDocument(July2022)-Sharepoint'>Sharepoint</a></li>
+<li><span class='TOCOutline'>1.5.4</span> <a href='#GameDesignDocument(July2022)-Celtx'>Celtx</a></li>
+</ul>
+</li>
+<li><span class='TOCOutline'>1.6</span> <a href='#GameDesignDocument(July2022)-OtherInfo'>Other Info</a>
+<ul class='toc-indentation'>
+<li><span class='TOCOutline'>1.6.1</span> <a href='#GameDesignDocument(July2022)-UserInterface'>User Interface</a></li>
+<li><span class='TOCOutline'>1.6.2</span> <a href='#GameDesignDocument(July2022)-MusicandSFX'>Music and SFX</a></li>
+<li><span class='TOCOutline'>1.6.3</span> <a href='#GameDesignDocument(July2022)-Playtime'>Playtime</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div><h2 id="GameDesignDocument(July2022)-GameOverview">Game Overview</h2><h3 id="GameDesignDocument(July2022)-Whatisthegame?"><br/>What is the game?</h3><p>The Conestoga Campus RPG is a supplemental piece of edutainment built to complement Conestoga's existing orientation methods. The game allows the player to explore a recreation of Conestoga Campuses, currently only Doon. The player experiences the first day of a new student through the guise of Conestoga's mascot, The Condor. They complete objectives, or quests, to progress the narrative and learn of Conestoga's facilities along the way.</p><p /><h3 id="GameDesignDocument(July2022)-OverallObjectives">Overall Objectives</h3><p>There are three main objectives to the Conestoga Campus RPG. The first is to allow the player an interactive method of learning the layout of the campus. Giving the student a connection to these areas will help them remember where they are. The second is to give the prospective student an understanding of what they need to be successful at Conestoga. The third is to teach international students the dangers of a Canadian winter and ways to prepare for it, as well as Canadian and the College’s culture.</p><p /><h3 id="GameDesignDocument(July2022)-Tone">Tone</h3><p>The game's writing, characters, encounters, and general tone will be positive. The dialogue will be comedic and lighthearted as the game is meant to be enjoyed by anyone and everyone.</p><p /><h2 id="GameDesignDocument(July2022)-Features">Features</h2><h3 id="GameDesignDocument(July2022)-GeneralFeatures"><br/>General Features</h3><ul><li><p>Recreation of Doon Campus (possibly others) within RPG Maker MZ<br/></p></li><li><p>2D sprite work using tile sheets and occasionally full drawings.<br/></p></li><li><p>2D drawings for boss encounters.<br/></p></li><li><p>An explorable interior and (limited) exterior<br/></p></li><li><p>A main storyline that features the &quot;Wayfinding quest&quot; and &quot;Winter quest&quot;<br/></p></li><li><p>Side quests that continue to build the player's knowledge of the campus as well as build out the world.<br/></p></li><li><p>A strong sense of humor<br/></p></li><li><p>RPG battles (labeled as Encounters) that are designed to allow creativity and be easily won<br/></p></li><li><p>Lessons about Canadian Winter taught through gameplay</p></li></ul><p /><h2 id="GameDesignDocument(July2022)-Gameplay">Gameplay</h2><h3 id="GameDesignDocument(July2022)-WayfindingQuest"><br/>Wayfinding Quest</h3><p>Conestoga Campus RPG's leading design principle is finding your way through campus and transferring that knowledge to real life. The goal of the main quest is to travel to a handful of important locations on campus.</p><p /><h3 id="GameDesignDocument(July2022)-WinterQuest">Winter Quest</h3><p>The winter quest tasks players with finding winter gear hidden throughout the game's classrooms, and completing &quot;encounters&quot; to understand the dangers and precautions of the Canadian Winter. This also incorporates wayfinding as it aims to teach new students how to read classroom numbers.</p><p /><h3 id="GameDesignDocument(July2022)-SideQuests">Side Quests</h3><p>When the player isn't advancing the game's narrative, they'll most likely be exploring the campus, leading them to the game's many side quests. These are minor distractions that offer different experiences from what the main quests offer. Many of them involve wayfinding or exploration, they offer a different context that teaches the player about a new facility at Conestoga. This is also our current method of incorporating sponsored content.</p><p /><h3 id="GameDesignDocument(July2022)-Playerabilities">Player abilities</h3><p>As is JRPG standard, each character gets a range of abilities tethered to their personality. A new ability is rewarded each time they level up (upwards to level 6) and they are only used during the winter quest encounters. These abilities perform buffs and debuffs, heal other party members, or deal <span class="inline-comment-marker" data-ref="e84cf604-db2b-4bdb-922a-c41cad9d8879">EN </span>damage to the winter quest adversaries. The adversaries also have unique moves.</p><p /><h3 id="GameDesignDocument(July2022)-ItemManagement">Item Management</h3><p>While not accurate to say the player will be managing their items, they do have an inventory that, as of right now, only utilizes key items. These are used for quests or, in the case of the winter quest, to guide the player from room to room.</p><p /><p /><h2 id="GameDesignDocument(July2022)-GameWorld">Game World</h2><h3 id="GameDesignDocument(July2022)-Scale"><br/>Scale</h3><p>The game is not 1:1 with the size of Conestoga's campuses. The hallways are shorter, getting the player to their destination faster than normal, and the key locations are larger in comparison, to emphasize their importance.  Objects within the game are not accurately sized, based on gameplay importance.</p><p /><h3 id="GameDesignDocument(July2022)-Details">Details</h3><p>Each map is filled with NPCs to interact with and objects accurately placed to fill the area.</p><p /><h3 id="GameDesignDocument(July2022)-KeyLocations">Key Locations</h3><p>These are mostly explained in the story and quest-related pages. The general idea is that every major location in Conestoga has a place in the game, though some might not be relevant to the game's main narrative. Places like Tim Hortons and The Pit are key identifiable locations within the Doon Campus even though they play no major role.</p><p /><h3 id="GameDesignDocument(July2022)-Traveling">Traveling</h3><p>As of right now, there is no concrete plan to build other campuses, though we already know our method of traversal. The player will be able to use the GRT system to instantly travel to the different Conestoga campuses. We'll be using a plugin that displays a map and gives the player a list of locations to choose from. Once the player has finished the game's storyline in their chosen campus, they gain the ability to use the busses to explore other campuses.</p><p /><h3 id="GameDesignDocument(July2022)-Layout">Layout</h3><p>Naturally, the basic design follows the real-life layout of Conestoga's campuses. Each wing is represented with its own map to make the large campus feel more manageable.</p><p /><h3 id="GameDesignDocument(July2022)-Perspective">Perspective</h3><p>As the game is developed in RPG Maker, the game has an overhead perspective, as many traditional games in the genre have.</p><p /><h3 id="GameDesignDocument(July2022)-Lighting">Lighting</h3><p>The lighting is done through the sprite work. There is a method to have each map be a single image and draw lighting over top of it, but that is still hand-drawn and will take a lot of time and effort.</p><p /><p /><h2 id="GameDesignDocument(July2022)-Tools">Tools</h2><h3 id="GameDesignDocument(July2022)-RPGMaker"><br/>RPG Maker</h3><p><span class="inline-comment-marker" data-ref="7f993227-0b75-4cca-ac4d-6d0083104293">The game is developed in RPG Maker MZ.</span></p><p /><h3 id="GameDesignDocument(July2022)-Aseprite">Aseprite</h3><p>All of the game's pixel-based assets are built and/or animated in Aseprite.</p><p /><h3 id="GameDesignDocument(July2022)-Sharepoint">Sharepoint</h3><p>The main method of sharing and backing up files is through Microsoft Sharepoint.</p><p /><h3 id="GameDesignDocument(July2022)-Celtx">Celtx</h3><p>The game's script is written through Celtx. A web-based platform designed with options for video game scripts.</p><p /><p /><h2 id="GameDesignDocument(July2022)-OtherInfo">Other Info</h2><h3 id="GameDesignDocument(July2022)-UserInterface">User Interface</h3><p>Mechanically, the game uses RPG Maker's basic UI (with some exceptions due to plug-ins). It's simple and based heavily on 90s JRPGs. Some menus have been disabled as they would only complicate things and could potentially confuse new players. Some art elements have been changed to fit the theme of the game more so than RPG Maker's more bland UI aesthetic.</p><p /><h3 id="GameDesignDocument(July2022)-MusicandSFX">Music and SFX</h3><p>All the game's music and SFX are from RPG Maker's libraries as well as some purchased DLC. More information can be found on a separate page.</p><p /><h3 id="GameDesignDocument(July2022)-Playtime">Playtime</h3><p>If the player goes through the main story, they should be looking at about 30-50 minutes of game time. It's all dependent on how familiar they are with the genre and video games in general. If the player indulges in the experience, then they could be looking at 60-90 minutes of game time. This length is ideal as we don't want to overload the player with content as we want them to finish the game.</p>
+                    </div>
+
+                                        <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="attachments" class="pageSectionTitle">Attachments:</h2>
+                        </div>
+
+                        <div class="greybox" align="left">
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/500432928/500465683.png">image-20220718-150023.png</a> (image/png)
+                                <br/>
+                                                    </div>
+                    </div>
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Jun 11, 2025 14:07</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

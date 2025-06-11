@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VARLab : Adding Pre-Inspection Videos to Inspections</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="VARLab_44990773.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Learning-Experience_972881951.html">Learning Experience</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="General-Release-DLX_729973721.html">General Release DLX</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="LSM6.02---Heavy-Equipment---Bulldozer_505151489.html">LSM6.02 - Heavy Equipment - Bulldozer</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Bulldozer---Order-of-Inspections_515997697.html">Bulldozer - Order of Inspections</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Ticket-Standard-for-HE-Inspections_577732609.html">Ticket Standard for HE Inspections</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            VARLab : Adding Pre-Inspection Videos to Inspections
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                            
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> Patrick Cho (Unlicensed)</span>, last modified on Dec 12, 2022
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <h2 id="AddingPre-InspectionVideostoInspections-Introduction">Introduction</h2><p>This brief Confluence page will explain how you can add a video before an inspection.  This could be useful in a variety of situations, such as showing a brief demonstration on how to do something (i.e. Oil Dipstick Check) before the inspection.</p><h2 id="AddingPre-InspectionVideostoInspections-Preparation">Preparation</h2><p>First, you will need to get your video clip downloaded.  If you don’t have a video clip, and only have a gif available, just use a free online tool such as <a class="external-link" data-card-appearance="inline" href="https://ezgif.com/gif-to-mp4" rel="nofollow">https://ezgif.com/gif-to-mp4</a>  to convert it.  In most cases, the video size will be larger than we want it, so you want to encode the video using <a class="external-link" data-card-appearance="inline" href="https://handbrake.fr/" rel="nofollow">https://handbrake.fr/</a>.  This will significantly reduce the size of the video, which is important not only for reducing the size of our sim, but improving loading speed as well.  Additionally, videos over 30mb are not able to be included in WebGL builds under our build configuration.  Once your video is downloaded, name it descriptively and accurately.  Next, add it to the Assets/StreamingAssets folder in the Heavy Equipment project.  This is the required location that the code backend is looking for the videos when passed a string filename.</p><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/578355201/577896453.png" data-image-src="attachments/578355201/577896453.png" data-height="24" data-width="171" data-unresolved-comment-count="0" data-linked-resource-id="577896453" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20221212-202027.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="578355201" data-linked-resource-container-version="2" data-media-id="457e72a9-52e4-40a2-9395-de2f01df4e80" data-media-type="file"></span><h2 id="AddingPre-InspectionVideostoInspections-Implementation">Implementation</h2><p>The way you can add one of these videos is quite simple, you just have to fill in two fields in the Inspection script added to our objects that can be inspected. This example below is for the Oil Dipstick, which happens to be a 2D inspection, but these fields will exist on any inspection type.  The pre inspection video title field is for the text that will show at the top of the screen.</p><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/578355201/578355210.png" data-image-src="attachments/578355201/578355210.png" data-height="259" data-width="552" data-unresolved-comment-count="0" data-linked-resource-id="578355210" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20221212-202317.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="578355201" data-linked-resource-container-version="2" data-media-id="834d28d2-9d11-4bad-bd11-40123c54fcc1" data-media-type="file"></span><div class="confluence-information-macro confluence-information-macro-information"><span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"></span><div class="confluence-information-macro-body"><p><strong>IMPORTANT: </strong>Always remember to add the file extension to the URL field.  Otherwise, it won’t be successful in finding the video.  Additionally, the term “URL” is a bit confusing, as you shouldn’t put an actual URL link in here, but rather the video name with extension. This is just what Unity’s video player refers to that field as.</p></div></div><p>As long as your video is properly placed in the appropriate location, and the URL matches correctly, the video should work without issues.</p><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/578355201/578715649.png" data-image-src="attachments/578355201/578715649.png" data-height="430" data-width="1011" data-unresolved-comment-count="0" data-linked-resource-id="578715649" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20221212-202754.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="578355201" data-linked-resource-container-version="2" data-media-id="eb7035b7-afde-41c8-81b2-d05f05f73dd6" data-media-type="file"></span><p>The “Proceed to Inspection” button will take you to the regular inspection window, and allow you to select the correct answer for the inspection question.</p><p />
+                    </div>
+
+                                        <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="attachments" class="pageSectionTitle">Attachments:</h2>
+                        </div>
+
+                        <div class="greybox" align="left">
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/578355201/577896453.png">image-20221212-202027.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/578355201/578355210.png">image-20221212-202317.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/578355201/578715649.png">image-20221212-202754.png</a> (image/png)
+                                <br/>
+                                                    </div>
+                    </div>
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Jun 11, 2025 14:09</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

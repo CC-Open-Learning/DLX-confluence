@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VARLab : Camera Movement - Notes from 22MAR2024 Meeting</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="VARLab_44990773.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Learning-Experience_972881951.html">Learning Experience</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="216629273.html">Digital Learning Experiences (DLX)</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="706347009.html">LSM8.02 - Conestoga Trades: Electrician Simulator</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="UX-Design_975405059.html">UX Design</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            VARLab : Camera Movement - Notes from 22MAR2024 Meeting
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                            
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> Stacey Dineen (Unlicensed)</span> on Mar 22, 2024
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <p>In the 15MAR2024 playable demo, the CE noted that it was difficult to see/identify all of the location options available for mounting some of the boxes, because the user does not know where to look, and some of the options are a little bit hidden due to the default camera position.</p><p>The CE also found that measurements were very hard to see/read, because they are shown only on hover, and they may not be facing the default camera position.</p><p>The team had a meeting on 22MAR2024 to discuss the camera movement, in consideration of the following requirements:</p><ul><li><p>It must be reasonably easy for the student to see all of the location options that are available for the box they have selected to install, even if they don’t know where to look</p></li><li><p>It must be reasonably easy to see and read the measurements that are relevant to the mounting location for the selected box.</p></li><li><p>Camera movement must be optimized to prevent user discomfort.  As little movement as possible, using as few clicks as possible, so that users do not feel disoriented or nauseous.</p></li><li><p>Deliberate movement is usually preferable to unexpected movement, but we want to be economical and user-friendly in the number of clicks required to achieve a task.  When camera control becomes too manual (not automatic), users become frustrated and are distracted from their learning activities.  We want learners to focus on their electrical circuit, NOT on the camera controls.</p></li></ul><p>At the meeting, a number of suggestions were shared and discussed.  This page does not seek to capture the entire discussion, but instead this info will focus on decisions that were made by the team.</p><p>Team members present:  Amila, Colm, Katrina, Stacey, Sana, Vince, Ali</p><p><strong>Decision #1: </strong>We need to be careful about the default view and zoom level, to ensure that we are providing an optimal initial camera position for each task.  We all acknowledged that different tasks are going to require different views, and it isn’t going to be possible to have one fixed view that would work for all tasks.  The default view for each task will be chosen carefully so that the learner can immediately see some areas of interest before they begin looking around.</p><p><strong>Decision #2:</strong> We need some on-screen prompt to make sure the students are aware that there are more location options available, if they pan the camera left, right, up, or down.   We will be careful to ensure that the prompt is not directive so that students will not perceive it as a requirement or a hint about the correct location. Mockup was shared like this: </p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20240322-183249.png" width="406" loading="lazy" src="attachments/1029242914/1030094880.png?width=406" data-image-src="attachments/1029242914/1030094880.png" data-height="230" data-width="406" data-unresolved-comment-count="0" data-linked-resource-id="1030094880" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20240322-183249.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1029242914" data-linked-resource-container-version="1" data-media-id="4eee4190-0774-4d1d-89e7-4e7fcb77efb4" data-media-type="file"></span><p /><p><strong>Decision #3:</strong>  We need some user-controlled navigation in the bathroom scene, so that the student can “walk” from one end of the room to the other.  We will start with two navigation targets, which will appear like targets on the floor, one at  each end of the room, approximately like this: </p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20240322-182916.png" width="477" loading="lazy" src="attachments/1029242914/1029996561.png?width=477" data-image-src="attachments/1029242914/1029996561.png" data-height="170" data-width="477" data-unresolved-comment-count="0" data-linked-resource-id="1029996561" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20240322-182916.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1029242914" data-linked-resource-container-version="1" data-media-id="c9639a2c-f8e7-44ca-a5c9-8388e85f7872" data-media-type="file"></span><p>This will allow the learner to manually “walk” to either end of the bathroom to get a different vantage point when selecting a location to mount different boxes. </p><p><strong>Decision #4:</strong> When a learner selects a location option, we will automatically show an optimal view of that location, including automatic adjustments to pan, zoom, and camera position as needed. When a learner selects a location option, we will automatically navigate to the closest camera position (navigation target) for that location option.  This will minimise the number of clicks required to preview a location option, by always navigating to the optimal camera position for each selected location.</p><p><strong>Decision #5:</strong> In the current demo build, the preview action (view the box in the selected position, with measurements shown) is achieved by hovering the mouse over a location option.  This could result in a lot of unintended camera movement because it is so easy to accidentally hover your mouse over a location option. We decided to create a distinct left-click action to Preview a location option, so that the camera movement would be deliberate. The workflow would need to work something like this:</p><ul><li><p>Left-click to ‘select’ a location option for Preview:  Camera movement happens automatically. Box is shown in semi-transparent style (indicating preview, not installed yet) in that position, with relevant measurements visible and readable.</p></li><li><p>From this Preview state, the learner can confirm that they want to install the box at this location, or they can pan the camera or manually navigate to select a new location to Preview.  If a new location is selected with left-click, the camera once again automatically moves and the preview is displayed for the new selected location.</p></li><li><p>When the learner confirms their selected location, they will see the animation of the box being mounted at the selected location. The box will stop being semi-transparent and will appear in the scene normally. All other location options will disappear.</p></li></ul><p><strong>Decision #6:</strong> The learner must always be able to see the essential information (box and relevant measurements) throughout the workflow.  We will facilitate this by allowing pan and zoom at both of the two camera positions (navigation targets) in the bathroom.  We will carefully select min and max zoom levels that are appropriate to each view, and we may set pan boundaries as well where appropriate to help ensure that learners maintain a good view of the work area.</p><p><strong>Decision #7:</strong> Measurement values are not as useful when the learner can’t see both ends of the measurement on the screen (e.g. if they zoom in, they will only be able to see part of the measurement line, so they might lose track of the two ends points for the measurement value.  We will always try to keep the measurement value visible on the screen, perhaps using “floating” style of display similar to a tooltip, but always keeping the measurement value close to and clearly associated with the measurement line.  We decided to add text to the measurement value to identify what we are measuring (e.g. to floor, to vanity, from bathtub) to help remind learners of the end point of a measurement without requiring them to zoom all the way out to see it.</p>
+                    </div>
+
+                                        <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="attachments" class="pageSectionTitle">Attachments:</h2>
+                        </div>
+
+                        <div class="greybox" align="left">
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1029242914/1029996561.png">image-20240322-182916.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1029242914/1030094880.png">image-20240322-183249.png</a> (image/png)
+                                <br/>
+                                                    </div>
+                    </div>
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Jun 11, 2025 14:17</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

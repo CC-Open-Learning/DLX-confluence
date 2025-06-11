@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VARLab : Validation Testing for SAR 2.0</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="VARLab_44990773.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Learning-Experience_972881951.html">Learning Experience</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="216629273.html">Digital Learning Experiences (DLX)</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="549486620.html">XTP7.06 - Search &amp; Rescue 2.0</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            VARLab : Validation Testing for SAR 2.0
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                            
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> Stacey Dineen (Unlicensed)</span>, last modified on Dec 13, 2023
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <p><style>[data-colorid=ohkhoy94c8]{color:#bf2600} html[data-color-mode=dark] [data-colorid=ohkhoy94c8]{color:#ff6640}[data-colorid=i76fy8isev]{color:#bf2600} html[data-color-mode=dark] [data-colorid=i76fy8isev]{color:#ff6640}[data-colorid=act4s5bgsy]{color:#bf2600} html[data-color-mode=dark] [data-colorid=act4s5bgsy]{color:#ff6640}[data-colorid=bhbaeks0rz]{color:#bf2600} html[data-color-mode=dark] [data-colorid=bhbaeks0rz]{color:#ff6640}[data-colorid=nj3653vpmp]{color:#bf2600} html[data-color-mode=dark] [data-colorid=nj3653vpmp]{color:#ff6640}[data-colorid=qdihgou5kx]{color:#bf2600} html[data-color-mode=dark] [data-colorid=qdihgou5kx]{color:#ff6640}[data-colorid=tqonb5f0sd]{color:#bf2600} html[data-color-mode=dark] [data-colorid=tqonb5f0sd]{color:#ff6640}</style>In this page, we will describe the critical and nice-to-have bug fixes that are expected for Search and Rescue 2.0 to proceed to General Release.</p><h3 id="ValidationTestingforSAR2.0-TestBuilds">Test Builds</h3><div class="table-wrap"><table data-table-width="760" data-layout="default" data-local-id="d750d36f-5df8-42f8-8fb8-f7a5b718e24b" class="confluenceTable"><tbody><tr><th class="confluenceTh"><p><strong>Build Date</strong></p></th><th class="confluenceTh"><p><strong>Link</strong></p></th><th class="confluenceTh"><p><strong>Status</strong></p></th></tr><tr><td class="confluenceTd"><p>Nov 2023</p></td><td class="confluenceTd"><p /></td><td class="confluenceTd"><p>Lab testing F23</p></td></tr><tr><td data-highlight-colour="#ffbdad" class="confluenceTd"><p>July 2023</p></td><td data-highlight-colour="#ffbdad" class="confluenceTd"><p /></td><td data-highlight-colour="#ffbdad" class="confluenceTd"><p>In-Class testing F23</p></td></tr><tr><td data-highlight-colour="#ffbdad" class="confluenceTd"><p>June 2023</p></td><td data-highlight-colour="#ffbdad" class="confluenceTd"><p /></td><td data-highlight-colour="#ffbdad" class="confluenceTd"><p>In-Class testing F23</p></td></tr><tr><td data-highlight-colour="#ffbdad" class="confluenceTd"><p>Apr 2023</p></td><td data-highlight-colour="#ffbdad" class="confluenceTd"><p /></td><td data-highlight-colour="#ffbdad" class="confluenceTd"><p>In-Class testing W23</p></td></tr><tr><td data-highlight-colour="#ffbdad" class="confluenceTd"><p>Jan 2023</p></td><td data-highlight-colour="#ffbdad" class="confluenceTd"><p /></td><td data-highlight-colour="#ffbdad" class="confluenceTd"><p>In-Class testing W23</p></td></tr></tbody></table></div><h3 id="ValidationTestingforSAR2.0-CriticalBugs">Critical Bugs</h3><ol start="1"><li><p><strong><span data-colorid="tqonb5f0sd">ALPHA DOOR</span></strong> If the alpha side door is not breached from the outside, it cannot be used as an egress. Students waste a lot of time trying to unlock/open/pry the door from the inside, and it's obviously unrealistic. Students should just be able to open the alpha door from the inside, regardless if it was breached from the exterior.<br /><br /><strong>To TEST this bug</strong>:  Enter the structure without forcing the alpha side door (e.g. enter on charlie side) and then try to exit through the alpha side by opening the door from the interior of the structure.  This should work, just like opening any other interior door.  Student may be required to interact with the deadbolt on the door before opening it, this is fine either way.<br /></p></li><li><p><strong><span data-colorid="act4s5bgsy">OFF-AIR CONSEQUENCES</span></strong> Nothing happens if the student forgets to go on air before entering the house. This happens basically every class to at least one student, and it's very unrealistic. In real life, you would not make it more than a couple metres into the house without air.<br /><br /><strong>To TEST this bug: </strong>Make sure that air is turned off and then enter the structure.  You should not make it more than a few metres inside the structure without seeing a &ldquo;Turn Air On&rdquo; message flashing in the middle of the view area.  This message will continue flashing until one of these things happens (try all 3):</p></li></ol><div class="table-wrap"><table data-table-width="760" data-layout="default" data-local-id="02f1fde5-1632-46fc-ae00-857207429c20" class="confluenceTable"><colgroup><col style="width: 247.0px;" /><col style="width: 510.0px;" /></colgroup><tbody><tr><td class="confluenceTd"><p>Leave the structure</p></td><td class="confluenceTd"><p>Go back outside and stay there, messsage should disappear after a few seconds even though your air is still turned off.</p></td></tr><tr><td class="confluenceTd"><p>Turn air on</p></td><td class="confluenceTd"><p>Message should disappear immediately when you go on air (HUD lights up green, message &ldquo;On Air&rdquo; is briefly displayed)</p></td></tr><tr><td class="confluenceTd"><p>Stay in the structure and wait 30 seconds (ignore the warning) </p></td><td class="confluenceTd"><p>Warning will flash for 30 seconds and then you will <strong>black out</strong> and exit the game</p></td></tr></tbody></table></div><ol start="3"><li><p><strong><span data-colorid="qdihgou5kx">ANALOG PASS GAUGE</span></strong> The analog gauge on the PASS is inaccurate and does not match the HUD or digital PASS reading. Students think that they still have 3300psi so they head into the structure to search the 2nd floor, and they end up alarming or passed out because their air was actually 2200.<br /><br /><strong>To TEST this bug:</strong> Make sure air is on, look at the PASS and compare the digital readout (numbers) to the analog gauge display and make sure they match. Do this many times as the air runs down to make sure that they stay in sync.  Rehab (new cylinder) and do it again.</p></li></ol><h3 id="ValidationTestingforSAR2.0-Non-CriticalBugs">Non-Critical Bugs</h3><ol start="1"><li><p><strong><span data-colorid="bhbaeks0rz">MULTIPLAYER FORCIBLE ENTRY</span></strong> This is confusing as hell because the workflow is inconsistent:  The axe is provided in the scene for one player (leaning against the wall) but the other player has to know enough to get their own halligan bar off their toolbelt. The player with the axe always tries to hit the &ldquo;hologram&rdquo; halligan (blue glowing outline) that is intended as a hint/guide for the second player to let them know where to place their own halligan. Once the player holds their halligan in the correct position, the outline turns green and the other player can hit it with the axe.  Once the halligan is well seated in the door, the player with the axe can drop the axe and the other player&rsquo;s halligan is replaced by a prop halligan (two halligans are now present, but they are right overtop of each other so you can&rsquo;t easily see that there are two).  The player holding the halligan has to know enough to remove their own halligan to reveal the prop halligan that has magically appeared underneath it, and then the prop halligan must be used to pry the door.  This is really confusing for students, particularly because it does not match the tutorial. Also, the tutorial did not work in the Jun 2023 version of the game - it could not be completed.<br /><br /><strong>To TEST this bug</strong>: Play the tutorial for forcible entry and make sure you can complete it.  Play several times if needed, because we need to have a detailed comparison of the tutorial with the multiplayer game experience.  The tutorial is always single-player, so this might be tricky.  Now play at least 2-3 scenarios for House 1 and House 2 where you force the alpha door.  Does it work? Would a brand new student be able to succeed in this task, based on their training before VR + the VR tutorial? If there are any elements that are still confusing or do not match the training, please identify them.</p></li><li><p><strong><span data-colorid="nj3653vpmp">SMOKE CLIPPING THROUGH EXTERIOR WALLS</span></strong>  Multiple users have reported seeing smoke clipping through the 2nd floor bravo side aluminum siding on the exterior of House 2 (nighttime scene).  It is possible that smoke will clip through other walls or that this bug might also affect House 1, but it has only been reported so far on the bravo wall 2nd floor for House 2.<br /><br /><strong>To TEST this bug</strong>: Perform a 360 walkaround of the house, looking specifically for smoke that is clipping through exterior walls.  Try different scenarios (fire in different locations) to see if that changes anything.<br /></p></li><li><p><strong><span data-colorid="ohkhoy94c8">MULTIPLAYER FLASHLIGHT BEAMS CLIPPING THROUGH FLOORS/CEILINGS </span></strong> There have been multiple reports of players seeing the flashlight beams from players that are on a different level of the structure.<br /><br /><strong>To TEST this bug</strong>: Put multiple players in the house, with each player in a separate room - everyone use your flashlight and check if the beams are cutting through walls (visible in another room on the other side of a wall).  Now split up and go to different floors - shine your flashlights all around.  Check if the flashlight beams are visible through the floor or ceiling.  Try both houses.<br /></p></li><li><p><strong><span data-colorid="i76fy8isev">SHOWER CURTAIN BLOCKING TUB SEARCH</span></strong> Players searching the bathtub were unable to move the shower curtain out of the way to get a good view of the bathtub.<br /><br /><strong>To TEST this bug</strong>: Go to each bathroom that includes a shower curtain. Make sure that you can push the shower curtain out of the way with your hands so that you can visually search the bathtub.</p></li></ol>
+                    </div>
+
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Jun 11, 2025 14:26</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

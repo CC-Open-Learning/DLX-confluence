@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VARLab : Converting UI To Flex XR Panels</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="VARLab_44990773.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Learning-Experience_972881951.html">Learning Experience</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="General-Release-DLX_729973721.html">General Release DLX</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="LSM9.01---Public-Health-Inspection_805306369.html">LSM9.01 - Public Health Inspection</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="PHI-VR-Research-Project_1514897411.html">PHI-VR Research Project</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            VARLab : Converting UI To Flex XR Panels
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                            
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> User 6fa8c</span> on Dec 12, 2024
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <h2 id="ConvertingUIToFlexXRPanels-TableofContents">Table of Contents</h2><style type='text/css'>/*<![CDATA[*/
+div.rbtoc1749651401364 {padding: 0px;}
+div.rbtoc1749651401364 ul {list-style: none;margin-left: 0px;}
+div.rbtoc1749651401364 li {margin-left: 0px;padding-left: 0px;}
+
+/*]]>*/</style><div class='toc-macro rbtoc1749651401364'>
+<ul class='toc-indentation'>
+<li><span class='TOCOutline'>1</span> <a href='#ConvertingUIToFlexXRPanels-TableofContents'>Table of Contents</a></li>
+<li><span class='TOCOutline'>2</span> <a href='#ConvertingUIToFlexXRPanels-Introduction'>Introduction</a></li>
+<li><span class='TOCOutline'>3</span> <a href='#ConvertingUIToFlexXRPanels-StepsToConvertUI'>Steps To Convert UI</a></li>
+<li><span class='TOCOutline'>4</span> <a href='#ConvertingUIToFlexXRPanels-KnownIssues'>Known Issues</a>
+<ul class='toc-indentation'>
+<li><span class='TOCOutline'>4.1</span> <a href='#ConvertingUIToFlexXRPanels-Flexpanelgetsinthewayofotherpanelswhennothingisthere:'>Flex panel gets in the way of other panels when nothing is there:</a></li>
+<li><span class='TOCOutline'>4.2</span> <a href='#ConvertingUIToFlexXRPanels-Flexpanelsgetsinthewayofotherpanelswhenitsnotevenoverlapping'>Flex panels gets in the way of other panels when its not even overlapping</a></li>
+<li><span class='TOCOutline'>4.3</span> <a href='#ConvertingUIToFlexXRPanels-Can’tinteractwiththemenu'>Can’t interact with the menu</a></li>
+<li><span class='TOCOutline'>4.4</span> <a href='#ConvertingUIToFlexXRPanels-PanelIsn’tdisplayingwhenexpected'>Panel Isn’t displaying when expected</a></li>
+<li><span class='TOCOutline'>4.5</span> <a href='#ConvertingUIToFlexXRPanels-UIonpanellookssquishedornon-functional'>UI on panel looks squished or non-functional</a></li>
+</ul>
+</li>
+</ul>
+</div><h2 id="ConvertingUIToFlexXRPanels-Introduction">Introduction</h2><p>This document will go over the steps taken to convert the User Interface into flex XR panels. Keep in mind that this document is a result of research and not to be considered the optimal solution. Rather this is the solution that fit the requirements and time constraints for the time.</p><div class="confluence-information-macro confluence-information-macro-information"><span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"></span><div class="confluence-information-macro-body"><p>You should have already had the project set up for VR before this. including adding the CORE XR package.</p></div></div><h2 id="ConvertingUIToFlexXRPanels-StepsToConvertUI">Steps To Convert UI</h2><ol start="1"><li><p>Navigate to “Packages → Core XR Tools → Runtime → FlexXR → Prefabs”</p></li><li><p>Locate the FlexXR Panel prefab and Place this object in your scene</p></li><li><p>Navigate to “Assets → Prefabs → XR” if this folder doesn’t exist create it</p></li><li><p>Drag the FlexXR Panel you placed in step 2 into this folder to create a prefab variant. This is what you will be working with when ever you need a panel.</p></li><li><p> Navigate to “Packages → Core XR Tools → Runtime → FlexXR → Resources”</p></li><li><p>Copy the “FlexXR World Material”</p></li><li><p>Navigate to “Assets → Art → Material → XR” if this folder doesn’t exist create it and place the material here</p></li><li><p>Select your copied material and set the shader. search “Unlit” and set it to the universal rend pipe line version</p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20241211-153124.png" width="438" loading="lazy" src="attachments/1514799110/1515290637.png?width=438" data-image-src="attachments/1514799110/1515290637.png" data-height="197" data-width="438" data-unresolved-comment-count="0" data-linked-resource-id="1515290637" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20241211-153124.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1514799110" data-linked-resource-container-version="1" data-media-id="1fe500dc-d5e6-47c9-ad18-e8e2a64a83a0" data-media-type="file"></span><p> </p></li><li><p>Set Alpha Clipping to true and the value to 0.5 (1 makes the ui transparent and 0 makes the blank spaces in the UI a opaque Black wall)</p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20241211-153242.png" width="417" loading="lazy" src="attachments/1514799110/1515159574.png?width=417" data-image-src="attachments/1514799110/1515159574.png" data-height="53" data-width="417" data-unresolved-comment-count="0" data-linked-resource-id="1515159574" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20241211-153242.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1514799110" data-linked-resource-container-version="1" data-media-id="c5e73f0a-ed39-4bd6-a111-26a4d6434344" data-media-type="file"></span><p> </p></li><li><p>Navigate back to your FlexXR Panel variant that you made in step 4 and begin editing it.</p></li><li><p>Set World material to the material you created in step 7.</p></li><li><p>In the Runtime section set the Interaction mode to Mix Reality.</p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20241211-153606.png" width="440" loading="lazy" src="attachments/1514799110/1515356192.png?width=440" data-image-src="attachments/1514799110/1515356192.png" data-height="143" data-width="440" data-unresolved-comment-count="0" data-linked-resource-id="1515356192" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20241211-153606.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1514799110" data-linked-resource-container-version="1" data-media-id="56c50c45-db83-4a1b-a487-ef4c63325c5c" data-media-type="file"></span><p> </p></li><li><p> Fitting mode should be set to “Crop to Flex XR Content” but was receiving errors about vertices. this SHOULD BE “Crop to Flex XR Content” but just to avoid this error i have temporarily set  it to Fill Render Texture.</p></li><li><p>Now the Flex XR Panel Variant is set up you can use it to convert your UI’s.</p></li><li><p>Place the new variant in the scene.</p></li><li><p>Drag your UI’s UI Document component into the “FlexXR Panel Variant→ Flex XR Panel Manager(script) → Document” to link this panel to that document you are converting.</p></li><li><p>navigate to the UI Documents Source Asset of the object you’re converting and Open it for editing</p></li><li><p>Under Library → Project → Custom Controls → FlexXR → Runtime → FlexXRPanel. drag the FlexXRContainer into your Hierarchy</p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20241211-154415.png" width="309" loading="lazy" src="attachments/1514799110/1515126803.png?width=309" data-image-src="attachments/1514799110/1515126803.png" data-height="229" data-width="309" data-unresolved-comment-count="0" data-linked-resource-id="1515126803" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20241211-154415.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1514799110" data-linked-resource-container-version="1" data-media-id="c60a04cb-813a-43dd-bae2-6ef665c495d1" data-media-type="file"></span><p /></li><li><p>Place this container as the root of the document so that everything else is a child of this container. Like so: </p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20241211-154511.png" width="313" loading="lazy" src="attachments/1514799110/1514668059.png?width=313" data-image-src="attachments/1514799110/1514668059.png" data-height="262" data-width="313" data-unresolved-comment-count="0" data-linked-resource-id="1514668059" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20241211-154511.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1514799110" data-linked-resource-container-version="1" data-media-id="ec575388-0ab6-4e31-b671-d06708119542" data-media-type="file"></span><p> </p></li><li><p>Save and close this document. At this point your Panel should be functional. </p></li><li><p>If you are reciving “Assertion Errors” follow the step(s) below:</p></li><li><p>Under the original UI’s objects UI Document, set the Panel settings to “FlexXR UI Panel Settings”. </p></li></ol><p>An Example of how the Flex XR Panel Manager looks at completion:</p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20241211-154830.png" width="448" loading="lazy" src="attachments/1514799110/1514897439.png?width=448" data-image-src="attachments/1514799110/1514897439.png" data-height="398" data-width="448" data-unresolved-comment-count="0" data-linked-resource-id="1514897439" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20241211-154830.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1514799110" data-linked-resource-container-version="1" data-media-id="cd4ee56e-19ac-4f4e-a3fe-30a8563783e7" data-media-type="file"></span><h2 id="ConvertingUIToFlexXRPanels-KnownIssues"> Known Issues</h2><h3 id="ConvertingUIToFlexXRPanels-Flexpanelgetsinthewayofotherpanelswhennothingisthere:"><strong>Flex panel gets in the way of other panels when nothing is there:</strong></h3><p>Problem: the panel even if it is not displaying UI elements is still there.</p><p>Fix: have some sort of function/call that will disable the lowest level of the XR Panel the “Flex Mesh” when the display style of the ui = none</p><h3 id="ConvertingUIToFlexXRPanels-Flexpanelsgetsinthewayofotherpanelswhenitsnotevenoverlapping"><strong>Flex panels gets in the way of other panels when its not even overlapping</strong></h3><p>Problem: This is due to the panel being much larger than what it requires. usually due to some sort of sizing error</p><p>Fix: Ensure your flex XR Container is sized properly to only contain the UI Elements it needs to in the UXML document. Also set the Fitting Mode of the Flex XR Panel Manager to “Crop to Flex XR Content” as explained in step 13</p><h3 id="ConvertingUIToFlexXRPanels-Can’tinteractwiththemenu"><strong>Can’t interact with the menu</strong></h3><p>Problem: many possibilities. could be overlapped with UI when it pop’s up making your controller not realize it’s overlapped (just point away then point back at the ui). another panel could be blocking your interactions. More likely you have the Interaction mode set incorrectly</p><p>Fix: First make sure you have followed step 12. the different interactions modes behave differently. Flat screen is with mouse on a flat screen. World is your mouse interacts with the object in the world. Mixed Reality is your XR controllers interact with the panel using your triggers. </p><p>if this doesn’t fix it check that you don’t have another panel infront of this panel as it would hit your raycast first blocking interactions</p><h3 id="ConvertingUIToFlexXRPanels-PanelIsn’tdisplayingwhenexpected"><strong>Panel Isn’t displaying when expected</strong></h3><p>Problem: the panel display settings aren’t changing when they are expected to. this is likely caused by another line of code being blocked when converting to UI references to things such as Main camera, point and click navigation and player controller are being held up by a line of code that no longer runs properly.</p><p>Fix: follow the code execution and determine whats is happening during each line. check for a line of code that might be blocking execution or failing due to a reference no longer existing. often during this research it was a line related to player controller, point and click navigation, or Main camera. </p><div class="confluence-information-macro confluence-information-macro-warning"><span class="aui-icon aui-icon-small aui-iconfont-error confluence-information-macro-icon"></span><div class="confluence-information-macro-body"><p><strong>Also double check that it isn't in your unity events as these will still cause issues but won’t throw an error </strong></p></div></div><h3 id="ConvertingUIToFlexXRPanels-UIonpanellookssquishedornon-functional"><strong>UI on panel looks squished or non-functional</strong></h3><p>Problem: No clue. not enough time to research properly. probably a sizing issue with the Flex XR Container. </p><p>Fix: try to resize the UXML document to properly encapsulate the other visual elements. </p>
+                    </div>
+
+                                        <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="attachments" class="pageSectionTitle">Attachments:</h2>
+                        </div>
+
+                        <div class="greybox" align="left">
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1514799110/1515290637.png">image-20241211-153124.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1514799110/1515159574.png">image-20241211-153242.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1514799110/1515356192.png">image-20241211-153606.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1514799110/1515126803.png">image-20241211-154415.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1514799110/1514668059.png">image-20241211-154511.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1514799110/1514897439.png">image-20241211-154830.png</a> (image/png)
+                                <br/>
+                                                    </div>
+                    </div>
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Jun 11, 2025 14:16</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

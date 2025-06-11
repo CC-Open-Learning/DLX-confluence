@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VARLab : Using Cable Supply Mounting System</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="VARLab_44990773.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Learning-Experience_972881951.html">Learning Experience</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="216629273.html">Digital Learning Experiences (DLX)</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="706347009.html">LSM8.02 - Conestoga Trades: Electrician Simulator</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Development-Documentations_1066237953.html">Development Documentations</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            VARLab : Using Cable Supply Mounting System
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                            
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> User c4ba3</span>, last modified on Aug 13, 2024
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <p>This document contains information on how to use the cable supply mounting system by setting up a task so to start the cable mounting workflow. This document does not contain information on creating cables using the spline tool.<br/></p><ol start="1"><li><p><strong>Modify Mountable Name Script</strong></p><ol start="1"><li><p>Open the <code>MountableName.cs</code> Script. Add a <strong>descriptive name to the enum</strong> to identify the supply cable. After that, add a <strong>Description Attribute </strong>that is the same as the name you added.<br/></p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20240812-194440.png" width="570" loading="lazy" src="attachments/1276346396/1276870735.png?width=570" data-image-src="attachments/1276346396/1276870735.png" data-height="201" data-width="570" data-unresolved-comment-count="0" data-linked-resource-id="1276870735" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20240812-194440.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1276346396" data-linked-resource-container-version="2" data-media-id="8871f870-41a0-4486-8c6f-4e9a083dbe17" data-media-type="file"></span><p>This example will showcase adding 3</p></li></ol></li><li><p><strong> Create a Task Camera </strong></p><ol start="1"><li><p>To preview the cable within the system, you must create an object with a cinamachine camera and add related scripts. </p><ol start="1"><li><p>Create an empty object with a descriptive name and add CinamachineVirtualCamera.</p></li><li><p>Add Cinemachine Pan Settings and Zoom Settings<br/></p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20240812-180103.png" width="381" loading="lazy" src="attachments/1276346396/1276903467.png?width=381" data-image-src="attachments/1276346396/1276903467.png" data-height="752" data-width="561" data-unresolved-comment-count="0" data-linked-resource-id="1276903467" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20240812-180103.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1276346396" data-linked-resource-container-version="2" data-media-id="5dbaa6f7-de8d-4d11-b1f5-f03b3ad5e8e7" data-media-type="file"></span></li></ol></li></ol></li><li><p><strong>Add Mountable.cs to the supply cable that will mounted.  </strong><br/></p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20240812-200106.png" width="736" loading="lazy" src="attachments/1276346396/1276903527.png?width=736" data-image-src="attachments/1276346396/1276903527.png" data-height="109" data-width="874" data-unresolved-comment-count="0" data-linked-resource-id="1276903527" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20240812-200106.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1276346396" data-linked-resource-container-version="2" data-media-id="2ba785c2-d8d7-4090-b6b7-537a11fabe0f" data-media-type="file"></span><p /></li><li><p><strong>Modify Task.cs </strong></p><ol start="1"><li><p>Go into <code>Task.cs</code>. Add a descriptive name and a Description Attribute for the task you are mounting the cable for. </p><p>  </p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20240813-140544.png" width="386" loading="lazy" src="attachments/1276346396/1277853778.png?width=386" data-image-src="attachments/1276346396/1277853778.png" data-height="71" data-width="386" data-unresolved-comment-count="0" data-linked-resource-id="1277853778" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20240813-140544.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1276346396" data-linked-resource-container-version="2" data-media-id="002c4569-8293-43a5-a123-22ad670b3728" data-media-type="file"></span><p> </p></li></ol></li><li><p><strong>Setting up Cable Mounting Task</strong></p><ol start="1"><li><p>Create an empty object and add the Cable Mounting Task Script</p></li><li><p>Configure the fields based on earlier steps where the Task Preview camera was added(step 2), Task Name(Step 4), Cable mountable options, which would be supply cables, and then the correct one. </p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20240812-195212.png" width="712" loading="lazy" src="attachments/1276346396/1277067356.png?width=712" data-image-src="attachments/1276346396/1277067356.png" data-height="403" data-width="846" data-unresolved-comment-count="0" data-linked-resource-id="1277067356" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20240812-195212.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1276346396" data-linked-resource-container-version="2" data-media-id="21260a73-b2f2-4de9-8b35-5743aa35a45f" data-media-type="file"></span><p>  </p></li></ol></li><li><p><strong>Trigger Mounting System</strong></p><ol start="1"><li><p>Now you have to pass the <strong>mountable name </strong>to<code>TaskHandler.onMountableSelected</code> and trigger the event <code>TaskHandler.OnMountingTaskClick</code> with the <strong>task name</strong></p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20240812-202635.png" width="736" loading="lazy" src="attachments/1276346396/1276379267.png?width=736" data-image-src="attachments/1276346396/1276379267.png" data-height="262" data-width="808" data-unresolved-comment-count="0" data-linked-resource-id="1276379267" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20240812-202635.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1276346396" data-linked-resource-container-version="2" data-media-id="92b7198f-2d20-49fe-85ea-affdba563846" data-media-type="file"></span><p> </p></li></ol></li></ol><p>Now, cables will be mounted when the events in step 6 are invoked with the camera view that is set up.</p><p />
+                    </div>
+
+                                        <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="attachments" class="pageSectionTitle">Attachments:</h2>
+                        </div>
+
+                        <div class="greybox" align="left">
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1276346396/1277132837.png">image-20240812-175033.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1276346396/1276510267.png">image-20240812-175055.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1276346396/1276936238.png">image-20240812-175157.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1276346396/1276248106.png">image-20240812-175244.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1276346396/1276936244.png">image-20240812-175302.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1276346396/1276903467.png">image-20240812-180103.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1276346396/1276248119.png">image-20240812-182830.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1276346396/1277329451.png">image-20240812-184629.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1276346396/1277395017.png">image-20240812-190335.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1276346396/1276870735.png">image-20240812-194440.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1276346396/1277067356.png">image-20240812-195212.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1276346396/1276477530.png">image-20240812-195250.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1276346396/1277427766.png">image-20240812-195605.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1276346396/1276903527.png">image-20240812-200106.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1276346396/1276248161.png">image-20240812-200930.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1276346396/1276379267.png">image-20240812-202635.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1276346396/1277853778.png">image-20240813-140544.png</a> (image/png)
+                                <br/>
+                                                    </div>
+                    </div>
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Jun 11, 2025 14:17</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

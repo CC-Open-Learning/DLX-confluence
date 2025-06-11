@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VARLab : GR Test Results Summary</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="VARLab_44990773.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Learning-Experience_972881951.html">Learning Experience</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="General-Release-DLX_729973721.html">General Release DLX</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="LSM9.01---Public-Health-Inspection_805306369.html">LSM9.01 - Public Health Inspection</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Testing_837615629.html">Testing</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="GR-Test-Plan---PHI_1389363206.html">GR Test Plan - PHI</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            VARLab : GR Test Results Summary
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                            
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> Carolina Naoum Junqueira</span>, last modified by <span class='editor'> Stacey Dineen (Unlicensed)</span> on Nov 21, 2024
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <p><strong>Build Tested: </strong><a class="external-link" href="https://conestoga.desire2learn.com/d2l/le/content/418015/viewContent/27838509/View" rel="nofollow"><strong>Release Candidate - PHI- 24F5.4 - 12NOV2024</strong></a></p><p><strong>GR Recommendation to VLT:</strong>  <span class="status-macro aui-lozenge aui-lozenge-visual-refresh aui-lozenge-success">PASSED - READY FOR GR</span> </p><div class="table-wrap"><table data-table-width="760" data-layout="default" data-local-id="1b5bb8f9-82f8-47c5-8bd3-cd8bc938f72e" class="confluenceTable"><tbody><tr><th class="confluenceTh"><h2 id="GRTestResultsSummary-Testers"><strong>Testers</strong></h2></th></tr><tr><td class="confluenceTd"><p>Carolina Naoum Junqueira</p></td></tr><tr><td class="confluenceTd"><p>Juhwan Seo</p></td></tr><tr><td class="confluenceTd"><p>Ryan Samii</p></td></tr><tr><td class="confluenceTd"><p>Salman Nouman Abulqasim</p></td></tr><tr><td class="confluenceTd"><p>Stacey Dineen</p></td></tr></tbody></table></div><style type='text/css'>/*<![CDATA[*/
+div.rbtoc1749651259611 {padding: 0px;}
+div.rbtoc1749651259611 ul {list-style: none;margin-left: 0px;}
+div.rbtoc1749651259611 li {margin-left: 0px;padding-left: 0px;}
+
+/*]]>*/</style><div class='toc-macro rbtoc1749651259611'>
+<ul class='toc-indentation'>
+<li><a href='#GRTestResultsSummary-Testers'>Testers</a></li>
+<li><a href='#GRTestResultsSummary-DeviceSpecs'>Device Specs</a></li>
+<li><a href='#GRTestResultsSummary-TestItems(fromGRTestPlan)'>Test Items (from GR Test Plan)</a>
+<ul class='toc-indentation'>
+<li><a href='#GRTestResultsSummary-InspectionWorkflow'>Inspection Workflow</a></li>
+<li><a href='#GRTestResultsSummary-DownloadPhotoWorkflow'>Download Photo Workflow</a></li>
+<li><a href='#GRTestResultsSummary-SaveandLoad'>Save and Load</a></li>
+<li><a href='#GRTestResultsSummary-EndInspectionWorkflow'>End Inspection Workflow</a></li>
+<li><a href='#GRTestResultsSummary-CancelEndInspection'>Cancel End Inspection</a></li>
+<li><a href='#GRTestResultsSummary-In-GameInspectionResultsareonlyavailablewhenappropriate'>In-Game Inspection Results are only available when appropriate</a></li>
+<li><a href='#GRTestResultsSummary-In-GameInspectionResultsarecorrect'>In-Game Inspection Results are correct</a></li>
+<li><a href='#GRTestResultsSummary-ExportableResultsenabled'>Exportable Results enabled</a></li>
+<li><a href='#GRTestResultsSummary-DownloadReminder'>Download Reminder</a></li>
+<li><a href='#GRTestResultsSummary-DownloadImages-zipfile(s)'>Download Images - zip file(s)</a></li>
+<li><a href='#GRTestResultsSummary-DownloadedResults-verifyPDFcontents'>Downloaded Results - verify PDF contents</a></li>
+<li><a href='#GRTestResultsSummary-DownloadedResults-Maxdownloadsize'>Downloaded Results - Max download size</a></li>
+<li><a href='#GRTestResultsSummary-DownloadedResults-downloadfailure-diskspace'>Downloaded Results - download failure - disk space</a></li>
+<li><a href='#GRTestResultsSummary-DownloadedResults-downloadfailure-networkconnectivityissues'>Downloaded Results - download failure - network connectivity issues</a></li>
+<li><a href='#GRTestResultsSummary-Analytics'>Analytics</a></li>
+</ul>
+</li>
+<li><a href='#GRTestResultsSummary-NetworkTests'>Network Tests</a></li>
+<li><a href='#GRTestResultsSummary-ScenarioTests'>Scenario Tests</a></li>
+</ul>
+</div><h2 id="GRTestResultsSummary-DeviceSpecs"><strong>Device Specs</strong></h2><div class="table-wrap"><table data-table-width="760" data-layout="default" data-local-id="25dc1789-6d61-49fb-b159-435a9f9e5ea7" class="confluenceTable"><colgroup><col style="width: 75.0px;"/><col style="width: 170.0px;"/><col style="width: 170.0px;"/><col style="width: 170.0px;"/><col style="width: 170.0px;"/></colgroup><tbody><tr><th class="confluenceTh"><p /></th><th class="confluenceTh"><p><strong>Dev 1</strong></p></th><th class="confluenceTh"><p><strong>Dev 2</strong></p></th><th class="confluenceTh"><p><strong>Dev 3</strong></p></th><th class="confluenceTh"><p><strong>Dev 4</strong></p></th></tr><tr><td class="confluenceTd"><p><strong>OS</strong></p></td><td class="confluenceTd"><p>Windows 11 Enterprise 24H2</p></td><td class="confluenceTd"><p>Windows 11 23H2</p></td><td class="confluenceTd"><p>Windows 11 Pro</p></td><td class="confluenceTd"><p>Windows 10 22H2</p></td></tr><tr><td class="confluenceTd"><p><strong>CPU</strong></p></td><td class="confluenceTd"><p>Core 9 Ultra 185H</p></td><td class="confluenceTd"><p>i7-13620H</p></td><td class="confluenceTd"><p>AMD Ryzen 9 5900HS</p></td><td class="confluenceTd"><p>i7-11800H</p></td></tr><tr><td class="confluenceTd"><p><strong>GPU</strong></p></td><td class="confluenceTd"><p>GeForce RTX 4070 (Laptop)</p></td><td class="confluenceTd"><p>GeForce RTX 4070 (Laptop)</p></td><td class="confluenceTd"><p>NVIDIA GeForce RTX 3060 (Laptop)</p></td><td class="confluenceTd"><p>RTX 3070 (Laptop)</p></td></tr><tr><td class="confluenceTd"><p><strong>RAM</strong></p></td><td class="confluenceTd"><p>64 GB</p></td><td class="confluenceTd"><p>32 GB</p></td><td class="confluenceTd"><p>48 GB</p></td><td class="confluenceTd"><p>16 GB</p></td></tr></tbody></table></div><div class="table-wrap"><table data-table-width="760" data-layout="default" data-local-id="ab11a7fe-a304-4d3d-8e2b-f0c115ab23da" class="confluenceTable"><colgroup><col style="width: 75.0px;"/><col style="width: 170.0px;"/><col style="width: 170.0px;"/><col style="width: 170.0px;"/><col style="width: 170.0px;"/></colgroup><tbody><tr><th class="confluenceTh"><p /></th><th class="confluenceTh"><p><strong>Hallway</strong></p></th><th class="confluenceTh"><p><strong>Library 01</strong></p></th><th class="confluenceTh"><p><strong>Library 02</strong></p></th><th class="confluenceTh"><p><strong>New TURD</strong></p></th></tr><tr><td class="confluenceTd"><p><strong>OS</strong></p></td><td class="confluenceTd"><p>Windows 11 23H2</p></td><td class="confluenceTd"><p>Windows 11 22H2</p></td><td class="confluenceTd"><p>Windows 11 Enterprise</p></td><td class="confluenceTd"><p>Windows 10 Home</p></td></tr><tr><td class="confluenceTd"><p><strong>CPU</strong></p></td><td class="confluenceTd"><p>i5-7400</p></td><td class="confluenceTd"><p>i5-8400T</p></td><td class="confluenceTd"><p>i5-8400T</p></td><td class="confluenceTd"><p>i7-6500U</p></td></tr><tr><td class="confluenceTd"><p><strong>GPU</strong></p></td><td class="confluenceTd"><p>Intel HD Graphics 630</p></td><td class="confluenceTd"><p>Intel UHD Graphics 630</p></td><td class="confluenceTd"><p>Intel UHD Graphics 630</p></td><td class="confluenceTd"><p>Intel HD Graphics 520</p></td></tr><tr><td class="confluenceTd"><p><strong>RAM</strong></p></td><td class="confluenceTd"><p>16 GB</p></td><td class="confluenceTd"><p>8 GB</p></td><td class="confluenceTd"><p>16 GB</p></td><td class="confluenceTd"><p>8 GB</p></td></tr></tbody></table></div><p><strong>Browsers:</strong></p><ul><li><p>Edge</p></li><li><p>Chrome</p></li><li><p>Firefox</p></li></ul><h2 id="GRTestResultsSummary-TestItems(fromGRTestPlan)"><strong>Test Items (from</strong><a href="GR-Test-Plan---PHI_1389363206.html" data-linked-resource-id="1389363206" data-linked-resource-version="19" data-linked-resource-type="page"><strong> GR Test Plan</strong></a><strong>)</strong> </h2><ul><li><p>For full results check comments on linked Jira Tickets.</p></li></ul><div class="table-wrap"><table data-table-width="760" data-layout="default" data-local-id="f100e472-54a6-490b-9b68-585ca3a68f32" class="confluenceTable"><colgroup><col style="width: 170.0px;"/><col style="width: 170.0px;"/><col style="width: 170.0px;"/><col style="width: 170.0px;"/></colgroup><tbody><tr><th colspan="4" class="confluenceTh"><h3 id="GRTestResultsSummary-InspectionWorkflow"><strong>Inspection Workflow</strong></h3></th></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Description</strong></p></td><td data-highlight-colour="#f4f5f7" colspan="3" class="confluenceTd"><p>Verify that the student can inspect numerous items one after the other with no impediments or blocking bugs.  
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="PHI-1290"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_1472987141_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/PHI-1290" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>PHI-1290</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+</p></td></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p /></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Chrome</strong></p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Edge</strong></p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Firefox</strong></p></td></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Results</strong></p></td><td data-highlight-colour="#e3fcef" class="confluenceTd"><p>Success</p></td><td data-highlight-colour="#e3fcef" class="confluenceTd"><p>Success</p></td><td data-highlight-colour="#e3fcef" class="confluenceTd"><p>Success</p></td></tr></tbody></table></div><div class="table-wrap"><table data-table-width="760" data-layout="default" data-local-id="98fa120c-420c-46b6-9db0-21678383dcf8" class="confluenceTable"><colgroup><col style="width: 170.0px;"/><col style="width: 170.0px;"/><col style="width: 170.0px;"/><col style="width: 170.0px;"/></colgroup><tbody><tr><th colspan="4" class="confluenceTh"><h3 id="GRTestResultsSummary-DownloadPhotoWorkflow"><strong>Download Photo Workflow</strong></h3></th></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Description</strong></p></td><td data-highlight-colour="#f4f5f7" colspan="3" class="confluenceTd"><p>Perform a visual inspection and take a photo. Select a different inspection tool without marking the photo as Compliant or Non-Compliant. Confirm that you are able to discard the photo. 
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="PHI-1308"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_1472987141_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/PHI-1308" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>PHI-1308</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p></td></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p /></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Chrome</strong></p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Edge</strong></p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Firefox</strong></p></td></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Results</strong></p></td><td data-highlight-colour="#e3fcef" class="confluenceTd"><p>Success</p></td><td data-highlight-colour="#e3fcef" class="confluenceTd"><p>Success</p></td><td data-highlight-colour="#e3fcef" class="confluenceTd"><p>Success</p></td></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Description</strong></p></td><td data-highlight-colour="#f4f5f7" colspan="3" class="confluenceTd"><p>Take a photo and mark it as Compliant. Return to the same item and inspect it again, take a new photo, and mark it as Compliant again. 
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="PHI-1309"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_1472987141_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/PHI-1309" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>PHI-1309</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p></td></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p /></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Chrome</strong></p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Edge</strong></p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Firefox</strong></p></td></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Results</strong></p></td><td data-highlight-colour="#e3fcef" class="confluenceTd"><p>Success</p></td><td data-highlight-colour="#e3fcef" class="confluenceTd"><p>Success</p></td><td data-highlight-colour="#e3fcef" class="confluenceTd"><p>Success</p></td></tr></tbody></table></div><div class="table-wrap"><table data-table-width="760" data-layout="default" data-local-id="d3aecfa2-3458-4d63-9df2-9d7748965d67" class="confluenceTable"><colgroup><col style="width: 170.0px;"/><col style="width: 170.0px;"/><col style="width: 170.0px;"/><col style="width: 170.0px;"/></colgroup><tbody><tr><th colspan="4" class="confluenceTh"><h3 id="GRTestResultsSummary-SaveandLoad"><strong>Save and Load</strong></h3></th></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Description</strong></p></td><td data-highlight-colour="#f4f5f7" colspan="3" class="confluenceTd"><p>Verify that progress and inspection results are saved when the student exits the DLX by closing the browser tab.</p><p>Confirm progress is saved by relaunching the DLX and selecting “Continue”</p><p>
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="PHI-1310"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_1472987141_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/PHI-1310" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>PHI-1310</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p></td></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p /></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Chrome</strong></p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Edge</strong></p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Firefox</strong></p></td></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Results</strong></p></td><td data-highlight-colour="#e3fcef" class="confluenceTd"><p>Success</p></td><td data-highlight-colour="#e3fcef" class="confluenceTd"><p>Success</p></td><td data-highlight-colour="#e3fcef" class="confluenceTd"><p>Success</p></td></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Description</strong></p></td><td data-highlight-colour="#f4f5f7" colspan="3" class="confluenceTd"><p>Verify that progress and inspection results are saved when the student exits the DLX by shutting off their computer. </p><p>Confirm progress is saved by relaunching the DLX and selecting “Continue”</p><p>
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="PHI-1312"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_1472987141_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/PHI-1312" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>PHI-1312</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p></td></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p /></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Chrome</strong></p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Edge</strong></p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Firefox</strong></p></td></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Results</strong></p></td><td data-highlight-colour="#e3fcef" class="confluenceTd"><p>Success</p></td><td data-highlight-colour="#e3fcef" class="confluenceTd"><p>Success</p></td><td data-highlight-colour="#e3fcef" class="confluenceTd"><p>Success</p></td></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Description</strong></p></td><td data-highlight-colour="#f4f5f7" colspan="3" class="confluenceTd"><p>Verify that progress and inspection results are saved when the student exits the DLX by disconnecting their internet connection. </p><p>Confirm progress is saved by relaunching the DLX and selecting “Continue”</p><p>
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="PHI-1314"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_1472987141_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/PHI-1314" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>PHI-1314</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p></td></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p /></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Chrome</strong></p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Edge</strong></p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Firefox</strong></p></td></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Results</strong></p></td><td data-highlight-colour="#e3fcef" class="confluenceTd"><p>Success</p></td><td data-highlight-colour="#e3fcef" class="confluenceTd"><p>Success</p></td><td data-highlight-colour="#e3fcef" class="confluenceTd"><p>Success</p></td></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Description</strong></p></td><td data-highlight-colour="#f4f5f7" colspan="3" class="confluenceTd"><p>Verify that progress and inspection results are saved when the student exits the DLX by exiting using Alt-F4. </p><p>Confirm progress is saved by relaunching the DLX and selecting “Continue”</p><p>
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="PHI-1316"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_1472987141_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/PHI-1316" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>PHI-1316</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p></td></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p /></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Chrome</strong></p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Edge</strong></p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Firefox</strong></p></td></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Results</strong></p></td><td data-highlight-colour="#e3fcef" class="confluenceTd"><p>Success</p></td><td data-highlight-colour="#e3fcef" class="confluenceTd"><p>Success</p></td><td data-highlight-colour="#e3fcef" class="confluenceTd"><p>Success</p></td></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Description</strong></p></td><td data-highlight-colour="#f4f5f7" colspan="3" class="confluenceTd"><p>Verify that progress and inspection results are saved when the student exits the DLX by closing the browser tab. </p><p>Confirm that progress is discarded (all images are discarded, all inspection results are discarded, activity log is cleared) when you select “Start from Beginning”</p><p>Specifically check that you will be thrown out of the restaurant if you select Start from Beginning and then try to inspect something without first introducing yourself to the manager and washing your hands.</p><p>
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="PHI-1311"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_1472987141_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/PHI-1311" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>PHI-1311</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p></td></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p /></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Chrome</strong></p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Edge</strong></p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Firefox</strong></p></td></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Results</strong></p></td><td data-highlight-colour="#e3fcef" class="confluenceTd"><p>Success</p></td><td data-highlight-colour="#e3fcef" class="confluenceTd"><p>Success</p></td><td data-highlight-colour="#e3fcef" class="confluenceTd"><p>Success</p></td></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Description</strong></p></td><td data-highlight-colour="#f4f5f7" colspan="3" class="confluenceTd"><p>Verify that progress and inspection results are saved when the student exits the DLX by shutting off their computer. </p><p>Confirm that progress is discarded (all images are discarded, all inspection results are discarded, activity log is cleared) when you select “Start from Beginning”</p><p>Specifically check that you will be thrown out of the restaurant if you select Start from Beginning and then try to inspect something without first introducing yourself to the manager and washing your hands.</p><p>
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="PHI-1313"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_1472987141_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/PHI-1313" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>PHI-1313</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p></td></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p /></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Chrome</strong></p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Edge</strong></p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Firefox</strong></p></td></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Results</strong></p></td><td data-highlight-colour="#e3fcef" class="confluenceTd"><p>Success</p></td><td data-highlight-colour="#e3fcef" class="confluenceTd"><p>Success</p></td><td data-highlight-colour="#e3fcef" class="confluenceTd"><p>Success</p></td></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Description</strong></p></td><td data-highlight-colour="#f4f5f7" colspan="3" class="confluenceTd"><p>Verify that progress and inspection results are saved when the student exits the DLX by disconnecting their internet connection. </p><p>Confirm that progress is discarded (all images are discarded, all inspection results are discarded, activity log is cleared) when you select “Start from Beginning”</p><p>Specifically check that you will be thrown out of the restaurant if you select Start from Beginning and then try to inspect something without first introducing yourself to the manager and washing your hands.</p><p>
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="PHI-1315"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_1472987141_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/PHI-1315" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>PHI-1315</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p></td></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p /></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Chrome</strong></p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Edge</strong></p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Firefox</strong></p></td></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Results</strong></p></td><td data-highlight-colour="#e3fcef" class="confluenceTd"><p>Success</p></td><td data-highlight-colour="#e3fcef" class="confluenceTd"><p>Success</p></td><td data-highlight-colour="#e3fcef" class="confluenceTd"><p>Success</p></td></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Description</strong></p></td><td data-highlight-colour="#f4f5f7" colspan="3" class="confluenceTd"><p>Verify that progress and inspection results are saved when the student exits the DLX by exiting using Alt-F4. </p><p>Confirm that progress is discarded (all images are discarded, all inspection results are discarded, activity log is cleared) when you select “Start from Beginning”</p><p>Specifically check that you will be thrown out of the restaurant if you select Start from Beginning and then try to inspect something without first introducing yourself to the manager and washing your hands.</p><p>
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="PHI-1317"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_1472987141_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/PHI-1317" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>PHI-1317</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p></td></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p /></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Chrome</strong></p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Edge</strong></p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Firefox</strong></p></td></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Results</strong></p></td><td data-highlight-colour="#e3fcef" class="confluenceTd"><p>Success</p></td><td data-highlight-colour="#e3fcef" class="confluenceTd"><p>Success</p></td><td data-highlight-colour="#e3fcef" class="confluenceTd"><p>Success</p></td></tr></tbody></table></div><div class="table-wrap"><table data-table-width="760" data-layout="default" data-local-id="830eb068-c7b0-4b2b-9f32-82df83da239e" class="confluenceTable"><colgroup><col style="width: 170.0px;"/><col style="width: 170.0px;"/><col style="width: 170.0px;"/><col style="width: 170.0px;"/></colgroup><tbody><tr><th colspan="4" class="confluenceTh"><h3 id="GRTestResultsSummary-EndInspectionWorkflow"><strong>End Inspection Workflow</strong></h3></th></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Description</strong></p></td><td data-highlight-colour="#f4f5f7" colspan="3" class="confluenceTd"><p>Confirm that the option to End Inspection is enabled in the Inspection Review panel. Note: This option only becomes available after the inspection is started, so you must introduce yourself and wash your hands in order for this button to be enabled.</p><p>In the Inspection Review panel, take screencaps of Inspection Log, Activity Log, and Gallery. You might need multiple screencaps to capture all contents.</p><p>
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="PHI-1318"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_1472987141_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/PHI-1318" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>PHI-1318</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p></td></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p /></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Chrome</strong></p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Edge</strong></p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Firefox</strong></p></td></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Results</strong></p></td><td data-highlight-colour="#e3fcef" class="confluenceTd"><p>Success</p></td><td data-highlight-colour="#e3fcef" class="confluenceTd"><p>Success</p></td><td data-highlight-colour="#e3fcef" class="confluenceTd"><p>Success</p></td></tr></tbody></table></div><div class="table-wrap"><table data-table-width="760" data-layout="default" data-local-id="def3268c-46ac-4893-a602-f871c89da368" class="confluenceTable"><colgroup><col style="width: 170.0px;"/><col style="width: 170.0px;"/><col style="width: 170.0px;"/><col style="width: 170.0px;"/></colgroup><tbody><tr><th colspan="4" class="confluenceTh"><h3 id="GRTestResultsSummary-CancelEndInspection"><strong>Cancel End Inspection</strong></h3></th></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Description</strong></p></td><td data-highlight-colour="#f4f5f7" colspan="3" class="confluenceTd"><p>Click on End Inspection to verify that a confirmation message is shown.</p><p>In the confirmation message, select to Cancel and return to inspect more items AND update/delete inspections you did previously.</p><p>Return to the Review panel and take updated screenshots of your Inspection Log, Activity Log, and Gallery. Keep these for comparison later.</p><p>
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="PHI-1319"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_1472987141_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/PHI-1319" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>PHI-1319</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p></td></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p /></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Chrome</strong></p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Edge</strong></p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Firefox</strong></p></td></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Results</strong></p></td><td data-highlight-colour="#e3fcef" class="confluenceTd"><p>Success</p></td><td data-highlight-colour="#e3fcef" class="confluenceTd"><p>Success</p></td><td data-highlight-colour="#e3fcef" class="confluenceTd"><p>Success</p></td></tr></tbody></table></div><div class="table-wrap"><table data-table-width="760" data-layout="default" data-local-id="8f1ec7b2-2117-4193-968f-5c2478267210" class="confluenceTable"><colgroup><col style="width: 170.0px;"/><col style="width: 170.0px;"/><col style="width: 170.0px;"/><col style="width: 170.0px;"/></colgroup><tbody><tr><th colspan="4" class="confluenceTh"><h3 id="GRTestResultsSummary-In-GameInspectionResultsareonlyavailablewhenappropriate"><strong>In-Game Inspection Results are only available when appropriate</strong></h3></th></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Description</strong></p></td><td data-highlight-colour="#f4f5f7" colspan="3" class="confluenceTd"><p>Both checkboxes must be selected in order to enable the “End Inspection and View Summary” button</p><p>Confirm that you cannot view the in-game results without selecting both checkboxes.</p><p>
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="PHI-1320"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_1472987141_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/PHI-1320" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>PHI-1320</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p></td></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p /></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Chrome</strong></p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Edge</strong></p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Firefox</strong></p></td></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Results</strong></p></td><td data-highlight-colour="#e3fcef" class="confluenceTd"><p>Success</p></td><td data-highlight-colour="#e3fcef" class="confluenceTd"><p>Success</p></td><td data-highlight-colour="#e3fcef" class="confluenceTd"><p>Success</p></td></tr></tbody></table></div><div class="table-wrap"><table data-table-width="760" data-layout="default" data-local-id="6dbd3583-33ec-49ab-9105-16e48711ffde" class="confluenceTable"><colgroup><col style="width: 170.0px;"/><col style="width: 170.0px;"/><col style="width: 170.0px;"/><col style="width: 170.0px;"/></colgroup><tbody><tr><th colspan="4" class="confluenceTh"><h3 id="GRTestResultsSummary-In-GameInspectionResultsarecorrect"><strong>In-Game Inspection Results are correct</strong></h3></th></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Description</strong></p></td><td data-highlight-colour="#f4f5f7" colspan="3" class="confluenceTd"><p>End Inspection and confirm. Check your results to ensure that the Inspection Summary show the exact same number of compliances and non-compliances reported and the correct number of areas inspected as the screencaps you took earlier in-game.</p><p>Confirm that the locations inspected is correct.</p><p>
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="PHI-1321"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_1472987141_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/PHI-1321" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>PHI-1321</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p></td></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p /></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Chrome</strong></p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Edge</strong></p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Firefox</strong></p></td></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Results</strong></p></td><td data-highlight-colour="#e3fcef" class="confluenceTd"><p>Success</p></td><td data-highlight-colour="#e3fcef" class="confluenceTd"><p>Success</p></td><td data-highlight-colour="#e3fcef" class="confluenceTd"><p>Success</p></td></tr></tbody></table></div><div class="table-wrap"><table data-table-width="760" data-layout="default" data-local-id="6099945e-8e7e-48ca-a0fe-937014872eaf" class="confluenceTable"><colgroup><col style="width: 170.0px;"/><col style="width: 170.0px;"/><col style="width: 170.0px;"/><col style="width: 170.0px;"/></colgroup><tbody><tr><th colspan="4" class="confluenceTh"><h3 id="GRTestResultsSummary-ExportableResultsenabled"><strong>Exportable Results enabled</strong></h3></th></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Description</strong></p></td><td data-highlight-colour="#f4f5f7" colspan="3" class="confluenceTd"><p>Verify that the Inspection Results and Gallery images are offered for download after the student has ended the inspection.</p><p>Confirm that the information provided is clear, concise, and adequate to explain the download contents.</p><p>Do not click download yet.</p><p>
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="PHI-1322"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_1472987141_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/PHI-1322" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>PHI-1322</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p></td></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p /></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Chrome</strong></p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Edge</strong></p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Firefox</strong></p></td></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Results</strong></p></td><td data-highlight-colour="#e3fcef" class="confluenceTd"><p>Success</p></td><td data-highlight-colour="#e3fcef" class="confluenceTd"><p>Success</p></td><td data-highlight-colour="#e3fcef" class="confluenceTd"><p>Success</p></td></tr></tbody></table></div><div class="table-wrap"><table data-table-width="760" data-layout="default" data-local-id="88ecc310-b063-4086-abbe-5f2e805b8c38" class="confluenceTable"><colgroup><col style="width: 170.0px;"/><col style="width: 170.0px;"/><col style="width: 170.0px;"/><col style="width: 170.0px;"/></colgroup><tbody><tr><th colspan="4" class="confluenceTh"><h3 id="GRTestResultsSummary-DownloadReminder"><strong>Download Reminder</strong></h3></th></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Description</strong></p></td><td data-highlight-colour="#f4f5f7" colspan="3" class="confluenceTd"><p>Move your mouse cursor outside of the playback window in your browser tab before downloading your results. Confirm that the reminder prompt to download results is shown.</p><p>Confirm that the prompt is ONLY shown if the mouse cursor is moved outside of the playback window AFTER ending the inspection but BEFORE downloading the results. Try other combinations to ensure this reminder prompt is not being shown at inappropriate times, such as BEFORE ending the inspection or AFTER downloading results.</p><p>
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="PHI-1323"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_1472987141_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/PHI-1323" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>PHI-1323</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p></td></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p /></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Chrome</strong></p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Edge</strong></p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Firefox</strong></p></td></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Results</strong></p></td><td data-highlight-colour="#e3fcef" class="confluenceTd"><p>Success</p></td><td data-highlight-colour="#e3fcef" class="confluenceTd"><p>Success</p></td><td data-highlight-colour="#e3fcef" class="confluenceTd"><p>Success</p></td></tr></tbody></table></div><div class="table-wrap"><table data-table-width="760" data-layout="default" data-local-id="68fa86d7-c22d-43d3-a3c7-ef1ff6a18513" class="confluenceTable"><colgroup><col style="width: 170.0px;"/><col style="width: 170.0px;"/><col style="width: 170.0px;"/><col style="width: 170.0px;"/></colgroup><tbody><tr><th colspan="4" class="confluenceTh"><h3 id="GRTestResultsSummary-DownloadImages-zipfile(s)"><strong>Download Images - zip file(s)</strong></h3></th></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Description</strong></p></td><td data-highlight-colour="#f4f5f7" colspan="3" class="confluenceTd"><p>Verify that the total number of exported images in the downloaded zip file(s) is identical to the number of photos in the Gallery. You may have up to 3 zip files, with 150 images in each zip. Check the contents carefully against your Gallery screenshots from your earlier testing.</p><p>Confirm that only your FINAL screenshots match your downloaded results. Ensure that images that were deleted from the Gallery prior to selecting End Inspection and View Summary are NOT included in your downloaded results.</p><p>
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="PHI-1324"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_1472987141_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/PHI-1324" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>PHI-1324</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p></td></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p /></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Chrome</strong></p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Edge</strong></p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Firefox</strong></p></td></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Results</strong></p></td><td data-highlight-colour="#e3fcef" class="confluenceTd"><p>Success</p></td><td data-highlight-colour="#e3fcef" class="confluenceTd"><p>Success</p></td><td data-highlight-colour="#e3fcef" class="confluenceTd"><p>Success</p></td></tr></tbody></table></div><div class="table-wrap"><table data-table-width="760" data-layout="default" data-local-id="2735eac2-b78f-4771-a0a0-3d8227921fa5" class="confluenceTable"><colgroup><col style="width: 170.0px;"/><col style="width: 170.0px;"/><col style="width: 170.0px;"/><col style="width: 170.0px;"/></colgroup><tbody><tr><th colspan="4" class="confluenceTh"><h3 id="GRTestResultsSummary-DownloadedResults-verifyPDFcontents"><strong>Downloaded Results - verify PDF contents</strong></h3></th></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Description</strong></p></td><td data-highlight-colour="#f4f5f7" colspan="3" class="confluenceTd"><p>Use the screenshots that you took earlier in testing to compare the Inspection Log, Activity Log, and all summary information from your downloaded PDF.</p><p>Ensure that your downloaded PDF contents match your FINAL screenshots, and not the interim screenshots that you created before adding/changing your inspection log.</p><p>
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="PHI-1325"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_1472987141_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/PHI-1325" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>PHI-1325</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p></td></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p /></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Chrome</strong></p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Edge</strong></p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Firefox</strong></p></td></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Results</strong></p></td><td data-highlight-colour="#e3fcef" class="confluenceTd"><p>Success</p></td><td data-highlight-colour="#e3fcef" class="confluenceTd"><p>Success</p></td><td data-highlight-colour="#e3fcef" class="confluenceTd"><p>Success</p></td></tr></tbody></table></div><div class="table-wrap"><table data-table-width="760" data-layout="default" data-local-id="4abd8147-9cf2-425b-805e-9f8e8afd915b" class="confluenceTable"><colgroup><col style="width: 170.0px;"/><col style="width: 170.0px;"/><col style="width: 170.0px;"/><col style="width: 170.0px;"/></colgroup><tbody><tr><th colspan="4" class="confluenceTh"><h3 id="GRTestResultsSummary-DownloadedResults-Maxdownloadsize"><strong>Downloaded Results - Max download size</strong></h3></th></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Description</strong></p></td><td data-highlight-colour="#f4f5f7" colspan="3" class="confluenceTd"><p>Create an inspection log that includes 1 photo of every inspectable item in the entire DLX (total 354 photos). End Inspection and review the summary, then download results.</p><ul><li><p>Confirm that all 354 photos are downloaded. Each zip archive will contain up to 150 image files, so there will be multiple zip files. The total number of photos in all zip files must add up to 354.</p></li><li><p>Confirm that the 354 photos are correct - there are no duplicate files (ie. you did not get the same first 150 images in every zip)</p></li><li><p>Repeat test with several different popular web browsers, such as Chrome, Edge, and Firefox</p></li></ul><p> 
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="PHI-1328"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_1472987141_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/PHI-1328" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>PHI-1328</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p></td></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p /></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Chrome</strong></p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Edge</strong></p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Firefox</strong></p></td></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Results</strong></p></td><td data-highlight-colour="#e3fcef" class="confluenceTd"><p>Success</p></td><td data-highlight-colour="#e3fcef" class="confluenceTd"><p>Success</p></td><td data-highlight-colour="#e3fcef" class="confluenceTd"><p>Success</p></td></tr></tbody></table></div><div class="table-wrap"><table data-table-width="760" data-layout="default" data-local-id="d21233fe-5e86-497d-b21a-6a77a5ca6ab7" class="confluenceTable"><colgroup><col style="width: 170.0px;"/><col style="width: 170.0px;"/><col style="width: 170.0px;"/><col style="width: 170.0px;"/></colgroup><tbody><tr><th colspan="4" class="confluenceTh"><h3 id="GRTestResultsSummary-DownloadedResults-downloadfailure-diskspace"><strong>Downloaded Results - download failure - disk space</strong></h3></th></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Description</strong></p></td><td data-highlight-colour="#f4f5f7" colspan="3" class="confluenceTd"><p>Confirm that the download will fail gracefully when there is not enough disk space for the download.</p><p>Configure your web browser to save to a very space-restricted location on your local machine (e.g. thumb drive)</p><p>End Inspection and proceed to download results and photos - report what happens.</p><p>NOTE: This test is designed to fail - it will not be possible to download results when inadequate disk space is available. The purpose of this test is to document what happens in these circumstances.</p><p>
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="PHI-1329"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_1472987141_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/PHI-1329" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>PHI-1329</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+  </p></td></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p /></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Chrome</strong></p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Edge</strong></p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Firefox</strong></p></td></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Results</strong></p></td><td data-highlight-colour="#e3fcef" class="confluenceTd"><p>Success</p></td><td data-highlight-colour="#e3fcef" class="confluenceTd"><p>Success</p></td><td data-highlight-colour="#e3fcef" class="confluenceTd"><p>Success</p></td></tr></tbody></table></div><div class="table-wrap"><table data-table-width="760" data-layout="default" data-local-id="022030b1-3229-455c-bcbc-aaba001677e5" class="confluenceTable"><colgroup><col style="width: 170.0px;"/><col style="width: 170.0px;"/><col style="width: 170.0px;"/><col style="width: 170.0px;"/></colgroup><tbody><tr><th colspan="4" class="confluenceTh"><h3 id="GRTestResultsSummary-DownloadedResults-downloadfailure-networkconnectivityissues"><strong>Downloaded Results - download failure - network connectivity issues</strong></h3></th></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Description</strong></p></td><td data-highlight-colour="#f4f5f7" colspan="3" class="confluenceTd"><p>Confirm that the download will fail gracefully when there is an interruption in network connectivity during the download.</p><p>Right after starting your results download, interrupt your internet connection. You could do this by toggling the wifi setting for your device, causing it to lose/regain/lose network connection. Try different timing intervals, to see how long you can be offline before the dowload will fail. Try different web browsers.</p><p>
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="PHI-1330"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_1472987141_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/PHI-1330" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>PHI-1330</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p></td></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p /></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Chrome</strong></p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Edge</strong></p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Firefox</strong></p></td></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Results</strong></p></td><td data-highlight-colour="#e3fcef" class="confluenceTd"><p>Success</p></td><td data-highlight-colour="#e3fcef" class="confluenceTd"><p>Success</p></td><td data-highlight-colour="#e3fcef" class="confluenceTd"><p>Success</p></td></tr></tbody></table></div><div class="table-wrap"><table data-table-width="760" data-layout="default" data-local-id="a1cd506e-314a-4096-a01a-350fdabb1200" class="confluenceTable"><colgroup><col style="width: 170.0px;"/><col style="width: 170.0px;"/><col style="width: 170.0px;"/><col style="width: 170.0px;"/></colgroup><tbody><tr><th colspan="4" class="confluenceTh"><h3 id="GRTestResultsSummary-Analytics"><strong>Analytics</strong></h3></th></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Description</strong></p></td><td data-highlight-colour="#f4f5f7" colspan="3" class="confluenceTd"><p>Verify that the Analytics package is correctly reporting all of the following:</p><ul><li><p>Total unique users to launch the DLX</p></li><li><p>Total playtime for all users, all time</p></li><li><p>Date of most recent access</p></li></ul><p>
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="PHI-1326"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_1472987141_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/PHI-1326" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>PHI-1326</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p></td></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p /></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Chrome</strong></p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Edge</strong></p></td><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Firefox</strong></p></td></tr><tr><td data-highlight-colour="#f4f5f7" class="confluenceTd"><p><strong>Results</strong></p></td><td data-highlight-colour="#e3fcef" class="confluenceTd"><p>Success</p></td><td data-highlight-colour="#e3fcef" class="confluenceTd"><p>Success</p></td><td data-highlight-colour="#e3fcef" class="confluenceTd"><p>Success</p></td></tr></tbody></table></div><h2 id="GRTestResultsSummary-NetworkTests">Network Tests</h2><a href="Network-Test-Procedures---PHI_1474953234.html" data-linked-resource-id="1474953234" data-linked-resource-version="4" data-linked-resource-type="page">Network Test Procedures - PHI</a><h2 id="GRTestResultsSummary-ScenarioTests">Scenario Tests</h2><p>All scenarios have been checked against the scenario document <a class="external-link" href="https://stuconestogacon.sharepoint.com/:x:/s/VARLab/EaeOTh2WuFhNsRhiiqmrqeIBrAXu7CQBa7E8OcpedGDEuw?e=0tKrJG" rel="nofollow">Scenarios.xlsx</a>.</p><p>For inspection we identified that did not match the scenario file we updated the file instead of updating the scenario in game to avoid a new build. All the changes are reported in the Jira tickets below and were discussed in the project team chat:</p><p>
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="PHI-1294"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_1472987141_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/PHI-1294" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>PHI-1294</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p><p>
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="PHI-1295"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_1472987141_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/PHI-1295" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>PHI-1295</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p><p>
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="PHI-1296"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_1472987141_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/PHI-1296" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>PHI-1296</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p><p>
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="PHI-1297"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_1472987141_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/PHI-1297" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>PHI-1297</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p><p>
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="PHI-1297"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_1472987141_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/PHI-1297" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>PHI-1297</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p><p>
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="PHI-1298"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_1472987141_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/PHI-1298" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>PHI-1298</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p><p>
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="PHI-1299"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_1472987141_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/PHI-1299" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>PHI-1299</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p><p>
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="PHI-1300"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_1472987141_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/PHI-1300" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>PHI-1300</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p><p>
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="PHI-1301"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_1472987141_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/PHI-1301" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>PHI-1301</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p><p>
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="PHI-1302"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_1472987141_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/PHI-1302" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>PHI-1302</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p><p>
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="PHI-1303"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_1472987141_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/PHI-1303" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>PHI-1303</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p><p>
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="PHI-1304"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_1472987141_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/PHI-1304" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>PHI-1304</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p><p>
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="PHI-1305"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_1472987141_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/PHI-1305" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>PHI-1305</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p>
+                    </div>
+
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Jun 11, 2025 14:14</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

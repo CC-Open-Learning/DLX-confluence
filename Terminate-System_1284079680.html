@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VARLab : Terminate System</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="VARLab_44990773.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Learning-Experience_972881951.html">Learning Experience</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="216629273.html">Digital Learning Experiences (DLX)</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="706347009.html">LSM8.02 - Conestoga Trades: Electrician Simulator</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Development-Documentations_1066237953.html">Development Documentations</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            VARLab : Terminate System
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                            
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> User c4ba3</span> on Aug 15, 2024
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <h3 id="TerminateSystem-CurrentIssues:"><br/>Current Issues:</h3><ol start="1"><li><p>Exiting a task is not possible.</p></li><li><p>Switching wires and altering options is not feasible.</p></li><li><p>The implementation of termination status types is pending.</p></li><li><p>Each subtask requires a simple enumeration status, which should be updated when an orb is selected. </p></li></ol><h3 id="TerminateSystem-FileDescriptions:">File Descriptions:</h3><ul><li><p><strong>Terminate Cable Task:</strong> This file encompasses references for subtasks within the wire categories (bond, neutral, hot), alongside task view camera settings and the main task functionality. It primarily facilitates interaction with subtasks, enabling orbs, the termination option, and removal.</p></li><li><p><strong>WireSubTask:</strong> Represents the wire object.</p></li><li><p><strong>TerminateWireAnchor:</strong> A script placed on the final wire object to display it to the user upon clicking a terminate location orb. It tracks the selected wire, transferring data to the anchor point when the original wire is disabled, as it includes a WireSubTask. This feature could be integrated into the TerminateLocation script but needs to be checked more.</p></li><li><p><strong>TerminateCableLocation:</strong> Script linked to the orb, referencing the game object it will enable, with the TerminateWireAnchor attached to that position.</p></li><li><p><strong>TerminateCableTaskHandler:</strong> Identifies all objects related to the TerminateCableTask, organizing them in a dictionary by their task for reference for handling purposes. This script contains the methods required to be called for starting, setting up orbs, and termination.</p></li><li><p><strong>TerminateInteraction:</strong> Manages raycasting to determine interactions with wires or orbs.</p></li><li><p><strong>TerminateEditInteraction:</strong> Handles raycasting and determines interactions with already terminated wires.</p></li></ul><h3 id="TerminateSystem-SystemFunctionality">System Functionality</h3><p>The user engages with the Terminate Cable Task handler by initiating the selected task. A new task is created in the Task.cs file, serialized in TerminateCableTask.cs, and attached to an empty object. The task name enum passed is used to access the Terminate Cable Task.cs file, activating the camera and recording the task initiation in the backend.</p><p>Post-camera preview, the cable wire colliders should activate (currently, only the object is enabled). The user can then select a cable, revealing the orbs. Upon orb selection, the finalized version is triggered by activating the object linked to the orb's serialized location.</p><p>The user can now edit the terminated wire by clicking on it, causing the finalized wire to disappear. This action accesses the orb locations for that wire, shows them, and allows the user to reselect the option.</p><p />
+                    </div>
+
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Jun 11, 2025 14:17</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

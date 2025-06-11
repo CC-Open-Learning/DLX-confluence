@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VARLab : TE Menu Configuration with UI Toolkit</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="VARLab_44990773.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Learning-Experience_972881951.html">Learning Experience</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="216629273.html">Digital Learning Experiences (DLX)</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="706347009.html">LSM8.02 - Conestoga Trades: Electrician Simulator</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Development-Documentations_1066237953.html">Development Documentations</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="User-Interfaces_1531150391.html">User Interfaces</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            VARLab : TE Menu Configuration with UI Toolkit
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                            
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> User 1c73e</span>, last modified by <span class='editor'> David Inglis</span> on Dec 20, 2024
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <p>This document describes the classes and configuration for displaying menus in Trades Electrical.</p><h2 id="TEMenuConfigurationwithUIToolkit-Contents">Contents</h2><style type='text/css'>/*<![CDATA[*/
+div.rbtoc1749651458476 {padding: 0px;}
+div.rbtoc1749651458476 ul {list-style: none;margin-left: 0px;padding-left: ;}
+div.rbtoc1749651458476 li {margin-left: 0px;padding-left: 0px;}
+
+/*]]>*/</style><div class='toc-macro rbtoc1749651458476'>
+<ul class='toc-indentation'>
+<li><a href='#TEMenuConfigurationwithUIToolkit-Classes'>Classes</a>
+<ul class='toc-indentation'>
+<li><a href='#TEMenuConfigurationwithUIToolkit-Generic'>Generic</a>
+<ul class='toc-indentation'>
+<li><a href='#TEMenuConfigurationwithUIToolkit-MenuController'>MenuController</a>
+<ul class='toc-indentation'>
+<li><a href='#TEMenuConfigurationwithUIToolkit-Fields'>Fields</a></li>
+<li><a href='#TEMenuConfigurationwithUIToolkit-Properties'>Properties</a></li>
+<li><a href='#TEMenuConfigurationwithUIToolkit-Methods'>Methods</a></li>
+</ul>
+</li>
+<li><a href='#TEMenuConfigurationwithUIToolkit-WorkflowSelectionMenuController'>WorkflowSelectionMenuController</a>
+<ul class='toc-indentation'>
+<li><a href='#TEMenuConfigurationwithUIToolkit-Fields.1'>Fields</a></li>
+</ul>
+</li>
+<li><a href='#TEMenuConfigurationwithUIToolkit-TabbedTaskMenuController'>TabbedTaskMenuController</a>
+<ul class='toc-indentation'>
+<li><a href='#TEMenuConfigurationwithUIToolkit-Fields.2'>Fields</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href='#TEMenuConfigurationwithUIToolkit-UIDocuments'>UI Documents</a>
+<ul class='toc-indentation'>
+<li><a href='#TEMenuConfigurationwithUIToolkit-Stylesheets'>Stylesheets</a></li>
+<li><a href='#TEMenuConfigurationwithUIToolkit-Navigation'>Navigation</a></li>
+<li><a href='#TEMenuConfigurationwithUIToolkit-Hierarchy'>Hierarchy</a></li>
+</ul>
+</li>
+</ul>
+</div><h2 id="TEMenuConfigurationwithUIToolkit-Classes">Classes</h2><h3 id="TEMenuConfigurationwithUIToolkit-Generic">Generic</h3><h4 id="TEMenuConfigurationwithUIToolkit-MenuController">MenuController</h4><p>Most window/menu elements in TE extend from the <code>abstract MenuController</code> class, which defines a set of common behaviours such as open and closed states and events when such state changes.</p><h5 id="TEMenuConfigurationwithUIToolkit-Fields">Fields</h5><p><code>UIDocument Document</code></p><p style="margin-left: 30.0px;">Reference to the UI document attached to the same GameObject. This reference is found automatically using the <code>OnValidate</code> Unity callback, but can be manually serialized if the UI Document to be controlled is located on a different GameObject.</p><p><code>VisualElement Root</code> </p><p style="margin-left: 30.0px;">The root visual element of the <code>Document</code>, equal to <code>Document.rootVisualElement</code>. This visual element is shown/hidden appropriately to open/close the the menu.</p><p><code>bool OpenOnStart</code> </p><p style="margin-left: 30.0px;">Indicates whether the menu should start in the open state. <code>false</code> by default.</p><p><code>UnityEvent Opened</code> </p><p style="margin-left: 30.0px;">UnityEvent invoked when the menu is opened. Objects can subscribe to events in code or through serialized fields in the Unity Editor.</p><p><code>UnityEvent Closed</code> </p><p style="margin-left: 30.0px;">UnityEvent invoked when the menu is closed. Objects can subscribe to events in code or through serialized fields in the Unity Editor.</p><p /><h5 id="TEMenuConfigurationwithUIToolkit-Properties">Properties</h5><p><code>bool IsOpen</code></p><p style="margin-left: 30.0px;">A derived property which checks the state of the <code>Root</code> element to determine if the menu is currently open, which ensures that the document itself defines the single source of truth for the display state.</p><p /><h5 id="TEMenuConfigurationwithUIToolkit-Methods">Methods</h5><p><code>abstract void Initialize</code></p><p style="margin-left: 30.0px;">Defines an initialization procedure for each menu controller. Child classes <strong>must</strong> override this method as it is abstract and provides no implementation in the base class.</p><p style="margin-left: 30.0px;">The <code>Start</code> Unity callback calls this function, so it effectively acts as a <code>Start</code> method with a guarantee that the <code>Document</code> and <code>Root</code> fields will be non-null.</p><p><code>virtual void Display(bool enabled)</code></p><p style="margin-left: 30.0px;">Indicates whether the menu should be opened or closed, based on the value provided as a parameter. <code>true</code> will open the menu, <code>false</code> will close it, calling the appropriate method for each.</p><p><code>virtual void Toggle()</code></p><p style="margin-left: 30.0px;">Shorthand for <code>Display(!IsOpen)</code></p><p><code>virtual void Open()</code></p><p style="margin-left: 30.0px;">Displays the menu by setting the <code>DisplayStyle</code> of the <code>Root</code> element to <code>DisplayStyle.Flex</code> and invokes the associated <code>Opened</code> event.</p><p><code>virtual void Close()</code></p><p style="margin-left: 30.0px;">Hides the menu by setting the <code>DisplayStyle</code> of the <code>Root</code> element to <code>DisplayStyle.Flex</code> and invokes the associated <code>Closed</code> event.</p><p /><p /><h4 id="TEMenuConfigurationwithUIToolkit-WorkflowSelectionMenuController">WorkflowSelectionMenuController</h4><p>This <code>abstract</code> class which extends from <code>MenuController</code> defines common Workflow Selection functionality, providing common behavior for derived selection menus.</p><h5 id="TEMenuConfigurationwithUIToolkit-Fields.1">Fields</h5><p><code>bool HasBackwardsNavigation</code></p><p style="margin-left: 30.0px;">Indicates whether the menu controller supports backwards navigation, and configures the appropriate button click actions to support it.</p><p><code>UnityEvent BackButtonPressed</code></p><p><code>UnityEvent CloseButtonPressed</code></p><p /><h4 id="TEMenuConfigurationwithUIToolkit-TabbedTaskMenuController">TabbedTaskMenuController</h4><h5 id="TEMenuConfigurationwithUIToolkit-Fields.2">Fields</h5><p><code>public readonly List&lt;Task&gt; TaskTabs</code></p><p><code>protected readonly List&lt;VisualElement&gt; TabButtons</code></p><p><code>protected readonly List&lt;VisualElement&gt; TabContainers</code></p><p /><p><code>public UnityEvent Cancelled</code></p><p style="margin-left: 30.0px;">An event which indicates that a selection action should be cancelled. This event is invoked on both close button and back button press.</p><p><code>public UnityEvent BackButtonPressed</code></p><p><code>public UnityEvent CloseButtonPressed</code></p><p><code>public UnityEvent&lt;Task&gt; TaskSelected</code></p><p><code>public UnityEvent&lt;MountableName&gt; ItemSelected</code></p><p><code>public UnityEvent&lt;ConfirmSelectionInfo&gt; ConfirmInfoChanged</code></p><p /><p /><h2 id="TEMenuConfigurationwithUIToolkit-UIDocuments">UI Documents</h2><p>UI Documents (which have the <code>.uxml</code> prefix) should follow these style and hierarchy patterns for consistency and reusability.</p><div class="panel" style="background-color: #EAE6FF;border-color: #998DD9;border-width: 1px;"><div class="panelContent" style="background-color: #EAE6FF;">
+<p>UI controllers (as described above) should avoid making direct style changes in code, whenever possible, opting instead to use <a class="external-link" href="https://docs.unity3d.com/6000.0/Documentation/Manual/UIE-USS-Selectors-Pseudo-Classes.html" rel="nofollow">pseudo-classes</a> such as <code>:hover</code> or <code>:active</code></p>
+</div></div><p /><h3 id="TEMenuConfigurationwithUIToolkit-Stylesheets">Stylesheets</h3><p>The default stylesheet is <code>styles.uss</code></p><h3 id="TEMenuConfigurationwithUIToolkit-Navigation">Navigation</h3><h3 id="TEMenuConfigurationwithUIToolkit-Hierarchy">Hierarchy</h3><ul><li><p>Screen</p><ul><li><p>Window</p><ul><li><p>Header</p><ul><li><p>Decoration</p></li><li><p>Title</p></li></ul></li><li><p>Content</p><ul><li><p>Instructions</p></li><li><p>Selections</p></li></ul></li></ul></li></ul></li></ul>
+                    </div>
+
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Jun 11, 2025 14:17</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

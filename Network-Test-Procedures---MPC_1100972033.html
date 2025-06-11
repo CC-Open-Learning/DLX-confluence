@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VARLab : Network Test Procedures - MPC</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="VARLab_44990773.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Learning-Experience_972881951.html">Learning Experience</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="General-Release-DLX_729973721.html">General Release DLX</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="LSM7.07---MP-Circuits_588283905.html">LSM7.07 - MP Circuits</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            VARLab : Network Test Procedures - MPC
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                            
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> David Inglis</span>, last modified on May 08, 2024
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <h2 id="NetworkTestProcedures-MPC-Overview">Overview</h2><p>These baseline tests intend to document network and web browser performance of the Motive Power Circuits DLX as a WebGL module in eConestoga.</p><p>These test procedures are being performed on the <strong>MPC-24W8.5-3MAY2024 </strong>series of builds which are proposed as release candidates. All 9 independent lab modules and the Digital Twin module are close in file size, with the smallest being the Digital Twin at <strong>20.9MB</strong>, and the largest being Circuits Lab 5 at <strong>35.8MB</strong> (compressed).</p><h2 id="NetworkTestProcedures-MPC-Contents">Contents</h2><style type='text/css'>/*<![CDATA[*/
+div.rbtoc1749651169611 {padding: 0px;}
+div.rbtoc1749651169611 ul {list-style: none;margin-left: 0px;padding-left: ;}
+div.rbtoc1749651169611 li {margin-left: 0px;padding-left: 0px;}
+
+/*]]>*/</style><div class='toc-macro rbtoc1749651169611'>
+<ul class='toc-indentation'>
+<li><a href='#NetworkTestProcedures-MPC-BaselineNetworkSystemsTests'>Baseline Network Systems Tests</a>
+<ul class='toc-indentation'>
+<li><a href='#NetworkTestProcedures-MPC-Bandwidth'>Bandwidth</a></li>
+<li><a href='#NetworkTestProcedures-MPC-ServerLoad'>Server Load</a></li>
+<li><a href='#NetworkTestProcedures-MPC-Latency'>Latency</a></li>
+<li><a href='#NetworkTestProcedures-MPC-PacketLoss'>Packet Loss</a></li>
+</ul>
+</li>
+<li><a href='#NetworkTestProcedures-MPC-Single-PlayerExperienceTests'>Single-Player Experience Tests</a>
+<ul class='toc-indentation'>
+<li><a href='#NetworkTestProcedures-MPC-LoadTimes'>Load Times</a></li>
+<li><a href='#NetworkTestProcedures-MPC-Fullscreen'>Fullscreen</a></li>
+<li><a href='#NetworkTestProcedures-MPC-SavingProgress'>Saving Progress</a></li>
+<li><a href='#NetworkTestProcedures-MPC-Offline'>Offline</a></li>
+<li><a href='#NetworkTestProcedures-MPC-Bandwidth.1'>Bandwidth</a></li>
+</ul>
+</li>
+<li><a href='#NetworkTestProcedures-MPC-MultiplayerExperienceTests'>Multiplayer Experience Tests</a></li>
+</ul>
+</div><h2 id="NetworkTestProcedures-MPC-BaselineNetworkSystemsTests">Baseline Network Systems Tests</h2><p>These baseline network tests aim to track a minimal but necessary set of network performance metrics. </p><h3 id="NetworkTestProcedures-MPC-Bandwidth">Bandwidth</h3><div class="table-wrap"><table data-table-width="760" data-layout="default" data-local-id="9d439524-9617-47ba-ae83-989c9bb58b18" class="confluenceTable"><colgroup><col style="width: 154.0px;"/><col style="width: 174.0px;"/><col style="width: 145.0px;"/><col style="width: 283.0px;"/></colgroup><tbody><tr><th class="confluenceTh"><p><strong>Module</strong></p></th><th class="confluenceTh"><p><strong>Network Speed</strong></p></th><th class="confluenceTh"><p><strong>Browser</strong></p></th><th class="confluenceTh"><p><strong>Load Time</strong></p></th></tr><tr><td class="confluenceTd"><p>Digital Twin</p></td><td class="confluenceTd"><p>250Mbps</p></td><td class="confluenceTd"><p>Chrome</p></td><td class="confluenceTd"><p>2s</p></td></tr><tr><td class="confluenceTd"><p>Digital Twin</p></td><td class="confluenceTd"><p>37.6Mbps</p></td><td class="confluenceTd"><p>Chrome</p></td><td class="confluenceTd"><p>6.43s (avg across 31 attempts)</p></td></tr><tr><td class="confluenceTd"><p>Digital Twin</p></td><td class="confluenceTd"><p>1Mbps</p></td><td class="confluenceTd"><p>Chrome</p></td><td class="confluenceTd"><p>1m25s</p></td></tr><tr><td class="confluenceTd"><p>Circuits Lab 1-5</p></td><td class="confluenceTd"><p>37.6Mbps</p></td><td class="confluenceTd"><p>Chrome</p></td><td class="confluenceTd"><p>9.90s (avg across 31 attempts)</p></td></tr><tr><td class="confluenceTd"><p>Circuits Lab 5</p></td><td class="confluenceTd"><p>250Mbps</p></td><td class="confluenceTd"><p>Chrome</p></td><td class="confluenceTd"><p>2.6s</p></td></tr></tbody></table></div><h3 id="NetworkTestProcedures-MPC-ServerLoad">Server Load</h3><p>The web host for all modules is eConestoga so no measurement can be performed server-side. Loading the simulation itself is dependent on eConestoga servers and the Unity WebGL runtime.</p><h3 id="NetworkTestProcedures-MPC-Latency">Latency</h3><p>Analytics events are “fire-and-forget” and the simulation is not dependent on a response from these API calls. </p><p>Average request time: 247ms</p><h3 id="NetworkTestProcedures-MPC-PacketLoss">Packet Loss</h3><p>Analytics events sent while the simulation is offline are lost.</p><p /><h2 id="NetworkTestProcedures-MPC-Single-PlayerExperienceTests">Single-Player Experience Tests</h2><p><strong>Single-Player Experience Tests</strong> intend to validate the stability and support of single-player experiences with the sim.</p><h3 id="NetworkTestProcedures-MPC-LoadTimes">Load Times</h3><p>As noted in response times above, with an ~average~? network connection one can expect to load and launch the sim within the magnitude of one minute. </p><h3 id="NetworkTestProcedures-MPC-Fullscreen">Fullscreen</h3><p>All modules are intended to be launched using the “Open In New Tab” option for SCORM/xAPI content. The modules can be launched as embedded content within the eConestoga tab, and the screen will resize to fill the available space.</p><p>Whether in a separate tab or embedded in the page, learners can resize the browser tab and the simulation will resize its playable window accordingly. They can also enter and leave fullscreen mode with no issues.</p><h3 id="NetworkTestProcedures-MPC-SavingProgress">Saving Progress</h3><p>Saving progress is not a requirement for the Motive Power Circuits simulation. As there is no save &amp; load capability, learners who close their web browser mid-lab will have to start from the beginning of the lab.</p><h3 id="NetworkTestProcedures-MPC-Offline">Offline</h3><p>Loss of network connection does not interrupt the learner’s ability to play the sim. However, analytics events sent while the simulation is offline are lost.</p><h3 id="NetworkTestProcedures-MPC-Bandwidth.1">Bandwidth</h3><p>Lower bandwidth increases overall load times but has no effect on the simulation once loaded, as there are no dependencies on external network resources after the initial load.</p><p /><h2 id="NetworkTestProcedures-MPC-MultiplayerExperienceTests">Multiplayer Experience Tests</h2><p>Motive Power Circuits has no multiplayer component, so no tests of this kind are being performed.</p>
+                    </div>
+
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Jun 11, 2025 14:12</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

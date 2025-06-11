@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VARLab : Biopsy Scenario System</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="VARLab_44990773.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Learning-Experience_972881951.html">Learning Experience</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="216629273.html">Digital Learning Experiences (DLX)</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="LSM9.05---Respiratory-Therapy_1328119833.html">LSM9.05 - Respiratory Therapy</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Documentation_1512341506.html">Documentation</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Biopsy_1748893705.html">Biopsy</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            VARLab : Biopsy Scenario System
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                            
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> User e88ce</span>, last modified by <span class='editor'> User bf53c</span> on Apr 15, 2025
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <p>RT’s Biopsy Procedure mode works by following a numbered list of defined sections. These sections are known as “Scenarios”. This document provides step-by-step instructions on how to create a scenario.</p><h2 id="BiopsyScenarioSystem-CreatingtheScenarioFolder:">Creating the Scenario Folder:</h2><ol start="1"><li><p>Determine where the scenario falls in the numbered order. The scenario should be represented by a scene in <a class="external-link" href="https://www.figma.com/design/QYBZejiuhRNZtbzWZPTwSv/Respiratory-Therapy?node-id=0-1&amp;p=f&amp;t=L6cfHloo1xb1XZKA-0" rel="nofollow">Figma</a> so you can figure out the correct number by comparing the scene order to the scenario order.</p></li><li><p>Create a folder in Assets/Scriptable Objects/Biopsy/Scenarios for the new scenario. It should be named “[scenario number].[scenario name] Scenario” (eg. “3.Initial Observation Scenario”). The [scenario name] usually isn’t defined, so name it something that appropriately summarizes what it represents.<br/></p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20250415-194116.png" width="708" loading="lazy" src="attachments/1749254213/1751875600.png?width=708" data-image-src="attachments/1749254213/1751875600.png" data-height="130" data-width="483" data-unresolved-comment-count="0" data-linked-resource-id="1751875600" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20250415-194116.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1749254213" data-linked-resource-container-version="3" data-media-id="0858dd1a-a0eb-4a96-9380-c21ffe0a3d6b" data-media-type="file"></span></li></ol><p>3. Within the newly created folder, create another folder named “[scenario name] Scenario Tasks” (eg. “Initial Observation Scenario Tasks”).</p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20250415-194156.png" width="708" loading="lazy" src="attachments/1749254213/1751908391.png?width=708" data-image-src="attachments/1749254213/1751908391.png" data-height="35" data-width="708" data-unresolved-comment-count="0" data-linked-resource-id="1751908391" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20250415-194156.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1749254213" data-linked-resource-container-version="3" data-media-id="639a80c2-f202-4276-b3f2-670872bca501" data-media-type="file"></span><h2 id="BiopsyScenarioSystem-CreatingScenarioTasks:">Creating Scenario Tasks:</h2><ol start="1"><li><p>Identify what “Tasks” are required for the scenario. Refer to the <a href="Biopsy-Task-System_1748860944.html" data-linked-resource-id="1748860944" data-linked-resource-version="12" data-linked-resource-type="page">task document</a> for information on the types of tasks and how to create them.</p></li><li><p>Create all required tasks within the scenario tasks folder.</p></li><li><p>Update the TaskIndexIncrement and ScenarioIndexIncrement fields of the created tasks:</p></li></ol><p><strong>Scenario With 1 Task:</strong> Generally, when a scenario has 1 task, the ScenarioIndexIncrement needs to be true for that task. This doesn’t need to happen when the task inherently updates the scenario index (currently only happens with the MessageTaskSO). The TaskIndexIncrement needs to be false.</p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20250415-192035.png" width="514" loading="lazy" src="attachments/1749254213/1752334348.png?width=514" data-image-src="attachments/1749254213/1752334348.png" data-height="211" data-width="514" data-unresolved-comment-count="0" data-linked-resource-id="1752334348" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20250415-192035.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1749254213" data-linked-resource-container-version="3" data-media-id="08988f0b-8889-4f68-916f-c43ae5e4e2b5" data-media-type="file"></span><p><strong>Scenario With 2+ Tasks: </strong>When a scenario has more than 1 task, the TaskIndexIncrement needs to be true for all tasks except the final one. The ScenarioTaskIncrement needs to be false for every task.</p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20250415-192155.png" width="519" loading="lazy" src="attachments/1749254213/1752301582.png?width=519" data-image-src="attachments/1749254213/1752301582.png" data-height="216" data-width="519" data-unresolved-comment-count="0" data-linked-resource-id="1752301582" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20250415-192155.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1749254213" data-linked-resource-container-version="3" data-media-id="88ff1ee5-5b1d-40ed-a2a0-a5b196485c5b" data-media-type="file"></span><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20250415-193150.png" width="516" loading="lazy" src="attachments/1749254213/1751908382.png?width=516" data-image-src="attachments/1749254213/1751908382.png" data-height="196" data-width="516" data-unresolved-comment-count="0" data-linked-resource-id="1751908382" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20250415-193150.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1749254213" data-linked-resource-container-version="3" data-media-id="b09f69ff-83ab-4982-8c20-ea7953764747" data-media-type="file"></span><p><strong>ItemRequestTaskSO: </strong>These tasks use unique values (GoToNextTask and GoToNextScenario) instead of the general values. The previous rules are mostly the same, but if a scenario ends with an item request GoToNextScenario must be true as it does not auto-increment.</p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20250415-193832.png" width="521" loading="lazy" src="attachments/1749254213/1752367138.png?width=521" data-image-src="attachments/1749254213/1752367138.png" data-height="279" data-width="521" data-unresolved-comment-count="0" data-linked-resource-id="1752367138" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20250415-193832.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1749254213" data-linked-resource-container-version="3" data-media-id="178baddb-805d-4d5b-9302-80e46c64867f" data-media-type="file"></span><h2 id="BiopsyScenarioSystem-CreatingTheScenario:">Creating The Scenario: </h2><ol start="1"><li><p>Return to the scenario folder created earlier and create a ScenarioTasksSO by inputting Right-click &gt; Create &gt; RT Scriptable Objects &gt; Biopsy &gt; Scenario.</p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20250415-194901.png" width="688" loading="lazy" src="attachments/1749254213/1752334354.png?width=688" data-image-src="attachments/1749254213/1752334354.png" data-height="128" data-width="496" data-unresolved-comment-count="0" data-linked-resource-id="1752334354" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20250415-194901.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1749254213" data-linked-resource-container-version="3" data-media-id="1c87d029-d375-493b-bb66-97594eee64f5" data-media-type="file"></span></li><li><p>Fill out the ScenarioName with the name decided on earlier. Also, fill out the ScenatioTaskList with the previously created tasks. Make sure they’re in the right order!</p></li></ol><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20250415-195112.png" width="514" loading="lazy" src="attachments/1749254213/1751810079.png?width=514" data-image-src="attachments/1749254213/1751810079.png" data-height="210" data-width="514" data-unresolved-comment-count="0" data-linked-resource-id="1751810079" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20250415-195112.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1749254213" data-linked-resource-container-version="3" data-media-id="fa9bd8c6-ea9d-47a6-b965-0b12dcc30fde" data-media-type="file"></span><h2 id="BiopsyScenarioSystem-ReferencingtheScenario:">Referencing the Scenario:</h2><ol start="1"><li><p>Find the BiopsyController in the project hierarchy.</p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20250415-195421.png" width="690" loading="lazy" src="attachments/1749254213/1751908399.png?width=690" data-image-src="attachments/1749254213/1751908399.png" data-height="86" data-width="366" data-unresolved-comment-count="0" data-linked-resource-id="1751908399" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20250415-195421.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1749254213" data-linked-resource-container-version="3" data-media-id="f5b9764c-f511-439a-993b-4c2a7b5f747a" data-media-type="file"></span></li><li><p>Update the ScenarioList to include the new scenario in the numbered order determined earlier. </p></li></ol><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20250415-195515.png" width="494" loading="lazy" src="attachments/1749254213/1752203298.png?width=494" data-image-src="attachments/1749254213/1752203298.png" data-height="210" data-width="494" data-unresolved-comment-count="0" data-linked-resource-id="1752203298" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20250415-195515.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1749254213" data-linked-resource-container-version="3" data-media-id="81cf74e9-3344-40e4-b883-9cd511bfe560" data-media-type="file"></span><p />
+                    </div>
+
+                                        <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="attachments" class="pageSectionTitle">Attachments:</h2>
+                        </div>
+
+                        <div class="greybox" align="left">
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1749254213/1751810057.png">image-20241210-170449.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1749254213/1751810063.png">image-20241210-164703.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1749254213/1752334348.png">image-20250415-192035.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1749254213/1752301582.png">image-20250415-192155.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1749254213/1751908382.png">image-20250415-193150.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1749254213/1752367138.png">image-20250415-193832.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1749254213/1751875600.png">image-20250415-194116.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1749254213/1752137741.png">image-20250415-194133.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1749254213/1751908391.png">image-20250415-194156.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1749254213/1752334354.png">image-20250415-194901.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1749254213/1751941135.png">image-20250415-195101.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1749254213/1751875606.png">image-20250415-195110.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1749254213/1751810079.png">image-20250415-195112.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1749254213/1751908399.png">image-20250415-195421.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1749254213/1752203298.png">image-20250415-195515.png</a> (image/png)
+                                <br/>
+                                                    </div>
+                    </div>
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Jun 11, 2025 14:21</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

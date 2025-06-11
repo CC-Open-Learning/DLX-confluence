@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VARLab : TPI System Design Session - POI System Enhancements</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="VARLab_44990773.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Learning-Experience_972881951.html">Learning Experience</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="216629273.html">Digital Learning Experiences (DLX)</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="LSM9.01B---PHI-Tattoo-and-Piercing-Studio-Inspection_1550090242.html">LSM9.01B - PHI-Tattoo and Piercing Studio Inspection</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="1581678593.html">TPI Meeting Notes : System Design Session</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            VARLab : TPI System Design Session - POI System Enhancements
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                            
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> User f2c35</span>, last modified on Jan 30, 2025
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <p>📅 <strong>Date:</strong> January 23, 2025</p><style type='text/css'>/*<![CDATA[*/
+div.rbtoc1749651718212 {padding: 0px;}
+div.rbtoc1749651718212 ul {list-style: none;margin-left: 0px;}
+div.rbtoc1749651718212 li {margin-left: 0px;padding-left: 0px;}
+
+/*]]>*/</style><div class='toc-macro rbtoc1749651718212'>
+<ul class='toc-indentation'>
+<li><a href='#TPISystemDesignSession-POISystemEnhancements-1.ScopeoftheMeeting'>1. Scope of the Meeting</a></li>
+<li><a href='#TPISystemDesignSession-POISystemEnhancements-2.UpdatedPOISystemStructure'>2. Updated POI System Structure</a>
+<ul class='toc-indentation'>
+<li><a href='#TPISystemDesignSession-POISystemEnhancements-📂PoiList.cs(StaticClass)'>📂 PoiList.cs (Static Class)</a>
+<ul class='toc-indentation'>
+<li><a href='#TPISystemDesignSession-POISystemEnhancements-🔹Properties'>🔹 Properties</a></li>
+<li><a href='#TPISystemDesignSession-POISystemEnhancements-🔹Methods'>🔹 Methods</a></li>
+</ul>
+</li>
+<li><a href='#TPISystemDesignSession-POISystemEnhancements-📂POI.cs(MonoBehaviour)'>📂 POI.cs (MonoBehaviour)</a>
+<ul class='toc-indentation'>
+<li><a href='#TPISystemDesignSession-POISystemEnhancements-🔹Properties.1'>🔹 Properties</a></li>
+<li><a href='#TPISystemDesignSession-POISystemEnhancements-🔹Methods.1'>🔹 Methods</a></li>
+<li><a href='#TPISystemDesignSession-POISystemEnhancements-🔹Events'>🔹 Events</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href='#TPISystemDesignSession-POISystemEnhancements-3.KeyDiscussionPoints&amp;Decisions'>3. Key Discussion Points &amp; Decisions</a>
+<ul class='toc-indentation'>
+<li><a href='#TPISystemDesignSession-POISystemEnhancements-📌WhyWeNeedaPOISystem?'>📌 Why We Need a POI System?</a></li>
+<li><a href='#TPISystemDesignSession-POISystemEnhancements-📌Enum-basedPOIListManagement'>📌 Enum-based POI List Management</a></li>
+<li><a href='#TPISystemDesignSession-POISystemEnhancements-📌POINameHandling&amp;Readability'>📌 POI Name Handling &amp; Readability</a></li>
+<li><a href='#TPISystemDesignSession-POISystemEnhancements-📌RestrictingInteractionsbasedonthePlayer’sCurrentPOI'>📌 Restricting Interactions based on the Player’s Current POI</a></li>
+<li><a href='#TPISystemDesignSession-POISystemEnhancements-📌DisablingInteractionsWhileNavigating'>📌 Disabling Interactions While Navigating</a></li>
+<li><a href='#TPISystemDesignSession-POISystemEnhancements-📌SwitchingfromWaypointTrackingtoCollider-basedDetection'>📌 Switching from Waypoint Tracking to Collider-based Detection</a></li>
+<li><a href='#TPISystemDesignSession-POISystemEnhancements-📌KeyPropertiesforPOI.csinTPI'>📌 Key Properties for POI.cs in TPI</a></li>
+<li><a href='#TPISystemDesignSession-POISystemEnhancements-📌ManagingResponsibilities&amp;ReducingScriptDependencies'>📌 Managing Responsibilities &amp; Reducing Script Dependencies</a></li>
+<li><a href='#TPISystemDesignSession-POISystemEnhancements-📌DoWeNeedaPOIManager?'>📌 Do We Need a POI Manager?</a></li>
+</ul>
+</li>
+</ul>
+</div><hr/><h2 id="TPISystemDesignSession-POISystemEnhancements-1.ScopeoftheMeeting"><strong>1. Scope of the Meeting</strong></h2><p>The goal of the <strong>System Design Session</strong> is to define the key manager classes in the project and clarify their responsibilities. 
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="TPI-11"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_1580924929_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/TPI-11" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>TPI-11</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ </p><p>We aim to optimize and reuse parts of the previous PHI project while ensuring better scalability and maintainability in this new project.</p><p>In this first session, the discussion was focused on refining the <strong>Point of Interest (POI) system </strong>and improving its overall structure. 
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="TPI-4"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_1580924929_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/TPI-4" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>TPI-4</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+</p><hr/><h2 id="TPISystemDesignSession-POISystemEnhancements-2.UpdatedPOISystemStructure"><strong>2. Updated POI System Structure</strong></h2><p>This section reflects the updates made after the first design session, as outlined in <a class="external-link" href="https://varlab-dev.atlassian.net/browse/TPI-4?atlOrigin=eyJpIjoiYzhiYzE1YWIyMzkyNDljOGJmYWY4ODA2OWFkZTE3MTIiLCJwIjoiaiJ9" rel="nofollow">TPI-4</a>.</p><h3 id="TPISystemDesignSession-POISystemEnhancements-📂PoiList.cs(StaticClass)"><strong>📂 PoiList.cs (</strong><code>Static Class</code><strong>)</strong></h3><h4 id="TPISystemDesignSession-POISystemEnhancements-🔹Properties"><strong>🔹 Properties</strong></h4><div class="table-wrap"><table data-table-width="760" data-layout="default" data-local-id="9e8f2d2e-33ca-43e2-9875-a971c755ac7f" class="confluenceTable"><colgroup><col/></colgroup><tbody><tr><th class="numberingColumn confluenceTh" /><th class="confluenceTh"><p><strong>Name</strong></p></th><th class="confluenceTh"><p><strong>Type</strong></p></th><th class="confluenceTh"><p><strong>Description</strong></p></th></tr><tr><td class="numberingColumn confluenceTd">1</td><td class="confluenceTd"><p><strong>PoiName</strong></p></td><td class="confluenceTd"><p><code>Enum</code></p></td><td class="confluenceTd"><p>Defines POI names.</p></td></tr></tbody></table></div><h4 id="TPISystemDesignSession-POISystemEnhancements-🔹Methods"><strong>🔹 Methods</strong></h4><div class="table-wrap"><table data-table-width="760" data-layout="default" data-local-id="dec28588-732b-4845-9f90-ef7de40c5d56" data-table-display-mode="fixed" class="confluenceTable"><colgroup><col/><col style="width: 117.0px;"/><col style="width: 132.0px;"/><col style="width: 120.0px;"/><col style="width: 347.0px;"/></colgroup><tbody><tr><th class="numberingColumn confluenceTh" /><th class="confluenceTh"><p><strong>Name</strong></p></th><th class="confluenceTh"><p><strong>Parameters</strong></p></th><th class="confluenceTh"><p><strong>Return Type</strong></p></th><th class="confluenceTh"><p><strong>Description</strong></p></th></tr><tr><td class="numberingColumn confluenceTd">1</td><td class="confluenceTd"><p><strong>GetPoiName</strong></p></td><td class="confluenceTd"><p><code>(string name)</code></p></td><td class="confluenceTd"><p><code>string</code></p></td><td class="confluenceTd"><p>Converts a POI identifier (e.g., <code>ReceptionArea</code>) into a readable format (<code>Reception Area</code>).</p></td></tr></tbody></table></div><h3 id="TPISystemDesignSession-POISystemEnhancements-📂POI.cs(MonoBehaviour)"><strong>📂 POI.cs (</strong><code>MonoBehaviour</code><strong>)</strong></h3><h4 id="TPISystemDesignSession-POISystemEnhancements-🔹Properties.1"><strong>🔹 Properties</strong></h4><div class="table-wrap"><table data-table-width="760" data-layout="default" data-local-id="484a7746-711a-4db5-aa72-9781ef763449" data-table-display-mode="fixed" class="confluenceTable"><colgroup><col/><col style="width: 161.0px;"/><col style="width: 137.0px;"/><col style="width: 419.0px;"/></colgroup><tbody><tr><th class="numberingColumn confluenceTh" /><th class="confluenceTh"><p><strong>Name</strong></p></th><th class="confluenceTh"><p><strong>Type</strong></p></th><th class="confluenceTh"><p><strong>Description</strong></p></th></tr><tr><td class="numberingColumn confluenceTd">1</td><td class="confluenceTd"><p><strong>PoiName</strong></p></td><td class="confluenceTd"><p><code>string</code></p></td><td class="confluenceTd"><p>Stores the name of the POI.</p></td></tr><tr><td class="numberingColumn confluenceTd">2</td><td class="confluenceTd"><p><strong>LookAtTarget</strong></p></td><td class="confluenceTd"><p><code>GameObject</code></p></td><td class="confluenceTd"><p>The point the player faces in the POI.</p></td></tr><tr><td class="numberingColumn confluenceTd">3</td><td class="confluenceTd"><p><strong>DefaultWaypoint</strong></p></td><td class="confluenceTd"><p><code>Waypoint</code></p></td><td class="confluenceTd"><p>Defines the default position where the player is placed when loading into this POI</p></td></tr><tr><td class="numberingColumn confluenceTd">4</td><td class="confluenceTd"><p><strong>Interacted</strong></p></td><td class="confluenceTd"><p><code>bool</code></p></td><td class="confluenceTd"><p>Tracks whether the player has interacted with this POI.</p></td></tr><tr><td class="numberingColumn confluenceTd">5</td><td class="confluenceTd"><p><strong>HasInspectables</strong></p></td><td class="confluenceTd"><p><code>bool</code></p></td><td class="confluenceTd"><p>Indicates if the POI contains inspectable objects.</p></td></tr><tr><td class="numberingColumn confluenceTd">6</td><td class="confluenceTd"><p><strong>PoiList.PoiName</strong></p></td><td class="confluenceTd"><p><code>Enum</code></p></td><td class="confluenceTd"><p>The enum reference for the POI name.</p></td></tr></tbody></table></div><h4 id="TPISystemDesignSession-POISystemEnhancements-🔹Methods.1"><strong>🔹 Methods</strong></h4><div class="table-wrap"><table data-table-width="760" data-layout="default" data-local-id="9ebb7934-cf3c-40ce-afc7-84405d9d4e75" data-table-display-mode="fixed" class="confluenceTable"><colgroup><col/><col style="width: 142.0px;"/><col style="width: 176.0px;"/><col style="width: 120.0px;"/><col style="width: 278.0px;"/></colgroup><tbody><tr><th class="numberingColumn confluenceTh" /><th class="confluenceTh"><p><strong>Name</strong></p></th><th class="confluenceTh"><p><strong>Parameters</strong></p></th><th class="confluenceTh"><p><strong>Return Type</strong></p></th><th class="confluenceTh"><p><strong>Description</strong></p></th></tr><tr><td class="numberingColumn confluenceTd">1</td><td class="confluenceTd"><p><strong>Start</strong></p></td><td class="confluenceTd"><p /></td><td class="confluenceTd"><p><code>void</code></p></td><td class="confluenceTd"><p>Retrieves the POI name when initialized.</p></td></tr><tr><td class="numberingColumn confluenceTd">2</td><td class="confluenceTd"><p><strong>OnTriggerEnter</strong></p></td><td class="confluenceTd"><p><code>(Collider collider)</code></p></td><td class="confluenceTd"><p><code>void</code></p></td><td class="confluenceTd"><p>Invokes <code>OnPoiEnterEvent</code> when the player enters a POI trigger zone.</p></td></tr><tr><td class="numberingColumn confluenceTd">3</td><td class="confluenceTd"><p><strong>OnTriggerExit</strong></p></td><td class="confluenceTd"><p><code>(Collider collider)</code></p></td><td class="confluenceTd"><p><code>void</code></p></td><td class="confluenceTd"><p>Invokes <code>OnPoiExitEvent</code> when the player leaves a POI trigger zone.</p></td></tr></tbody></table></div><h4 id="TPISystemDesignSession-POISystemEnhancements-🔹Events"><strong>🔹 Events</strong></h4><div class="table-wrap"><table data-table-width="760" data-layout="center" data-local-id="ebff2970-3242-40c1-b58e-b46ca115234c" data-table-display-mode="fixed" class="confluenceTable"><colgroup><col/><col style="width: 255.0px;"/><col style="width: 461.0px;"/></colgroup><tbody><tr><th class="numberingColumn confluenceTh" /><th class="confluenceTh"><p><strong>Name</strong></p></th><th class="confluenceTh"><p><strong>Description</strong></p></th></tr><tr><td class="numberingColumn confluenceTd">1</td><td class="confluenceTd"><p><strong>OnPoiEnter</strong></p></td><td class="confluenceTd"><p>Event triggered when a player enters a POI.</p></td></tr><tr><td class="numberingColumn confluenceTd">2</td><td class="confluenceTd"><p><strong>OnPoiExit</strong></p></td><td class="confluenceTd"><p>Event triggered when a player exits a POI.</p></td></tr></tbody></table></div><hr/><h2 id="TPISystemDesignSession-POISystemEnhancements-3.KeyDiscussionPoints&amp;Decisions"><strong>3. Key Discussion Points &amp; Decisions</strong></h2><h3 id="TPISystemDesignSession-POISystemEnhancements-📌WhyWeNeedaPOISystem?"><strong>📌 Why We Need a POI System?</strong></h3><ul><li><p>The <strong>Point of Interest (POI) system</strong> is essential for managing <strong>distinct areas within the simulation</strong> rather than treating an entire space as a single entity.</p></li><li><p>This approach was also used in the <strong>PHI restaurant project</strong>, where the simulation divided the restaurant into functional areas like reception, kitchen, and dining instead of treating the entire restaurant as one.</p></li><li><p>In the <strong>TPI project</strong>, while the exact floor plan is not finalized, areas such as <strong>Reception, Bathroom, Piercing Area, and Tattoo Area</strong> are expected to be key locations.</p></li></ul><h3 id="TPISystemDesignSession-POISystemEnhancements-📌Enum-basedPOIListManagement"><strong>📌 Enum-based POI List Management</strong></h3><ul><li><p>In the PHI project, <strong>POI names were initially managed as strings</strong>, which led to issues when names were misspelled or inconsistently referenced.</p></li><li><p>To <strong>prevent errors</strong>, the PHI team transitioned to <strong>an enum-based system</strong>, allowing POI names to be selected from a dropdown in Unity's Inspector.</p></li><li><p><strong>TPI will adopt the same enum-based approach</strong>, ensuring that <strong>new POIs can be added to the list without risking incorrect name references</strong>.</p></li></ul><h3 id="TPISystemDesignSession-POISystemEnhancements-📌POINameHandling&amp;Readability"><strong>📌 POI Name Handling &amp; Readability</strong></h3><ul><li><p>Enums <strong>cannot contain spaces or special characters</strong>, so the <code>GetPOIName</code><strong> method</strong> was introduced to <strong>convert identifiers into readable text</strong> (e.g., <code>ReceptionArea</code> → <code>Reception Area</code>).</p></li><li><p>This ensures that <strong>activity logs and inspection reports display readable POI names</strong>.</p></li></ul><h3 id="TPISystemDesignSession-POISystemEnhancements-📌RestrictingInteractionsbasedonthePlayer’sCurrentPOI"><strong>📌 Restricting Interactions based on the Player’s Current POI</strong></h3><ul><li><p>In <strong>PHI</strong>, a player <strong>could only inspect objects in the POI they were currently located in</strong>.</p></li><li><p>This restriction remains in <strong>TPI</strong>, aligning with real-world scenarios where an inspector <strong>cannot examine objects from a different room</strong>.</p></li></ul><h3 id="TPISystemDesignSession-POISystemEnhancements-📌DisablingInteractionsWhileNavigating"><strong>📌 Disabling Interactions While Navigating</strong></h3><ul><li><p>In the <strong>PHI project</strong>, interactions with objects were <strong>disabled while the player was moving</strong> to prevent unintended interactions.</p></li><li><p>This logic will also be applied to <strong>TPI</strong>, ensuring that:</p><ul><li><p>When the player starts walking (<code>WalkStarted</code> event), <strong>all interactions are temporarily disabled</strong>.</p></li><li><p>When the player reaches their destination (<code>WalkCompleted</code> event), <strong>interactions are re-enabled</strong>.</p></li></ul></li><li><p>This approach prevents <strong>accidental object interactions mid-movement</strong> and ensures a more controlled user experience.</p></li></ul><h3 id="TPISystemDesignSession-POISystemEnhancements-📌SwitchingfromWaypointTrackingtoCollider-basedDetection"><strong>📌<span style="background-color: rgb(254,222,200);"> Switching from Waypoint Tracking to Collider-based Detection</span></strong></h3><ul><li><p><strong>PHI</strong> determined a player’s location <strong>using waypoints</strong>, but this method caused issues when targets were moved or deleted.</p></li><li><p>In <strong>TPI</strong>, POI detection will instead rely on <strong>colliders and the </strong><code>OnTriggerEnter</code><strong> method</strong>:</p><ul><li><p>Each POI <strong>will have a collider set as a trigger</strong>.</p></li><li><p>When the <strong>player enters the trigger zone, an event (</strong><code>OnPoiEnter</code><strong>) will be invoked</strong>.</p></li><li><p>This event will <strong>call </strong><code>OnPoiEnter</code><strong>, enabling all inspectable objects within that POI</strong> and logging the entry in the activity log.</p></li><li><p>Similarly, when leaving a POI, <code>OnTriggerExit</code> will invoke <code>OnPoiExit</code>, ensuring that interactions are disabled as needed.</p></li></ul></li></ul><h3 id="TPISystemDesignSession-POISystemEnhancements-📌KeyPropertiesforPOI.csinTPI"><strong>📌 Key Properties for POI.cs in TPI</strong></h3><ul><li><p><code>string PoiName</code>: Stores the POI’s readable name.</p></li><li><p><code>GameObject LookAtTarget</code>: Defines where the player should be looking when entering a POI.</p></li><li><p><code>Waypoint DefaultWaypoint</code>: Determines the player’s default starting position when continuing from a saved state.</p></li><li><p><code>bool Interacted</code>: Tracks whether the player has interacted with any objects in the POI.</p></li><li><p><code>bool HasInspectables</code>: Identifies if a POI contains inspectable items.</p></li><li><p><code>POIList.POIName poiName</code>: Enum reference for the POI name.</p></li></ul><h3 id="TPISystemDesignSession-POISystemEnhancements-📌ManagingResponsibilities&amp;ReducingScriptDependencies"><strong>📌 Managing Responsibilities &amp; Reducing Script Dependencies</strong></h3><ul><li><p>We discussed how <strong>centralized script management can improve maintainability</strong>, though specific implementation details were not finalized in this session.</p></li><li><p>A key takeaway was that <strong>similar functionalities should be grouped in a structured way</strong>, reducing unnecessary dependencies that might make future modifications complex.</p></li><li><p>The discussion explored whether <strong>certain operations should be managed at the POI level, the scene management level, or through a separate system</strong>. This remains an open discussion.</p></li><li><p>Rather than relying on <strong>static variables or direct script dependencies</strong>, an <strong>event-driven system</strong> was suggested to improve flexibility in handling different features.</p></li></ul><h3 id="TPISystemDesignSession-POISystemEnhancements-📌DoWeNeedaPOIManager?"><strong>📌 Do We Need a POI Manager?</strong></h3><ul><li><p>A major discussion point was whether <strong>a separate </strong><code>POIManager.cs</code><strong> script is necessary</strong> or if its responsibilities could be distributed across other scripts.</p></li><li><p>A key question was: <strong>Would removing </strong><code>POIManager.cs</code><strong> reduce dependencies and improve maintainability?</strong></p></li><li><p>The discussion remains ongoing, and no final decision was reached in the first system design session.</p></li></ul>
+                    </div>
+
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Jun 11, 2025 14:21</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

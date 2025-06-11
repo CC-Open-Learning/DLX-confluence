@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VARLab : Bulldozer - Adding Analytics To A Heavy Equipment DLX</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="VARLab_44990773.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Learning-Experience_972881951.html">Learning Experience</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="General-Release-DLX_729973721.html">General Release DLX</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="LSM6.02---Heavy-Equipment---Bulldozer_505151489.html">LSM6.02 - Heavy Equipment - Bulldozer</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            VARLab : Bulldozer - Adding Analytics To A Heavy Equipment DLX
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                            
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> Brodin Collins-Robb</span>, last modified on Aug 08, 2023
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <div class="contentLayout2"><style>[data-colorid=k3lsqrasr1]{color:#0747a6} html[data-color-mode=dark] [data-colorid=k3lsqrasr1]{color:#5999f8}[data-colorid=xpe5uwff7o]{color:#0747a6} html[data-color-mode=dark] [data-colorid=xpe5uwff7o]{color:#5999f8}[data-colorid=y08ye0u4q1]{color:#0747a6} html[data-color-mode=dark] [data-colorid=y08ye0u4q1]{color:#5999f8}[data-colorid=sfhlbhaiwv]{color:#0747a6} html[data-color-mode=dark] [data-colorid=sfhlbhaiwv]{color:#5999f8}[data-colorid=sd8xgn5g0m]{color:#0747a6} html[data-color-mode=dark] [data-colorid=sd8xgn5g0m]{color:#5999f8}[data-colorid=nmdwt1sk78]{color:#0747a6} html[data-color-mode=dark] [data-colorid=nmdwt1sk78]{color:#5999f8}[data-colorid=cvtopwrjvr]{color:#0747a6} html[data-color-mode=dark] [data-colorid=cvtopwrjvr]{color:#5999f8}[data-colorid=ocs828iw0n]{color:#0747a6} html[data-color-mode=dark] [data-colorid=ocs828iw0n]{color:#5999f8}[data-colorid=u7h5cxgu0n]{color:#0747a6} html[data-color-mode=dark] [data-colorid=u7h5cxgu0n]{color:#5999f8}[data-colorid=bxebik9wzy]{color:#0747a6} html[data-color-mode=dark] [data-colorid=bxebik9wzy]{color:#5999f8}[data-colorid=t0yoo9iblj]{color:#0747a6} html[data-color-mode=dark] [data-colorid=t0yoo9iblj]{color:#5999f8}[data-colorid=j9pb7n5ij3]{color:#ff991f} html[data-color-mode=dark] [data-colorid=j9pb7n5ij3]{color:#e07a00}[data-colorid=b15qqep2a6]{color:#0747a6} html[data-color-mode=dark] [data-colorid=b15qqep2a6]{color:#5999f8}[data-colorid=zl7k6ybhk3]{color:#0747a6} html[data-color-mode=dark] [data-colorid=zl7k6ybhk3]{color:#5999f8}[data-colorid=lrznqozfxn]{color:#0747a6} html[data-color-mode=dark] [data-colorid=lrznqozfxn]{color:#5999f8}[data-colorid=sue8g312xq]{color:#0747a6} html[data-color-mode=dark] [data-colorid=sue8g312xq]{color:#5999f8}</style>
+<div class="columnLayout fixed-width" data-layout="fixed-width">
+<div class="cell normal" data-type="normal">
+<div class="innerCell">
+<p>This page explains how to add analytics to specifically heavy equipment DLX projects. This page builds off the analytics pages generally set up by the analytics team. In HE project analytics will add info capturing about:</p><ul><li><p>Different users playing the simulation both in Unity and in a browser</p></li><li><p>Inspection completions</p></li><li><p>DLX completion</p></li></ul><h2 id="Bulldozer-AddingAnalyticsToAHeavyEquipmentDLX-Instructions"><img class="emoticon emoticon-blue-star" data-emoji-id="1f4d8" data-emoji-shortname=":blue_book:" data-emoji-fallback="\uD83D\uDCD8" src="images/icons/emoticons/72/1f4d8.png" width="16" height="16" data-emoticon-name="blue-star" alt="(blue star)"/>&nbsp;Instructions</h2><p /><hr /></div>
+</div>
+</div>
+<div class="columnLayout two-left-sidebar" data-layout="two-left-sidebar">
+<div class="cell aside" data-type="aside">
+<div class="innerCell">
+<h1 id="Bulldozer-AddingAnalyticsToAHeavyEquipmentDLX-1"><strong><span data-colorid="zl7k6ybhk3">1</span></strong></h1><p><strong>Ensure the CORE HE Inspections package is on version 1.4.1 or later</strong></p></div>
+</div>
+<div class="cell normal" data-type="normal">
+<div class="innerCell">
+<span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/778567703/778534933.png" data-image-src="attachments/778567703/778534933.png" data-height="927" data-width="1084" data-unresolved-comment-count="0" data-linked-resource-id="778534933" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20230808-184307.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="778567703" data-linked-resource-container-version="3" data-media-id="9111f9b0-7354-4591-964e-04d884e9188f" data-media-type="file" /></span><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" width="680" loading="lazy" src="attachments/778567703/778338319.png?width=680" data-image-src="attachments/778567703/778338319.png" data-height="430" data-width="1088" data-unresolved-comment-count="0" data-linked-resource-id="778338319" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20230808-183012.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="778567703" data-linked-resource-container-version="3" data-media-id="0fdf307c-3e0f-4720-9a16-ef42aa5f4154" data-media-type="file" /></span><div class="confluence-information-macro confluence-information-macro-information"><span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon" /><div class="confluence-information-macro-body"><p>This is to ensure that the fileName variable we will use for user analytics is accessible as a public variable in the scenarioSaveHandler.cs script</p></div></div></div>
+</div>
+</div>
+<div class="columnLayout fixed-width" data-layout="fixed-width">
+<div class="cell normal" data-type="normal">
+<div class="innerCell">
+<hr /></div>
+</div>
+</div>
+<div class="columnLayout two-left-sidebar" data-layout="two-left-sidebar">
+<div class="cell aside" data-type="aside">
+<div class="innerCell">
+<h1 id="Bulldozer-AddingAnalyticsToAHeavyEquipmentDLX-2"><strong><span data-colorid="lrznqozfxn">2</span></strong></h1><p><strong>Install PlayFab package</strong></p></div>
+</div>
+<div class="cell normal" data-type="normal">
+<div class="innerCell">
+<div class="confluence-information-macro confluence-information-macro-information"><span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon" /><div class="confluence-information-macro-body"><p>Find instructions here: <a class="external-link" data-card-appearance="inline" href="https://learn.microsoft.com/en-us/gaming/playfab/sdks/unity3d/installing-unity3d-sdk" rel="nofollow">https://learn.microsoft.com/en-us/gaming/playfab/sdks/unity3d/installing-unity3d-sdk</a> </p></div></div></div>
+</div>
+</div>
+<div class="columnLayout fixed-width" data-layout="fixed-width">
+<div class="cell normal" data-type="normal">
+<div class="innerCell">
+<hr /></div>
+</div>
+</div>
+<div class="columnLayout two-left-sidebar" data-layout="two-left-sidebar">
+<div class="cell aside" data-type="aside">
+<div class="innerCell">
+<h1 id="Bulldozer-AddingAnalyticsToAHeavyEquipmentDLX-3"><strong><span data-colorid="ocs828iw0n">3</span></strong></h1><p><strong>Add the analytics package to the project in the package manager</strong></p></div>
+</div>
+<div class="cell normal" data-type="normal">
+<div class="innerCell">
+<p>In the package manager, add a package by git URL: </p><p>ssh://git@bitbucket.org/VARLab/analyticspackage.git#upm</p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" width="680" loading="lazy" src="attachments/778567703/778600466.png?width=680" data-image-src="attachments/778567703/778600466.png" data-height="903" data-width="1151" data-unresolved-comment-count="0" data-linked-resource-id="778600466" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20230808-183407.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="778567703" data-linked-resource-container-version="3" data-media-id="d1f3e887-8173-4a40-94bc-82a5c98e115b" data-media-type="file" /></span><div class="panel" style="background-color: #EAE6FF;border-color: #998DD9;border-width: 1px;"><div class="panelContent" style="background-color: #EAE6FF;">
+<p>Note: Above steps copied from: <a class="createlink" href="/wiki/pages/createpage.action?spaceKey=CV2&amp;title=Installation%20of%20the%20Analytic%20Package">Installation of the Analytic Package</a> </p>
+</div></div></div>
+</div>
+</div>
+<div class="columnLayout fixed-width" data-layout="fixed-width">
+<div class="cell normal" data-type="normal">
+<div class="innerCell">
+<hr /></div>
+</div>
+</div>
+<div class="columnLayout two-left-sidebar" data-layout="two-left-sidebar">
+<div class="cell aside" data-type="aside">
+<div class="innerCell">
+<h1 id="Bulldozer-AddingAnalyticsToAHeavyEquipmentDLX-4"><strong><span data-colorid="sfhlbhaiwv">4</span></strong></h1><p><strong>Add the analytics object to the scene</strong></p></div>
+</div>
+<div class="cell normal" data-type="normal">
+<div class="innerCell">
+<p>Find the prefab pictured below and drag it into the scene hierarchy:</p><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/778567703/778502162.png" data-image-src="attachments/778567703/778502162.png" data-height="341" data-width="719" data-unresolved-comment-count="0" data-linked-resource-id="778502162" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20230808-184101.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="778567703" data-linked-resource-container-version="3" data-media-id="8137dbe9-d3f9-4a87-8e4e-20187a95e8a0" data-media-type="file" /></span><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/778567703/778764309.png" data-image-src="attachments/778567703/778764309.png" data-height="553" data-width="1022" data-unresolved-comment-count="0" data-linked-resource-id="778764309" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20230808-184155.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="778567703" data-linked-resource-container-version="3" data-media-id="fed22150-a17c-4783-8af9-7157de2cbd8e" data-media-type="file" /></span></div>
+</div>
+</div>
+<div class="columnLayout fixed-width" data-layout="fixed-width">
+<div class="cell normal" data-type="normal">
+<div class="innerCell">
+<hr /></div>
+</div>
+</div>
+<div class="columnLayout two-left-sidebar" data-layout="two-left-sidebar">
+<div class="cell aside" data-type="aside">
+<div class="innerCell">
+<h1 id="Bulldozer-AddingAnalyticsToAHeavyEquipmentDLX-5"><strong><span data-colorid="cvtopwrjvr">5</span></strong></h1><p><strong>Created and set up an equipment-specific analytics script - i.e., bulldozerAnalytics</strong></p></div>
+</div>
+<div class="cell normal" data-type="normal">
+<div class="innerCell">
+<p>Add a new script in the below location:</p><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/778567703/778764315.png" data-image-src="attachments/778567703/778764315.png" data-height="466" data-width="984" data-unresolved-comment-count="0" data-linked-resource-id="778764315" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20230808-185339.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="778567703" data-linked-resource-container-version="3" data-media-id="af75cfd3-b4b1-43da-a3ed-45e8d474b7dd" data-media-type="file" /></span><p>The script should follow along the lines of the below code:</p><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: c#; gutter: false; theme: Confluence" data-theme="Confluence">using System.Collections;
+using System.Collections.Generic;
+using System.Diagnostics;
+using UnityEngine;
+using VARLab.Analytics;
+
+public class BulldozerAnalytics : MonoBehaviour
+{
+    //this channel allows us to send or connect to our playfab account
+    public AnalyticsEvent analyticsEvent;
+
+    //Data to send to anayltics
+    public int numInspectionsCompleted;
+
+    public void setNumInspectionCompleted(int numComplete)
+    {
+        numInspectionsCompleted = numComplete;
+    }
+
+    //This method will send an integer (num of inspections completed) to the analytics channel
+    public void SegmentCompleteMethod()
+    {
+        //send integer
+        SegmentCompleteContainer data = new SegmentCompleteContainer(&quot;InspectionsComplete&quot;, numInspectionsCompleted);
+        analyticsEvent.Raise(this, data);
+    }
+
+    //This method will send a boolean value of when the simulation is complete (simple true value sent to the analytics channel)
+    public void DLXCompleteMethod()
+    {
+        //send that we are done
+        DLXCompleteContainer data = new DLXCompleteContainer();
+        analyticsEvent.Raise(this, data);
+    }
+}</pre>
+</div></div></div>
+</div>
+</div>
+<div class="columnLayout fixed-width" data-layout="fixed-width">
+<div class="cell normal" data-type="normal">
+<div class="innerCell">
+<hr /></div>
+</div>
+</div>
+<div class="columnLayout two-left-sidebar" data-layout="two-left-sidebar">
+<div class="cell aside" data-type="aside">
+<div class="innerCell">
+<h1 id="Bulldozer-AddingAnalyticsToAHeavyEquipmentDLX-6"><strong><span data-colorid="y08ye0u4q1">6</span></strong></h1><p><strong>Add the equipment analytics script (i.e., bulldozerAnalytics) to the analytics game object in the scene </strong></p></div>
+</div>
+<div class="cell normal" data-type="normal">
+<div class="innerCell">
+<p>Drag the added script from the unity explorer into the components list of the analytics game object:</p><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/778567703/778666049.png" data-image-src="attachments/778567703/778666049.png" data-height="625" data-width="1408" data-unresolved-comment-count="0" data-linked-resource-id="778666049" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20230808-185843.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="778567703" data-linked-resource-container-version="3" data-media-id="de815d7e-d8ad-4357-a307-89eaa8341e9f" data-media-type="file" /></span></div>
+</div>
+</div>
+<div class="columnLayout fixed-width" data-layout="fixed-width">
+<div class="cell normal" data-type="normal">
+<div class="innerCell">
+<hr /></div>
+</div>
+</div>
+<div class="columnLayout two-left-sidebar" data-layout="two-left-sidebar">
+<div class="cell aside" data-type="aside">
+<div class="innerCell">
+<h1 id="Bulldozer-AddingAnalyticsToAHeavyEquipmentDLX-7"><strong><span data-colorid="u7h5cxgu0n">7</span></strong></h1><p><strong>Serialize the analytics channel to the equipment analytics script (i.e., bulldozerAnalytics) analytics event field of the game object</strong></p></div>
+</div>
+<div class="cell normal" data-type="normal">
+<div class="innerCell">
+<p>Drag the channel circled in the image below into the analytics channel sterilized field circle on the right of the below image:</p><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/778567703/778600472.png" data-image-src="attachments/778567703/778600472.png" data-height="994" data-width="1372" data-unresolved-comment-count="0" data-linked-resource-id="778600472" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20230808-190224.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="778567703" data-linked-resource-container-version="3" data-media-id="4829c3f7-e802-451c-b76b-1e67bde3bd30" data-media-type="file" /></span></div>
+</div>
+</div>
+<div class="columnLayout fixed-width" data-layout="fixed-width">
+<div class="cell normal" data-type="normal">
+<div class="innerCell">
+<hr /></div>
+</div>
+</div>
+<div class="columnLayout two-left-sidebar" data-layout="two-left-sidebar">
+<div class="cell aside" data-type="aside">
+<div class="innerCell">
+<h1 id="Bulldozer-AddingAnalyticsToAHeavyEquipmentDLX-8"><strong><span data-colorid="sd8xgn5g0m">8</span></strong></h1><p><strong>Add a getScormFileName script</strong></p></div>
+</div>
+<div class="cell normal" data-type="normal">
+<div class="innerCell">
+<p>Add a new script in the below location:</p><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/778567703/778436654.png" data-image-src="attachments/778567703/778436654.png" data-height="414" data-width="855" data-unresolved-comment-count="0" data-linked-resource-id="778436654" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20230808-190712.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="778567703" data-linked-resource-container-version="3" data-media-id="4a319b50-5986-4d9a-9d65-3e83cb877126" data-media-type="file" /></span><p>The script should follow along the lines of the below code:</p><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: c#; gutter: false; theme: Confluence" data-theme="Confluence">using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+namespace HeavyEquipment
+{
+    public class GetScormFileName : MonoBehaviour
+    {
+        public ScenarioSaveHandler saveHandler;
+
+        public string FileName { get =&gt; saveHandler.fileName; }
+
+    }
+}</pre>
+</div></div></div>
+</div>
+</div>
+<div class="columnLayout fixed-width" data-layout="fixed-width">
+<div class="cell normal" data-type="normal">
+<div class="innerCell">
+<hr /></div>
+</div>
+</div>
+<div class="columnLayout two-left-sidebar" data-layout="two-left-sidebar">
+<div class="cell aside" data-type="aside">
+<div class="innerCell">
+<h1 id="Bulldozer-AddingAnalyticsToAHeavyEquipmentDLX-9"><strong><span data-colorid="sue8g312xq">9</span></strong></h1><p><strong>In the FSM - Add three blackboard variables to the FSM (Ensure the variables are added in both the prefab FSM and FSM</strong></p></div>
+</div>
+<div class="cell normal" data-type="normal">
+<div class="innerCell">
+<p><strong>Using the add variable button at the top of the backboard variables <span data-colorid="j9pb7n5ij3">[LEAVE VALUES BLANK FOR NOW]</span>:</strong></p><ol start="1"><li><p>add a &ldquo;game object&rdquo; for our analytics object</p></li></ol><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/778567703/778240026.png" data-image-src="attachments/778567703/778240026.png" data-height="1583" data-width="529" data-unresolved-comment-count="0" data-linked-resource-id="778240026" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20230808-191211.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="778567703" data-linked-resource-container-version="3" data-media-id="b15241a3-f7d3-49ec-84cf-90bfa4705703" data-media-type="file" /></span><ol start="2"><li><p>add an &ldquo;integer&rdquo; for inspections complete count (will be self-bound to saveData inspections completed variable)</p></li></ol><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/778567703/778273110.png" data-image-src="attachments/778567703/778273110.png" data-height="1583" data-width="529" data-unresolved-comment-count="0" data-linked-resource-id="778273110" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20230808-191233.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="778567703" data-linked-resource-container-version="3" data-media-id="676bd83b-801f-4f93-b79b-1cb035f9921b" data-media-type="file" /></span><p><strong>Using the add variable button in the middle of the backboard variables:</strong></p><ol start="3"><li><p>Add a &ldquo;string&rdquo; for our fileName (Self-bound to getScormFileName script)</p></li></ol><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/778567703/778862602.png" data-image-src="attachments/778567703/778862602.png" data-height="1582" data-width="542" data-unresolved-comment-count="0" data-linked-resource-id="778862602" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20230808-191305.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="778567703" data-linked-resource-container-version="3" data-media-id="854488eb-20d2-442e-950b-d709d50b0c7b" data-media-type="file" /></span></div>
+</div>
+</div>
+<div class="columnLayout fixed-width" data-layout="fixed-width">
+<div class="cell normal" data-type="normal">
+<div class="innerCell">
+<hr /></div>
+</div>
+</div>
+<div class="columnLayout two-left-sidebar" data-layout="two-left-sidebar">
+<div class="cell aside" data-type="aside">
+<div class="innerCell">
+<h1 id="Bulldozer-AddingAnalyticsToAHeavyEquipmentDLX-10"><strong><span data-colorid="nmdwt1sk78">10</span></strong></h1><p><strong>Add scripts into FSM under Prefs</strong></p></div>
+</div>
+<div class="cell normal" data-type="normal">
+<div class="innerCell">
+<p>In the FSM, click on Prefs on the top left and follow t through the menus below:</p><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/778567703/778502183.png" data-image-src="attachments/778567703/778502183.png" data-height="540" data-width="665" data-unresolved-comment-count="0" data-linked-resource-id="778502183" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20230808-192600.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="778567703" data-linked-resource-container-version="3" data-media-id="17eebc50-a6eb-437e-9d0d-22b672e04dac" data-media-type="file" /></span><p>The below menu will appear; click on add new type:</p><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/778567703/778534940.png" data-image-src="attachments/778567703/778534940.png" data-height="791" data-width="461" data-unresolved-comment-count="0" data-linked-resource-id="778534940" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20230808-192648.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="778567703" data-linked-resource-container-version="3" data-media-id="c2d8c73f-ddbc-4d75-9455-215265ad169b" data-media-type="file" /></span><p>Then the below menu will appear where you will search for your scripts and click them to add them:</p><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/778567703/778338333.png" data-image-src="attachments/778567703/778338333.png" data-height="1010" data-width="1036" data-unresolved-comment-count="0" data-linked-resource-id="778338333" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20230808-192816.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="778567703" data-linked-resource-container-version="3" data-media-id="debe2081-7614-4fe4-bf09-dfe1765387f3" data-media-type="file" /></span><p>You will need to add these three scripts:</p><ul><li><p>COREanalytics </p></li><li><p>getScormFileName </p></li><li><p>equipment-specific script (i.e., bulldozerAnalytis)</p></li></ul></div>
+</div>
+</div>
+<div class="columnLayout fixed-width" data-layout="fixed-width">
+<div class="cell normal" data-type="normal">
+<div class="innerCell">
+<hr /></div>
+</div>
+</div>
+<div class="columnLayout two-left-sidebar" data-layout="two-left-sidebar">
+<div class="cell aside" data-type="aside">
+<div class="innerCell">
+<h1 id="Bulldozer-AddingAnalyticsToAHeavyEquipmentDLX-11"><strong><span data-colorid="t0yoo9iblj">11</span></strong></h1><p><strong>In the FSM, add values for the three variables </strong></p></div>
+</div>
+<div class="cell normal" data-type="normal">
+<div class="innerCell">
+<ol start="1"><li><p>Analytics - drag the game object from the scene into the value of this blackboard variable:</p></li></ol><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/778567703/778371097.png" data-image-src="attachments/778567703/778371097.png" data-height="1571" data-width="1806" data-unresolved-comment-count="0" data-linked-resource-id="778371097" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20230808-191840.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="778567703" data-linked-resource-container-version="3" data-media-id="27ace2d5-32ef-49a8-971b-1cf1b362e652" data-media-type="file" /></span><ol start="2"><li><p>insepctionsComplete - click the cog on the right of this blackboard variable and follow through the menus shown below:</p></li></ol><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/778567703/778273117.png" data-image-src="attachments/778567703/778273117.png" data-height="1738" data-width="1779" data-unresolved-comment-count="0" data-linked-resource-id="778273117" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20230808-192007.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="778567703" data-linked-resource-container-version="3" data-media-id="570067c7-bc53-4889-a413-877b6a2298bb" data-media-type="file" /></span><ol start="3"><li><p>fileName - click the cog on the right of this blackboard variable and follow through the menus shown below:</p></li></ol><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/778567703/778600480.png" data-image-src="attachments/778567703/778600480.png" data-height="1705" data-width="1640" data-unresolved-comment-count="0" data-linked-resource-id="778600480" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20230808-192209.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="778567703" data-linked-resource-container-version="3" data-media-id="ba13c9bc-fccb-4ce7-9bbd-93c96e849df5" data-media-type="file" /></span></div>
+</div>
+</div>
+<div class="columnLayout fixed-width" data-layout="fixed-width">
+<div class="cell normal" data-type="normal">
+<div class="innerCell">
+<hr /></div>
+</div>
+</div>
+<div class="columnLayout two-left-sidebar" data-layout="two-left-sidebar">
+<div class="cell aside" data-type="aside">
+<div class="innerCell">
+<h1 id="Bulldozer-AddingAnalyticsToAHeavyEquipmentDLX-12"><strong><span data-colorid="b15qqep2a6">12</span></strong></h1><p><strong>Add the login analytics functionality </strong></p></div>
+</div>
+<div class="cell normal" data-type="normal">
+<div class="innerCell">
+<p>Under the &ldquo;Load Saved State&rdquo; node in the FSM, add a new execute function action task on this node</p><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/778567703/778567727.png" data-image-src="attachments/778567703/778567727.png" data-height="1343" data-width="2325" data-unresolved-comment-count="0" data-linked-resource-id="778567727" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20230808-194732.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="778567703" data-linked-resource-container-version="3" data-media-id="b6100a70-88cf-47cb-bc5b-769af29eca58" data-media-type="file" /></span><p>Set the analytics object in the analytics function - ensure to check off the check box and the dot:</p><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/778567703/778502190.png" data-image-src="attachments/778567703/778502190.png" data-height="1893" data-width="3480" data-unresolved-comment-count="0" data-linked-resource-id="778502190" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20230808-194956.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="778567703" data-linked-resource-container-version="3" data-media-id="47b56057-6a30-49cd-a090-de3fe4300f0b" data-media-type="file" /></span><p>Call the loginLearner method from in the COREanalytics scripts</p><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/778567703/778567735.png" data-image-src="attachments/778567703/778567735.png" data-height="1512" data-width="1197" data-unresolved-comment-count="0" data-linked-resource-id="778567735" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20230808-195106.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="778567703" data-linked-resource-container-version="3" data-media-id="a3e1493c-1d10-4a8b-b4a1-4fde1f3516c0" data-media-type="file" /></span><p>Set the parameter &ldquo;Learner ID&rdquo; to the fileName blackboard variable:</p><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/778567703/778305581.png" data-image-src="attachments/778567703/778305581.png" data-height="1893" data-width="3489" data-unresolved-comment-count="0" data-linked-resource-id="778305581" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20230808-195350.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="778567703" data-linked-resource-container-version="3" data-media-id="3f880894-6d50-4fbe-aa42-88c5b7f4a62a" data-media-type="file" /></span></div>
+</div>
+</div>
+<div class="columnLayout fixed-width" data-layout="fixed-width">
+<div class="cell normal" data-type="normal">
+<div class="innerCell">
+<hr /></div>
+</div>
+</div>
+<div class="columnLayout two-left-sidebar" data-layout="two-left-sidebar">
+<div class="cell aside" data-type="aside">
+<div class="innerCell">
+<h1 id="Bulldozer-AddingAnalyticsToAHeavyEquipmentDLX-13"><strong><span data-colorid="bxebik9wzy">13</span></strong></h1><p><strong>Add inspection complete analytics functionality</strong></p></div>
+</div>
+<div class="cell normal" data-type="normal">
+<div class="innerCell">
+<p>Under the &ldquo;Update Saved Data&rdquo; node, added a new execute function action task </p><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/778567703/778338343.png" data-image-src="attachments/778567703/778338343.png" data-height="1348" data-width="2343" data-unresolved-comment-count="0" data-linked-resource-id="778338343" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20230808-200211.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="778567703" data-linked-resource-container-version="3" data-media-id="e7aed608-a15c-48f0-99a3-fe1146394143" data-media-type="file" /></span><p>Use the analytics game object blackboard variable (Ensure to check off the checkbox and click the dot)</p><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/778567703/778600493.png" data-image-src="attachments/778567703/778600493.png" data-height="1626" data-width="3504" data-unresolved-comment-count="0" data-linked-resource-id="778600493" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20230808-200323.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="778567703" data-linked-resource-container-version="3" data-media-id="e894f2aa-c16b-484b-8575-563eb40e4a6e" data-media-type="file" /></span><p>Call the setNumInspetionCompleted in the bulldozerAnalyitcs scripts </p><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/778567703/778666059.png" data-image-src="attachments/778567703/778666059.png" data-height="1515" data-width="1059" data-unresolved-comment-count="0" data-linked-resource-id="778666059" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20230808-200531.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="778567703" data-linked-resource-container-version="3" data-media-id="2a15b78a-c149-4c7a-9f23-1f724321ae69" data-media-type="file" /></span><p>Pass the parameter insepctionsComplete from the blackboard variables</p><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/778567703/778240039.png" data-image-src="attachments/778567703/778240039.png" data-height="1613" data-width="3505" data-unresolved-comment-count="0" data-linked-resource-id="778240039" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20230808-200709.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="778567703" data-linked-resource-container-version="3" data-media-id="d4cee46b-5bec-4832-bc23-516d68a64421" data-media-type="file" /></span><p>Then add another execute function action task to the &ldquo;Update Save Data&rdquo; node in the FSM</p><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/778567703/778633241.png" data-image-src="attachments/778567703/778633241.png" data-height="1348" data-width="2343" data-unresolved-comment-count="0" data-linked-resource-id="778633241" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20230808-200215.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="778567703" data-linked-resource-container-version="3" data-media-id="8d54babb-645f-4dd9-97c1-c4ec558acc55" data-media-type="file" /></span><p>This action task uses the analytics blackboard variable (Ensure to check off the checkbox and click the dot)</p><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/778567703/778371108.png" data-image-src="attachments/778567703/778371108.png" data-height="1615" data-width="3512" data-unresolved-comment-count="0" data-linked-resource-id="778371108" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20230808-200428.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="778567703" data-linked-resource-container-version="3" data-media-id="a99f16d5-3981-4607-b53a-ce6e5b946af1" data-media-type="file" /></span><p>Call the segmentCompleteMethod in the bulldozerAnalytics script</p><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/778567703/778469392.png" data-image-src="attachments/778567703/778469392.png" data-height="1516" data-width="1015" data-unresolved-comment-count="0" data-linked-resource-id="778469392" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20230808-200633.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="778567703" data-linked-resource-container-version="3" data-media-id="af09a839-ca35-4eac-8ccd-0c4df12d235a" data-media-type="file" /></span></div>
+</div>
+</div>
+<div class="columnLayout fixed-width" data-layout="fixed-width">
+<div class="cell normal" data-type="normal">
+<div class="innerCell">
+<hr /></div>
+</div>
+</div>
+<div class="columnLayout two-left-sidebar" data-layout="two-left-sidebar">
+<div class="cell aside" data-type="aside">
+<div class="innerCell">
+<h1 id="Bulldozer-AddingAnalyticsToAHeavyEquipmentDLX-14"><strong><span data-colorid="xpe5uwff7o">14</span></strong></h1><p><strong>Add DLX end analytics functionality </strong></p></div>
+</div>
+<div class="cell normal" data-type="normal">
+<div class="innerCell">
+<p>Added a new execute function action task to the &ldquo;Inspection End&rdquo; node in the FSM</p><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/778567703/778567743.png" data-image-src="attachments/778567703/778567743.png" data-height="1228" data-width="1730" data-unresolved-comment-count="0" data-linked-resource-id="778567743" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20230808-200938.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="778567703" data-linked-resource-container-version="3" data-media-id="d55317c4-be64-45a7-9ba3-9f56c6376872" data-media-type="file" /></span><p>This task uses the analytics blackboard variable (Ensure to check off the checkbox and click the dot)</p><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/778567703/778273142.png" data-image-src="attachments/778567703/778273142.png" data-height="1637" data-width="3505" data-unresolved-comment-count="0" data-linked-resource-id="778273142" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20230808-201008.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="778567703" data-linked-resource-container-version="3" data-media-id="f76846f7-b404-4f40-b4cd-e632054e0673" data-media-type="file" /></span><p>Call the DLXCompltete method in the bulldozerAnalytics script</p><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/778567703/778469416.png" data-image-src="attachments/778567703/778469416.png" data-height="1517" data-width="1635" data-unresolved-comment-count="0" data-linked-resource-id="778469416" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20230808-201108.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="778567703" data-linked-resource-container-version="3" data-media-id="60be246f-e8df-4332-a6e8-4123fdfc942a" data-media-type="file" /></span></div>
+</div>
+</div>
+<div class="columnLayout fixed-width" data-layout="fixed-width">
+<div class="cell normal" data-type="normal">
+<div class="innerCell">
+<hr /></div>
+</div>
+</div>
+<div class="columnLayout two-left-sidebar" data-layout="two-left-sidebar">
+<div class="cell aside" data-type="aside">
+<div class="innerCell">
+<h1 id="Bulldozer-AddingAnalyticsToAHeavyEquipmentDLX-15"><strong><span data-colorid="k3lsqrasr1">15</span></strong></h1><p><strong>Seriliaze last script</strong></p></div>
+</div>
+<div class="cell normal" data-type="normal">
+<div class="innerCell">
+<p>Add the getScormFileName script to the bulldozer state machine and then serialize the cloud save handler from the scene to the save handler variable of this added script:</p><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/778567703/778633233.png" data-image-src="attachments/778567703/778633233.png" data-height="999" data-width="1369" data-unresolved-comment-count="0" data-linked-resource-id="778633233" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20230808-195745.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="778567703" data-linked-resource-container-version="3" data-media-id="4810cc00-aa8a-4811-a49f-cc89ce8c212b" data-media-type="file" /></span></div>
+</div>
+</div>
+<div class="columnLayout fixed-width" data-layout="fixed-width">
+<div class="cell normal" data-type="normal">
+<div class="innerCell">
+<p /><p /></div>
+</div>
+</div>
+</div>
+                    </div>
+
+                                        <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="attachments" class="pageSectionTitle">Attachments:</h2>
+                        </div>
+
+                        <div class="greybox" align="left">
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/778567703/778338319.png">image-20230808-183012.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/778567703/778600466.png">image-20230808-183407.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/778567703/778502162.png">image-20230808-184101.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/778567703/778764309.png">image-20230808-184155.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/778567703/778534933.png">image-20230808-184307.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/778567703/778764315.png">image-20230808-185339.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/778567703/778666049.png">image-20230808-185843.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/778567703/778600472.png">image-20230808-190224.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/778567703/778436654.png">image-20230808-190712.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/778567703/778240026.png">image-20230808-191211.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/778567703/778273110.png">image-20230808-191233.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/778567703/778862602.png">image-20230808-191305.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/778567703/778371097.png">image-20230808-191840.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/778567703/778273117.png">image-20230808-192007.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/778567703/778600480.png">image-20230808-192209.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/778567703/778502183.png">image-20230808-192600.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/778567703/778534940.png">image-20230808-192648.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/778567703/778338333.png">image-20230808-192816.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/778567703/778567727.png">image-20230808-194732.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/778567703/778502190.png">image-20230808-194956.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/778567703/778567735.png">image-20230808-195106.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/778567703/778305581.png">image-20230808-195350.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/778567703/778633233.png">image-20230808-195745.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/778567703/778338343.png">image-20230808-200211.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/778567703/778633241.png">image-20230808-200215.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/778567703/778600493.png">image-20230808-200323.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/778567703/778371108.png">image-20230808-200428.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/778567703/778666059.png">image-20230808-200531.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/778567703/778469392.png">image-20230808-200633.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/778567703/778240039.png">image-20230808-200709.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/778567703/778567743.png">image-20230808-200938.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/778567703/778273142.png">image-20230808-201008.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/778567703/778469416.png">image-20230808-201108.png</a> (image/png)
+                                <br/>
+                                                    </div>
+                    </div>
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Jun 11, 2025 14:09</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VARLab : Setting Up Dynamically Mountable Prefabs (Boxes, Devices)</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="VARLab_44990773.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Learning-Experience_972881951.html">Learning Experience</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="216629273.html">Digital Learning Experiences (DLX)</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="706347009.html">LSM8.02 - Conestoga Trades: Electrician Simulator</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Development-Documentations_1066237953.html">Development Documentations</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            VARLab : Setting Up Dynamically Mountable Prefabs (Boxes, Devices)
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                            
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> Amila Abeygunasekara (Unlicensed)</span>, last modified on Nov 27, 2024
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <p>To dynamically instantiate a <code>Mountable</code>, we need a <code>MountLocation</code> in the scene.</p><h2 id="SettingUpDynamicallyMountablePrefabs(Boxes,Devices)-MountLocation">Mount Location</h2><p>Select a MountLocation object while keeping the Handle Position as <strong>Pivot </strong>and Tool Handle Rotation as <strong>Local</strong>.</p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20241126-235026.png" width="164" loading="lazy" src="attachments/1486913539/1491238943.png?width=164" data-image-src="attachments/1486913539/1491238943.png" data-height="50" data-width="164" data-unresolved-comment-count="0" data-linked-resource-id="1491238943" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20241126-235026.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1486913539" data-linked-resource-container-version="4" data-media-id="39522878-8f97-4a7d-ab61-7db34b216272" data-media-type="file"></span><p>The local Front (Z) axis of <code>MountLocation</code> represents the front of the <code>Mountable</code> to be mounted.</p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20241126-235515.png" width="382" loading="lazy" src="attachments/1486913539/1490714662.png?width=382" data-image-src="attachments/1486913539/1490714662.png" data-height="305" data-width="382" data-unresolved-comment-count="0" data-linked-resource-id="1490714662" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20241126-235515.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1486913539" data-linked-resource-container-version="4" data-media-id="e6e68ebd-cadd-4e60-812a-2ac34e51dff6" data-media-type="file"></span><p>The mount points below will act as anchors to attach the <code>Mountable</code>’s pivot point. This can be configured in <code>MountLocation</code> GameObject.</p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20241127-003407.png" width="263" loading="lazy" src="attachments/1486913539/1490911271.png?width=263" data-image-src="attachments/1486913539/1490911271.png" data-height="208" data-width="263" data-unresolved-comment-count="0" data-linked-resource-id="1490911271" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20241127-003407.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1486913539" data-linked-resource-container-version="4" data-media-id="caf398fe-a249-4be1-99b6-b6b3085d1594" data-media-type="file"></span><p>An example of a Mountable instantiated on the Right mount point is shown below.</p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20241127-010003.png" width="404" loading="lazy" src="attachments/1486913539/1491238961.png?width=404" data-image-src="attachments/1486913539/1491238961.png" data-height="346" data-width="404" data-unresolved-comment-count="0" data-linked-resource-id="1491238961" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20241127-010003.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1486913539" data-linked-resource-container-version="4" data-media-id="5c3bdb53-3406-4808-8a22-7631ebdaaaba" data-media-type="file"></span><h2 id="SettingUpDynamicallyMountablePrefabs(Boxes,Devices)-MountablePrefabSetup">Mountable Prefab Setup</h2><p>Create the prefab in the following structure where we can adjust the pivot point of the parent Mesh object (Meshes GameObject) by putting it under another GameObject (Device Box, in this case).</p><p>Ensure the mesh aligns the front (Z) axis of the parent GameObject to properly align with the <code>MountLocation</code> when instantiated.</p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20241127-010545.png" width="717" loading="lazy" src="attachments/1486913539/1490681901.png?width=717" data-image-src="attachments/1486913539/1490681901.png" data-height="571" data-width="1066" data-unresolved-comment-count="0" data-linked-resource-id="1490681901" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20241127-010545.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1486913539" data-linked-resource-container-version="4" data-media-id="997211b0-a69a-43ec-b639-9d00d68e45cf" data-media-type="file"></span><h2 id="SettingUpDynamicallyMountablePrefabs(Boxes,Devices)-ExampleScenario:MountingtheMountableattheFrontpoint">Example Scenario: Mounting the Mountable at the Front point</h2><p>Let’s see how to mount the above example Mountable at the Front mount point. Previously, it was mounted at the Right mount point.</p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20241127-011456.png" width="473" loading="lazy" src="attachments/1486913539/1490681910.png?width=473" data-image-src="attachments/1486913539/1490681910.png" data-height="181" data-width="473" data-unresolved-comment-count="0" data-linked-resource-id="1490681910" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20241127-011456.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1486913539" data-linked-resource-container-version="4" data-media-id="cbca6417-0f08-4dd8-9731-ec785297eee7" data-media-type="file"></span><p>Adjust the prefab as follows. Notice where the pivot point is. Give it a little thought if it doesn’t make sense.</p><span class="confluence-embedded-file-wrapper image-left-wrap-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-wrap-left" alt="image-20241127-011341.png" width="364" loading="lazy" src="attachments/1486913539/1491009591.png?width=364" data-image-src="attachments/1486913539/1491009591.png" data-height="369" data-width="393" data-unresolved-comment-count="0" data-linked-resource-id="1491009591" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20241127-011341.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1486913539" data-linked-resource-container-version="4" data-media-id="0254c7a1-dc9b-42a3-b510-d4043034c40f" data-media-type="file"></span><span class="confluence-embedded-file-wrapper image-right-wrap-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-wrap-right" alt="image-20241127-011307.png" width="375" loading="lazy" src="attachments/1486913539/1491238968.png?width=375" data-image-src="attachments/1486913539/1491238968.png" data-height="328" data-width="362" data-unresolved-comment-count="0" data-linked-resource-id="1491238968" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20241127-011307.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1486913539" data-linked-resource-container-version="4" data-media-id="f52cdd6b-f6e9-4e76-8d4d-452f12d4907d" data-media-type="file"></span><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20241127-012347.png" width="478" loading="lazy" src="attachments/1486913539/1490845777.png?width=478" data-image-src="attachments/1486913539/1490845777.png" data-height="337" data-width="478" data-unresolved-comment-count="0" data-linked-resource-id="1490845777" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20241127-012347.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1486913539" data-linked-resource-container-version="4" data-media-id="554422b6-8868-445d-aef0-e0a491315dc6" data-media-type="file"></span><p />
+                    </div>
+
+                                        <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="attachments" class="pageSectionTitle">Attachments:</h2>
+                        </div>
+
+                        <div class="greybox" align="left">
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1486913539/1490681879.png">image-20241126-234946.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1486913539/1491238943.png">image-20241126-235026.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1486913539/1490714662.png">image-20241126-235515.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1486913539/1490911271.png">image-20241127-003407.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1486913539/1491238961.png">image-20241127-010003.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1486913539/1490681901.png">image-20241127-010545.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1486913539/1491238968.png">image-20241127-011307.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1486913539/1491009591.png">image-20241127-011341.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1486913539/1490681910.png">image-20241127-011456.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1486913539/1491238975.png">image-20241127-011751.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1486913539/1490845777.png">image-20241127-012347.png</a> (image/png)
+                                <br/>
+                                                    </div>
+                    </div>
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Jun 11, 2025 14:17</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

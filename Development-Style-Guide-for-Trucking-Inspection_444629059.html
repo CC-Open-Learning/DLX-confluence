@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VARLab : Development Style Guide for Trucking Inspection</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="VARLab_44990773.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Learning-Experience_972881951.html">Learning Experience</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="General-Release-DLX_729973721.html">General Release DLX</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="LSM3.01-Trucking-Pre-Trip-Inspection_386367493.html">LSM3.01 Trucking Pre Trip Inspection</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            VARLab : Development Style Guide for Trucking Inspection
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                            
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> David Inglis (Unlicensed)</span>, last modified by <span class='editor'> Balazs Karner</span> on Dec 01, 2021
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <div class="table-wrap"><table data-layout="default" data-local-id="4674453c-7ec5-4a33-a199-1b390cc336d9" class="confluenceTable"><colgroup><col style="width: 347.0px;"/><col style="width: 379.0px;"/></colgroup><tbody><tr><th class="confluenceTh"><p>Document status</p></th><td class="confluenceTd"><p><span class="status-macro aui-lozenge aui-lozenge-visual-refresh aui-lozenge-progress">IN PROGRESS</span></p></td></tr><tr><th class="confluenceTh"><p>Document owner</p></th><td class="confluenceTd"><p><a class="confluence-userlink user-mention" data-account-id="5f037cc00b38b100225264fa" href="https://varlab-dev.atlassian.net/wiki/people/5f037cc00b38b100225264fa?ref=confluence" target="_blank" data-base-url="https://varlab-dev.atlassian.net/wiki">David Inglis (Unlicensed)</a></p></td></tr></tbody></table></div><style type='text/css'>/*<![CDATA[*/
+div.rbtoc1749650763736 {padding: 0px;}
+div.rbtoc1749650763736 ul {list-style: disc;margin-left: 0px;}
+div.rbtoc1749650763736 li {margin-left: 0px;padding-left: 0px;}
+
+/*]]>*/</style><div class='toc-macro rbtoc1749650763736'>
+<ul class='toc-indentation'>
+<li><a href='#DevelopmentStyleGuideforTruckingInspection-Objective'>Objective</a></li>
+<li><a href='#DevelopmentStyleGuideforTruckingInspection-VehicleInspection'>Vehicle Inspection</a>
+<ul class='toc-indentation'>
+<li><a href='#DevelopmentStyleGuideforTruckingInspection-InspectableComponents'>Inspectable Components</a></li>
+<li><a href='#DevelopmentStyleGuideforTruckingInspection-LearnerGuidance'>Learner Guidance</a></li>
+</ul>
+</li>
+<li><a href='#DevelopmentStyleGuideforTruckingInspection-InteractableComponents'>Interactable Components</a></li>
+<li><a href='#DevelopmentStyleGuideforTruckingInspection-UserInterfaces'>User Interfaces</a>
+<ul class='toc-indentation'>
+<li><a href='#DevelopmentStyleGuideforTruckingInspection-Inspections'>Inspections</a></li>
+<li><a href='#DevelopmentStyleGuideforTruckingInspection-DisplayingTextOnScreen'>Displaying Text On Screen</a></li>
+<li><a href='#DevelopmentStyleGuideforTruckingInspection-DisplayingWindowsandTooltips'>Displaying Windows and Tooltips</a></li>
+</ul>
+</li>
+</ul>
+</div><h2 id="DevelopmentStyleGuideforTruckingInspection-Objective">Objective</h2><p>Developers working on the <strong>Trucking Inspection</strong> Digital Learning Simulation should reference this development style guide to inform:</p><ul><li><p>how interactable objects can best be set up in a scene</p></li><li><p>how inspectable objects can best be set up in a scene</p></li><li><p>how text can be displayed to the user</p></li><li><p>how windows and other interactable UI elements can be displayed to the user</p></li></ul><p>With this guide, content created for the DLS will be consistent and give developers a point of reference when beginning their work, while still allowing for individual design and creativity as a team member working on this DLS project.</p><h2 id="DevelopmentStyleGuideforTruckingInspection-VehicleInspection">Vehicle Inspection</h2><h3 id="DevelopmentStyleGuideforTruckingInspection-InspectableComponents">Inspectable Components</h3><p>A multi-point vehicle inspection can be facilitated using the <strong>Inspection</strong> system. The Trucking Inspection simulation will be broken into segments where the learner will have a small number of objects to inspect in each segment. </p><p>Trucking will also use two distinct inspection modes: Visual and Physical. </p><p>The <a href="Design-Considerations---CORE-and-Trucking_453247043.html" data-linked-resource-id="453247043" data-linked-resource-version="9" data-linked-resource-type="page">Design Considerations - CORE and Trucking</a> document in the Trucking Inspection workspace outlines this design decision in full.</p><h3 id="DevelopmentStyleGuideforTruckingInspection-LearnerGuidance">Learner Guidance</h3><p>Throughout the inspection, voice clips will be played to guide the learner through the different inspection points, and will be used as hints or suggestions when it seems that the learner is stuck on a particular inspection point. Voice clips will primarily be used in the Tutorial and Guided modes to teach and guide the learner through the inspection points. In Advanced mode, voice clips can be used to kick off the inspection, and guide the user back to the inspection if they have idled for a while, but otherwise guidance should be left to a minimum. </p><p>Developers can use the <a href="https://varlab-dev.atlassian.net/wiki/spaces/CE/pages/462422073/Audio+Controller" data-linked-resource-id="462422073" data-linked-resource-version="2" data-linked-resource-type="page">Audio Controller</a> in the scene to store all voice clips in a shared location as key-value pairs. The keys can then can then be used to easily reference a voice clip in the Scenario graphs any of the play modes.</p><p><strong>Script</strong>: <a class="external-link" href="https://bitbucket.org/VARLab/core-engine/src/development/Assets/Scripts/Audio/AudioController.cs" rel="nofollow">AudioController.cs</a></p><p>Voice clips can be accompanied by text displayed on-screen using a <strong>Message Prompt</strong> effectively as subtitles for the voice clip. This can be useful as an accessibility consideration to learners and faculty, and can help learners in the simulation if their sound is low or off, or they have missed part of the audio-based prompt.</p><p /><h2 id="DevelopmentStyleGuideforTruckingInspection-InteractableComponents">Interactable Components</h2><p>In the Trucking sim, learners will not be clicking and dragging to “interact” with objects manually, and the sim will not use the <strong>Interactable</strong> system in the same way that simulations like Motive Power or Heavy Equipment use it. Instead, learners will either be looking at an object for a visual inspection and only needing to interact with it to make note of damages, or they will be triggering an animation by selecting an option in the “Physical Inspection Button Tray” for a physical inspection.</p><p>For more information on using <strong>Interactables</strong>, review the documentation for the <a href="https://varlab-dev.atlassian.net/wiki/spaces/CE/pages/138805291/Interaction+System" data-linked-resource-id="138805291" data-linked-resource-version="8" data-linked-resource-type="page">Interaction System</a>.</p><p /><h2 id="DevelopmentStyleGuideforTruckingInspection-UserInterfaces">User Interfaces</h2><h3 id="DevelopmentStyleGuideforTruckingInspection-Inspections">Inspections</h3><p>For both the visual and physical inspections, learners will record damages that they notice by clicking on damage. Clicking on any inspectable area of the vehicle, whether it is damaged or not, will bring up an Inspection Panel with the possible damaged states. This is a modified version of the panel used in Heavy Equipment, but doesn’t give the option to select “good” as a state, since all components are assumed to be good unless some damage/defect is selected.</p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" width="550" loading="lazy" src="attachments/444629059/460193928.png?width=550" data-image-src="attachments/444629059/460193928.png" data-height="464" data-width="876" data-unresolved-comment-count="0" data-linked-resource-id="460193928" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20211118-172115.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="444629059" data-linked-resource-container-version="4" data-media-id="7c6d5339-6608-4987-aa52-b814db7e5655" data-media-type="file"></span><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" width="550" loading="lazy" src="attachments/444629059/460226669.png?width=550" data-image-src="attachments/444629059/460226669.png" data-height="359" data-width="565" data-unresolved-comment-count="0" data-linked-resource-id="460226669" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="TI-tooltip.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="444629059" data-linked-resource-container-version="4" data-media-id="99faa6dd-1d01-42e4-8594-3669315fc364" data-media-type="file"></span><p /><h3 id="DevelopmentStyleGuideforTruckingInspection-DisplayingTextOnScreen">Displaying Text On Screen</h3><p>Displaying text for the user can be done using the PromptManager system. </p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" width="544" loading="lazy" src="attachments/444629059/449478660.png?width=544" data-image-src="attachments/444629059/449478660.png" data-height="58" data-width="588" data-unresolved-comment-count="0" data-linked-resource-id="449478660" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20211004-173827.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="444629059" data-linked-resource-container-version="4" data-media-id="1d5ba1fc-c0fb-436a-adfb-53214da403b0" data-media-type="file"></span><p>The TaskManager uses the PromptManager system to automatically display a text prompt at the bottom of the screen containing the description of the current Task. This automatic prompt can be disabled, or can be updated to show additional information to the learner such as hints.</p><p>Additional messages can be placed at the top or the middle of the screen:</p><ul><li><p>Top-of-screen positioning is useful when providing additional context or information for the user’s task or action, since it will not be placed in front of whatever the learner is currently engaging with. </p></li><li><p>Middle-of-screen positioning should be used when the message is intended to interrupt the learner’s workflow; this can be used to provide a warning or cautionary message to the learner if they have performed an incorrect action. </p></li></ul><p>The documentation on <a href="https://varlab-dev.atlassian.net/wiki/spaces/CE/pages/18055437/Message+Prompts" data-linked-resource-id="18055437" data-linked-resource-version="5" data-linked-resource-type="page">Message Prompts</a> provides descriptions and code examples for setting up such prompts.</p><p /><h3 id="DevelopmentStyleGuideforTruckingInspection-DisplayingWindowsandTooltips">Displaying Windows and Tooltips</h3><p>In addition to the tooltips/floating control panels of the inspection system, we might want to display a window to the user. </p><p>If the learner should be able to open and close this window/menu at their discretion, it should be added to the menu bar which is positioned at the bottom-left of the screen. An icon that is relevant to the purpose of the window will make the option clear to the user. An on-hover tooltip containing the name of the window should also be added to the button in the menu bar. </p><p>An example of this kind of window is the <strong>Magnifiers </strong>window which is used in both the <strong>Hydraulics</strong> and <strong>Motive Power </strong>(Daily Hoist Inspection) simulations. The learner can open the window to view any magnifiers at any time by clicking on the magnifying glass icon in the menu bar. They can then click the button again or click the “X” on the window itself to close the window; clicking on another button in the menu bar will also close the window, if it has been set up with the Window Manager to be a “sibling” window</p><p>A window can also be made to be entirely controlled by CORE Engine. It is then displayed to the learner at certain times as defined by the Scenario, and typically the learner must complete the action prompted by the window in order to close it. An example of this behaviour is seen in the Daily Hoist Inspection sim=</p><p>Any window that can be manually activated by the user can also be controlled by CORE Engine through the Scenario. Take the “Quit Dialog” for example: the learner can press the ESC key or click on the “back” arrow in the menu bar to “pause” the simulation and bring up the dialog allowing them to quit. This dialog is also automatically displayed to the learner once they have completed all of the task of the simulation.</p><p>See the <a href="https://varlab-dev.atlassian.net/wiki/spaces/CE/pages/455737349/RemoteEducation.UI" data-linked-resource-id="455737349" data-linked-resource-version="4" data-linked-resource-type="page">RemoteEducation.UI</a> documentation for more information about implementing windows, buttons, and tooltips.</p>
+                    </div>
+
+                                        <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="attachments" class="pageSectionTitle">Attachments:</h2>
+                        </div>
+
+                        <div class="greybox" align="left">
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/444629059/449478660.png">image-20211004-173827.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/444629059/460193928.png">image-20211118-172115.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/444629059/460226669.png">TI-tooltip.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/444629059/461406370.png">image-20211125-164511.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/444629059/461406376.png">image-20211125-164608.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/444629059/461340799.png">image-20211125-164732.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/444629059/461406382.png">image-20211125-164753.png</a> (image/png)
+                                <br/>
+                                                    </div>
+                    </div>
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Jun 11, 2025 14:06</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

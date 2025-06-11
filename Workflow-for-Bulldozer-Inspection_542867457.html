@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VARLab : Workflow for Bulldozer Inspection</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="VARLab_44990773.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Learning-Experience_972881951.html">Learning Experience</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="General-Release-DLX_729973721.html">General Release DLX</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="LSM6.02---Heavy-Equipment---Bulldozer_505151489.html">LSM6.02 - Heavy Equipment - Bulldozer</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            VARLab : Workflow for Bulldozer Inspection
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                            
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> David Inglis (Unlicensed)</span>, last modified on Nov 04, 2022
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <h2 id="WorkflowforBulldozerInspection-Terminology">Terminology</h2><p>Below is an overview of the classes and objects which are used in the <strong>LSM6.02 Heavy Equipment - Bulldozer </strong>digital learning simulation. </p><h3 id="WorkflowforBulldozerInspection-InspectionManifest">Inspection Manifest</h3><p>The <strong>Inspection Manifest</strong> is a Unity component attached to the top-level of the bulldozer. It tracks all of the <strong>Inspection Elements</strong> attached to the bulldozer </p><h3 id="WorkflowforBulldozerInspection-InspectionElement">Inspection Element</h3><p>An <strong>Inspection Element</strong> is a Unity component defines a ‘part’ on the equipment to be inspected. This component is attached to a GameObject in the scene and stores all of the <strong>Inspection Conditions. </strong>This project uses a subclass called <strong>SpecializedInspectionElement</strong> which defines properties specific to this bulldozer inspection.</p><h3 id="WorkflowforBulldozerInspection-InspectionCondition">Inspection Condition</h3><p>An <strong>Inspection Condition </strong>is a Scriptable Object which stores information about a possible condition of an <strong>Inspection Element</strong>. </p><p>For example, the <strong>Final Drive </strong>(Element) has four possible <strong>Conditions</strong>: </p><div class="table-wrap"><table data-layout="default" data-local-id="daf92517-ed3b-44de-b55f-1fec13b787bb" class="confluenceTable"><colgroup><col style="width: 340.0px;"/><col style="width: 340.0px;"/></colgroup><tbody><tr><td class="confluenceTd"><ul><li><p>Good</p></li></ul></td><td class="confluenceTd"><ul><li><p>Missing Bolts</p></li></ul></td></tr><tr><td class="confluenceTd"><ul><li><p>Leaking Bolts</p></li></ul></td><td class="confluenceTd"><ul><li><p>Embedded Object</p></li></ul></td></tr></tbody></table></div><p>This project uses a subclass called <strong>SpecializedInspectionCondition</strong> which defines properties specific to the needs of this bulldozer inspection.</p><h3 id="WorkflowforBulldozerInspection-Statement">Statement</h3><p>Captured at both the <strong>Inspection Element </strong>and <strong>Inspection Condition</strong> level are <strong>Statements</strong>. A <strong>Statement</strong> defines a text string and audio file to be used as instructions in the digital learning simulation. </p><p>The <strong>Scriptable Statement</strong> class is used to store this information in Scriptable Object format.</p><h3 id="WorkflowforBulldozerInspection-FiniteStateMachine">Finite State Machine</h3><p>A <strong>Finite State Machine</strong> or <strong>FSM</strong> is an object provided by the <a class="external-link" href="https://nodecanvas.paradoxnotion.com/documentation/" rel="nofollow">NodeCanvas</a> package which allows a state machine to be configured using a visual, drag-and-drop editor. The <strong>Bulldozer State Machine</strong> object acts as the main <strong>FSM</strong> that drives the bulldozer inspection, and is is embedded in the scene.</p><h3 id="WorkflowforBulldozerInspection-InspectionStateMachine">Inspection State Machine</h3><p>The <strong>Inspection State Machine</strong> class will keep track of the current <strong>Inspection Element</strong> and the <em>state </em>of the inspection. The diagram below illustrates the general organization of the <strong>FSM</strong> that is driven by the <strong>Inspection State Machine</strong>, along with a description of each <em>state</em>:</p><span class="confluence-embedded-file-wrapper image-right-wrap-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-wrap-right" width="283" loading="lazy" src="attachments/542867457/542998533.png?width=283" data-image-src="attachments/542867457/542998533.png" data-height="900" data-width="636" data-unresolved-comment-count="0" data-linked-resource-id="542998533" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20221019-184225.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="542867457" data-linked-resource-container-version="2" data-media-id="fddf8f34-5c2d-42ef-a416-cad67d33405d" data-media-type="file"></span><ul><li><p><strong>Waiting</strong>: An <strong>Inspection Element</strong> is loaded as the ‘current’ inspection. The camera moves to the position specified by that element, and the user is prompted to inspect the part.</p></li><li><p><strong>Started</strong>: The UI is toggled on and shown to the learner. They are prompted to answer a question about the part being inspected.</p></li><li><p><strong>Active</strong>: This state is waiting for a selection from the learner. Depending on the choice they select, the state machine proceeds to either the <em>Rejected </em>or <em>Accepted </em>state.</p></li><li><p><strong>Rejected</strong>: User receives feedback on an incorrect answer. The workflow goes back to the <em>Active </em>state.</p></li><li><p><strong>Accepted</strong>: User receives feedback on the correct answer. The workflow proceeds to <em>Finished</em></p></li><li><p><strong>Finished</strong>: The UI is closed and the <strong>Element</strong> is unloaded. The workflow moves immediately back to the <em>Waiting</em> state to load a new <strong>Element</strong>. </p></li></ul><p /><h3 id="WorkflowforBulldozerInspection-VirtualCamera">Virtual Camera</h3><p>A <strong>Cinemachine Virtual Camera</strong> is an object from the <a class="external-link" href="https://docs.unity3d.com/Packages/com.unity.cinemachine@2.3/api/Cinemachine.html" rel="nofollow">Cinemachine</a> package, which holds camera settings for a particular position. A virtual camera can become <strong>Live</strong> which will cause the Unity <strong>Camera</strong> in the scene to update its position, rotation, and other settings according to the Virtual Camera. An <strong>Inspection Element</strong> can specify the Virtual Camera that will provide the best view of that element.</p><h2 id="WorkflowforBulldozerInspection-InspectionWorkflow">Inspection Workflow </h2><p>In the documentation below for setting up an inspection, a few shorthands have been used for simplicity:</p><ul><li><p><strong>Element </strong>refers to the <strong>Specialized Inspection Element</strong> MonoBehaviour class, </p></li><li><p><strong>Condition</strong> refers to the <strong>Specialized Inspection Condition</strong> Scriptable Object class</p></li></ul><h3 id="WorkflowforBulldozerInspection-AddinganInspectionElement">Adding an Inspection Element</h3><p>Each part on the bulldozer which the learner will inspect requires an <strong>Element</strong> component attached.</p><p>The <strong>Element</strong> will need a corresponding Collider so that it can be clicked on. </p><div class="confluence-information-macro confluence-information-macro-information"><span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"></span><div class="confluence-information-macro-body"><p>This click action can be set up using the <strong>Click Handler</strong> script. A COREv2 package (<strong>CORE Interactions</strong>) is currently under development which will provide serialized events for mouse actions. Once this package is implemented, it will replace the temporary <strong>Click Handler</strong> script.</p></div></div><p>The <strong>Element</strong> will also need serialized references to the resources it plans to access for the inspection.</p><div class="table-wrap"><table data-layout="default" data-local-id="17d4dc2f-4b7e-45e7-8667-d2034d3c0f22" class="confluenceTable"><colgroup><col style="width: 190.0px;"/><col style="width: 314.0px;"/></colgroup><tbody><tr><th class="confluenceTh"><p><strong>Camera</strong></p></th><td class="confluenceTd"><p>The <strong>Cinemachine Virtual Camera</strong> provided here will become <strong>Live</strong> when this element becomes the current Inspection Element</p></td></tr><tr><th class="confluenceTh"><p><strong>Conditions</strong></p></th><td class="confluenceTd"><p>A list of <strong>Condition</strong> Scriptable Objects which represents all possible conditions that the part could be found in.</p></td></tr><tr><th class="confluenceTh"><p><strong>Initial Script</strong></p></th><td class="confluenceTd"><p>A list of <strong>Scriptable Statements</strong> which are presented to the learner sequentially when this element becomes the current Inspection Element. The <strong>Initial</strong> statement(s) tell the learner what they are looking at and ask them to click on the element to start the inspection</p></td></tr><tr><th class="confluenceTh"><p><strong>Poke Script</strong></p></th><td class="confluenceTd"><p>A list of <strong>Scriptable Statements</strong> which will be used to encourage the learner to click on the inspection element if they wait too long. About 5 seconds after the <strong>Initial Script</strong> is presented, one of the <strong>Poke </strong>statements will be randomly selected to give the learner a hint about what they need to be doing.</p></td></tr><tr><th class="confluenceTh"><p><strong>Task Script</strong></p></th><td class="confluenceTd"><p>A currently unused list of Scriptable Statements. </p></td></tr></tbody></table></div><p /><h3 id="WorkflowforBulldozerInspection-CreatinganInspectionConditionasset">Creating an Inspection Condition asset</h3><p>A <strong>Condition</strong> is represented as a Scriptable Object, which is an asset file that can be saved in the project folder and hold preset values. This is similar to a Prefab, but it is specific to one single class, instead of the prefab’s hierarchy of GameObjects.</p><p>To create a <strong>Condition</strong>, navigate to <code>Assets &gt; Create &gt; CORE &gt; HeavyEquipment &gt; Condition</code> in the top bar menu. This will create a new <strong>Condition</strong> asset in the project folder</p><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/542867457/545325081.png" data-image-src="attachments/542867457/545325081.png" data-height="390" data-width="527" data-unresolved-comment-count="0" data-linked-resource-id="545325081" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20221104-155444.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="542867457" data-linked-resource-container-version="2" data-media-id="8c0aed77-6bb9-45bc-bd65-9f187dc68380" data-media-type="file"></span><p /><h3 id="WorkflowforBulldozerInspection-CreatingaStatementasset">Creating a Statement asset</h3><p>To create a <strong>Statement</strong>, navigate to <code>Assets &gt; Create &gt; CORE &gt; HeavyEquipment &gt; Statement</code> in the top bar menu. This will create a new <strong>Statement </strong>asset in the project folder</p><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/542867457/545587217.png" data-image-src="attachments/542867457/545587217.png" data-height="188" data-width="529" data-unresolved-comment-count="0" data-linked-resource-id="545587217" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20221104-155514.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="542867457" data-linked-resource-container-version="2" data-media-id="0a619240-a230-46a4-bffd-828b68edf687" data-media-type="file"></span><p />
+                    </div>
+
+                                        <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="attachments" class="pageSectionTitle">Attachments:</h2>
+                        </div>
+
+                        <div class="greybox" align="left">
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/542867457/542998533.png">image-20221019-184225.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/542867457/545325081.png">image-20221104-155444.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/542867457/545587217.png">image-20221104-155514.png</a> (image/png)
+                                <br/>
+                                                    </div>
+                    </div>
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Jun 11, 2025 14:09</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

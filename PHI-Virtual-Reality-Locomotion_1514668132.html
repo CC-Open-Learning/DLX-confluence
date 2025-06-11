@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VARLab : PHI Virtual Reality Locomotion</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="VARLab_44990773.html">VARLab</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Learning-Experience_972881951.html">Learning Experience</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="General-Release-DLX_729973721.html">General Release DLX</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="LSM9.01---Public-Health-Inspection_805306369.html">LSM9.01 - Public Health Inspection</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="PHI-VR-Research-Project_1514897411.html">PHI-VR Research Project</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            VARLab : PHI Virtual Reality Locomotion
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                            
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> User 55f04</span>, last modified on Dec 12, 2024
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <h2 id="PHIVirtualRealityLocomotion-TableofContents">Table of Contents</h2><style type='text/css'>/*<![CDATA[*/
+div.rbtoc1749651403894 {padding: 0px;}
+div.rbtoc1749651403894 ul {list-style: circle;margin-left: 0px;}
+div.rbtoc1749651403894 li {margin-left: 0px;padding-left: 0px;}
+
+/*]]>*/</style><div class='toc-macro rbtoc1749651403894'>
+<ul class='toc-indentation'>
+<li><a href='#PHIVirtualRealityLocomotion-TableofContents'>Table of Contents</a></li>
+</ul>
+<li><a href='#PHIVirtualRealityLocomotion-Introduction'>Introduction</a></li>
+<li><a href='#PHIVirtualRealityLocomotion-Teleportation'>Teleportation</a>
+<ul class='toc-indentation'>
+<li><a href='#PHIVirtualRealityLocomotion-Howtoteleport?'>How to teleport?</a></li>
+<li><a href='#PHIVirtualRealityLocomotion-Whatdidn&#39;twork?'>What didn&#39;t work?</a></li>
+</ul>
+</li>
+<li><a href='#PHIVirtualRealityLocomotion-Snap-turn'>Snap-turn</a>
+<ul class='toc-indentation'>
+<li><a href='#PHIVirtualRealityLocomotion-HowtoSnapTurn?'>How to Snap Turn?</a></li>
+<li><a href='#PHIVirtualRealityLocomotion-Whatdidn’twork?'>What didn’t work?</a></li>
+</ul>
+</div><h1 id="PHIVirtualRealityLocomotion-Introduction">Introduction</h1><p>This documentation focuses on the steps on how XR Locomotion was implemented in PHI VR as part of our research project. With the XRSystem added to the project, there are 3 types of locomotion:</p><ul><li><p>Move (Continuous Move)</p></li><li><p>Turn (Continuous Turn or Snap Turn)</p></li><li><p>Teleport</p></li></ul><p>Initially, we thought about using the default controls with a mix of teleportation between way points. However, the controls (turning and moving) were nausea inducing since they were configured as continuous motion. We decided to use snap turn locomotion and teleportation in order to mitigate this issue.</p><h1 id="PHIVirtualRealityLocomotion-Teleportation">Teleportation</h1><p>Refer to the Jira issue 
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="PHI-1336"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_1514668132_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/PHI-1336" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>PHI-1336</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ for reference to the implementation.</p><p>With the XR packages installed, search for <code>TeleportPoint</code> under the project and you will find a prefab that belongs to the <code>com.varlab.xr</code> package. Similar to how the XRSystem was copied into the <code>Assets/Prefabs/</code> folder, you want to do the same for this prefab as well so that you have a variant that you can modify outside of the package. See below screenshot for reference to the prefab and its new variant:</p><div class="panel" style="background-color: #EAE6FF;border-color: #998DD9;border-width: 1px;"><div class="panelContent" style="background-color: #EAE6FF;">
+<p>Package files are read-only so it is crucial that you do this step for anything you are modifying from the packages.</p>
+</div></div><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20241211-195819.png" width="760" loading="lazy" src="attachments/1514668132/1514602600.png?width=760" data-image-src="attachments/1514668132/1514602600.png" data-height="323" data-width="859" data-unresolved-comment-count="0" data-linked-resource-id="1514602600" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20241211-195819.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1514668132" data-linked-resource-container-version="6" data-media-id="f24726a1-2329-490a-ad5a-52a575c82beb" data-media-type="file"></span><p>To breakdown the implementation in the Jira issue linked above. I simply added the teleport point to each<code>MovementTile</code> under <code>Inspectables and POIs &gt; Areas &gt; ExampleArea &gt; Movement Targets</code> prefab. That way I modify the <code>Movement Targets</code> for each area rather than the base prefab <code>MovementTile</code>. Below is an example screenshot of the implementation for Back Kitchen Area:</p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20241211-200459.png" width="310" loading="lazy" src="attachments/1514668132/1514930262.png?width=310" data-image-src="attachments/1514668132/1514930262.png" data-height="357" data-width="310" data-unresolved-comment-count="0" data-linked-resource-id="1514930262" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20241211-200459.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1514668132" data-linked-resource-container-version="6" data-media-id="1ace4c6f-968a-4d48-b994-a1ba7ac829a6" data-media-type="file"></span><p>Once that is complete, You would want to check the <code>TeleportAnchor</code>object under the <code>TeleportPoint</code> prefab to ensure that it is pointing right side up for every <code>MovementTile</code>. You are better off modifying the <code>TeleportPoint</code> prefab to achieve this as the change will be applied across every object that holds the <code>TeleportPoint</code>object.</p><p>Upon inspecting the <code>TeleportPoint</code> prefab, you will notice that it has its own sprite for the teleportation marker. I removed it to not have 2 visible sprites (one for the original <code>MovementTile</code>and another for the <code>TeleportPoint</code>) on top of each other. This was throwing a bunch of null reference errors since the sprite did not exist and the <code>Teleport Marker</code>script uses the sprite component to draw the marker.</p><div class="confluence-information-macro confluence-information-macro-information"><span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"></span><div class="confluence-information-macro-body"><p>You can simply disable the sprite component instead of outright removing it. You can also modify the <code>Teleport Marker</code> script to simply not use the sprite as well, to suppress any null reference errors.</p></div></div><h3 id="PHIVirtualRealityLocomotion-Howtoteleport?">How to teleport?</h3><p>Simply move the Primary2DAxis joystick on the right controller upwards to get a <code>TeleportInteractor</code> line that is red in color. If the <code>TeleportInteractor</code> hits a <code>TeleportPoint</code> it will turn green and you will be presented with a reticle over the point showing the direction you will be looking at when you teleport. Releasing the Primary2DAxis joystick will then initiate the teleportation.</p><h3 id="PHIVirtualRealityLocomotion-Whatdidn&#39;twork?">What didn't work?</h3><p>Some of the <code>MovementTiles</code> were placed upside down in the initial development of PHI flatscreen. As the sprite for the tile wasn’t clear about which way it faces up, this was ignored. This would lead to unintended behavior like teleporting upside down and fall off the game world. To mitigate this, I made sure that the X rotation of every <code>MovementTile</code> matches at around 270 degrees (Note: <code>MovementTiles</code>with X rotation set to this value were the only ones that allowed teleportation right side up).</p><h1 id="PHIVirtualRealityLocomotion-Snap-turn">Snap-turn</h1><p>Refer to Jira issue 
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue" data-jira-key="PHI-1345"  data-client-id="SINGLE_a5997e8d-c92b-3e2c-a3c8-296b7f0f7c11_1514668132_712020:8a6d4980-1b7a-4890-950c-f5d8b8602cce" >
+                <a href="https://varlab-dev.atlassian.net/browse/PHI-1345" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"></span>PHI-1345</a>
+                    -
+            <span class="summary">Getting issue details...</span>
+                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+            </span>
+ for a detailed reference to the implementation.</p><p>This implementation was simple and did not require any per-requisites since the locomotion objects and its related options are readily available. Simply go to <code>XRSystem &gt; XR Rig &gt; LocomotionSystem &gt; Turn</code>(Make sure to modify this through the new variant of the <code>XRSystem</code> prefab). Below is a screenshot referencing what was changed:</p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" alt="image-20241211-205516.png" width="633" loading="lazy" src="attachments/1514668132/1514963041.png?width=633" data-image-src="attachments/1514668132/1514963041.png" data-height="652" data-width="633" data-unresolved-comment-count="0" data-linked-resource-id="1514963041" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20241211-205516.png" data-base-url="https://varlab-dev.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="1514668132" data-linked-resource-container-version="6" data-media-id="7eeaef36-7fbb-4eee-ab58-b04d42b724e6" data-media-type="file"></span><p>There are two options for turn locomotion (Continuous Turn and Snap Turn) as shown in the above screenshot. To assign a controller input to any of these actions, simply enable <code>Use Reference</code> checkbox for the target controller hand and assign the <code>Input Action</code> that translates to the input from the controller. Make sure to only use one of the references to avoid having 2 controller inputs for the same action.</p><p>For Snap Turn, I enabled the reference for the <code>Right Hand Snap Turn Action</code> and assigned the input <code>XRI RightHand Locomotion/Turn (Input Action)</code> (Primary2DAxis joystick left and right).</p><h3 id="PHIVirtualRealityLocomotion-HowtoSnapTurn?">How to Snap Turn?</h3><p>Simply move the Primary2DAxis joystick on the assigned controller (Right or Left hand) to the left or right for your player to Snap Turn in the specified direction.</p><h3 id="PHIVirtualRealityLocomotion-Whatdidn’twork?">What didn’t work?</h3><p>The control assignment could have been more streamlined and the lack of documentation made it extremely difficult to know what the keybinds were for each input action. This led to many trial and error implementations to get it right. For example, It would not make sense to just assign the <code>XRI RightHand Locomotion/Turn (Input Action)</code> to Snap Turn since there is one that is named <code>XRI RightHand Locomotion/Snap Turn(Input Action)</code> but this Input Action has the same configuration as shown below:</p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><a href="attachments/1514668132/1515356282.mp4?width=760">20241211-2104-07.3247678.mp4</a></span><p>With Snap Turn assigned as the Input Action, I could not get it to work. So i went back to the Turn Input Action and Snap Turn seemed to work just fine. If there was documentation to refer to, It would be much clearer.</p>
+                    </div>
+
+                                        <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="attachments" class="pageSectionTitle">Attachments:</h2>
+                        </div>
+
+                        <div class="greybox" align="left">
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1514668132/1514537056.png">image-20241211-195746.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1514668132/1514700864.png">image-20241211-195753.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1514668132/1514569778.png">image-20241211-195757.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1514668132/1514602600.png">image-20241211-195819.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1514668132/1514930262.png">image-20241211-200459.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1514668132/1514602623.png">image-20241211-205510.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1514668132/1514963041.png">image-20241211-205516.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/1514668132/1515356282.mp4">20241211-2104-07.3247678.mp4</a> (video/mp4)
+                                <br/>
+                                                    </div>
+                    </div>
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Jun 11, 2025 14:16</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>
